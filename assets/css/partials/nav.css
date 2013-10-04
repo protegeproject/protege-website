@@ -1,0 +1,53 @@
+.navbar { 
+  margin-bottom: 0; 
+  position: fixed;
+  background: rgba(255,255,255,.8);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-brand span {
+  display: block;
+  width: 88px;
+  height: 32px;
+  background: url(../../img/logo.png) 0 0 no-repeat;
+  background-size: 88px 32px;
+  text-indent: -9999em; 
+}
+
+.navbar-nav {
+  margin-top: 12px;
+  font-size: .875em;
+  text-transform: uppercase;
+  letter-spacing: .1em; 
+}
+
+.navbar-nav > li > a {
+  padding: 0;
+  margin: 10px 0 0 30px;
+  font-weight: bold;
+  color: #415161;
+}
+
+.navbar-nav > li > a:hover {
+  background-color: transparent;
+}
+
+.web-protege-nav li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.web-protege-nav .pictogram {
+  font-size: 2em;
+  color: #db5e33;
+  font-weight: normal;
+  margin-right: 1.5%;
+}
+
+.web-protege-nav li:last-child .pictogram {
+  position: relative;
+  top: 3px;
+}

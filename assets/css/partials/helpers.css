@@ -1,0 +1,15 @@
+.right {
+  float: right !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.half {
+  width: 50%;
+}
+
+.clearleft {
+  clear: left;
+}

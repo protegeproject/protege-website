@@ -1,0 +1,116 @@
+/* Social section */
+#social {
+  background: #ebeae9;
+  padding: 38px 0;
+  margin-top: 50px;
+}
+
+.pictogram-social {
+  font-size: 6.6em;
+  color: #3498db;
+}
+
+.tweet p {
+  font-family: "Klinic Slab", serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: #777;
+}
+
+.tweet strong {
+  font-weight: 500;
+}
+
+.tweet-time {
+  font-size: .75em;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: .1em;
+}
+
+.social-icons {
+  list-style: none;
+}
+
+.social-icons p { 
+  color: #000;
+  font-size: .75em;
+  font-weight: 600;
+  letter-spacing: .1em;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.social-icons li a {
+  color: #959ea7;
+  font-size: 5.5em;
+  line-height: .8em;
+}
+
+.social-icons li a:hover {
+  text-decoration: none;
+}
+
+/* Footer proper */
+#footer {
+  background: #34414e;
+  padding-top: 34px;
+  color: #fff;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul a {
+  color: #fff;
+  font-size: .9375em;
+}
+
+#footer ul a.active {
+  color: #6b7782;
+  font-weight: 600;
+}
+
+#footer h3 {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: 700;
+  color: #db5e33;
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.wiki-callout {
+  border: 3px solid #415161;
+  padding: 20px;
+}
+
+.wiki-callout h3 {
+  color: #fff;
+}
+
+.wiki-callout p {
+  font-size: 1.3125em;
+  color: #959ea7;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+.copyright small {
+  color: #a1a5a9;
+}
+
+.copyright .disclaimer {
+  line-height: 1;
+}
+
+.stanford-logo {
+  width: 215px;
+  height: 27px;
+  font-size: 0;
+  display: block;
+  background: url(../../img/stanford-logo.png) no-repeat 0 0;
+  float: right;
+}

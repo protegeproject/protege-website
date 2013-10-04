@@ -1,0 +1,36 @@
+.jumbotron {
+  background-color: #6d5d8d;
+  color: #fff;
+  margin: 64px 0 0 0;
+  border-bottom: 1px solid #60527e;
+  min-height: 695px;
+}
+
+.jumbotron h1 {
+  font-size: 54px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.jumbotron p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.jumbotron.home, .jumbotron.products, .jumbotron.support-page {
+  background: url(../../img/home-hero-image.jpg) no-repeat 0 0;
+  background-position: 50% 0;
+  padding: 280px 0 0 0;
+}
+
+.jumbotron.products, .jumbotron.support-page {
+  padding: 160px 0 0 0;
+  min-height: 495px;
+}
+
+.jumbotron.products h1, .jumbotron.support-page h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 300;
+}

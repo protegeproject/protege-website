@@ -1,0 +1,314 @@
+/* PROXIMA */
+
+/* Regular */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-regular-webfont.eot');
+    src: url('../../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-regularitalic-webfont.eot');
+    src: url('../../fonts/proximanova-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-regularitalic-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-regularitalic-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-regularitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-semibold-webfont.eot');
+    src: url('../../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Semibold Italic */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-semibolditalic-webfont.eot');
+    src: url('../../fonts/proximanova-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-semibolditalic-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-semibolditalic-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-semibolditalic-webfont.svg#proxima_novasemibold_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-bold-webfont.eot');
+    src: url('../../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-boldit-webfont.eot');
+    src: url('../../fonts/proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/proximanova-boldit-webfont.woff') format('woff'),
+         url('../../fonts/proximanova-boldit-webfont.ttf') format('truetype'),
+         url('../../fonts/proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* BRANDON */
+
+/* Medium */
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../../fonts/brandon_med-webfont.eot');
+    src: url('../../fonts/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/brandon_med-webfont.woff') format('woff'),
+         url('../../fonts/brandon_med-webfont.ttf') format('truetype'),
+         url('../../fonts/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../../fonts/brandon_bld-webfont.eot');
+    src: url('../../fonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/brandon_bld-webfont.woff') format('woff'),
+         url('../../fonts/brandon_bld-webfont.ttf') format('truetype'),
+         url('../../fonts/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* KLINIC */
+
+/* Book Italic */
+@font-face {
+    font-family: 'Klinic Slab';
+    src: url('../../klinicslabbookit-webfont.eot');
+    src: url('../../klinicslabbookit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../klinicslabbookit-webfont.woff') format('woff'),
+         url('../../klinicslabbookit-webfont.ttf') format('truetype'),
+         url('../../klinicslabbookit-webfont.svg#klinic_slabbook_italic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'Klinic Slab';
+    src: url('../../fonts/klinicslabmediumit-webfont.eot');
+    src: url('../../fonts/klinicslabmediumit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/klinicslabmediumit-webfont.woff') format('woff'),
+         url('../../fonts/klinicslabmediumit-webfont.ttf') format('truetype'),
+         url('../../fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ENTYPO */
+
+/* Icon Font */
+@font-face {
+    font-family: 'Entypo';
+    src: url('../../fonts/entypo.eot');
+    src: url('../../fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/entypo.woff') format('woff'),
+         url('../../fonts/entypo.ttf') format('truetype'),
+         url('../../fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Social Icon Font */
+@font-face {
+    font-family: 'Entypo Social';
+    src: url('../../fonts/entypo-social.eot');
+    src: url('../../fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/entypo-social.woff') format('woff'),
+         url('../../fonts/entypo-social.ttf') format('truetype'),
+         url('../../fonts/entypo-social.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Proxima Nova', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  color: #545454;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong {
+  font-weight: 700;
+  font-style: normal
+}
+
+em {
+  font-weight: 600;
+  font-style: italic;
+}
+
+em.ital-a {
+  font-family: "Klinic Slab", serif;
+  font-weight: 500;
+  color: #939ea9;
+}
+
+i {
+    font-weight: 300;
+    font-style: italic;
+}
+
+small {
+  font-size: .75em;
+}
+
+h1 {
+    font-family: 'Brandon Grotesque', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h2, h3 {
+    font-family: 'Klinic Slab', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-weight: 500;
+}
+
+h2.heading-a, h2.heading-b, h2.heading-c {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+h2.heading-b {
+  color: #2c3e50;
+}
+
+h2.heading-c {
+  font-size: 21px;
+  margin-top: 0;
+  color: #959ea7;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 300;
+}
+
+h3.heading-a {
+  font-size: 16px;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+h3.heading-b {
+  font-family: "Klinic Slab", serif;
+  color: #2c3e50;
+  font-size: 21px;
+}
+
+h3.heading-c {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+hr {
+  border-top: 1px solid #525d68;
+}
+
+hr.ruler-a {
+  border-top: 1px solid #e4e3e2;
+}
+
+.upcase {
+  text-transform: uppercase;
+}
+
+.link-a, .link-b, .link-c, .link-d {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.link-b {
+  color: #2c3e50;
+  color: rgba(44,62,80,.6);
+}
+
+.link-c, .course-raquo {
+  color: #3498db;
+  font-family: "Klinic Slab", serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  display: inline;
+}
+
+.link-d {
+  font-weight: 500;
+  color: #415161;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.link-c:hover {
+  color: #3498db;
+}
+
+.course-raquo {
+  font-weight: 700;
+  margin-right: 8px;
+  margin-left: -16px;
+  font-size: 15px;
+  position: relative;
+  top: -1px;
+}
+
+.pictogram, .pictogram-social {
+  position: relative;
+  top: 1px;
+  font-size: 6em;
+  display: inline-block;
+  font-family: 'Entypo';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+
+.pictogram-social {
+  font-family: "Entypo Social";
+}
+
+.intro-a, .intro-b {
+  font-family: "Klinic Slab", serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+
+.intro-b {
+  color: #545454;
+}
