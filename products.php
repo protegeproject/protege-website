@@ -1,6 +1,6 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron products">
+<div class="jumbotron internal bordered">
 
   <div class="container">
     <div class="row">
@@ -24,7 +24,7 @@
         <img src="assets/img/cloud-badge.png">
       </div><!-- /end .col-2 -->
       <div class="col-6">
-        <p class="intro">
+        <p class="intro-a">
           Talk about WebProtege, why people should use it, 
           and probably some other information that would 
           push users into using this instead of the desktop 
@@ -80,7 +80,7 @@
         </ul><!-- /end nav -->
       </div><!-- /end .col-6 -->
       <div class="col-4">
-        <ul class="web-protege-features">
+        <ul class="list-a">
           <li>Cross compatible with desktop version</li>
           <li>Extensible plug-in architecture with custom-designed elements</li>
         </ul>
@@ -108,7 +108,7 @@
         <img src="assets/img/desktop-badge.png">
       </div><!-- /end .col-2 -->
       <div class="col-6">
-        <p class="intro">
+        <p class="intro-b">
           At its core, Protégé implements a rich set of knowledge-modeling 
           structures and actions that support the creation, visualization, 
           and manipulation of ontologies in various representation formats. 
@@ -162,7 +162,7 @@
         </ul><!-- /end nav -->
       </div><!-- /end .col-6 -->
       <div class="col-4">
-        <ul class="web-protege-features">
+        <ul class="list-a">
           <li>Various export formats</li>
           <li>Extensible environment</li>
           <li>Active community</li>

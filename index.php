@@ -36,13 +36,13 @@
     <div class="row">
 
       <div class="col-8">
-        <h3 class="heading-a">Trusted by over <big>243,583</big> users</h3>
+        <h3 class="heading-a upcase">Trusted by over <big class="type-a">243,583</big> users</h3>
       </div><!-- /end .col-8 -->
 
       <div class="col-4">
         <div class="slider-nav right">
-          <a class="" href="#testimonials" data-slide="prev"><span class="pictogram">&#59237;</span></a>
-          <a class="" href="#testimonials" data-slide="next"><span class="pictogram">&#59238;</span></a>
+          <a href="#testimonials" data-slide="prev"><span class="pictogram">&#59237;</span></a>
+          <a href="#testimonials" data-slide="next"><span class="pictogram">&#59238;</span></a>
         </div><!-- /end .slider-nav -->
       </div><!-- /end .col-4 -->
 
@@ -64,7 +64,7 @@
           </div><!-- /end .pull-left -->
 
           <div class="media-body">
-            <blockquote>
+            <blockquote class="quote-a">
               We use Protégé to prototype a repository for the product 
               design of investment advice in wealth management. It is a 
               research project at the University of Fribourg, Switzerland.
@@ -86,7 +86,7 @@
           </div><!-- /end .pull-left -->
 
           <div class="media-body">
-            <blockquote>
+            <blockquote class="quote-a">
               We use Protégé to prototype a repository for the product 
               design of investment advice in wealth management. It is a 
               research project at the University of Fribourg, Switzerland.

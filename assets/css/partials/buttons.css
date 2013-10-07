@@ -27,7 +27,7 @@
 .btn-c {
   background: rgba(0,0,0,.2);
   border: 2px solid #fff;
-  line-height: 46px;
+  line-height: 46px !important;
 }
 
 .btn-d {
@@ -58,6 +58,10 @@
   line-height: inherit;
   height: auto;
   padding: 15px 0 15px 25px;
+}
+
+.btn-inline {
+  padding: 0 20px;
 }
 
 .btn-icon .pictogram {

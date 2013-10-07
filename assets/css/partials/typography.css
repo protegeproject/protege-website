@@ -163,6 +163,12 @@ strong {
   font-style: normal
 }
 
+strong.bold-a {
+  color: #ce842d;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
 em {
   font-weight: 600;
   font-style: italic;
@@ -181,6 +187,37 @@ i {
 
 small {
   font-size: .75em;
+}
+
+big.type-a, big.type-b {
+  font-family: "Brandon Grotesque", serif;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 1px 0 4px;
+}
+
+big.type-b {
+  font-family: "Klinic Slab", serif;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+small.type-a, small.type-b {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+small.type-a {
+  display: block;
+  line-height: 20px;
+}
+
+small.type-b {
+  letter-spacing: 0;
+  color: #959ea7;
 }
 
 h1 {
@@ -214,9 +251,10 @@ h2.heading-c {
   font-weight: 300;
 }
 
-h3.heading-a {
+h3.heading-a, h3.heading-b, h3.heading-c, h3.heading-d {
   font-size: 16px;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: 700;
 }
 
 h3.heading-b {
@@ -225,11 +263,33 @@ h3.heading-b {
   font-size: 21px;
 }
 
-h3.heading-c {
+h3.heading-c, h3.heading-d {
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 500;
+}
+
+h3.heading-d {
+  font-family: "Klinic Slab", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+h4.heading-a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 25px;
+}
+
+p.para-a {
+  font-size: 15px;
+  color: #415161;
 }
 
 hr {
@@ -238,6 +298,30 @@ hr {
 
 hr.ruler-a {
   border-top: 1px solid #e4e3e2;
+}
+
+hr.small {
+  width: 10%;
+}
+
+hr.medium {
+  width: 20%;
+}
+
+blockquote.quote-a, blockquote.quote-b {
+  padding: 0;
+  margin: 0;
+  border-left: none;
+  color: #959ea7;
+  font-size: 24px;
+  font-family: "Klinic Slab", serif;
+  line-height: 30px;
+}
+
+blockquote.quote-b {
+  font-size: 22px;
+  color: #7f65b4;
+  font-weight: 500;
 }
 
 .upcase {
@@ -289,7 +373,7 @@ hr.ruler-a {
 .pictogram, .pictogram-social {
   position: relative;
   top: 1px;
-  font-size: 6em;
+  font-size: 48px;
   display: inline-block;
   font-family: 'Entypo';
   -webkit-font-smoothing: antialiased;
@@ -305,8 +389,7 @@ hr.ruler-a {
   font-weight: 500;
   color: #fff;
   font-size: 21px;
-  line-height: 26px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .intro-b {

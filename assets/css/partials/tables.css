@@ -1,0 +1,17 @@
+.table {
+  border-color: transparent;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.table a {
+  font-size: 18px;
+}
+
+.table tr:first-child td, .table tr:first-child th {
+  border-top: none;
+}
+
+.table > tbody > tr > th, .table > tbody > tr > td {
+  padding: 14px 8px;
+}

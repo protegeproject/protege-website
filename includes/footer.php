@@ -39,9 +39,9 @@
                 <h3 class="upcase">Protégé</h3>
                 <ul>
                   <li><a href="#" class="active">Home</a></li>
-                  <li><a href="#">Products</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Community</a></li>
+                  <li><a href="products.php">Products</a></li>
+                  <li><a href="support.php">Support</a></li>
+                  <li><a href="community.php">Community</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->
@@ -50,9 +50,9 @@
               <nav>
                 <h3 class="upcase">About</h3>
                 <ul>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">BMIR</a></li>
-                  <li><a href="#">Stanford</a></li>
+                  <li><a href="about.php#our-team">Our Team</a></li>
+                  <li><a href="about.php#about-bmir">BMIR</a></li>
+                  <li><a href="about.php#citing">Stanford</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->

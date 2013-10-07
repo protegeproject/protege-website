@@ -1,6 +1,6 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron support-page">
+<div class="jumbotron internal bordered">
 
   <div class="container">
     <div class="row">
@@ -142,7 +142,7 @@
 </section><!-- /end .documentation -->
   
 </div><!-- /end .container -->
-<hr class="secondary">
+<hr class="ruler-a">
 
 <section class="more-support">
   <div class="container"> 
@@ -169,7 +169,7 @@
       <div class="col-4 affiliate">
         <h3 class="heading-c">Protege Afilliate</h3>
         <span><em class="ital-a">(fee: $1,500/year)</em></span>
-        <ul class="affiliate-features">
+        <ul class="list-b">
           <li>40 hours consulting</li>
           <li>2 tickets to the annual Protégé Conf</li>
           <li>Protégé coffee mug and t-shirt</li>
@@ -181,7 +181,7 @@
       <div class="col-4 affiliate">
         <h3 class="heading-c">Consulting</h3>
         <span><em class="ital-a">(fee: $500/staff person/hour)</em></span>
-        <ul class="affiliate-features">
+        <ul class="list-b">
           <li>Ontology and knowledge base design and/or evaluation</li>
           <li>Plug-in design and/or development</li>
           <li>Using Protégé in applications</li>

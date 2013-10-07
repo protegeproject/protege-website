@@ -259,9 +259,9 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+  line-height: 24px;
+  color: #333;
+  background-color: #fff;
 }
 input,
 button,
@@ -4891,12 +4891,6 @@ body.modal-open,
   content: '\203a';
 }
 .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
   padding-left: 0;
   list-style: none;
   text-align: center;
@@ -4907,7 +4901,7 @@ body.modal-open,
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #ffffff;
+  border: 1px solid #ddd;
   border-radius: 10px;
   cursor: pointer;
 }

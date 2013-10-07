@@ -9,14 +9,7 @@
   margin: 0;
 }
 
-.sub-header h3 big {
-  font-family: "Brandon Grotesque", serif;
-  color: #fff;
-  font-size: 24px;
-  margin: 0 1px 0 4px;
-}
-
-.products + .sub-header, .support-page + .sub-header {
+.bordered + .sub-header {
   border-top: 12px solid #2c3e50;
   background: #415161;
 }
@@ -51,15 +44,6 @@
 #testimonials img {
   padding-top: 10px;
   margin-right: 15px;
-}
-
-#testimonials blockquote {
-  border-left: none;
-  padding: 0;
-  margin: 0;
-  color: #959ea7;
-  font-size: 24px;
-  font-family: "Klinic Slab", serif;
 }
 
 #testimonials blockquote footer {
@@ -204,6 +188,51 @@
   background: #fff;
 }
 
+.social-panel {
+  padding: 30px 25px 20px 25px;
+}
+
+.social-panel.twitter p {
+  margin-bottom: 180px;
+}
+
+.social-panel.twitter {
+  background: #3498db;
+}
+
+.social-panel.facebook {
+  background: #4c66a4;
+  margin-bottom: 20px;
+}
+
+.social-panel.github {
+  background: #fff;
+  border: 2px solid #858d95;
+}
+
+.social-panel .pictogram-social {
+  color: rgba(255,255,255,.4);
+  margin-top: 10px;
+  line-height: 0;
+  font-size: 90px;
+}
+
+.social-panel.twitter .pictogram-social {
+  color: #85c1e9;
+  margin-bottom: 100px;
+}
+
+.social-panel.facebook .pictogram-social, .social-panel.github .pictogram-social  {
+  color: #94a3c8;
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.social-panel.github .pictogram-social {
+  color: #5c6670;
+}
+
+
 /* Tabs */
 .nav-tabs {
   border-bottom: 1px solid #b2b2b2;
@@ -259,4 +288,140 @@
 .affiliate span {
   display: block;
   margin-bottom: 20px;
+}
+
+.team {
+  background: #415161;
+  padding: 37px 0;
+  margin-bottom: 45px;
+}
+
+.team-member {
+  margin-bottom: 50px;
+  display: block;
+  position: relative;
+  transition: top .3s;
+}
+
+.team-member:hover {
+  text-decoration: none;
+  top: -5px;
+}
+
+.team-member div {
+  box-shadow: 0 0 0 6px #677481;
+  border-radius: 50%;
+  margin: 10px;
+  width: 116px;
+  height: 115px;
+  margin: 0 auto;
+  transition: box-shadow .3s;
+  background-size: cover;
+}
+
+.team-member:hover div {
+  box-shadow: 0 0 0 10px #677481;
+}
+
+.team-member:hover .matthew, .team-member:hover .mark, .team-member:hover .natasha,
+.team-member:hover .csongor, .team-member:hover .samson, .team-member:hover .tania,
+.team-member:hover .jennifer {
+  background-position: bottom left;
+}
+
+.team-member .matthew {
+  background: url(../../img/team/matthew.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .mark {
+  background: url(../../img/team/mark.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .natasha {
+  background: url(../../img/team/natasha.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .csongor {
+  background: url(../../img/team/csongor.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .samson {
+  background: url(../../img/team/samson.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .tania {
+  background: url(../../img/team/tania.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .jennifer {
+  background: url(../../img/team/jennifer.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-offset {
+  margin-left: 12%;
+}
+
+.team-member h4 {
+  margin-top: 22px;
+  margin-bottom: 3px;
+  color: #959ea7;
+  font-style: italic;
+  font-weight: 600;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.team-member:hover h4 {
+  color: #fff;
+}
+
+.team-member p {
+  margin: 0;
+}
+
+.about-bmir .intro-b {
+  margin-bottom: 50px;
+  line-height: 30px;
+}
+
+.about-bmir hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.citing {
+  margin-top: 40px;
+}
+
+.citing p {
+  margin-bottom: 8px;
+}
+
+.newest-course {
+  background: #fbf5db; 
+  height: 70px;
+  line-height: 72px;
+  border-bottom: 1px solid #fbdfb7;
+  padding: 0;
+}
+
+.shortcourses {
+  padding-top: 60px;
+}
+
+#shortcourse-reviews {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  padding: 30px;
+  margin-top: 140px;
+}
+
+#shortcourse-reviews .item {
+  min-height: 215px;
 }

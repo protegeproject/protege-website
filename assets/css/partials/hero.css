@@ -18,18 +18,18 @@
   margin-bottom: 20px;
 }
 
-.jumbotron.home, .jumbotron.products, .jumbotron.support-page {
+.jumbotron.home, .jumbotron.internal {
   background: url(../../img/home-hero-image.jpg) no-repeat 0 0;
   background-position: 50% 0;
   padding: 280px 0 0 0;
 }
 
-.jumbotron.products, .jumbotron.support-page {
+.jumbotron.internal {
   padding: 160px 0 0 0;
   min-height: 495px;
 }
 
-.jumbotron.products h1, .jumbotron.support-page h1 {
+.jumbotron.internal h1 {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;

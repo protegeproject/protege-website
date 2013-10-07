@@ -13,3 +13,16 @@
 .clearleft {
   clear: left;
 }
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.offset-heading {
+  padding-top: 90px;
+  margin-top: -90px;
+}

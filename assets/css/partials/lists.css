@@ -16,13 +16,13 @@
   color: #2c3e50;
 }
 
-.web-protege-features {
+.list-a {
   list-style: none;
   margin: 0 0 40px 0;
   padding: 0;
 }
 
-.web-protege-features li {
+.list-a li {
   font-family: "Klinic Slab", serif;
   color: #b5bec7;
   font-weight: 500;
@@ -32,17 +32,17 @@
   margin-bottom: 15px;
 }
 
-.desktop .web-protege-features li {
+.desktop .list-a li {
   color: #2c3e50;
 }
 
-.affiliate-features {
+.list-b {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.affiliate-features li {
+.list-b li {
   background: url(../../img/red-raquo.png) no-repeat 0 7px;
   padding-left: 20px;
   margin-bottom: 10px;
