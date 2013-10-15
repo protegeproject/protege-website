@@ -16,8 +16,19 @@
       <script src="assets/js/vendor/respond.min.js"></script>
     <![endif]-->
 
+    <!--[if lt IE 10]>
+      <link href="assets/css/ltie10.css" rel="stylesheet">
+    <![endif]-->
+
+    <?php 
+      $url = $_SERVER['REQUEST_URI'];
+      $end = end((explode('/', $url)));
+      $bodyClass = preg_replace("/\\.[^.\\s]{3,4}$/", "", $end);
+    ?>
+
+
   </head>
-  <body>
+  <body class="<?php echo $bodyClass; ?>">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -27,22 +38,40 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   
-    <header class="navbar-wrapper">
+  <div class="map-course-container hide">
+    <div class="newest-course text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="no-margin para-a"><strong class="upcase bold-a">New Protege Course:</strong> October 13 @ Cortez Hill - San Diego, CA.</p>
+          </div><!-- /end .col-12 -->
+          <a href="#" class="pictogram pull-right open-map">&#8862;</a>
+        </div><!-- /end .row -->
+      </div><!-- /end .container -->
+    </div><!-- /end .newest-course -->
 
-        <div class="navbar navbar-static-top">
-          <div class="container">
+    <div class="map-container">
+      <div id="map-canvas" class="first-map"></div>
+      <span class="pictogram close-map"></span>
+    </div><!-- /end .map-container -->
+  </div><!-- /end .map-course-container -->
 
-            <div class="navbar-header">	
-              <a class="navbar-brand" href="/Stanford"><span>protégé</span></a>
-            </div><!-- /end .navbar-header -->
+  <header class="navbar-wrapper">
 
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="products.php">Products</a></li>
-              <li><a href="support.php">Support</a></li>
-              <li><a href="community.php">Community</a></li>
-            </ul>
+    <div class="navbar navbar-static-top">
+      <div class="container">
 
-          </div><!-- /end .container -->
-        </div><!-- /end .navbar.navbar-static-top -->
+        <div class="navbar-header">	
+          <a class="navbar-brand" href="/Stanford"><span>protégé</span></a>
+        </div><!-- /end .navbar-header -->
 
-    </header><! -- /end .navbar-wrapper -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="<?php echo ($bodyClass == 'products' ? 'active' : '');?>"><a href="products.php">Products</a></li>
+          <li class="<?php echo ($bodyClass == 'support' ? 'active' : '');?>"><a href="support.php">Support</a></li>
+          <li class="<?php echo ($bodyClass == 'community' ? 'active' : '');?>"><a href="community.php">Community</a></li>
+        </ul>
+
+      </div><!-- /end .container -->
+    </div><!-- /end .navbar.navbar-static-top -->
+
+  </header><! -- /end .navbar-wrapper -->

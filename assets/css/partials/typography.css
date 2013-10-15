@@ -158,6 +158,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  transition:color .15s ease-in-out;
+}
+
 strong {
   font-weight: 700;
   font-style: normal
@@ -192,7 +196,7 @@ small {
 big.type-a, big.type-b {
   font-family: "Brandon Grotesque", serif;
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   margin: 0 1px 0 4px;
 }
 
@@ -261,6 +265,7 @@ h3.heading-b {
   font-family: "Klinic Slab", serif;
   color: #2c3e50;
   font-size: 21px;
+  font-weight: 500;
 }
 
 h3.heading-c, h3.heading-d {
@@ -336,16 +341,30 @@ blockquote.quote-b {
   margin-top: 25px;
 }
 
+.link-a {
+  color: rgba(255,255,255,.4);
+}
+
+.link-a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .link-b {
   color: #2c3e50;
   color: rgba(44,62,80,.6);
+}
+
+.link-b:hover {
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 .link-c, .course-raquo {
   color: #3498db;
   font-family: "Klinic Slab", serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 0;
   display: inline;
 }
@@ -394,4 +413,8 @@ blockquote.quote-b {
 
 .intro-b {
   color: #545454;
+}
+
+#myModalLabel {
+  color: #222;
 }

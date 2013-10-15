@@ -5,9 +5,15 @@
   margin-top: 50px;
 }
 
+#social .col-2 {
+  width: 14%;
+}
+
 .pictogram-social {
-  font-size: 120px;
+  font-size: 110px;
   color: #3498db;
+  position: relative;
+  top: 10px;
 }
 
 .tweet p {
@@ -15,6 +21,7 @@
   font-size: 1.5em;
   line-height: 1.3em;
   color: #777;
+  margin-bottom: 10px;
 }
 
 .tweet strong {
@@ -30,6 +37,7 @@
 
 .social-icons {
   list-style: none;
+  text-align: center;
 }
 
 .social-icons p { 
@@ -37,18 +45,39 @@
   font-size: .75em;
   font-weight: 600;
   letter-spacing: .1em;
-  margin-bottom: 0;
+  margin-bottom: 10px;;
   margin-top: 20px;
+}
+
+.social-icons li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
 }
 
 .social-icons li a {
   color: #959ea7;
-  font-size: 5.5em;
-  line-height: .8em;
+  font-size: 88px;
+  line-height: 42px;
 }
 
 .social-icons li a:hover {
   text-decoration: none;
+}
+
+.social-icons .twitter-icon:hover {
+  color: #3498db;
+}
+
+.social-icons .facebook-icon:hover {
+  color: #4c66a4;
+}
+
+.social-icons .github-icon:hover {
+  color: #5c6670;
 }
 
 /* Footer proper */
@@ -66,20 +95,30 @@
 
 #footer ul a {
   color: #fff;
-  font-size: .9375em;
+  font-size: 15px;
 }
 
-#footer ul a.active {
+#footer ul a:hover {
   color: #6b7782;
-  font-weight: 600;
+  text-decoration: none;
+}
+
+#footer p {
+  margin-bottom: 10px;
 }
 
 #footer h3 {
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: 700;
   color: #db5e33;
-  font-size: 1em;
+  font-size: 18px;
   margin-top: 0;
+  margin-bottom: 4px;
+}
+
+#footer hr {
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .wiki-callout {
@@ -87,8 +126,13 @@
   padding: 20px;
 }
 
-.wiki-callout h3 {
+#footer .wiki-callout h3 {
   color: #fff;
+  font-size: 18px;
+}
+
+#footer .col-5 {
+  width: 44.666667%;
 }
 
 .wiki-callout p {
@@ -96,6 +140,10 @@
   color: #959ea7;
   font-weight: 300;
   line-height: 1.3em;
+}
+
+.wiki-callout .btn {
+  font-size: 12px;
 }
 
 .copyright small {
@@ -110,6 +158,7 @@
   width: 215px;
   height: 27px;
   font-size: 0;
+  margin-top: 15px;
   display: block;
   background: url(../../img/stanford-logo.png) no-repeat 0 0;
   float: right;

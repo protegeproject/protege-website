@@ -9,19 +9,24 @@
   line-height: 40px;
   color: #fff;
   padding: 0;
+  transition: background-color .15s ease-in-out;
 }
 
 .btn {
-  text-transform: uppercase;
   background: #959ea7;
 }
 
 .btn:hover {
-  color: inherit;
+  color: #fff;
+  background: #415161;
 }
 
 .btn-b {
   background: #db5e33;
+}
+
+.btn-b:hover {
+  background: #bc4d26; 
 }
 
 .btn-c {
@@ -30,9 +35,20 @@
   line-height: 46px !important;
 }
 
+.btn-c:hover {
+  background: rgba(0,0,0,.5);
+}
+
 .btn-d {
   background: #fff;
   border: 2px solid #959ea7;
+  transition: border .15s ease-in-out;
+}
+
+.btn-d:hover {
+  background: inherit;
+  border: 2px solid #2c3e50;
+  color: #ce842d;
 }
 
 .btn-small {
@@ -57,7 +73,7 @@
 .btn-xl {
   line-height: inherit;
   height: auto;
-  padding: 15px 0 15px 25px;
+  padding: 15px 0 10px 25px;
 }
 
 .btn-inline {
@@ -78,6 +94,10 @@
   color: rgba(255,255,255,.6);
 }
 
+.btn-icon:hover, .btn-icon-alt:hover {
+  color: rgba(255,255,255,.6);
+}
+
 .btn-icon h4, .btn-icon-alt {
   font-family: "Proxima Nova", sans-serif;
   font-size: 18px;
@@ -87,7 +107,7 @@
   color: #fff;
 }
 
-.apple-icon {
+.apple-icon, .windows-icon {
   width: 24px;
   height: 28px;
   background: url(../../img/apple-icon.png) no-repeat 0 0;
@@ -95,4 +115,11 @@
   position: relative;
   top: 5px;
   margin-right: 8px;
+}
+
+.windows-icon {
+  width: 24px;
+  height: 21px;
+  background: url(../../img/windows-icon.png) no-repeat 0 0;
+  top: 8px;
 }

@@ -1,3 +1,4 @@
+</script>
 <?php include 'includes/header.php' ?>
 
 <div class="jumbotron home">
@@ -19,11 +20,11 @@
 
     <div class="row">
       <div class="col-3">
-        <a class="btn btn-b btn-lg btn-block">Download Now</a>
+        <a class="btn btn-b btn-lg btn-block upcase">Download Now</a>
       </div><!-- /end .col-3 -->
 
       <div class="col-3">
-        <a class="btn btn-c btn-lg btn-block">Use webProtégé</a>
+        <a class="btn btn-c btn-lg btn-block upcase">Use webProtégé</a>
       </div><!-- /end .col-3 -->
 
     </div><!-- /end .row -->
@@ -109,7 +110,7 @@
     
     <hgroup class="text-center">
       <h1 class="upcase">Why Protégé</h1>
-      <h2>Tell them Protégé's interface is very sexy and stuff</h2>
+      <h2 class="heading-c">Tell them Protégé's interface is very sexy and stuff</h2>
     </hgroup>
     
     <div class="row">
@@ -150,13 +151,11 @@
         </div><!-- /end .feature -->
       </div><!-- /end .col-4 -->
 
-      <div class="col-3 col-offset-3">
-        <a class="btn btn-large btn-block" href="#">Download Now</a>
-      </div><!-- /end .col-3 -->
+      <div class="clearfix text-center">
+        <a class="btn btn-xl btn-block upcase" href="#">Download Now</a>
 
-      <div class="col-3">
-        <a class="btn btn-large btn-block" href="#">Use webProtégé</a>
-      </div><!-- /end .col-3 -->
+        <a class="btn btn-xl btn-block upcase" href="#">Use webProtégé</a>
+      </div><!-- /end .feature-cta -->
 
     </div><!-- /end .row -->
   </section><!-- /end .features -->

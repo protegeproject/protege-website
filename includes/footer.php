@@ -18,9 +18,9 @@
       <ul class="social-icons col-3">
         <p class="text-center upcase">Follow us on</p>
         <div class="row">
-          <li class="col-4"><a href="#" class="pictogram-social">&#62218;</a></li>
-          <li class="col-4"><a href="#" class="pictogram-social">&#62221;</a></li>
-          <li class="col-4"><a href="#" class="pictogram-social">&#62209;</a></li>
+          <li><a href="http://twitter.com/protegeproject" class="pictogram-social twitter-icon">&#62218;</a></li>
+          <li><a href="http://www.facebook.com/pages/Protege-Project/136205016405270" class="pictogram-social facebook-icon">&#62221;</a></li>
+          <li><a href="http://github.com/protegeproject" class="pictogram-social github-icon">&#62209;</a></li>
         </div>
       </ul>
 
@@ -38,7 +38,7 @@
               <nav>
                 <h3 class="upcase">Protégé</h3>
                 <ul>
-                  <li><a href="#" class="active">Home</a></li>
+                  <li><a href="#">Home</a></li>
                   <li><a href="products.php">Products</a></li>
                   <li><a href="support.php">Support</a></li>
                   <li><a href="community.php">Community</a></li>
@@ -62,7 +62,7 @@
                 <h3 class="upcase">Look no further. The wiki is here.</h3>
                 <p>Everything you didn’t know you needed to know about Protégé.</p>
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-5">
                     <a href="#" class="btn btn-b btn-block small upcase">Visit the Wiki</a>
                   </div><!-- /end .col-6 -->
                 </div><!-- /end .row -->
@@ -100,7 +100,10 @@
     </footer><!-- /end #footer -->
 
     <script src="assets/js/vendor/jquery-1.10.1.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyATdsmP1hwLCM1-VQnDB-bmTWnsURpZLeU&sensor=true"></script>
+    <script src="assets/js/vendor/infobox.js"></script>
+    <script src="assets/js/vendor/resize.js"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

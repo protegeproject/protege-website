@@ -1,7 +1,7 @@
 .jumbotron {
   background-color: #6d5d8d;
   color: #fff;
-  margin: 64px 0 0 0;
+  margin: 0;
   border-bottom: 1px solid #60527e;
   min-height: 695px;
 }
@@ -20,6 +20,7 @@
 
 .jumbotron.home, .jumbotron.internal {
   background: url(../../img/home-hero-image.jpg) no-repeat 0 0;
+  background: url(../../img/home-hero-image.jpg) no-repeat 0 0, -webkit-linear-gradient(left, #6d5d8d, #6f608f);
   background-position: 50% 0;
   padding: 280px 0 0 0;
 }
@@ -34,3 +35,26 @@
   line-height: 1.2;
   font-weight: 300;
 }
+
+.jumbotron.home h1 {
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.jumbotron.home .col-10 {
+  width: 85.3333333%;
+}
+
+.jumbotron.home .col-8 {
+  width: 62.6666667%;
+}
+
+.jumbotron.home .col-3 {
+  padding-right: 3px;
+  width: 21%;
+}
+
+.jumbotron.home .btn {
+  margin-top: 5px;
+}
+

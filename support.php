@@ -48,10 +48,40 @@
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
-              <a href="#" class="btn btn-b btn-small btn-block">Subscribe</a>
+              <a href="#" class="btn btn-b btn-small btn-block upcase" id="showDesktopMailingList">Subscribe</a>
               <a href="#" class="upcase text-center link-d">Archive &raquo;</a>
             </div><!-- /end .col-4 -->
-
+            <div id="desktopMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+              <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h3 class="heading-b">Subscribe to the Protege Desktop Support mailing list</h3>
+                        <form>
+                          <label>Name</label>
+                          <input type="text" value="Enter your name">
+                          <label>Email</label>
+                          <input type="email" value="Enter your email">
+                          <input type="checkbox" name="subscribe" value="Subscribe"> Receive list mail batched in a daily digest
+                          <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
+                          <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                        </form>
+                      </div><!-- /end .col-6 -->
+                      <div class="col-6 with-bg">
+                        <ul class="list-b">
+                          <li><a href="#">List Information</a> page to manage subscription (list name: p4-feedback)</li>
+                          <li><a href="#">Archive</a> hosted by Stanford Information Technology Services</li>
+                          <li><a href="#">Archive</a> hosted by Nabbble</li>
+                        
+                        </ul>
+                      </div><!-- /end .col-6 -->
+                    </div><!-- /end .row -->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
           </div><!-- /end .row -->
         </div><!-- /end .panel -->
         <div class="panel clearfix">
@@ -65,9 +95,40 @@
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
-              <a href="#" class="btn btn-b btn-small btn-block">Subscribe</a>
+              <a href="#" id="showWebMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
               <a href="#" class="upcase text-center link-d">Archive &raquo;</a>
-            </div><!-- /end .col-4 -->
+            </div><!-- /end .col-4 -->            
+            <div id="webMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+              <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h3 class="heading-b">Subscribe to the Protege Web Support mailing list</h3>
+                        <form>
+                          <label>Name</label>
+                          <input type="text" value="Enter your name">
+                          <label>Email</label>
+                          <input type="email" value="Enter your email">
+                          <input type="checkbox" name="subscribe" value="Subscribe"> Receive list mail batched in a daily digest
+                          <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
+                          <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                        </form>
+                      </div><!-- /end .col-6 -->
+                      <div class="col-6 with-bg">
+                        <ul class="list-b">
+                          <li><a href="#">List Information</a> page to manage subscription (list name: p4-feedback)</li>
+                          <li><a href="#">Archive</a> hosted by Stanford Information Technology Services</li>
+                          <li><a href="#">Archive</a> hosted by Nabbble</li>
+                        
+                        </ul>
+                      </div><!-- /end .col-6 -->
+                    </div><!-- /end .row -->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
 
           </div><!-- /end .row -->
         </div><!-- /end .panel -->
@@ -84,10 +145,40 @@
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
-              <a href="#" class="btn btn-b btn-small btn-block">Subscribe</a>
+              <a href="#" id="showAnnouncementMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
               <a href="#" class="upcase text-center link-d">Archive &raquo;</a>
             </div><!-- /end .col-4 -->
-
+            <div id="announcementMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+              <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h3 class="heading-b">Subscribe to the Protege Announcements mailing list</h3>
+                        <form>
+                          <label>Name</label>
+                          <input type="text" value="Enter your name">
+                          <label>Email</label>
+                          <input type="email" value="Enter your email">
+                          <input type="checkbox" name="subscribe" value="Subscribe"> Receive list mail batched in a daily digest
+                          <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
+                          <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                        </form>
+                      </div><!-- /end .col-6 -->
+                      <div class="col-6 with-bg">
+                        <ul class="list-b">
+                          <li><a href="#">List Information</a> page to manage subscription (list name: p4-feedback)</li>
+                          <li><a href="#">Archive</a> hosted by Stanford Information Technology Services</li>
+                          <li><a href="#">Archive</a> hosted by Nabbble</li>
+                        
+                        </ul>
+                      </div><!-- /end .col-6 -->
+                    </div><!-- /end .row -->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
           </div><!-- /end .row -->
         </div><!-- /end .panel -->
       </div><!-- /end .col-8 -->
@@ -176,7 +267,7 @@
           <li>2 tickets to the annual Protégé Conf</li>
           <li>Recognition on our application’s About Box and on our website’s About Page</li>
         </ul>
-        <a href="#" class="btn btn-d btn-med">Contact Support</a>
+        <a href="#" class="btn btn-d btn-med upcase">Contact Support</a>
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate">
         <h3 class="heading-c">Consulting</h3>
@@ -187,7 +278,7 @@
           <li>Using Protégé in applications</li>
           <li>Visualization and comprehension techniques for large knowledge-bases</li>
         </ul>
-        <a href="#" class="btn btn-d btn-med">Contact Support</a>
+        <a href="#" class="btn btn-d btn-med upcase">Contact Support</a>
       </div><!-- /end .col-4 -->
     </div><!-- /end .row -->
 

@@ -6,6 +6,11 @@
   display: none;
 }
 
+.visually-hidden {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
 .half {
   width: 50%;
 }
