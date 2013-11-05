@@ -2,7 +2,6 @@
 #social {
   background: #ebeae9;
   padding: 38px 0;
-  margin-top: 50px;
 }
 
 #social .col-2 {
@@ -16,23 +15,44 @@
   top: 10px;
 }
 
-.tweet p {
+#social .pictogram-social {
+  top: 0;
+}
+
+.tweet_list {
+  margin: 14px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tweet_text {
   font-family: "Klinic Slab", serif;
   font-size: 1.5em;
   line-height: 1.3em;
   color: #777;
   margin-bottom: 10px;
+  display: block;
 }
 
-.tweet strong {
+.tweet_text a, a.tweet_hashtag {
   font-weight: 500;
+  font-style: italic;
 }
 
-.tweet-time {
+a.tweet_hashtag {
+  color: #717171;
+}
+
+.tweet_time {
   font-size: .75em;
   font-weight: 600;
-  color: #000;
   letter-spacing: .1em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.tweet_time a {
+  color: #000;
 }
 
 .social-icons {
@@ -66,17 +86,6 @@
 
 .social-icons li a:hover {
   text-decoration: none;
-}
-
-.social-icons .twitter-icon:hover {
-  color: #3498db;
-}
-
-.social-icons .facebook-icon:hover {
-  color: #4c66a4;
-}
-
-.social-icons .github-icon:hover {
   color: #5c6670;
 }
 
@@ -93,14 +102,27 @@
   padding: 0;
 }
 
-#footer ul a {
+#footer ul a, .copyright a {
   color: #fff;
   font-size: 15px;
+}
+
+.copyright a {
+  font-size: inherit;
+}
+
+.copyright a:hover {
+  color: #a1a5a9;
 }
 
 #footer ul a:hover {
   color: #6b7782;
   text-decoration: none;
+}
+
+#footer ul li.active a {
+  font-weight: 600;
+  color: #6b7782;
 }
 
 #footer p {
@@ -162,4 +184,8 @@
   display: block;
   background: url(../../img/stanford-logo.png) no-repeat 0 0;
   float: right;
+}
+
+.twitterfeed {
+  position: relative;
 }

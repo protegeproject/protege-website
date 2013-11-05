@@ -9,15 +9,12 @@
     <title>Stanford</title>
 
     <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/lib/colorbox.css" rel="stylesheet">
+    <link href="assets/css/main.css?v2" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="assets/js/vendor/html5shiv.js"></script>
       <script src="assets/js/vendor/respond.min.js"></script>
-    <![endif]-->
-
-    <!--[if lt IE 10]>
-      <link href="assets/css/ltie10.css" rel="stylesheet">
     <![endif]-->
 
     <?php 
@@ -38,14 +35,14 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   
-  <div class="map-course-container hide">
+  <div class="map-course-container">
     <div class="newest-course text-center">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="no-margin para-a"><strong class="upcase bold-a">New Protege Course:</strong> October 13 @ Cortez Hill - San Diego, CA.</p>
+            <p class="no-margin para-a"><strong class="upcase bold-a"><a class="open-map" href="#">New Protégé Short Course:</strong> March 26-28 @ Stanford University - Stanford, CA.</a></p>
           </div><!-- /end .col-12 -->
-          <a href="#" class="pictogram pull-right open-map">&#8862;</a>
+          <a href="#" class="pictogram pull-right open-map-icon"></a>
         </div><!-- /end .row -->
       </div><!-- /end .container -->
     </div><!-- /end .newest-course -->
@@ -62,7 +59,7 @@
       <div class="container">
 
         <div class="navbar-header">	
-          <a class="navbar-brand" href="/Stanford"><span>protégé</span></a>
+          <a class="navbar-brand" href="/protege"><span>protégé</span></a>
         </div><!-- /end .navbar-header -->
 
         <ul class="nav navbar-nav navbar-right">

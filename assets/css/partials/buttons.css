@@ -1,3 +1,4 @@
+/* Various button styles */
 .btn, .btn-a, .btn-b, .btn-c, .btn-d {
   background: #bc4d26;
   border: none;
@@ -10,6 +11,8 @@
   color: #fff;
   padding: 0;
   transition: background-color .15s ease-in-out;
+  -moz-transition: background-color .15s ease-in-out;
+  -webkit-transition: background-color .15s ease-in-out;
 }
 
 .btn {
@@ -30,27 +33,32 @@
 }
 
 .btn-c {
+  background: rgb(0,0,0);
   background: rgba(0,0,0,.2);
   border: 2px solid #fff;
   line-height: 46px !important;
 }
 
 .btn-c:hover {
+  background: rgb(0,0,0);
   background: rgba(0,0,0,.5);
 }
 
 .btn-d {
   background: #fff;
   border: 2px solid #959ea7;
-  transition: border .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -webkit-transition: all .15s ease-in-out;
 }
 
 .btn-d:hover {
   background: inherit;
   border: 2px solid #2c3e50;
-  color: #ce842d;
+  color: #db5e33;
 }
 
+/* Begin Button Sizes */
 .btn-small {
   height: 36px;
   line-height: 36px;
@@ -80,21 +88,17 @@
   padding: 0 20px;
 }
 
-.btn-icon .pictogram {
-  color: rgba(0,0,0,.3);
-  font-size: 60px;
-  line-height: 36px;
-}
-
 .btn-icon, .btn-icon-alt {
   text-align: left;
   text-transform: none;
   font-weight: 300;
   letter-spacing: 0;
+  color: rgb(255,255,255);
   color: rgba(255,255,255,.6);
 }
 
 .btn-icon:hover, .btn-icon-alt:hover {
+  color: rgb(255,255,255);
   color: rgba(255,255,255,.6);
 }
 
@@ -107,7 +111,7 @@
   color: #fff;
 }
 
-.apple-icon, .windows-icon {
+.apple-icon, .windows-icon, .generic-download-icon {
   width: 24px;
   height: 28px;
   background: url(../../img/apple-icon.png) no-repeat 0 0;
@@ -122,4 +126,17 @@
   height: 21px;
   background: url(../../img/windows-icon.png) no-repeat 0 0;
   top: 8px;
+}
+
+.generic-download-icon {
+  background: url(../../img/generic-download-button-icon.png) no-repeat 0 0;
+  top: 10px;
+}
+
+.web-protege-btn .pictogram {
+  top: -1px;
+}
+
+html[data-useragent*='MSIE 10.0'] .web-protege-btn .pictogram, html[data-useragent*='MSIE 9.0'] .web-protege-btn .pictogram {
+  top: -6px;
 }

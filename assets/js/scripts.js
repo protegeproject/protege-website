@@ -1,51 +1,63 @@
 (function($) {
-  // This example displays a marker at the center of Australia.
-  // When the user clicks the marker, an info window opens.
 
-  $('.short-courses .first-map').removeAttr('id', 'map-canvas')
+  // Remove Map Canvas ID on Short Courses page to eliminate duplicate IDs
+  $('.short-courses .event').removeAttr('id', 'map-canvas')
 
+  // Hide .map-container on page load
+  $('.map-container').hide();
+
+  // Function to call Google Maps API placement
   function initMaps() {
 
-    var myLatlng = new google.maps.LatLng(32.70895,-117.160885);
-
+    // Place location coordinates here for next event
+    var myLatlng = new google.maps.LatLng(37.431472,-122.175661);
 
     var mapOptions = {
       zoom: 17,
-      center: myLatlng,
+      center: myLatlng, // Drop marker at these coordinates
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: false
+      scrollwheel: false // Eliminate map from scrolling when user scrolls over it
     }
 
+    // Create map element
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    var image = 'assets/img/custom-map-marker.png';
+    // Use custom map marker according to design comp
+    var image = 'assets/img/custom-map-pin.png';
 
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(32.70870,-117.160885),
+      // Slightly alter these numbers (usually subtract a few decimals) to make sure the pin on the map is centered within the viewport
+      position: new google.maps.LatLng(37.4313,-122.175661),
       map: map,
       icon: image,
       visible: true
     });
 
+    // Content for latest Protege course goes here
     var boxText = 
       '<div id="box" class="clearfix">' +
-        '<p class="upcase infobox-title"><strong>Protege Bootcamp</strong></p>' +
+        '<p class="upcase infobox-title"><strong><a href="http://protege.stanford.edu/shortcourse/201403/" target="_blank">Protégé Short Course</a></strong></p>' + // Course title and url
         '<hr class="ruler-a">' +
         '<div class="clearfix">' +
-        '<span class="pictogram pull-left">&#128197;</span>' +
-        '<p class="pull-left">September 2-4. From 9.00 to 18.00</p>' +
+        '<span class="pictogram pull-left calendar-icon"></span>' +
+        '<p class="pull-left">March 26-28, 2013</p>' + // Time and date of course
         '</div>' +
         '<div class="clearfix">' +
-        '<span class="pictogram pull-left map-icon">&#59172;</span>' +
-        '<p class="pull-left">343 4th Avenue, San Diego, CA. 92101</p>' +
+        '<span class="pictogram pull-left map-icon"></span>' +
+        '<p class="pull-left">291 Campus Dr. Palo Alto, CA. 94305</p>' + // Address/Location of course
+        '</div>' +
+        '<div class="clearfix">' +
+        '<a href="http://protege.stanford.edu/shortcourse/201403/" style="margin-right: 20px;" class="learn-more-link pull-right" target="_blank">Learn more &raquo;</a>' +
         '</div>';
+
       '</div>';
             
+    // Options specific to InfoBox plugin
     var myOptions = {
       content: boxText,
       disableAutoPan: false,
       maxWidth: 0,
-      pixelOffset: new google.maps.Size(30, -90),
+      pixelOffset: new google.maps.Size(30, -110),
       zIndex: null,
       infoBoxClearance: new google.maps.Size(1, 1),
       closeBoxURL: "",
@@ -54,42 +66,30 @@
       enableEventPropagation: false
     };
 
+    // Initialize InfoBox
     var infoBox = new InfoBox(myOptions);
     infoBox.open(map, marker);
 
   };
 
-  $('.tooltip-activate').hover(function() {
-    $(this).find('.tooltip').toggleClass('visually-hidden');
-  })
-
-  $('a[data-toggle="tab"]').on('shown', function (e) {
-    e.target // activated tab
-    e.relatedTarget // previous tab
-  })
-
-  $('.social-icons a').click( function() {
-    window.open(this.href);
-    return false;
-  });
-
-  $('.map-container').hide();
+  // Run initMaps() function on page load
   initMaps();
 
-  var mapCourseContainHeight = $('.map-course-container').height();
-
-  $('.open-map').click(function(e) {
+  // Interaction for opening map panel
+  $('.open-map, .open-map-icon').on('click', function(e) {
     $('.map-container').slideDown();
-    $(this).parent().parent().parent().slideUp();
+    $('.newest-course').slideUp();
     initMaps();
     e.preventDefault();
   });
 
-  $('.close-map').click(function() {
+  // Interaction for closing map panel
+  $('.close-map').on('click', function() {
     $('.map-container').slideUp();
     $('.newest-course').slideDown();
   });
 
+  // Needed to comepnsate header offset for affix navigation, whether map container is opened or closed
   if ($('.map-course-container').is(':visible')) {
     $('.navbar-wrapper').addClass("affix-top").each(function (){
       var $self = $(this);
@@ -100,55 +100,58 @@
       }
       $self.affix({offset: {top: offsetFn}});
     });
+  } else {
+    $('.navbar-wrapper').affix();
   }
 
-  if ($('.map-course-container').is(':hidden')) {
-    $('.navbar-wrapper').addClass('affix');
-  }
 
-  if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-  if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
-  if (navigator.appVersion.indexOf("SunOS") != -1 ) OSName = "Solaris";
-
+  // Load specific download button for Windows users
   if (navigator.appVersion.indexOf("Win")!=-1) {
+    $('.local-install').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe');
     $('.desktop-download-btn').find('h4').text('Download for Windows');
-    $('.desktop-download-btn .media .apple-icon').attr('class', 'windows-icon');
-    $('#desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe')
+    $('.desktop-download-btn .media .generic-download-icon').attr('class', 'windows-icon');
     $('.windows-instructions').removeClass('hide');
     if ($('div:not(.windows-instructions)')) {
-      $('.instruction-panel div:not(.windows-instructions').addClass('hide');
+      $('.instruction-panel div:not(.windows-instructions)').addClass('hide');
     }
-    $('#source').find('option[value="desktop-win"]').attr("selected",true);
-  }
-
+    $('#source').find('option[value="desktop-win-vm"]').attr("selected",true);
+  } 
+  
   if (navigator.appVersion.indexOf("Mac")!=-1) {
+    $('.local-install').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip');
+    $('.desktop-download-btn').find('h4').text('Download for Mac OSX');
+    $('.desktop-download-btn .media .generic-download-icon').attr('class', 'apple-icon');
+    $('#desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe')
     $('.osx-instructions').removeClass('hide');
     if ($('div:not(.osx-instructions)')) {
-      $('.instruction-panel div:not(.osx-instructions').addClass('hide');
+      $('.instruction-panel div:not(.osx-instructions)').addClass('hide');
     }
     $('#source').find('option[value="desktop-osx"]').attr("selected",true);
   }
 
-  // Replace dropdown menu
+  // Hide original dropdown menu
   $('#source').hide();
+
+  // Call function that replaces old dropdown menu with more styleable dl list
   createDropDown();
             
-  $(".dropdown dt a").click(function(e) {
+  // Create custom click event to call newly generated dropdown list
+  $(".dropdown dt a").on('click', function(e) {
     $(".dropdown dd ul").toggle();
     $(this).parent().parent().addClass('dropdown-active');
-    $('.search-downloads').select();
+    $('.search-downloads').select(); // Automatically highlight search field
     e.preventDefault();
-    e.stopPropagation();
   });
 
+  // Hide dropdown list if anything but target is clicked
   $(document).on('click', function(e) {
     var $clicked = $(e.target);
     if (! $clicked.parents().hasClass("dropdown")) {
-        $(".dropdown dd ul").hide();
+      $(".dropdown dd ul").hide();
     }
-    $('.dropdown dt a').parent().parent().removeClass('dropdown-active');
   });
-              
+
+  // Once a dropdown item is clicked, replace text on dropdown menu button
   $(".dropdown dd ul li a").on('click', function(e) {
     var text = $(this).html();
     $(".dropdown dt a").html(text);
@@ -159,284 +162,379 @@
     e.preventDefault();
   });
 
-function createDropDown(){
-  var source = $("#source");
-  var selected = source.find("option[selected]");
-  var options = $("option", source);
-  
-  $("#desktop-download-form").append('<dl id="target" class="dropdown"></dl>');
-  $("#target").append('<dt class="selected-download"><a href="#" data-value=' + selected.val() + '><span>' + selected.text() + '</span></a></dt>');
-  $("#target").append('<dd><ul></ul></dd>');
-  $("#target dd ul").append('<li><form><input type="search" class="search-downloads"></form>');
+  // Create and replace all elements of initial dropdown element
+  function createDropDown(){
+    var source = $("#source");
+    var selected = source.find("option[selected]");
+    var options = $("option", source);
+    
+    $("#desktop-download-form").append('<dl id="target" class="dropdown"></dl>');
+    $("#target").append('<dt class="selected-download"><a href="#" data-value=' + selected.val() + '><span>' + selected.text() + '</span></a></dt>');
+    $("#target").append('<dd><ul></ul></dd>');
+    $("#target dd ul").append('<li><form><input type="search" class="search-downloads"></form>');
 
-  options.each(function(){
-    $("#target dd ul").append('<li data-value='+ $(this).val() + '><a href="#"><span>' + $(this).text() + '</span></a></li>');
-  });
-}
-
-var downloadListItems = $('#target dd li:not(:first-child)');
-$('.search-downloads').keyup(function() {
-  var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-  downloadListItems.show().filter(function() {
-    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-    return !~text.indexOf(val);
-  }).hide();
-});
-
-$('.dropdown dd ul li').on('click', function(e) {
-  var ddVal = $(this).data('value');
-  switch (ddVal) {
-    case 'desktop-osx':
-      $('.osx-instructions').removeClass('hide');
-      if ($('div:not(.osx-instructions)')) {
-        $('.instruction-panel div:not(.osx-instructions').addClass('hide');
-      }
-      break;
-    case 'desktop-win-64':
-    case 'desktop-win-64-vm':
-    case 'desktop-win-vm':
-    case 'desktop-win':
-      {
-        $('.windows-instructions').removeClass('hide');
-        if ($('div:not(.windows-instructions)')) {
-          $('.instruction-panel div:not(.windows-instructions').addClass('hide');
-      }
-      break;
-    }
-    default:
-      $('.generic-instructions').removeClass('hide');
-      if ($('div:not(.generic-instructions)')) {
-        $('.instruction-panel div:not(.generic-instructions').addClass('hide');
-      }
-      break;
+    options.each(function(){
+      $("#target dd ul").append('<li data-value='+ $(this).val() + '><a href="#"><span>' + $(this).text() + '</span></a></li>');
+    });
   }
-  $(".dropdown dt a").attr('data-value', ddVal);
-  $('#target dt a').each(function() {
-    if (ddVal.match(/^desktop-win/)) {
-      $(this).attr('class', 'windows-dropdown-icon');
+
+  // Functionality to make dropdown menu items searchable
+  var downloadListItems = $('#target dd li:not(:first-child)');
+  $('.search-downloads').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    downloadListItems.show().filter(function() {
+      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+      return !~text.indexOf(val);
+    }).hide();
+  });
+
+  // Case statement used to determine which download instructions to show
+  $('.dropdown dd ul li').on('click', function(e) {
+    var ddVal = $(this).data('value');
+    switch (ddVal) {
+      case 'desktop-osx':
+        $('.osx-instructions').removeClass('hide');
+        if ($('div:not(.osx-instructions)')) {
+          $('.instruction-panel div:not(.osx-instructions)').addClass('hide');
+        }
+        break;
+      case 'desktop-win-64':
+      case 'desktop-win-64-vm':
+      case 'desktop-win-vm':
+      case 'desktop-win':
+        {
+          $('.windows-instructions').removeClass('hide');
+          if ($('div:not(.windows-instructions)')) {
+            $('.instruction-panel div:not(.windows-instructions)').addClass('hide');
+        }
+        break;
+      }
+      default:
+        $('.generic-instructions').removeClass('hide');
+        if ($('div:not(.generic-instructions)')) {
+          $('.instruction-panel div:not(.generic-instructions').addClass('hide');
+        }
+        break;
     }
-    else if (ddVal.match(/^desktop-osx/)) {
-      $(this).attr('class', 'apple-dropdown-icon');
+    // Update data attribute value for style hooks
+    $(".dropdown dt a").attr('data-value', ddVal);
+    // Used to determine which download icon to show based on download selection
+    $('#target dt a').each(function() {
+      if (ddVal.match(/^desktop-win/)) {
+        $(this).attr('class', 'windows-dropdown-icon');
+      }
+      else if (ddVal.match(/^desktop-osx/)) {
+        $(this).attr('class', 'apple-dropdown-icon');
+      }
+      else if (ddVal.match(/^desktop-linux/)) {
+        $(this).attr('class', 'linux-dropdown-icon');
+      }
+      else {
+        $(this).attr('class', 'download-dropdown-icon');
+      }
+    })
+  });
+
+  // Case statement used to determine which file to download based on dropdown menu selection
+  $('#showSignUpModal').on('click', function(e) {
+    var altDdVal = $('dt.selected-download a').attr('data-value');
+    switch (altDdVal) {
+      case 'desktop-osx':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip')
+        break;
+      case 'desktop-win-64-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe')
+        break;
+      case 'desktop-win-64':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe')
+        break;
+      case 'desktop-win-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe')
+        break;
+        break;
+      case 'desktop-win':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe')
+        break;
+      case 'desktop-linux-64-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin')
+        break;
+      case 'desktop-linux-64':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin')
+        break;
+      case 'desktop-linux-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin')
+        break;
+      case 'desktop-linux':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin')
+        break;
+      case 'desktop-unix':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin')
+        break;
+      case 'desktop-hpux-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin')
+        break;
+      case 'desktop-hpux':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin')
+        break;
+      case 'desktop-solaris':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin')
+        break;
+      case 'desktop-aix-vm':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin')
+        break;
+      case 'desktop-aix':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin')
+        break;
+      case 'desktop-other':
+        $('#desktopDownload').modal('hide');
+        $('#signUpModal').modal('show');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar"></iframe>');
+        iFrameDl.prependTo($('body'));
+        $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar')
+        break;
     }
-    else if (ddVal.match(/^desktop-linux/)) {
-      $(this).attr('class', 'linux-dropdown-icon');
+    e.preventDefault();
+  });
+
+  // Add OS icons to various dropdown menu items
+  $('#target dd li:not(:first-child)').each(function() {
+    if ($(this).data('value').match(/^desktop-win/)) {
+      $(this).find('a').addClass('windows-dropdown-icon');
+    }
+    else if ($(this).data('value').match(/^desktop-osx/)) {
+      $(this).find('a').addClass('apple-dropdown-icon');
+    }
+    else if ($(this).data('value').match(/^desktop-linux/)) {
+      $(this).find('a').addClass('linux-dropdown-icon');
     }
     else {
-      $(this).attr('class', 'download-dropdown-icon');
-    }
-})
-});
-
-$('#showSignUpModal').on('click', function(e) {
-  var altDdVal = $('dt.selected-download a').attr('data-value');
-  switch (altDdVal) {
-    case 'desktop-osx':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-osx');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip')
-      break;
-    case 'desktop-win-64-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-win-64-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe')
-      break;
-    case 'desktop-win-64':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-win-64');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe')
-      break;
-    case 'desktop-win-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-win-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe')
-      break;
-      break;
-    case 'desktop-win':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-win');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe')
-      break;
-    case 'desktop-linux-64-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-linux-64-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin')
-      break;
-    case 'desktop-linux-64':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-linux-64');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin')
-      break;
-    case 'desktop-linux-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-linux-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin')
-      break;
-    case 'desktop-linux':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-linux');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin')
-      break;
-    case 'desktop-unix':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-unix');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin')
-      break;
-    case 'desktop-hpux-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-hpux-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin')
-      break;
-    case 'desktop-hpux':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-hpux');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin')
-      break;
-    case 'desktop-solaris':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-solaris');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin')
-      break;
-    case 'desktop-aix-vm':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-aix-vm');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin')
-      break;
-    case 'desktop-aix':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-aix');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin')
-      break;
-    case 'desktop-other':
-      $('#desktopDownload').modal('hide');
-      $('#signUpModal').modal('show');
-      console.log('desktop-other');
-      var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar"></iframe>');
-      // iFrameDl.prependTo($('body'));
-      $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar')
-      break;
-  }
-  e.preventDefault();
-});
-
-$('#target dd li:not(:first-child)').each(function() {
-  if ($(this).data('value').match(/^desktop-win/)) {
-    $(this).find('a').addClass('windows-dropdown-icon');
-  }
-  else if ($(this).data('value').match(/^desktop-osx/)) {
-    $(this).find('a').addClass('apple-dropdown-icon');
-  }
-  else if ($(this).data('value').match(/^desktop-linux/)) {
-    $(this).find('a').addClass('linux-dropdown-icon');
-  }
-  else {
-    $(this).find('a').addClass('download-dropdown-icon');
-  }
-});
-
-if (navigator.appVersion.indexOf("Mac")!=-1) {
-  $('#target dt a').attr('class', 'apple-dropdown-icon');
-}
-
-if (navigator.appVersion.indexOf("Win")!=-1) {
-  $('#target dt a').attr('class', 'windows-dropdown-icon');
-}
-
-$('#showDownloadDesktop').on('click', function(e) {
-  $('#desktopDownload').modal('show');
-  e.preventDefault();
-})
-
-$('#showDesktopMailingList').on('click', function(e) {
-  $('#desktopMailingList').modal('show');
-  e.preventDefault();
-})
-
-$('#showWebMailingList').on('click', function(e) {
-  $('#webMailingList').modal('show');
-  e.preventDefault();
-})
-
-$('#showAnnouncementMailingList').on('click', function(e) {
-  $('#webMailingList').modal('show');
-  e.preventDefault();
-})
-
-$('#signUpModal input').each(function() {
-
-  var defaultValue = this.value;
-
-  $(this).on('focus', function() {
-    if(this.value === defaultValue) {
-      this.value = '';
+      $(this).find('a').addClass('download-dropdown-icon');
     }
   });
 
-  $(this).on('blur', function() {
-    if(this.value === '') {
-      this.value = defaultValue;
+  // Initial item to have selected on dropdown menu based on OS
+  if (navigator.appVersion.indexOf("Mac")!=-1) {
+    $('#target dt a').attr('class', 'apple-dropdown-icon');
+  }
+
+  // Initial item to have selected on dropdown menu based on OS
+  if (navigator.appVersion.indexOf("Win")!=-1) {
+    $('#target dt a').attr('class', 'windows-dropdown-icon');
+  }
+
+  // Functionality to show Desktop Download Modal
+  $('.showDownloadDesktop').on('click', function(e) {
+    $('#desktopDownload').modal('show');
+    e.preventDefault();
+  })
+
+  // Functionality to show Desktop Mailing List Modal
+  $('#showDesktopMailingList').on('click', function(e) {
+    $('#desktopMailingList').modal('show');
+    e.preventDefault();
+  })
+
+  // Functionality to show Web Mailing List Modal
+  $('#showWebMailingList').on('click', function(e) {
+    $('#webMailingList').modal('show');
+    e.preventDefault();
+  })
+
+  // Functionality to show Announcement Mailing List Modal
+  $('#showAnnouncementMailingList').on('click', function(e) {
+    $('#announcementMailingList').modal('show');
+    e.preventDefault();
+  })
+
+  // Functionality to show Protege web Screenshots Modal
+  $('#showScreenShotsModalWeb').on('click', function(e) {
+    $('#screenShotsModalWeb').modal('show');
+    e.preventDefault();
+  })
+
+  // Functionality to show Protege desktop Screenshots Modal
+  $('#showScreenShotsModalDesktop').on('click', function(e) {
+    $('#screenShotsModalDesktop').modal('show');
+    e.preventDefault();
+  })
+
+  // Remove value attr from form fields on focus inside of modals.
+  // Add value attr back on blur
+  $('.modal input').each(function() {
+    var defaultValue = this.value;
+    $(this).on('focus', function() {
+      if(this.value === defaultValue) {
+        this.value = '';
+      }
+    });
+    $(this).on('blur', function() {
+      if(this.value === '') {
+        this.value = defaultValue;
+      }
+    });
+  })
+
+  // Remove value attr from texareas on focus inside of modals.
+  // Add value attr back on blur
+  $('.modal input').each(function() {
+    var defaultValue = this.value;
+    $('#signUpModal textarea').each(function() {
+      var defaultText = $(this).text();
+      $(this).on('focus', function() {
+        if(this.value === defaultText) {
+          this.value = '';
+        }
+      });
+      $(this).on('blur', function() {
+        if(this.value === '') {
+          this.value = defaultText;
+        }
+      });
+    })
+  })
+
+  // Add active states to hash based footer links
+  $('.sub-footer-nav li').on('click', function() {
+    if (window.location.hash === '#our-team') {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    } else if (window.location.hash === '#about-bmir') {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    } else if (window.location.hash === '#citing') {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+
     }
   });
 
-})
-
-$('#signUpModal textarea').each(function() {
-  var defaultText = $(this).text();
-  $(this).on('focus', function() {
-    if(this.value === defaultText) {
-      this.value = '';
+  // Don't allow courses table to grow past amount of courses listed
+  var tableHeight = $('.table').height();
+  $('#grow-table').on('click', function(e) {
+    if ($('.table-container').height() > tableHeight) {
+      return false;
+    } else {
+      $('.table-container').animate({'height': '+=165'});
     }
+    e.preventDefault();
+  })
+
+  // Autoplay shortcourse review carousel
+  $('#shortcourse-reviews').carousel({
+    interval: 15000
   });
 
-  $(this).on('blur', function() {
-    if(this.value === '') {
-      this.value = defaultText;
-    }
+  // Options for Twitter feed near footer
+  $('.twitterfeed').tweet({
+      modpath: 'twitter/',
+      username: 'protegeproject',
+      count: 1,
+      loading_text: 'loading',
+      template: '{text}{time}'
   });
-})
+
+  // Open social, tweet links and wiki link in new tab
+  $('.social-icons a, .twitterfeed a, .external-link').on('click', function() {
+    window.open(this.href);
+    return false;
+  });
+
+  // Interval for screenshots carousel
+  $('#webCarousel, #desktopCarousel').carousel({
+    interval: 3000
+  })
+
+  // Tooltip functionliaty on product pages
+  $('.tooltip-activate').hover(function() {
+    $(this).find('.tooltip').toggleClass('visually-hidden');
+  })
+
+  // Tab functionality under documentation section on support page
+  $('a[data-toggle="tab"]').on('shown', function (e) {
+    e.target // activated tab
+    e.relatedTarget // previous tab
+  })
+
+  // Expand/Collapse Blockquotes
+  $('.read-more').on('click', function(e) {
+    var blockquoteContext = $(this).prev();
+    var actualHeight = blockquoteContext[0].scrollHeight;
+    if (blockquoteContext.height() == 90) {
+      $(blockquoteContext).animate({height: actualHeight + 'px'});
+      $(this).text('Read Less...');
+      console.log('go forward');
+    } else {
+      $(blockquoteContext).animate({height: '90px'});
+      console.log('go back');
+      $(this).text('Read More...');
+    }
+    e.preventDefault();
+    return false;
+  });
+
+  $('.testimonials').carousel('pause')
+
+  $('a.gallery1').colorbox({rel: 'gallery1'});
+  $('a.gallery2').colorbox({rel: 'gallery2'});
 
 })(jQuery);

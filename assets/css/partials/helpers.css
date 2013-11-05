@@ -1,9 +1,5 @@
-.right {
-  float: right !important;
-}
-
-.hidden {
-  display: none;
+.upcase {
+  text-transform: uppercase;
 }
 
 .visually-hidden {
@@ -19,8 +15,12 @@
   clear: left;
 }
 
+.clearright {
+  clear: right;
+}
+
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .no-margin-top {
@@ -30,4 +30,16 @@
 .offset-heading {
   padding-top: 90px;
   margin-top: -90px;
+}
+
+p.loading {
+  background: url(../../img/ajax-loader.gif) no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: 53px;
 }

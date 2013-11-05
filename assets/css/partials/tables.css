@@ -1,7 +1,12 @@
+.table-container {
+  overflow-y: hidden;
+  clear: both;
+}
 .table {
   border-color: transparent;
-  margin-top: 40px;
+  margin-top: 5px;
   margin-bottom: 0;
+  overflow: hidden;
 }
 
 .table a {

@@ -1,5 +1,6 @@
 .navbar { 
   margin-bottom: 0; 
+  background: rgb(255,255,255);
   background: rgba(255,255,255,.9);
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
@@ -16,7 +17,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 997;
 }
 
 .navbar-wrapper.affix + .jumbotron {
@@ -46,29 +47,30 @@
   color: #db5e33;
 }
 
-.web-protege-nav li a {
-  color: #fff;
+.desktop-protege-nav li a, .web-protege-nav li a {
   font-weight: 600;
   font-size: 15px;
+  color: #2c3e50;
+}
+
+.web-protege-nav li a {
+  color: #fff;
+}
+
+.desktop-protege-nav li a:hover, .web-protege-nav li a:hover {
+  color: rgb(44,62,80);
+  color: rgba(44,62,80,.6);
+  text-decoration: none;
 }
 
 .web-protege-nav li a:hover {
-  text-decoration: none;
-  color: #6b7782;
+  color: rgb(255,255,255);
+  color: rgba(255,255,255,.5);
 }
 
-.web-protege-nav .pictogram {
+.desktop-protege-nav .pictogram, .web-protege-nav .pictogram {
   font-size: 2em;
   color: #db5e33;
   font-weight: normal;
   margin-right: 1.5%;
-}
-
-.web-protege-nav li:last-child .pictogram {
-  position: relative;
-  top: 3px;
-}
-
-.short-courses .map-course-container {
-  display: none;
 }

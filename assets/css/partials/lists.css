@@ -34,6 +34,7 @@
   background: url(../../img/green-check.png) no-repeat 0 6px;
   padding-left: 20px;
   margin-bottom: 15px;
+  font-style: italic;
 }
 
 .desktop .list-a li {

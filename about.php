@@ -21,7 +21,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="heading-a upcase no-margin offset-heading" id="our-team">Our Team</h2>
+        <h2 class="heading-a upcase no-margin" id="our-team">Our Team</h2>
       </div><!-- /end .col-12 -->
     </div><!-- /end .row -->
   </div><!-- /end .container -->
@@ -31,42 +31,42 @@
   <div class="container">
     <div class="row">
       <div class="col-3">
-        <a href="#" class="team-member text-center">
+        <a href="http://www.stanford.edu/~horridge/" class="team-member text-center external-link">
           <div class="matthew"></div>
           <h4 class="heading-a">Matthew Horridge, PhD</h4>
           <p><small class="type-b">Research Staff</small></p>
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3">
-        <a href="#" class="team-member text-center">
+        <a href="http://med.stanford.edu/profiles/Mark_Musen" class="team-member text-center external-link">
           <div class="mark"></div>
           <h4 class="heading-a">Mark Musen, MD, PhD</h4>
           <p><small class="type-b">Professor, Division Head</small></p>
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3">
-        <a href="#" class="team-member text-center">
+        <a href="http://www.stanford.edu/~natalya/" class="team-member text-center external-link">
           <div class="natasha"></div>
           <h4 class="heading-a">Natasha Noy, PhD</h4>
           <p><small class="type-b">Senior Research Scientist</small></p>
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3">
-        <a href="#" class="team-member text-center">
+        <a href="http://www.researchgate.net/profile/Csongor_Nyulas/" class="team-member text-center external-link">
           <div class="csongor"></div>
           <h4 class="heading-a">Csongor Nyulas, MSc</h4>
           <p><small class="type-b">Research Staff</small></p>
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3 col-offset-1 team-offset">
-        <a href="#" class="team-member text-center">
+        <a href="http://www.stanford.edu/~swt/" class="team-member text-center external-link">
           <div class="samson"></div>
           <h4 class="heading-a">Samson Tu, MSc</h4>
           <p><small class="type-b">Senior Research Scientist</small></p>
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3">
-        <a href="#" class="team-member text-center">
+        <a href="http://www.stanford.edu/~ttania/" class="team-member text-center external-link">
           <div class="tania"></div>
           <h4 class="heading-a">Tania Tudorache, PhD</h4>
           <p><small class="type-b">Research Scientist</small></p>
@@ -83,7 +83,7 @@
   </div><!-- /end .container -->
 </section><!-- /end .team -->
 
-<section class="about-bmir">
+<section class="about-bmir main-content">
   <div class="container">
     <div class="row">
     <div class="col-12">
@@ -93,7 +93,7 @@
       <hr class="ruler-a small">
     </div><!-- /end col-12 -->
     <div class="col-offset-1 col-10">
-      <p class="intro-b text-center">
+      <p class="intro-c text-center">
         At the Stanford Center for Biomedical Research (BMIR) we 
         develop cutting-edge ways to acquire, represent, and process 
         information about human health. Our work enables the Institute 
@@ -108,20 +108,20 @@
         clinical and translational research as well as patient care.
       </p>
       <p>
-        We develop and manage the <a href="#">Protégé system</a> for developing and maintaining 
-        ontologies, and the <a href="#">National Center for Biomedical Ontology</a>, which provides 
+        We develop and manage the <a class="external-link" href="http://protege.stanford.edu/">Protégé system</a> for developing and maintaining 
+        ontologies, and the <a class="external-link" href="http://www.bioontology.org/">National Center for Biomedical Ontology</a>, which provides 
         both a repository as well as Web services for clinicians and biomedical 
-        scientists to use ontologies. We assist the <a href="#">World Health Organization (WHO)</a>
+        scientists to use ontologies. We assist the <a class="external-link" href="http://www.who.int/">World Health Organization (WHO)</a>
         by creating the technological infrastructure for the development and dissemination 
-        of the <a href="#">International Classification of Diseases</a>, the <a href="#">International Classification 
+        of the <a class="external-link" href="http://www.who.int/classifications/icd/">International Classification of Diseases</a>, the <a class="external-link" href="http://www.who.int/mediacentre/news/notes/2010/trad_medicine_20101207/">International Classification 
         of Traditional Medicine</a>, and other ontologies. WHO has designated BMIR an official 
-        <a href="#">Collaborating Centre</a>.
+        <a class="external-link" href="http://www.who.int/collaboratingcentres/">Collaborating Centre</a>.
       </p>
     </div><!-- /end .col-6 -->
     <div class="col-6">
       <p>
-        BMIR faculty members and staff participate in the <a href="#">Stanford Biomedical Informatics (BMI)</a> graduate program, 
-        and we house the BMI program’s support staff. Through our <a href="#">Quantitative Sciences Unit</a>, we offer collaborative 
+        BMIR faculty members and staff participate in the <a class="external-link" href="http://bmi.stanford.edu/">Stanford Biomedical Informatics (BMI)</a> graduate program, 
+        and we house the BMI program’s support staff. Through our <a class="external-link" href="http://medicine.stanford.edu/research/quantitative_welcome.html">Quantitative Sciences Unit</a>, we offer collaborative 
         support on the application of techniques in biostatistics or biomedical informatics. We also offer short 
         courses, tutorials, and seminars on biomedical informatics and about technologies developed at BMIR.
       </p>
@@ -135,7 +135,7 @@
   </div><!-- /end .container -->
 </section><!-- /end .about-bmir -->
 
-<section class="citing">
+<section class="citing main-content">
   <div class="container">
     <div class="row">
       <div class="col-4">

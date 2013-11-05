@@ -1,3 +1,8 @@
 .newest-course .pictogram {
   margin-top: -20px;
 }
+
+#box .pictogram {
+  position: relative;
+  top: -8px;
+}

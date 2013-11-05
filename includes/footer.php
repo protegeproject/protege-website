@@ -1,26 +1,21 @@
 <section id="social">
   <div class="container">
 
-    <div class="row">
+    <div class="row disp-table">
 
-      <div class="col-2">
-        <span class="pictogram-social">&#62217;</span>
+      <div class="col-2 center-vertical">
+        <span class="pictogram-social main-twitter-icon"></span>
       </div><!-- /end .col-2 -->
 
-      <div class="col-7 tweet">
-        <p>
-          Discount room rates for <strong>#ProtegeShortCourse</strong> attendees expire soon 
-          (<a href="#"><strong>http://goo.gl/IduxwF</strong></a>)! Come build ontologies with us this September!
-        </p>
-        <span class="tweet-time upcase">5 Hours Ago</span>
-      </div><!-- /end .col-7 -->
+      <div class="col-9 tweet twitterfeed">
+      </div><!-- /end .col-7.tweet.twitterfeed -->
 
       <ul class="social-icons col-3">
         <p class="text-center upcase">Follow us on</p>
         <div class="row">
-          <li><a href="http://twitter.com/protegeproject" class="pictogram-social twitter-icon">&#62218;</a></li>
-          <li><a href="http://www.facebook.com/pages/Protege-Project/136205016405270" class="pictogram-social facebook-icon">&#62221;</a></li>
-          <li><a href="http://github.com/protegeproject" class="pictogram-social github-icon">&#62209;</a></li>
+          <li><a href="http://twitter.com/protegeproject" class="pictogram-social twitter-round-icon"></a></li>
+          <li><a href="http://www.facebook.com/pages/Protege-Project/136205016405270" class="pictogram-social facebook-round-icon"></a></li>
+          <li><a href="http://github.com/protegeproject" class="pictogram-social github-round-icon"></a></li>
         </div>
       </ul>
 
@@ -38,10 +33,10 @@
               <nav>
                 <h3 class="upcase">Protégé</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="products.php">Products</a></li>
-                  <li><a href="support.php">Support</a></li>
-                  <li><a href="community.php">Community</a></li>
+                  <li class="<?php echo ($currentPage == 'home' ? 'active' : '');?>"><a href="/protege">Home</a></li>
+                  <li class="<?php echo ($bodyClass == 'products' ? 'active' : '');?>"><a href="products.php">Products</a></li>
+                  <li class="<?php echo ($bodyClass == 'support' ? 'active' : '');?>"><a href="support.php">Support</a></li>
+                  <li class="<?php echo ($bodyClass == 'community' ? 'active' : '');?>"><a href="community.php">Community</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->
@@ -49,10 +44,10 @@
             <div class="col-2">
               <nav>
                 <h3 class="upcase">About</h3>
-                <ul>
-                  <li><a href="about.php#our-team">Our Team</a></li>
+                <ul class="sub-footer-nav">
+                  <li class="<?php echo ($bodyClass == 'about' ? 'active' : '');?>"><a href="about.php">Our Team</a></li>
                   <li><a href="about.php#about-bmir">BMIR</a></li>
-                  <li><a href="about.php#citing">Stanford</a></li>
+                  <li><a href="about.php#citing">Citing</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->
@@ -63,7 +58,7 @@
                 <p>Everything you didn’t know you needed to know about Protégé.</p>
                 <div class="row">
                   <div class="col-5">
-                    <a href="#" class="btn btn-b btn-block small upcase">Visit the Wiki</a>
+                    <a href="http://protegewiki.stanford.edu/wiki/Main_Page" class="btn btn-b btn-block small upcase external-link">Visit the Wiki</a>
                   </div><!-- /end .col-6 -->
                 </div><!-- /end .row -->
               </div><!-- /end .wiki-callout -->
@@ -79,18 +74,18 @@
               <p class="disclaimer">
                 <small>
                   Protégé is a national resource for biomedical ontologies and knowledge 
-                  bases supported by the National Institute of General Medical Sciences.
+                  bases supported by the <a href="http://www.nigms.nih.gov/" class="external-link">National Institute of General Medical Sciences</a>.
                 </small>
               </p>
               <p class="disclaimer">
                 <small>
-                  Protégé is a core component of The National Center for Biomedical Ontology.
+                  Protégé is a core component of <a href="http://www.bioontology.org/" class="external-link"> The National Center for Biomedical Ontology</a>.
                 </small>
               </p>
             </div><!-- /end .col-8 -->
 
             <div class="col-4 text-right">
-              <p class="stanford-logo">Stanford University</p>
+              <a href="http://www.stanford.edu" class="external-link"><p class="stanford-logo">Stanford University</p></a>
             </div><!-- /end .col-4.text-right -->
 
           </div><! --/end .row -->
@@ -104,6 +99,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyATdsmP1hwLCM1-VQnDB-bmTWnsURpZLeU&sensor=true"></script>
     <script src="assets/js/vendor/infobox.js"></script>
     <script src="assets/js/vendor/resize.js"></script>
+    <script src="twitter/jquery.tweet.js"></script>
+    <script src="assets/js/vendor/colorbox-min.js"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

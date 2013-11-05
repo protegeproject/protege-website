@@ -4,6 +4,8 @@
   margin: 0;
   border-bottom: 1px solid #60527e;
   min-height: 695px;
+  position: relative;
+  display: block;
 }
 
 .jumbotron h1 {
@@ -15,25 +17,21 @@
 
 .jumbotron p {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .jumbotron.home, .jumbotron.internal {
-  background: url(../../img/home-hero-image.jpg) no-repeat 0 0;
-  background: url(../../img/home-hero-image.jpg) no-repeat 0 0, -webkit-linear-gradient(left, #6d5d8d, #6f608f);
-  background-position: 50% 0;
-  padding: 280px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 .jumbotron.internal {
   padding: 160px 0 0 0;
-  min-height: 495px;
 }
 
 .jumbotron.internal h1 {
   font-size: 48px;
   line-height: 1.2;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .jumbotron.home h1 {
@@ -54,7 +52,69 @@
   width: 21%;
 }
 
+.jumbotron .home-cta {
+  position: relative;
+  z-index: 996;
+}
+
 .jumbotron.home .btn {
   margin-top: 5px;
 }
 
+.about .jumbotron {
+  background: #6d5d8d;
+  min-height: 495px;
+}
+
+.jumbotron.internal h1 {
+  position: relative;
+  z-index: 100;
+}
+
+.jumbotron.home:after, .about .jumbotron:after, .products .jumbotron:after,
+.support .jumbotron:after, .community .jumbotron:after, .short-courses .jumbotron:after {
+  content: "";
+  background: url(../../img/hero-home.jpg) no-repeat 0 0;
+  background-position: 50% 0;
+  opacity: .4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+  height: 694px;
+}
+
+.jumbotron.home {
+  height: 500px;
+  min-height: 500px;
+}
+
+.jumbotron.home:after {
+  height: 500px;
+}
+
+.about .jumbotron:after {
+  background: url(../../img/hero-about.jpg) no-repeat 50% 0;
+}
+
+.products .jumbotron, .support .jumbotron, .community .jumbotron, .short-courses .jumbotron {
+  min-height: 495px;
+}
+
+.products .jumbotron:after {
+  background: url(../../img/hero-products.jpg) no-repeat 50% 0;
+}
+
+.support .jumbotron:after {
+  background: url(../../img/hero-support.jpg) no-repeat 50% 0;
+}
+
+.community .jumbotron:after {
+  background: url(../../img/hero-community.jpg) no-repeat 50% 0;
+}
+
+.short-courses .jumbotron:after {
+  background: url(../../img/hero-short-courses.jpg) no-repeat 50% 0;
+}

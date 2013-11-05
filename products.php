@@ -17,15 +17,15 @@
 
 </div><!-- /end .jumbotron -->
 
-<div class="sub-header">
-  <div class="container">
-    <div class="row">
+<div class="sub-header main-content">
+  <div class="container" id="web-protege">
+    <div class="row protege-versions">
       <div class="col-2">
         <img src="assets/img/cloud-badge.png">
       </div><!-- /end .col-2 -->
       <div class="col-6">
         <p class="intro-a">
-          Talk about WebProtege, why people should use it, 
+          Talk about WebProtégé, why people should use it, 
           and probably some other information that would 
           push users into using this instead of the desktop 
           version.
@@ -40,43 +40,85 @@
         </p>
         <ul class="inline web-protege-nav">
           <li>
-            <a href="#">
-              <span class="pictogram">&#127748;</span>
+            <a href="assets/img/screenshots/webprotege-screenshot-1.jpg" class="gallery1 inline-link link-b">
+              <span class="pictogram pictures-icon"></span>
               Screenshots
             </a>
+            <a href="assets/img/screenshots/webprotege-screenshot-2.jpg" class="gallery1 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/webprotege-screenshot-3.jpg" class="gallery1 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/webprotege-screenshot-4.jpg" class="gallery1 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/webprotege-screenshot-5.jpg" class="gallery1 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/webprotege-screenshot-6.jpg" class="gallery1 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/webprotege-screenshot-7.jpg" class="gallery1 inline-link link-b hidden"></a>
           </li>
           <li class="tooltip-activate">
             <a href="#">
-              <span class="pictogram">&#128193;</span>
+              <span class="pictogram folder-icon"></span>
               Documentation
             </a>
               <div class="tooltip bottom visually-hidden">
                 <div class="tooltip-inner">
                   <ul>
-                    <li>
-                      <a href="#">
-                        <span>&raquo;</span>
-                        Link
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>&raquo;</span>
-                        Wiki Access
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>&raquo;</span>
-                        Website Linked
-                      </a>
-                    </li>
+                  <li>
+                    <a class="external-link" href="http://protegewiki.stanford.edu/wiki/WebProtege">
+                      <span>&raquo;</span>
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a class="external-link" href="http://protegewiki.stanford.edu/wiki/WebProtegeUsersGuide">
+                      <span>&raquo;</span>
+                      User's Guide
+                    </a>
+                  </li>
+                  <li>
+                    <a class="external-link" href="http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide">
+                      <span>&raquo;</span>
+                      Administrator's Guide
+                    </a>
+                  </li>
+                  <li>
+                    <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Main_Page">
+                      <span>&raquo;</span>
+                      Wiki Access
+                    </a>
+                  </li>
                   </ul>
                 </div><!-- /end .tooltip-inner -->
                 <div class="tooltip-arrow"></div>
               </div><!-- /end .tooltip -->
           </li><!-- /end .tool-tip-activate -->
-          <li><a href="#"><span class="pictogram">&#10133;</span>Resources</a></li>
+          <li class="tooltip-activate resources">
+            <a href="#">
+              <span class="pictogram plus-icon"></span>
+                Resources
+            </a>
+            <div class="tooltip bottom visually-hidden">
+              <div class="tooltip-inner">
+                <ul>
+                  <li>
+                    <a href="support.php#mailing-lists">
+                      <span>&raquo;</span>
+                      Mailing Lists
+                    </a>
+                  </li>
+                  <li>
+                    <a href="short-courses.php">
+                      <span>&raquo;</span>
+                      Short Courses
+                    </a>
+                  </li>
+                  <li>
+                    <a href="support.php#more-support">
+                      <span>&raquo;</span>
+                      Consulting
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- /end .tooltip-inner -->
+              <div class="tooltip-arrow"></div>
+            </div><!-- /end .tooltip -->
+          </li>
         </ul><!-- /end nav -->
       </div><!-- /end .col-6 -->
       <div class="col-4">
@@ -84,26 +126,26 @@
           <li>Cross compatible with desktop version</li>
           <li>Extensible plug-in architecture with custom-designed elements</li>
         </ul>
-        <a href="#" class="btn btn-b btn-xl btn-icon btn-block">
+        <a href="#" class="btn btn-b btn-xl btn-icon btn-block web-protege-btn">
           <div class="media">
             <div class="pull-left">
-              <span class="pictogram">&#9729;</span>
+              <span class="pictogram cloud-icon"></span>
             </div><!-- /end .pull-left -->
             <div class="media-body">
-              <h4>Use WebProtege</h4>
+              <h4>Use WebProtégé</h4>
               <span>Stanford Hosting Solution</span>
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
-        <a class="text-center link-a" href="#">Install Locally &raquo;</a>
+        <a class="text-center link-a local-install" href="#">Install Locally &raquo;</a>
       </div><!-- /end .col-4 -->
     </div><!-- /end .row -->
   </div><!-- /end .container -->
 </div><!-- /end .sub-header -->
 
-<section class="desktop">
-  <div class="container">
-    <div class="row">
+<section class="main-content">
+  <div class="container" id="desktop-protege">
+    <div class="row protege-versions">
       <div class="col-2">
         <img src="assets/img/desktop-badge.png">
       </div><!-- /end .col-2 -->
@@ -120,37 +162,35 @@
           Application Programming Interface (API) for building knowledge-based 
           tools and applications.
         </p>
-        <ul class="inline web-protege-nav">
-          <li>
-            <a href="#">
-              <span class="pictogram">&#127748;</span>
+        <ul class="inline desktop-protege-nav">
+           <li>
+            <a href="assets/img/screenshots/desktopprotege-screenshot-1.jpg" class="gallery2 inline-link link-b">
+              <span class="pictogram pictures-icon"></span>
               Screenshots
             </a>
+            <a href="assets/img/screenshots/desktopprotege-screenshot-2.jpg" class="gallery2 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/desktopprotege-screenshot-3.jpg" class="gallery2 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/desktopprotege-screenshot-4.jpg" class="gallery2 inline-link link-b hidden"></a>
+            <a href="assets/img/screenshots/desktopprotege-screenshot-5.jpg" class="gallery2 inline-link link-b hidden"></a>
           </li>
           <li class="tooltip-activate">
-            <a href="#">
-              <span class="pictogram">&#128193;</span>
+            <a href="#" class="inline-link link-b">
+              <span class="pictogram folder-icon"></span>
               Documentation
             </a>
               <div class="tooltip bottom visually-hidden">
                 <div class="tooltip-inner">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs#Getting_started_.2F_tutorials">
                         <span>&raquo;</span>
-                        Link
+                        Getting Started
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Main_Page">
                         <span>&raquo;</span>
                         Wiki Access
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>&raquo;</span>
-                        Website Linked
                       </a>
                     </li>
                   </ul>
@@ -158,7 +198,37 @@
                 <div class="tooltip-arrow"></div>
               </div><!-- /end .tooltip -->
           </li><!-- /end .tool-tip-activate -->
-          <li><a href="#"><span class="pictogram">&#10133;</span>Resources</a></li>
+          <li class="tooltip-activate resources">
+            <a href="#" class="inline-link link-b">
+              <span class="pictogram plus-icon"></span>
+              Resources
+            </a>              
+            <div class="tooltip bottom visually-hidden">
+              <div class="tooltip-inner">
+                <ul>
+                  <li>
+                    <a href="support.php#mailing-lists">
+                      <span>&raquo;</span>
+                      Mailing Lists
+                    </a>
+                  </li>
+                  <li>
+                    <a href="short-courses.php">
+                      <span>&raquo;</span>
+                      Short Courses
+                    </a>
+                  </li>
+                  <li>
+                    <a href="support.php#more-support">
+                      <span>&raquo;</span>
+                      Consulting
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- /end .tooltip-inner -->
+              <div class="tooltip-arrow"></div>
+            </div><!-- /end .tooltip -->
+          </li>
         </ul><!-- /end nav -->
       </div><!-- /end .col-6 -->
       <div class="col-4">
@@ -167,14 +237,14 @@
           <li>Extensible environment</li>
           <li>Active community</li>
         </ul>
-        <a href="#" id="showDownloadDesktop" class="btn btn btn-xl btn-icon btn-block desktop-download-btn">
+        <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn showDownloadDesktop">
           <div class="media">
             <div class="pull-left">
-              <span class="apple-icon"></span>
+              <span class="generic-download-icon"></span>
             </div><!-- /end .pull-left -->
             <div class="media-body">
-              <h4>Download for Mac OSX</h4>
-              <span>Protege Desktop 4.5</span>
+              <h4>Download for Desktop</h4>
+              <span>Protégé Desktop 4.5</span>
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
@@ -182,29 +252,29 @@
         <div id="desktopDownload" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="desktopDownloadLabel" aria-hidden="true">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel" class="heading-a upcase">Download Protege 4.3 Desktop</h3>
+            <h3 id="myModalLabel" class="heading-a upcase">Download Protégé 4.3 Desktop</h3>
           </div>
           <div class="modal-body">
             <div class="row">
               <div class="col-8">
                 <form id="desktop-download-form">
                   <select id="source">
-                    <option value="desktop-osx">Protege Desktop for Mac OSX</option>
-                    <option value="desktop-win-64-vm">Protege Desktop for Windows 64bit (with Java VM)</option>
-                    <option value="desktop-win-64">Protege Desktop for Windows 64bit (without Java VM)</option>
-                    <option value="desktop-win-vm">Protege Desktop for Windows (with Java VM)</option>
-                    <option value="desktop-win">Protege Desktop for Windows (without Java VM)</option>
-                    <option value="desktop-linux-64-vm">Protege Desktop for Linux 64bit (with Java VM)</option>
-                    <option value="desktop-linux-64">Protege Desktop for Linux 64bit (without Java VM)</option>
-                    <option value="desktop-linux-vm">Protege Desktop for Linux (with Java VM)</option>
-                    <option value="desktop-linux">Protege Desktop for Linux (without Java VM)</option>
-                    <option value="desktop-unix">Protege Desktop for Any UNIX Platform</option>
-                    <option value="desktop-hpux-vm">Protege Desktop for HPUX (with Java VM)</option>
-                    <option value="desktop-hpux">Protege Desktop for HPUX (without Java VM)</option>
-                    <option value="desktop-solaris">Protege Desktop for Solaris</option>
-                    <option value="desktop-aix-vm">Protege Desktop for AIX (with Java VM)</option>
-                    <option value="desktop-aix">Protege Desktop for AIX (without Java VM)</option>
-                    <option value="desktop-other">Protege Desktop for Other Java-enabled Platforms</option>
+                    <option value="desktop-osx">Protégé Desktop for Mac OSX</option>
+                    <option value="desktop-win-64-vm">Protégé Desktop for Windows 64bit (with Java VM)</option>
+                    <option value="desktop-win-64">Protégé Desktop for Windows 64bit (without Java VM)</option>
+                    <option value="desktop-win-vm">Protégé Desktop for Windows (with Java VM)</option>
+                    <option value="desktop-win">Protégé Desktop for Windows (without Java VM)</option>
+                    <option value="desktop-linux-64-vm">Protégé Desktop for Linux 64bit (with Java VM)</option>
+                    <option value="desktop-linux-64">Protégé Desktop for Linux 64bit (without Java VM)</option>
+                    <option value="desktop-linux-vm">Protégé Desktop for Linux (with Java VM)</option>
+                    <option value="desktop-linux">Protégé Desktop for Linux (without Java VM)</option>
+                    <option value="desktop-unix">Protégé Desktop for Any UNIX Platform</option>
+                    <option value="desktop-hpux-vm">Protégé Desktop for HPUX (with Java VM)</option>
+                    <option value="desktop-hpux">Protégé Desktop for HPUX (without Java VM)</option>
+                    <option value="desktop-solaris">Protégé Desktop for Solaris</option>
+                    <option value="desktop-aix-vm">Protégé Desktop for AIX (with Java VM)</option>
+                    <option value="desktop-aix">Protégé Desktop for AIX (without Java VM)</option>
+                    <option value="desktop-other">Protégé Desktop for Other Java-enabled Platforms</option>
                   </select>
                 </form>
               </div><!-- /end .col-9 -->
@@ -279,30 +349,29 @@
                       Your download should start in a couple 
                       of seconds. If it doesn’t, <a class="alt-download" href="#">click here</a>.
                     </h3>
-                    <p>In the meantime... why not sign up as a Protege User? Registered users immediately get:</p>
+                    <p>In the meantime... why not sign up as a Protégé user? Registered users immediately get:</p>
                     <ul class="list-a">
                       <li>Basic online support</li>
-                      <li>Subscription to our newsletter</li>
                     </ul>
                   </div><!-- /end .col-6 -->
                   <div class="col-6">
-                    <form>
+                    <form method="POST" action="http://protege.stanford.edu/smi-protege-bin/reg.cgi">
                       <label>Name</label>
-                      <input type="text" value="Enter your name">
+                      <input type="text" name="name" value="Enter your name">
                       <label>Email</label>
-                      <input type="email" value="Enter your email">
+                      <input type="text" name="email" value="Enter your email">
                       <label>How did you hear about us?</label>
-                      <input type="text" value="Friend, colleague, newspaper, ad, etc">
+                      <input type="text" name="reffered" value="Colleague, Web search, conference, etc">
                       <div class="half first">
                         <label>Project URL</label>
-                        <input type="text" value="http://">
+                        <input type="text" name="url" value="http://">
                       </div><!-- /end .half -->
                       <div class="half">
                         <label>Affiliation</label>
-                        <input type="text" value="What's your role?">
+                        <input type="text" name="affiliation" value="What's your role?">
                       </div><!-- /end .half -->
                       <label>Project Description</label>
-                      <textarea>A few words about your project...</textarea>
+                      <textarea name="project">A few words about your project...</textarea>
                       <button type="submit" class="btn btn-b pull-right">Sign Up</button>
                     </form>
                   </div><!-- /end .col-6 -->
@@ -313,20 +382,51 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <a class="text-center link-b" href="#">Other downloads &raquo;</a>
+      <div class="tooltip-activate">
+        <a class="text-center link-b external-link" href="#">Other downloads &raquo;</a>
+        <div class="tooltip bottom visually-hidden other-downloads">
+          <div class="tooltip-inner">
+            <ul>
+            <li>
+              <a href="http://protege.stanford.edu/download/protege/4.3/osx/protege-4.3.0-304.zip">
+                <span>&raquo;</span>
+                OS X App Bundle
+              </a>
+            </li>
+            <li>
+              <a href="http://protege.stanford.edu/download/protege/4.3/zip/protege-4.3.0-304.zip">
+                <span>&raquo;</span>
+                ZIP file
+              </a>
+            </li>
+            <li>
+              <a class="showDownloadDesktop" href="#">
+                <span>&raquo;</span>
+                Other platforms
+              </a>
+            </li>
+            <li>
+              <a class="external-link" href="http://protege.stanford.edu/download/registered.html">
+                <span>&raquo;</span>
+                Older versions
+              </a>
+            </li>
+            </ul>
+          </div><!-- /end .tooltip-inner -->
+          <div class="tooltip-arrow"></div>
       </div><!-- /end .col-4 -->
+    </div>
     </div><!-- /end .row -->
   </div><!-- /end .container -->
 </section><!-- /end .features -->
   
 </div><!-- /end .container -->
-<hr class="ruler-a">
-
-<section class="support">
+<hr class="ruler-a no-margin">
+<section class="support main-content">
   <div class="container"> 
     <hgroup class="text-center">
-      <h1 class="upcase">Need Support?</h1>
-      <h2 class="heading-c">Get assistance from the very same people that make Protege</h2>
+      <h1 class="heading-a upcase no-margin">Need Support?</h1>
+      <h2 class="heading-c">Get assistance from the very same people that make Protégé</h2>
     </hgroup>
 
     <div class="row">
@@ -337,7 +437,7 @@
           Cras mattis consectetur purus sit amet fermentum. Praesent 
           commodo cursus magna.
         </p>
-        <a href="#" class="btn btn-d btn-med">Learn More</a>
+        <a href="support.php#mailingListSupport" class="btn btn-d btn-med upcase no-margin">Learn More</a>
       </div><!-- /end .col-4 -->
       <div class="col-4">
         <h3 class="heading-c">Documentation</h3>
@@ -346,17 +446,17 @@
           condimentum nibh, ut fermentum massa justo sit amet risus. 
           risus Praesent commodo cursus magna, vel scelerisque nisl.
         </p>
-        <a href="#" class="btn btn-d btn-med">Learn More</a>
+        <a href="support.php#documentationSupport" class="btn btn-d btn-med upcase no-margin">Learn More</a>
       </div><!-- /end .col-4 -->
       <div class="col-4">
         <h3 class="heading-c">Short Courses</h3>
-        <span class="course-raquo">&raquo;</span><a href="shortcourses.php" class="link-c">Protégé Short Course</a>
+        <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
         <p>
           A comprehensive 4-day course on building ontologies, knowledge 
           bases, and applications using Protégé (covers both frame-based 
           and OWL ontologies).
         </p>
-        <span class="course-raquo">&raquo;</span><a href="#" class="link-c">Protégé-OWL Short Course</a>
+        <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé-OWL Short Course</a>
         <p>
           An intensive 2-day introduction to developing OWL ontologies and 
           Semantic Web applications using Protégé-OWL.
@@ -367,4 +467,3 @@
   </div><!-- /end .container -->
 </section>
 <?php include 'includes/footer.php' ?>
-

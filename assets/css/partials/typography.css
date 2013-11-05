@@ -1,5 +1,4 @@
-/* PROXIMA */
-
+/* ------------PROXIMA------------ */
 /* Regular */
 @font-face {
     font-family: 'Proxima Nova';
@@ -72,8 +71,7 @@
     font-style: italic;
 }
 
-/* BRANDON */
-
+/* ------------BRANDON------------ */
 /* Medium */
 @font-face {
     font-family: 'Brandon Grotesque';
@@ -99,16 +97,15 @@
 }
 
 
-/* KLINIC */
-
+/* ------------KLINIC------------ */
 /* Book Italic */
 @font-face {
     font-family: 'Klinic Slab';
-    src: url('../../klinicslabbookit-webfont.eot');
-    src: url('../../klinicslabbookit-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../klinicslabbookit-webfont.woff') format('woff'),
-         url('../../klinicslabbookit-webfont.ttf') format('truetype'),
-         url('../../klinicslabbookit-webfont.svg#klinic_slabbook_italic') format('svg');
+    src: url('../../fonts/klinicslabbookit-webfont.eot');
+    src: url('../../fonts/klinicslabbookit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/klinicslabbookit-webfont.woff') format('woff'),
+         url('../../fonts/klinicslabbookit-webfont.ttf') format('truetype'),
+         url('../../fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -125,32 +122,6 @@
     font-style: italic;
 }
 
-/* ENTYPO */
-
-/* Icon Font */
-@font-face {
-    font-family: 'Entypo';
-    src: url('../../fonts/entypo.eot');
-    src: url('../../fonts/entypo.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/entypo.woff') format('woff'),
-         url('../../fonts/entypo.ttf') format('truetype'),
-         url('../../fonts/entypo.svg#entypo') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Social Icon Font */
-@font-face {
-    font-family: 'Entypo Social';
-    src: url('../../fonts/entypo-social.eot');
-    src: url('../../fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/entypo-social.woff') format('woff'),
-         url('../../fonts/entypo-social.ttf') format('truetype'),
-         url('../../fonts/entypo-social.svg#entypo') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
   font-family: 'Proxima Nova', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
@@ -158,9 +129,83 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Base link styles */
 a {
-  transition:color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -webkit-transition: color .15s ease-in-out;
+  outline: none;
 }
+
+a:active {
+  outline: none;
+}
+
+/* Various link style types */
+.link-a, .link-b, .link-c, .link-d {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.link-a {
+  color: #fff;
+}
+
+.link-a:hover {
+  color: rgba(255,255,255,.4);
+  text-decoration: none;
+}
+
+.link-b {
+  color: #2c3e50;
+}
+
+.link-b:hover {
+  color: rgb(44,62,80);
+  color: rgba(44,62,80,.6);
+  text-decoration: none;
+}
+
+.link-c, .offset-raquo {
+  color: #3498db;
+  font-family: "Klinic Slab", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0;
+  display: inline;
+  font-style: italic;
+}
+
+.link-d {
+  font-weight: 500;
+  color: #415161;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  opacity: .6;
+}
+
+.link-c:hover {
+  color: #2d73a1;
+}
+
+.inline-link {
+  display: inline !important;
+}
+
+/* raquo styles (usually assocaited with a link) */
+.offset-raquo {
+  font-weight: 700;
+  margin-right: 8px;
+  margin-left: -16px;
+  font-size: 15px;
+  position: relative;
+  top: -1px;
+}
+
+/* <strong> styles */
 
 strong {
   font-weight: 700;
@@ -173,6 +218,15 @@ strong.bold-a {
   letter-spacing: 1px;
 }
 
+strong.bold-a a {
+  color: inherit;
+}
+
+strong.bold-a a:hover {
+  color: #ac6e22;
+}
+
+/* <em> and <i> styles */
 em {
   font-weight: 600;
   font-style: italic;
@@ -189,6 +243,7 @@ i {
     font-style: italic;
 }
 
+/* <small> and <big> styles */
 small {
   font-size: .75em;
 }
@@ -207,6 +262,7 @@ big.type-b {
   font-weight: 500;
   display: block;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 small.type-a, small.type-b {
@@ -224,18 +280,25 @@ small.type-b {
   color: #959ea7;
 }
 
+/* Headline styles <h1> - <h6> */
 h1 {
-    font-family: 'Brandon Grotesque', Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Brandon Grotesque', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1.heading-a {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 30px;
 }
 
 h2, h3 {
-    font-family: 'Klinic Slab', Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-weight: 500;
+  font-family: 'Klinic Slab', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 500;
 }
 
-h2.heading-a, h2.heading-b, h2.heading-c {
+h2.heading-a, h2.heading-b, h2.heading-c, h2.heading-d {
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -255,7 +318,13 @@ h2.heading-c {
   font-weight: 300;
 }
 
-h3.heading-a, h3.heading-b, h3.heading-c, h3.heading-d {
+h2.heading-d {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 300;
+}
+
+h3.heading-a, h3.heading-b, h3.heading-c, h3.heading-d, h3.heading-e {
   font-size: 16px;
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: 700;
@@ -279,7 +348,19 @@ h3.heading-d {
   font-family: "Klinic Slab", sans-serif;
   font-size: 36px;
   line-height: 40px;
-  font-weight: 300;
+  font-weight: 500;
+}
+
+h3.heading-e {
+  font-family: "Klinic Slab", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ce842d;
+  line-height: 32px;
+}
+
+#myModalLabel h3.heading-a {
+  color: #222;
 }
 
 h4.heading-a {
@@ -287,6 +368,8 @@ h4.heading-a {
   font-size: 17px;
   font-weight: 500;
 }
+
+/* <p> styles */
 
 p {
   margin-bottom: 25px;
@@ -297,6 +380,31 @@ p.para-a {
   color: #415161;
 }
 
+/* paragraph based intro styles */
+
+.intro-a, .intro-b, .intro-c {
+  font-family: "Klinic Slab", serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.intro-b {
+  color: #545454;
+}
+
+.intro-c {
+  color: #3e4144;
+  font-weight: 500;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 30px;
+  margin-bottom: 40px !important;
+}
+
+/* <hr> styles */
 hr {
   border-top: 1px solid #525d68;
 }
@@ -313,6 +421,7 @@ hr.medium {
   width: 20%;
 }
 
+/* <blockquote> styles */
 blockquote.quote-a, blockquote.quote-b {
   padding: 0;
   margin: 0;
@@ -323,98 +432,143 @@ blockquote.quote-a, blockquote.quote-b {
   line-height: 30px;
 }
 
+
 blockquote.quote-b {
   font-size: 22px;
   color: #7f65b4;
   font-weight: 500;
+  font-style: italic;
 }
 
-.upcase {
-  text-transform: uppercase;
+/* Base icon styles */
+
+.open-map-icon {
+  background: url(../../img/custom-map-marker.png) no-repeat 0 0;
+  width: 16px;
+  height: 25px;
 }
 
-.link-a, .link-b, .link-c, .link-d {
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  font-weight: 600;
-  margin-top: 25px;
-}
-
-.link-a {
-  color: rgba(255,255,255,.4);
-}
-
-.link-a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.link-b {
-  color: #2c3e50;
-  color: rgba(44,62,80,.6);
-}
-
-.link-b:hover {
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-.link-c, .course-raquo {
-  color: #3498db;
-  font-family: "Klinic Slab", serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 0;
-  display: inline;
-}
-
-.link-d {
-  font-weight: 500;
-  color: #415161;
-  letter-spacing: 1px;
-  margin-top: 20px;
-}
-
-.link-c:hover {
-  color: #3498db;
-}
-
-.course-raquo {
-  font-weight: 700;
-  margin-right: 8px;
-  margin-left: -16px;
-  font-size: 15px;
-  position: relative;
-  top: -1px;
-}
-
-.pictogram, .pictogram-social {
-  position: relative;
-  top: 1px;
-  font-size: 48px;
+.left-arrow, .right-arrow {
+  background: url(../../img/left-arrow.png) no-repeat 0 0;
+  width: 14px;
+  height: 26px;
   display: inline-block;
-  font-family: 'Entypo';
-  -webkit-font-smoothing: antialiased;
-  line-height: 1;
+  transition: all .2s ease-in-out;
+  margin-top: -20px;
 }
 
-.pictogram-social {
-  font-family: "Entypo Social";
+.left-arrow:hover, .right-arrow:hover {
+  opacity: .6;
 }
 
-.intro-a, .intro-b {
-  font-family: "Klinic Slab", serif;
-  font-weight: 500;
-  color: #fff;
-  font-size: 21px;
-  margin-bottom: 20px;
+.right-arrow {
+  background: url(../../img/right-arrow.png) no-repeat 0 0;
 }
 
-.intro-b {
-  color: #545454;
+.calendar-icon {
+  background: url(../../img/calendar-icon.png) no-repeat 0 0;
+  width: 15px;
+  height: 16px;
+  position: relative;
+  left: 12px;
+  top: 2px;
 }
 
-#myModalLabel {
-  color: #222;
+.map-icon {
+  background: url(../../img/small-map-marker.png) no-repeat 0 0;
+  width: 10px;
+  height: 16px;
+  position: relative;
+  left: 15px;
+  top: 2px;
+}
+
+.quote-icon {
+  background: url(../../img/icon-quote.png) no-repeat 0 0;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+}
+
+.main-twitter-icon {
+  background: url(../../img/main-twitter-icon.png) no-repeat 0 0;
+  width: 50px;
+  height: 41px;
+  display: inline-block;
+}
+
+.twitter-round-icon, .facebook-round-icon, .github-round-icon {
+  background: url(../../img/twitter-round-icon.png) no-repeat 0 0;
+  width: 40px;
+  height: 41px;
+  display: inline-block;
+}
+
+.facebook-round-icon {
+  background: url(../../img/facebook-round-icon.png) no-repeat 0 0;
+}
+
+.github-round-icon {
+  background: url(../../img/github-round-icon.png) no-repeat 0 0;
+}
+
+.cloud-icon {
+  background: url(../../img/cloud-icon.png) no-repeat 0 0;
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.pictures-icon {
+  background: url(../../img/pictures-icon.png) no-repeat 0 0;
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+}
+
+.folder-icon {
+  background: url(../../img/folder-icon.png) no-repeat 0 0;
+  width: 17px;
+  height: 14px;
+  display: inline-block;
+}
+
+.plus-icon {
+  background: url(../../img/plus-icon.png) no-repeat 0 0;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.twitter-icon-fade, .facebook-icon-fade, .github-icon-fade {
+  background: url(../../img/washed-twitter-bird.png) no-repeat 0 0;
+  width: 44px;
+  height: 37px;
+  display: inline-block;
+  margin-top: -13px;
+}
+
+.facebook-icon-fade {
+  background: url(../../img/facebook-icon-fade.png) no-repeat 0 0;
+  width: 16px;
+  height: 34px;
+  display: inline-block;
+}
+
+.github-icon-fade {
+  background: url(../../img/github-icon-fade.png) no-repeat 0 0;
+  width: 34px;
+  height: 29px;
+  display: inline-block;
+}
+
+.disp-table {
+  display: table;
+}
+
+.center-vertical {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
 }
