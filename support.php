@@ -1,21 +1,23 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron internal bordered">
+<div class="jumbotron-container">
+  <div class="jumbotron internal bordered">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1>
-          This paragraph should introduce the user to the different
-          support options available, without giving much detail yet; 
-          we’ll be more specific below.
-        </h1>
-      </div><!-- /end .col-10 -->
-    </div><!-- /end .row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <h1>
+            This paragraph should introduce the user to the different
+            support options available, without giving much detail yet; 
+            we’ll be more specific below.
+          </h1>
+        </div><!-- /end .col-10 -->
+      </div><!-- /end .row -->
 
-  </div><!-- /end .container -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="sub-header main-content" id="mailing-lists">
   <div class="container offset-heading" id="mailingListSupport">

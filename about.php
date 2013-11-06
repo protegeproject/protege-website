@@ -1,21 +1,23 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron internal">
+<div class="jumbotron-container">
+  <div class="jumbotron internal">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1>
-          Protégé was developed by Stanford Center for 
-          Biomedical Informatics Research at the Stanford 
-          University School of Medicine.
-        </h1>
-      </div><!-- /end .col-10 -->
-    </div><!-- /end .row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <h1>
+            Protégé was developed by Stanford Center for 
+            Biomedical Informatics Research at the Stanford 
+            University School of Medicine.
+          </h1>
+        </div><!-- /end .col-10 -->
+      </div><!-- /end .row -->
 
-  </div><!-- /end .container -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="sub-header">
   <div class="container">

@@ -20,7 +20,7 @@
   z-index: 997;
 }
 
-.navbar-wrapper.affix + .jumbotron {
+.navbar-wrapper.affix + .jumbotron-container {
   margin-top: 62px;
 }
 

@@ -1,23 +1,25 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron internal">
+<div class="jumbotron-container">
+  <div class="jumbotron internal">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1>
-          Interested in the Semantic Web and the latest semantic technologies? 
-        </h1>
-        <h2 class="heading-d">
-          Join us at a Protégé Short Course to learn about the Web Ontology Language (OWL)
-          and building ontologies with the Protégé toolset.
-        </h2>
-      </div><!-- /end .col-10 -->
-    </div><!-- /end .row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <h1>
+            Interested in the Semantic Web and the latest semantic technologies? 
+          </h1>
+          <h2 class="heading-d">
+            Join us at a Protégé Short Course to learn about the Web Ontology Language (OWL)
+            and building ontologies with the Protégé toolset.
+          </h2>
+        </div><!-- /end .col-10 -->
+      </div><!-- /end .row -->
 
-  </div><!-- /end .container -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="newest-course hide">
   <div class="container">

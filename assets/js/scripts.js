@@ -242,28 +242,28 @@
       case 'desktop-osx':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip')
         break;
       case 'desktop-win-64-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/VM/install_protege_4.3.exe')
         break;
       case 'desktop-win-64':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows_64bit/NoVM/install_protege_4.3.exe')
         break;
       case 'desktop-win-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe')
         break;
@@ -271,84 +271,84 @@
       case 'desktop-win':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/NoVM/install_protege_4.3.exe')
         break;
       case 'desktop-linux-64-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/VM/install_protege_4.3.bin')
         break;
       case 'desktop-linux-64':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux_64bit/NoVM/install_protege_4.3.bin')
         break;
       case 'desktop-linux-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/VM/install_protege_4.3.bin')
         break;
       case 'desktop-linux':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Linux/NoVM/install_protege_4.3.bin')
         break;
       case 'desktop-unix':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Unix/install_protege_4.3.bin')
         break;
       case 'desktop-hpux-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/VM/install_protege_4.3.bin')
         break;
       case 'desktop-hpux':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/HPUX/NoVM/install_protege_4.3.bin')
         break;
       case 'desktop-solaris':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Solaris/NoVM/install_protege_4.3.bin')
         break;
       case 'desktop-aix-vm':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/VM/install_protege_4.3.bin')
         break;
       case 'desktop-aix':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/AIX/NoVM/install_protege_4.3.bin')
         break;
       case 'desktop-other':
         $('#desktopDownload').modal('hide');
         $('#signUpModal').modal('show');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar"></iframe>');
         iFrameDl.prependTo($('body'));
         $('.alt-download').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Java/install_protege_4.3.jar')
         break;
@@ -469,10 +469,13 @@
   });
 
   // Don't allow courses table to grow past amount of courses listed
-  var tableHeight = $('.table').height();
   $('#grow-table').on('click', function(e) {
-    if ($('.table-container').height() > tableHeight) {
-      return false;
+    var tableHeight = $('.table').height();
+    var tableContainerHeight = $('.table-container').height();
+    console.log(tableHeight);
+    console.log(tableContainerHeight);
+    if ($('.table-container').height() > tableHeight - 165) {
+      $('.table-container').animate({'height': tableHeight + 'px'});
     } else {
       $('.table-container').animate({'height': '+=165'});
     }

@@ -1,21 +1,23 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron internal bordered">
+<div class="jumbotron-container">
+  <div class="jumbotron internal bordered">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1>
-          Protégé is a free, open-source platform that provides a growing 
-          user community with a suite of tools to construct domain models 
-          and knowledge-based applications with ontologies.
-        </h1>
-      </div><!-- /end .col-10 -->
-    </div><!-- /end .row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <h1>
+            Protégé is a free, open-source platform that provides a growing 
+            user community with a suite of tools to construct domain models 
+            and knowledge-based applications with ontologies.
+          </h1>
+        </div><!-- /end .col-10 -->
+      </div><!-- /end .row -->
 
-  </div><!-- /end .container -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="sub-header main-content">
   <div class="container" id="web-protege">
@@ -126,7 +128,7 @@
           <li>Cross compatible with desktop version</li>
           <li>Extensible plug-in architecture with custom-designed elements</li>
         </ul>
-        <a href="#" class="btn btn-b btn-xl btn-icon btn-block web-protege-btn">
+        <a href="http://webprotege.stanford.edu" class="btn btn-b btn-xl btn-icon btn-block web-protege-btn external-link">
           <div class="media">
             <div class="pull-left">
               <span class="pictogram cloud-icon"></span>

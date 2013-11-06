@@ -6,6 +6,13 @@
   min-height: 695px;
   position: relative;
   display: block;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.jumbotron-container {
+  background: #2c3e50;
+  position: relative;
 }
 
 .jumbotron h1 {
@@ -117,4 +124,5 @@
 
 .short-courses .jumbotron:after {
   background: url(../../img/hero-short-courses.jpg) no-repeat 50% 0;
+  opacity: .3;
 }

@@ -1,35 +1,37 @@
 <?php include 'includes/header.php' ?>
 <?php $currentPage = 'home' ?>
 
-<div class="jumbotron home">
+<div class="jumbotron-container">
+  <div class="jumbotron home">
 
-  <div class="container home-cta">
-    <div class="row">
-      <div class="col-10">
-        <h1>A free, open-source ontology editor and framework for building intelligent systems</h1>
-      </div><!-- /end .col-10 -->
-      <div class="col-8">
-        <p>
-          Protégé is supported by a strong community of academic, government, and corporate users, 
-          who use Protégé to build knowledge-based solutions in areas as diverse as biomedicine, 
-          e-commerce, and organizational modeling.
-        </p>
-      </div><!-- /end .col-8 -->
-    </div><!-- /end .row -->
+    <div class="container home-cta">
+      <div class="row">
+        <div class="col-10">
+          <h1>A free, open-source ontology editor and framework for building intelligent systems</h1>
+        </div><!-- /end .col-10 -->
+        <div class="col-8">
+          <p>
+            Protégé is supported by a strong community of academic, government, and corporate users, 
+            who use Protégé to build knowledge-based solutions in areas as diverse as biomedicine, 
+            e-commerce, and organizational modeling.
+          </p>
+        </div><!-- /end .col-8 -->
+      </div><!-- /end .row -->
 
-    <div class="row">
-      <div class="col-3">
-        <a href="products.php#desktop-protege" class="btn btn-b btn-lg btn-block upcase">Download Now</a>
-      </div><!-- /end .col-3 -->
+      <div class="row">
+        <div class="col-3">
+          <a href="products.php#desktop-protege" class="btn btn-b btn-lg btn-block upcase">Download Now</a>
+        </div><!-- /end .col-3 -->
 
-      <div class="col-3">
-        <a href="products.php#web-protege" class="btn btn-c btn-lg btn-block upcase">Use webProtégé</a>
-      </div><!-- /end .col-3 -->
+        <div class="col-3">
+          <a href="products.php#web-protege" class="btn btn-c btn-lg btn-block upcase">Use webProtégé</a>
+        </div><!-- /end .col-3 -->
 
-    </div><!-- /end .row -->
-  </div><!-- /end .container -->
+      </div><!-- /end .row -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="sub-header">
   <div class="container">

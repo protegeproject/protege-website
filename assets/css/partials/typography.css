@@ -504,12 +504,24 @@ blockquote.quote-b {
   display: inline-block;
 }
 
+.twitter-round-icon:hover {
+  background: url(../../img/twitter-round-icon.png) no-repeat 0 -41px;
+}
+
 .facebook-round-icon {
   background: url(../../img/facebook-round-icon.png) no-repeat 0 0;
 }
 
+.facebook-round-icon:hover {
+  background: url(../../img/facebook-round-icon.png) no-repeat 0 -41px;
+}
+
 .github-round-icon {
   background: url(../../img/github-round-icon.png) no-repeat 0 0;
+}
+
+.github-round-icon:hover {
+  background: url(../../img/github-round-icon.png) no-repeat 0 -41px;
 }
 
 .cloud-icon {

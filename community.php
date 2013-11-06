@@ -1,21 +1,23 @@
 <?php include 'includes/header.php' ?>
 
-<div class="jumbotron internal">
+<div class="jumbotron-container">
+  <div class="jumbotron internal">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1>
-          Some text talking about this community page. Remember 
-          this has to be kind of short and to the point, probably 
-          3-4 lines should be enough.
-        </h1>
-      </div><!-- /end .col-10 -->
-    </div><!-- /end .row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <h1>
+            Some text talking about this community page. Remember 
+            this has to be kind of short and to the point, probably 
+            3-4 lines should be enough.
+          </h1>
+        </div><!-- /end .col-10 -->
+      </div><!-- /end .row -->
 
-  </div><!-- /end .container -->
+    </div><!-- /end .container -->
 
-</div><!-- /end .jumbotron -->
+  </div><!-- /end .jumbotron -->
+</div><!-- /end .jumbotron-container -->
 
 <div class="sub-header">
   <div class="container">
