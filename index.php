@@ -126,7 +126,7 @@
           <div class="media-body">
             <blockquote class="quote-a">
               <span>
-                We use WebProtégé in <a href="http://www.thezfiles.co.za/ROMULUS/">ROMULUS</a>, 
+                We use WebProtégé in <a href="http://www.thezfiles.co.za/ROMULUS/" class="external-link">ROMULUS</a>, 
                 a repository of interchangeable foundational ontologies. ROMULUS allows users 
                 to browse foundational ontologies online without the need to install software.
               </span>
