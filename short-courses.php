@@ -25,7 +25,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <p class="no-margin para-a pull-left"><strong class="upcase bold-a">New Protégé Course:</strong> March 26-28 @ Stanford University - Stanford, CA.</p>
+        <p class="no-margin para-a pull-left"><strong class="upcase bold-a">New Protégé Course:</strong> March 26-28 @ Stanford University - Stanford, CA</p>
       </div><!-- /end .col-12 -->
     <a href="#" class="pull-right open-map">Find out more &raquo;</a>
     </div><!-- /end .row -->
