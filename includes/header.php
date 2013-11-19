@@ -59,7 +59,7 @@
       <div class="container">
 
         <div class="navbar-header">	
-          <a class="navbar-brand" href="/protege"><span>protégé</span></a>
+          <a class="navbar-brand" href="/"><span>protégé</span></a>
         </div><!-- /end .navbar-header -->
 
         <ul class="nav navbar-nav navbar-right">
