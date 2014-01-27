@@ -252,14 +252,7 @@
         <h3 class="heading-c">Short Courses</h3>
         <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
         <p>
-          A comprehensive 4-day course on building ontologies, knowledge 
-          bases, and applications using Protégé (covers both frame-based 
-          and OWL ontologies).
-        </p>
-        <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé-OWL Short Course</a>
-        <p>
-          An intensive 2-day introduction to developing OWL ontologies and 
-          Semantic Web applications using Protégé-OWL.
+          A 3-day intensive training in hands-on use of the Prot&eacute;g&eacute; toolset, ontology development, and the Web Ontology Language (OWL).
         </p>
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate">
@@ -267,10 +260,9 @@
         <span><em class="ital-a">(fee: $1,500/year)</em></span>
         <ul class="list-b">
           <li>40 hours consulting</li>
-          <li>2 tickets to the annual Protégé Conf</li>
+          <li>2 tickets to the Protégé Conference</li>
           <li>Protégé coffee mug and t-shirt</li>
-          <li>2 tickets to the annual Protégé Conf</li>
-          <li>Recognition on our application’s About Box and on our website’s About Page</li>
+          <li>Recognition in the Prot&eacute;g&eacute; Desktop application's About Box</li>
         </ul>
         <a href="mailto:protege-affiliates@lists.stanford.edu" class="btn btn-d btn-med upcase">Contact Support</a>
       </div><!-- /end .col-4 -->
