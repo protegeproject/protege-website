@@ -2,20 +2,17 @@
 
 <div class="jumbotron-container">
   <div class="jumbotron internal bordered">
-
     <div class="container">
       <div class="row">
         <div class="col-10">
           <h1>
-            This paragraph should introduce the user to the different
-            support options available, without giving much detail yet; 
-            we’ll be more specific below.
+            Do you have questions about Prot&eacute;g&eacute;?  We're here 
+            to help!  We offer both free and paid support through a variety 
+            of sources.  Scroll down to learn more.
           </h1>
         </div><!-- /end .col-10 -->
       </div><!-- /end .row -->
-
     </div><!-- /end .container -->
-
   </div><!-- /end .jumbotron -->
 </div><!-- /end .jumbotron-container -->
 
