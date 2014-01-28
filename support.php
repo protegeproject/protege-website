@@ -23,14 +23,14 @@
         <h2 class="heading-a upcase">Mailing Lists</h2>
         <hr class="half pull-left">
         <p class="intro-a clearleft">
-          Talk about what mailing lists are good for. Tell them 
-          this is some sort of free support via email, and that 
-          they could probably find other people’s problems useful 
-          at some point.
+          Get free support for all of your Prot&eacute;g&eacute; questions via 
+          our mailing lists.  The lists are actively monitored by
+          Stanford's Prot&eacute;g&eacute; team, as well as many experienced 
+          Prot&eacute;g&eacute; users from the community at large.
         </p>
         <p>
-          There are a number of Protégé mailing lists to which 
-          you can subscribe. Please note that you must be subscribed 
+          Click the Subscribe button next to the list you wish to join.  
+          Please note that you must be subscribed 
           to a list before you can post messages.
         </p>
       </div><!-- /end .col-4 -->
