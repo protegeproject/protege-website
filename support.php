@@ -39,16 +39,16 @@
           <div class="row">
 
             <div class="col-8">
-              <h3 class="heading-b">Protégé Desktop Support</h3>
+              <h3 class="heading-b">Protégé User Support</h3>
               <p>
-                User and developer help for the 4.x series of
-                the <a href="#">Protégé-OWL editor</a>.
+                User support for all versions of <a href="products.php#web-protege">WebProt&eacute;g&eacute;</a> and 
+                <a href="products.php#desktop-protege">Prot&eacute;g&eacute; Desktop</a>.
               </p>
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
               <a href="#" class="btn btn-b btn-small btn-block upcase" id="showDesktopMailingList">Subscribe</a>
-              <a href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/Protege-OWL-4-x-Support-f21363.html" class="upcase text-center link-d external-link">Archive &raquo;</a>
+              <a href="http://protege-project.136.n4.nabble.com/" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->
 
           </div><!-- /end .row -->
