@@ -90,7 +90,7 @@
             <div class="col-8">
               <h3 class="heading-b">Protégé Developer Support</h3>
               <p>
-                Developer help for all versions of <a href="products.php#web-protege">WebProt&eacute;g&eacute;</a> and 
+                Developer support for all versions of <a href="products.php#web-protege">WebProt&eacute;g&eacute;</a> and 
                 <a href="products.php#desktop-protege">Prot&eacute;g&eacute; Desktop</a>.
               </p>
             </div><!-- /end .col-8 -->
@@ -106,8 +106,8 @@
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-6">
-                        <h3 class="heading-b">Subscribe to the Protégé Web Support mailing list</h3>
-                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/webprotege-feedback">
+                        <h3 class="heading-b">Subscribe to the Protégé Developer Support mailing list</h3>
+                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-dev">
                           <label>Name</label>
                           <input type="text" name="fullname" value="Enter your name">
                           <label>Email</label>
@@ -121,9 +121,8 @@
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
                         <ul class="list-b">
-                          <li><a class="external-link" href="http://mailman.stanford.edu/pipermail/webprotege-feedback/">Archive</a> hosted by Stanford Information Technology Services</li>
-                          <li><a class="external-link" href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/WebProtege-Support-f4655356.html">Archive</a> hosted by Nabbble</li>
-                        
+                          <li><a class="external-link" href="http://protege-project.136.n4.nabble.com/">Archive</a> hosted by Nabbble</li>
+                          <li><a class="external-link" href="http://mailman.stanford.edu/pipermail/protege-dev/">Archive</a> hosted by Stanford IT Services</li>
                         </ul>
                       </div><!-- /end .col-6 -->
                     </div><!-- /end .row -->
