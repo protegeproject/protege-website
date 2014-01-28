@@ -88,15 +88,16 @@
           <div class="row">
 
             <div class="col-8">
-              <h3 class="heading-b">WebProtégé Support</h3>
+              <h3 class="heading-b">Protégé Developer Support</h3>
               <p>
-                User and developer help for all versions of <a href="#">WebProtégé</a>.
+                Developer help for all versions of <a href="products.php#web-protege">WebProt&eacute;g&eacute;</a> and 
+                <a href="products.php#desktop-protege">Prot&eacute;g&eacute; Desktop</a>.
               </p>
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
               <a href="#" id="showWebMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
-              <a href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/WebProtege-Support-f4655356.html" class="upcase text-center link-d external-link">Archive &raquo;</a>
+              <a href="http://protege-project.136.n4.nabble.com/" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->            
             <div id="webMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
               <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
