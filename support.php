@@ -139,15 +139,15 @@
             <div class="col-8">
               <h3 class="heading-b">Protégé Announcements</h3>
               <p>
-                Low traffic, announcement-only list for major releases,
+                Low traffic, announcement-only list for new releases,
                 availability of short courses, and information regarding
-                biennial Protégé Conferences.
+                Protégé Conferences.
               </p>
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
               <a href="#" id="showAnnouncementMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
-              <a href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/Protege-Announcements-f22950.html" class="upcase text-center link-d external-link">Archive &raquo;</a>
+              <a href="http://protege-project.136.n4.nabble.com/Protege-Announce-f4659442.html" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->
             <div id="announcementMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
               <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
@@ -157,7 +157,7 @@
                     <div class="row">
                       <div class="col-6">
                         <h3 class="heading-b">Subscribe to the Protégé Announcements mailing list</h3>
-                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-users">
+                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-announce">
                           <label>Name</label>
                           <input type="text" name="fullname" value="Enter your name">
                           <label>Email</label>
@@ -171,9 +171,8 @@
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
                         <ul class="list-b">
-                          <li><a href="https://mailman.stanford.edu/pipermail/protege-users/" class="external-link">Archive</a> hosted by Stanford Information Technology Services</li>
-                          <li><a href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/Protege-Users-f22950.html" class="external-link">Archive</a> hosted by Nabbble</li>
-                          <li><a href="http://news.gmane.org/gmane.comp.misc.ontology.protege.announce" class="external-link">Archive</a> Gmane and called protégé.announce</li>
+                          <li><a href="http://protege-project.136.n4.nabble.com/Protege-Announce-f4659442.html" class="external-link">Archive</a> hosted by Nabbble</li>
+                          <li><a href="https://mailman.stanford.edu/pipermail/protege-announce/" class="external-link">Archive</a> hosted by Stanford IT Services</li>
                         </ul>
                       </div><!-- /end .col-6 -->
                     </div><!-- /end .row -->
