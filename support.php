@@ -60,8 +60,8 @@
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-6">
-                        <h3 class="heading-b">Subscribe to the Protégé Desktop Support mailing list</h3>
-                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/p4-feedback">
+                        <h3 class="heading-b">Subscribe to the Protégé User Support mailing list</h3>
+                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-user">
                           <label>Name</label>
                           <input type="text" name="fullname" value="Enter your name">
                           <label>Email</label>
@@ -75,8 +75,8 @@
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
                         <ul class="list-b">
-                          <li><a href="https://mailman.stanford.edu/pipermail/p4-feedback/" class="external-link">Archive</a> hosted by Stanford Information Technology Services</li>
-                          <li><a href="http://protege-ontology-editor-knowledge-acquisition-system.136.n4.nabble.com/Protege-4-Feedback-f21363.html" class="external-link">Archive</a> hosted by Nabbble</li>
+                          <li><a href="http://protege-project.136.n4.nabble.com/" class="external-link">Archive</a> hosted by Nabbble</li>
+                          <li><a href="https://mailman.stanford.edu/pipermail/protege-user/" class="external-link">Archive</a> hosted by Stanford IT Services</li>
                         </ul>
                       </div><!-- /end .col-6 -->
                     </div><!-- /end .row -->
