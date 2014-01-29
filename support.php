@@ -233,7 +233,7 @@
             <p>
               A guide to creating your first ontology.
             </p>
-            <span class="offset-raquo">&raquo;</span><a href="http://130.88.198.11/tutorials/protegeowltutorial/" class="link-c" target="_blank">Protege OWL Tutorial</a>
+            <span class="offset-raquo">&raquo;</span><a href="http://130.88.198.11/tutorials/protegeowltutorial/" class="link-c" target="_blank">Protégé OWL Tutorial</a>
             <p>
               A substantial guide to the Web Ontology Language (OWL) and ontology engineering.
             </p>
