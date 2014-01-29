@@ -194,15 +194,14 @@
         <h2 class="heading-b upcase">Documentation</h2>
         <hr class="ruler-a half pull-left">
         <p class="intro-b clearleft">
-          Praesent commodo cursus magna, vel scelerisque nisl 
-          consectetur et. Cras justo odio, dapibus ac facilisis in, 
-          egestas eget quam.
+          Learn about the Protégé toolset and developing ontologies using 
+          our product documentation.  All documentation is freely available 
+          on the <a href="http://protegewiki.stanford.edu/wiki/Main_Page">Protégé Wiki.</a>
         </p>
         <p>
-          Vestibulum id ligula porta felis euismod semper. Nulla vitae 
-          elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus 
-          commodo, tortor mauris condimentum nibh, ut fermentum massa justo 
-          sit amet risus.
+          Please note that applying for a user account on the wiki is not 
+          necessary for viewing documentation.  Obtaining a user account is 
+          only required in the event you wish to contribute content.
         </p>
       </div><!-- /end .col-4 -->
       <div class="col-8">
