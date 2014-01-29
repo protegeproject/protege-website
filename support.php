@@ -213,15 +213,29 @@
         <div class="tab-content">
           <div class="tab-pane active" id="users">
             <p class="intro-b">Look here first!</p>
-            <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/ProtegeProject_FAQ" class="link-c" target="_blank">Protégé Frequently Asked Questions</a>
             <p>
-              A comprehensive 4-day course on building ontologies, kownledge bases 
-              and applications using Protégé (covers both frame-based and OWL 
-              ontologies).
+              Find answers to commonly asked questions about the Protégé Project.
             </p>
-            <span class="offset-raquo">&raquo;</span><a href="http://protege.stanford.edu/doc/faq.html" class="link-c">Protégé Frequently Asked Questions</a>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/WebProtege" class="link-c" target="_blank">WebProtégé Overview</a>
             <p>
-              Answers questions about the Protégé Project and the Protégé Frames Editor.
+              Get an overview of WebProtégé features and the latest project activity.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/WebProtegeUsersGuide" class="link-c" target="_blank">WebProtégé User's Guide</a>
+            <p>
+              A short user's guide with screencasts and screenshots describing the main user interface elements in WebProtégé.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs" class="link-c" target="_blank">Protégé Desktop Overview</a>
+            <p>
+              Top-level entry point for all documentation pertaining to the latest version of Protégé Desktop, including an overview of editor features, links to tutorials, release notes, etc.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protege.stanford.edu/publications/ontology_development/ontology101.pdf" class="link-c" target="_blank">Ontology Development 101</a>
+            <p>
+              A guide to creating your first ontology.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://130.88.198.11/tutorials/protegeowltutorial/" class="link-c" target="_blank">Protege OWL Tutorial</a>
+            <p>
+              A substantial guide to the Web Ontology Language (OWL) and ontology engineering.
             </p>
           </div><!-- /end #users -->
           <div class="tab-pane" id="developers">
