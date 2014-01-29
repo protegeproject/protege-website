@@ -225,7 +225,26 @@
             </p>
           </div><!-- /end #users -->
           <div class="tab-pane" id="developers">
-            <p>Developer info</p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/WebProtegeDevelopersGuide" class="link-c" target="_blank">WebProtégé Developer's Guide</a>
+            <p>
+              Describes how to compile and run WebProt&eacute;g&eacute; from an IDE.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/WebProtegeImplementationGuide" class="link-c" target="_blank">WebProtégé Implementation Guide</a>
+            <p>
+              A guide for implementing your own WebProt&eacute;g&eacute; components.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="https://github.com/protegeproject/webprotege" class="link-c" target="_blank">WebProtégé on GitHub</a>
+            <p>
+              Official home of the WebProtégé code base and issue tracker.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/Protege5DevDocs" class="link-c" target="_blank">Protégé Desktop Developer's Guide</a>
+            <p>
+              Top-level entry point for all Protégé Desktop developer documentation, including instructions for building from sources, building from Eclipse, design documents, etc.
+            </p>
+            <span class="offset-raquo">&raquo;</span><a href="https://github.com/protegeproject/protege" class="link-c" target="_blank">Protégé Desktop on GitHub</a>
+            <p>
+              Official home of the Protégé Desktop code base and issue tracker.
+            </p>
           </div><!-- /end #developers -->
         </div><!-- /end .tab-content -->
       </div><!-- /end .col-8 -->
@@ -248,7 +267,7 @@
         <h3 class="heading-c">Short Courses</h3>
         <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
         <p>
-          A 3-day intensive training in hands-on use of the Prot&eacute;g&eacute; toolset, ontology development, and the Web Ontology Language (OWL).
+          A 3-day intensive training in ontology development, hands-on use of the Prot&eacute;g&eacute; toolset, and the Web Ontology Language (OWL).
         </p>
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate">
