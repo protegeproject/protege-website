@@ -7,8 +7,8 @@
         <div class="col-10">
           <h1>
             Do you have questions about Prot&eacute;g&eacute;?  We're here 
-            to help!  We offer both free and paid support through a variety 
-            of sources.  Scroll down to learn more.
+            to help!  We offer both community-based and paid support through 
+            a variety of sources.
           </h1>
         </div><!-- /end .col-10 -->
       </div><!-- /end .row -->
