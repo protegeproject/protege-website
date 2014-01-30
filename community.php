@@ -2,7 +2,6 @@
 
 <div class="jumbotron-container">
   <div class="jumbotron internal">
-
     <div class="container">
       <div class="row">
         <div class="col-10">
@@ -13,31 +12,25 @@
           </h1>
         </div><!-- /end .col-10 -->
       </div><!-- /end .row -->
-
     </div><!-- /end .container -->
-
   </div><!-- /end .jumbotron -->
 </div><!-- /end .jumbotron-container -->
 
 <div class="sub-header">
-  <div class="container">
+  <div class="container" style="width:675px;">
     <div class="row">
-    <div class="col-3 registered-users">
-      <big class="type-b">224,474</big>
-      <small class="type-a upcase">Registered Users</small>
-    </div><!-- /end .col-3 -->
-    <div class="col-3 user-list-members">
-      <big class="type-b">17,198</big>
-      <small class="type-a upcase">Protégé-user <br> list members</small>
-    </div><!-- /end .col-3 -->
-    <div class="col-3 discussion-list-members">
-      <big class="type-b">2,418</big>
-      <small class="type-a upcase">Protégé-discussion <br> list members</small>
-    </div><!-- /end .col-3 -->
-    <div class="col-3 last owl-list-members">
-      <big class="type-b">2,384</big>
-      <small class="type-a upcase">Protégé-owl <br> List members</small>
-    </div><!-- /end .col-3 -->
+      <div class="col-3 registered-users">
+        <big class="type-b">224,474</big>
+        <small class="type-a upcase">Registered Users</small>
+      </div><!-- /end .col-3 -->
+      <div class="col-3 user-list-members">
+        <big class="type-b">17,198</big>
+        <small class="type-a upcase">protégé-announce<br />list members</small>
+      </div><!-- /end .col-3 -->
+      <div class="col-3 last discussion-list-members">
+        <big class="type-b">2,418</big>
+        <small class="type-a upcase">protégé-user<br />list members</small>
+      </div><!-- /end .col-3 -->
     </div><!-- /end .row -->
   </div><!-- /end .container -->
 </div><!-- /end .sub-header -->
@@ -83,7 +76,7 @@
       <div class="col-4">
         <div class="social-panel github">
           <div class="pictogram-social github-icon-fade"></div>
-          <iframe class="pull-right" src="http://ghbtns.com/github-btn.html?user=protegeproject&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="155" height="20"></iframe>
+          <iframe class="pull-right" src="http://ghbtns.com/github-btn.html?user=protegeproject&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
           <p class="intro-b">
             Help us with development by forking our repo or reporting bugs 
             on our Github page. Plus, you’ll be the first to see updates.

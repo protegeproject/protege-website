@@ -841,6 +841,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 .modal ul li {
   line-height: 22px;
 }
+
 #signUpModal {
   width: 780px;
   padding: 30px;
@@ -866,6 +867,11 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   color: #999;
   margin-bottom: 10px;
   font-weight: 300;
+}
+
+#signUpModal .error-span {
+  color: red;
+  display: none;
 }
 
 #signUpModal .modal-body {
@@ -1288,15 +1294,15 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 }
 
 .registered-users {
-  width: 19%;
+  width: 33%;
 }
 
 .user-list-members {
-  width: 15%;
+  width: 33%;
 }
 
 .discussion-list-members {
-  width: 21%;
+  width: 23%;
 }
 
 .owl-list-members {
@@ -1304,7 +1310,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 }
 
 .community .sub-header .col-3 {
-  margin-right: 97px;
+  margin-right: 30px;
 }
 
 /* Heading Offsets */
