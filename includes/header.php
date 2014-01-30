@@ -40,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="no-margin para-a"><strong class="upcase bold-a"><a class="open-map" href="#">New Protégé Short Course:</strong> March 26-28 @ Stanford University - Stanford, CA</a></p>
+            <p class="no-margin para-a"><strong class="upcase bold-a">New Protégé Short Course:</strong> <a class="open-map" href="#">March 26-28 @ Stanford University - Stanford, CA</a></p>
           </div><!-- /end .col-12 -->
           <a href="#" class="pictogram pull-right open-map-icon"></a>
         </div><!-- /end .row -->
@@ -71,4 +71,4 @@
       </div><!-- /end .container -->
     </div><!-- /end .navbar.navbar-static-top -->
 
-  </header><! -- /end .navbar-wrapper -->
+  </header><!-- /end .navbar-wrapper -->
