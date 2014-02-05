@@ -540,4 +540,58 @@
   $('a.gallery1').colorbox({rel: 'gallery1'});
   $('a.gallery2').colorbox({rel: 'gallery2'});
 
+  function validateRegForm() {
+    var valid = true;
+
+    if ($("#name").val().length < 3) {
+      $("#nameError").show();
+      valid = false;
+    } else {
+      $("#nameError").hide();
+    }
+    
+    if ($("#email").val().length < 3) {
+      $("#emailError").show();
+      valid = false;
+    } else {
+      $("#emailError").hide();
+    }
+
+    return valid;
+  }
+
+  function submitRegForm() {
+    $.ajax({
+      type: "POST", 
+      url: "register.php", 
+      data: $('#signUpForm').serialize()
+    });
+    return false;
+  }
+
+  function resetRegForm() {
+    $("#nameError").hide();
+    $("#emailError").hide();
+    $("#description").val("");
+    $("#signUpModal input").each(function() {
+      $(this).val("");
+    })
+  }
+
+  $("#signUp").on("click", function(event) {
+    event.preventDefault();
+  })
+
+  $("#signUp").on("click", function() {
+    if (validateRegForm()) {
+      submitRegForm();
+      resetRegForm();
+      $("#signUpModal").modal('hide');
+    }
+  })
+
+  $("#closeSignUpModal").on("click", function() {
+    resetRegForm();
+  })
+ 
 })(jQuery);

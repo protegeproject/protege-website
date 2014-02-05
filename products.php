@@ -357,29 +357,29 @@
                     </ul>
                   </div><!-- /end .col-6 -->
                   <div class="col-6">
-                    <form method="POST" action="http://protege.stanford.edu/smi-protege-bin/reg.cgi">
-                      <label>Name</label>
-                      <input type="text" name="name" value="Enter your name">
-                      <label>Email</label>
-                      <input type="text" name="email" value="Enter your email">
+                    <form id="signUpForm" method="" action="">
+                      <label>Name*</label> <span id="nameError" class="error-span">Please enter at least 3 characters.</span>
+                      <input id="name" type="text" name="name" placeholder="Enter your name">
+                      <label>Email*</label> <span id="emailError" class="error-span">Please enter a valid email address.</span>
+                      <input id="email" type="text" name="email" placeholder="Enter your email">
                       <label>How did you hear about us?</label>
-                      <input type="text" name="reffered" value="Colleague, Web search, conference, etc">
+                      <input type="text" name="referrer" placeholder="Colleague, Web search, conference, etc">
                       <div class="half first">
                         <label>Project URL</label>
-                        <input type="text" name="url" value="http://">
+                        <input type="text" name="url" placeholder="http://">
                       </div><!-- /end .half -->
                       <div class="half">
                         <label>Affiliation</label>
-                        <input type="text" name="affiliation" value="What's your role?">
+                        <input type="text" name="affiliation" placeholder="What's your role?">
                       </div><!-- /end .half -->
                       <label>Project Description</label>
-                      <textarea name="project">A few words about your project...</textarea>
-                      <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                      <textarea id="project" name="project" placeholder="A few words about your project..."></textarea>
+                      <button id="signUp" type="submit" class="btn btn-b pull-right">Sign Up</button>
                     </form>
                   </div><!-- /end .col-6 -->
                 </div><!-- /end .row -->
               </div>
-              <a href="#" data-dismiss="modal">No thanks, close this window</button>
+              <a id="closeSignUpModal" href="#" data-dismiss="modal">No thanks, close this window</a>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
