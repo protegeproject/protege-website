@@ -472,8 +472,6 @@
   $('#grow-table').on('click', function(e) {
     var tableHeight = $('.table').height();
     var tableContainerHeight = $('.table-container').height();
-    console.log(tableHeight);
-    console.log(tableContainerHeight);
     if ($('.table-container').height() > tableHeight - 165) {
       $('.table-container').animate({'height': tableHeight + 'px'});
     } else {
@@ -525,10 +523,8 @@
     if (blockquoteContext.height() == 90) {
       $(blockquoteContext).animate({height: actualHeight + 'px'});
       $(this).text('Read Less...');
-      console.log('go forward');
     } else {
       $(blockquoteContext).animate({height: '90px'});
-      console.log('go back');
       $(this).text('Read More...');
     }
     e.preventDefault();
