@@ -196,7 +196,7 @@
         <p class="intro-b clearleft">
           Learn about the Protégé toolset and developing ontologies using 
           our product documentation.  All documentation is freely available 
-          on the <a href="http://protegewiki.stanford.edu/wiki/Main_Page">Protégé Wiki.</a>
+          on the <a href="http://protegewiki.stanford.edu/wiki/Main_Page" target="_blank">Protégé Wiki.</a>
         </p>
         <p>
           Please note that applying for a user account on the wiki is not 
