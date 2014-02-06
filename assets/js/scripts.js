@@ -107,7 +107,7 @@
 
   // Load specific download button for Windows users
   if (navigator.appVersion.indexOf("Win")!=-1) {
-    $('.local-install').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe');
+    $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Windows');
     $('.desktop-download-btn .media .generic-download-icon').attr('class', 'windows-icon');
     $('.windows-instructions').removeClass('hide');
@@ -118,7 +118,7 @@
   } 
   
   if (navigator.appVersion.indexOf("Mac")!=-1) {
-    $('.local-install').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/MacOSX/install_protege_4.3.zip');
+    $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Mac OSX');
     $('.desktop-download-btn .media .generic-download-icon').attr('class', 'apple-icon');
     $('#desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/InstData/Windows/VM/install_protege_4.3.exe')

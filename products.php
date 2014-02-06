@@ -139,7 +139,7 @@
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
-        <a class="text-center link-a local-install" href="#">Install Locally &raquo;</a>
+        <a class="text-center link-a local-install" href="#" target="_blank">Install Locally &raquo;</a>
       </div><!-- /end .col-4 -->
     </div><!-- /end .row -->
   </div><!-- /end .container -->
