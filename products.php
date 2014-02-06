@@ -435,18 +435,19 @@
       <div class="col-4">
         <h3 class="heading-c">Mailing Lists</h3>
         <p>
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. 
-          Cras mattis consectetur purus sit amet fermentum. Praesent 
-          commodo cursus magna.
+          Sign up for our free support mailing lists 
+          to get your Prot&eacute;g&eacute; questions answered.  The lists 
+          are monitored daily by Prot&eacute;g&eacute; team members and experienced Prot&eacute;g&eacute; 
+          users from our worldwide community.
         </p>
         <a href="support.php#mailingListSupport" class="btn btn-d btn-med upcase no-margin">Learn More</a>
       </div><!-- /end .col-4 -->
       <div class="col-4">
         <h3 class="heading-c">Documentation</h3>
         <p>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris 
-          condimentum nibh, ut fermentum massa justo sit amet risus. 
-          risus Praesent commodo cursus magna, vel scelerisque nisl.
+          Get overviews and more in-depth information about Prot&eacute;g&eacute; and ontology development 
+          on the Prot&eacute;g&eacute; Wiki &ndash; the official home for all of our documentation.  You'll find
+          FAQs, tutorials, user guides, developer guides, and much more.
         </p>
         <a href="support.php#documentationSupport" class="btn btn-d btn-med upcase no-margin">Learn More</a>
       </div><!-- /end .col-4 -->
@@ -454,14 +455,9 @@
         <h3 class="heading-c">Short Courses</h3>
         <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
         <p>
-          A comprehensive 4-day course on building ontologies, knowledge 
-          bases, and applications using Protégé (covers both frame-based 
-          and OWL ontologies).
-        </p>
-        <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé-OWL Short Course</a>
-        <p>
-          An intensive 2-day introduction to developing OWL ontologies and 
-          Semantic Web applications using Protégé-OWL.
+          A 3-day intensive training in ontology development, hands-on use 
+          of the Prot&eacute;g&eacute; toolset, and the Web Ontology 
+          Language (OWL).
         </p>
       </div><!-- /end .col-4 -->
     </div><!-- /end .row -->
