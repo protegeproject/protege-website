@@ -27,18 +27,15 @@
       </div><!-- /end .col-2 -->
       <div class="col-6">
         <p class="intro-a">
-          Talk about WebProtégé, why people should use it, 
-          and probably some other information that would 
-          push users into using this instead of the desktop 
-          version.
+          WebProt&eacute;g&eacute; is an ontology development environment for the Web 
+          that makes it easy to create, upload, modify, and share 
+          ontologies for collaborative viewing and editing.
         </p>
         <p>
-          In the frame-based model, an ontology consists of 
-          a set of classes organized in a subsumption hierarchy 
-          to represent a domain's salient concepts, a set of slots 
-          associated to classes that describe their properties and 
-          relationships, and a set of instances that hold specific 
-          values for those classes.
+          WebProt&eacute;g&eacute; fully supports the latest OWL 2 Web Ontology Language.  The highly configurable user interface creates 
+          the perfect environment for beginners and experts alike.  Collaboration features abound, including sharing 
+          and permissions, threaded notes and discussions, watches and email notifications.  RDF/XML, Turtle, OWL/XML, OBO, and other formats 
+          available for ontology upload and download.
         </p>
         <ul class="inline web-protege-nav">
           <li>
@@ -77,12 +74,6 @@
                     <a class="external-link" href="http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide">
                       <span>&raquo;</span>
                       Administrator's Guide
-                    </a>
-                  </li>
-                  <li>
-                    <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Main_Page">
-                      <span>&raquo;</span>
-                      Wiki Access
                     </a>
                   </li>
                   </ul>
@@ -125,8 +116,13 @@
       </div><!-- /end .col-6 -->
       <div class="col-4">
         <ul class="list-a">
-          <li>Cross compatible with desktop version</li>
-          <li>Extensible plug-in architecture with custom-designed elements</li>
+          <li>W3C standards compliant</li>
+          <li>Simple, customizable user interface</li>
+          <li>Optimized for collaboration</li>
+          <li>Change tracking and revision history</li>
+          <li>Web forms for domain specific editing</li>
+          <li>Multiple upload/download formats</li>
+          <li>Cross compatible with Protégé Desktop</li>
         </ul>
         <a href="http://webprotege.stanford.edu" class="btn btn-b btn-xl btn-icon btn-block web-protege-btn external-link">
           <div class="media">
