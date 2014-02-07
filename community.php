@@ -6,9 +6,9 @@
       <div class="row">
         <div class="col-10">
           <h1>
-            Some text talking about this community page. Remember 
-            this has to be kind of short and to the point, probably 
-            3-4 lines should be enough.
+            Thousands of people all over the world are using the 
+            Prot&eacute;g&eacute; platform.  Interact with us and 
+            contribute by joining our growing user community.
           </h1>
         </div><!-- /end .col-10 -->
       </div><!-- /end .row -->
@@ -24,12 +24,12 @@
         <small class="type-a upcase">Registered Users</small>
       </div><!-- /end .col-3 -->
       <div class="col-3 user-list-members">
-        <big class="type-b">17,198</big>
-        <small class="type-a upcase">protégé-announce<br />list members</small>
+        <big class="type-b">18,030</big>
+        <small class="type-a upcase">protege-announce<br />list members</small>
       </div><!-- /end .col-3 -->
       <div class="col-3 last discussion-list-members">
-        <big class="type-b">2,418</big>
-        <small class="type-a upcase">protégé-user<br />list members</small>
+        <big class="type-b">3,624</big>
+        <small class="type-a upcase">protege-user<br />list members</small>
       </div><!-- /end .col-3 -->
     </div><!-- /end .row -->
   </div><!-- /end .container -->
