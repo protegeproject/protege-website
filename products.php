@@ -180,15 +180,21 @@
                 <div class="tooltip-inner">
                   <ul>
                     <li>
-                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs#Getting_started_.2F_tutorials">
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs">
                         <span>&raquo;</span>
-                        Getting Started
+                        Overview
                       </a>
                     </li>
                     <li>
-                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Main_Page">
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4Features">
                         <span>&raquo;</span>
-                        Wiki Access
+                        Feature Summary
+                      </a>
+                    </li>
+                    <li>
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Pr4_UG">
+                        <span>&raquo;</span>
+                        User's Guide
                       </a>
                     </li>
                   </ul>
@@ -231,9 +237,13 @@
       </div><!-- /end .col-6 -->
       <div class="col-4">
         <ul class="list-a">
-          <li>Various export formats</li>
-          <li>Extensible environment</li>
-          <li>Active community</li>
+          <li>W3C standards compliant</li>
+          <li>Customizable user interface</li>
+          <li>Visualization support</li>
+          <li>Ontology refactoring support</li>
+          <li>Direct interface to reasoners</li>
+          <li>Highly pluggable architecture</li>
+          <li>Cross compatible with WebProt&eacute;g&eacute;</li>
         </ul>
         <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn showDownloadDesktop">
           <div class="media">
@@ -242,7 +252,7 @@
             </div><!-- /end .pull-left -->
             <div class="media-body">
               <h4>Download for Desktop</h4>
-              <span>Protégé Desktop 4.5</span>
+              <span>Protégé Desktop 4.3</span>
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
