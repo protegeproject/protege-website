@@ -19,6 +19,7 @@
 <div class="sub-header main-content" id="mailing-lists">
   <div class="container offset-heading" id="mailingListSupport">
     <div class="row">
+      
       <div class="col-4 offset-right-padding">
         <h2 class="heading-a upcase">Mailing Lists</h2>
         <hr class="half pull-left">
@@ -34,10 +35,10 @@
           to a list before you can post messages.
         </p>
       </div><!-- /end .col-4 -->
+      
       <div class="col-8">
         <div class="panel bring-to-front clearfix">
           <div class="row">
-
             <div class="col-8">
               <h3 class="heading-b">Protégé User Support</h3>
               <p>
@@ -45,32 +46,31 @@
                 <a href="products.php#desktop-protege">Prot&eacute;g&eacute; Desktop</a>.
               </p>
             </div><!-- /end .col-8 -->
-
             <div class="col-3 pull-right">
-              <a href="#" class="btn btn-b btn-small btn-block upcase" id="showDesktopMailingList">Subscribe</a>
+              <a href="#" class="btn btn-b btn-small btn-block upcase" id="showProtegeUserMailingList">Subscribe</a>
               <a href="http://protege-project.136.n4.nabble.com/" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->
-
           </div><!-- /end .row -->
         </div><!-- /end .panel -->
-            <div id="desktopMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
-              <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
+
+            <div id="protegeUserMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+              <a href="#" data-dismiss="modal" class="close-modal-icon close-modal" data-related_form="protegeUserSubscribe"></a>
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-6">
                         <h3 class="heading-b">Subscribe to the Protégé User Support mailing list</h3>
-                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-user">
+                        <form id="protegeUserSubscribe" method="" action="">
                           <label>Name</label>
-                          <input type="text" name="fullname" value="Enter your name">
+                          <input type="text" name="fullname" placeholder="Enter your name">
                           <label>Email</label>
-                          <input type="email" name="email" value="Enter your email">
+                          <input type="email" name="email" placeholder="Enter your email">
                           <p>Receive list mail batched in a daily digest?</p>
                           <input type="radio" name="digest" value="1"> <span>Yes</span>
                           <input type="radio" name="digest" value="0"> <span>No</span>
-                          <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
-                          <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                          <a href="#" data-dismiss="modal" class="cancel-modal close-modal" data-related_form="protegeUserSubscribe">Cancel</a>
+                          <button id="signUpProtegeUserList" type="submit" class="btn btn-b pull-right close-modal" data-related_form="protegeUserSubscribe">Sign Up</button>
                         </form>
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
@@ -84,6 +84,7 @@
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
+
         <div class="panel clearfix">
           <div class="row">
 

@@ -101,6 +101,7 @@
     <script src="assets/js/vendor/resize.js"></script>
     <script src="twitter/jquery.tweet.js"></script>
     <script src="assets/js/vendor/colorbox-min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>    
+    <script src="assets/js/protege.mailinglists-1.0.0.js"></script>
   </body>
 </html>

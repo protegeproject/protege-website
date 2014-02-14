@@ -788,11 +788,11 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   font-size: 14px;
 }
 
-#desktopMailingList {
+#protegeUserMailingList {
   height: 390px;
 }
 
-#desktopMailingList .modal-body {
+#protegeUserMailingList .modal-body {
   min-height: 388px;
 }
 

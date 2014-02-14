@@ -388,12 +388,6 @@
     e.preventDefault();
   })
 
-  // Functionality to show Desktop Mailing List Modal
-  $('#showDesktopMailingList').on('click', function(e) {
-    $('#desktopMailingList').modal('show');
-    e.preventDefault();
-  })
-
   // Functionality to show Web Mailing List Modal
   $('#showWebMailingList').on('click', function(e) {
     $('#webMailingList').modal('show');
