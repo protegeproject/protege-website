@@ -1,0 +1,3412 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+<title>What is an ontology and why we need it</title>
+<style>
+
+<!--
+
+ /* Font Definitions */
+
+@font-face
+
+	{font-family:Times;
+
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+
+	mso-font-charset:0;
+
+	mso-generic-font-family:roman;
+
+	mso-font-format:other;
+
+	mso-font-pitch:variable;
+
+	mso-font-signature:3 0 0 0 1 0;}
+
+@font-face
+
+	{font-family:Wingdings;
+
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+
+	mso-font-charset:2;
+
+	mso-generic-font-family:auto;
+
+	mso-font-pitch:variable;
+
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+
+ /* Style Definitions */
+
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+
+	{mso-style-parent:"";
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+h1
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.3in;
+
+	text-indent:-.3in;
+
+	mso-pagination:none;
+
+	page-break-after:avoid;
+
+	mso-outline-level:1;
+
+	mso-list:l7 level1 lfo6;
+
+	tab-stops:list .3in;
+
+	font-size:14.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:Arial;
+
+	mso-bidi-font-family:"Times New Roman";
+
+	mso-font-kerning:14.0pt;
+
+	mso-bidi-font-weight:normal;}
+
+h2
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.4in;
+
+	text-indent:-.4in;
+
+	mso-pagination:none;
+
+	page-break-after:avoid;
+
+	mso-outline-level:2;
+
+	mso-list:l7 level2 lfo6;
+
+	tab-stops:list .4in;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:Arial;
+
+	mso-bidi-font-family:"Times New Roman";
+
+	mso-bidi-font-weight:normal;
+
+	font-style:italic;
+
+	mso-bidi-font-style:normal;}
+
+h3
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.5in;
+
+	text-indent:-.5in;
+
+	mso-pagination:none;
+
+	page-break-after:avoid;
+
+	mso-outline-level:3;
+
+	mso-list:l7 level3 lfo6;
+
+	tab-stops:list .5in;
+
+	font-size:13.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:Arial;
+
+	mso-bidi-font-family:"Times New Roman";
+
+	mso-bidi-font-weight:normal;}
+
+h4
+
+	{mso-style-next:Normal;
+
+	margin-top:6.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:0in;
+
+	mso-pagination:none;
+
+	page-break-after:avoid;
+
+	mso-outline-level:4;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-bidi-font-weight:normal;}
+
+h5
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.7in;
+
+	text-indent:-.7in;
+
+	mso-pagination:none;
+
+	mso-outline-level:5;
+
+	mso-list:l7 level5 lfo6;
+
+	tab-stops:list .7in;
+
+	font-size:13.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-bidi-font-weight:normal;
+
+	font-style:italic;
+
+	mso-bidi-font-style:normal;}
+
+h6
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.8in;
+
+	text-indent:-.8in;
+
+	mso-pagination:none;
+
+	mso-outline-level:6;
+
+	mso-list:l7 level6 lfo6;
+
+	tab-stops:list .8in;
+
+	font-size:11.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-bidi-font-weight:normal;}
+
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.9in;
+
+	text-indent:-.9in;
+
+	mso-pagination:none;
+
+	mso-outline-level:7;
+
+	mso-list:l7 level7 lfo6;
+
+	tab-stops:list .9in;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+
+	{mso-style-next:Normal;
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:1.0in;
+
+	text-indent:-1.0in;
+
+	mso-pagination:none;
+
+	mso-outline-level:8;
+
+	mso-list:l7 level8 lfo6;
+
+	tab-stops:list 1.0in;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";
+
+	font-style:italic;
+
+	mso-bidi-font-style:normal;}
+
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+
+	{mso-style-next:Normal;
+
+	margin-top:0in;
+
+	margin-right:0in;
+
+	margin-bottom:0in;
+
+	margin-left:1.1in;
+
+	margin-bottom:.0001pt;
+
+	text-indent:-1.1in;
+
+	line-height:12.0pt;
+
+	mso-pagination:none;
+
+	mso-outline-level:9;
+
+	mso-list:l7 level9 lfo6;
+
+	tab-stops:list 1.1in;
+
+	font-size:1.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-ansi-language:X-NONE;}
+
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+
+	{margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+
+	{margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+
+	{margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	tab-stops:center 3.0in right 6.0in;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+
+	{mso-style-next:Normal;
+
+	margin-top:6.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:6.0pt;
+
+	margin-left:0in;
+
+	mso-pagination:none;
+
+	font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";
+
+	font-weight:bold;
+
+	mso-bidi-font-weight:normal;}
+
+span.MsoFootnoteReference
+
+	{mso-ansi-font-size:10.0pt;
+
+	vertical-align:super;}
+
+span.MsoCommentReference
+
+	{mso-ansi-font-size:8.0pt;}
+
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+
+	{margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";
+
+	font-style:italic;
+
+	mso-bidi-font-style:normal;}
+
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+
+	{margin:0in;
+
+	margin-bottom:.0001pt;
+
+	text-align:justify;
+
+	mso-pagination:none;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+a:link, span.MsoHyperlink
+
+	{color:blue;
+
+	text-decoration:underline;
+
+	text-underline:single;}
+
+a:visited, span.MsoHyperlinkFollowed
+
+	{color:purple;
+
+	text-decoration:underline;
+
+	text-underline:single;}
+
+p.Rule, li.Rule, div.Rule
+
+	{mso-style-name:Rule;
+
+	margin-top:0in;
+
+	margin-right:.5in;
+
+	margin-bottom:0in;
+
+	margin-left:.5in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:none;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";
+
+	font-style:italic;
+
+	mso-bidi-font-style:normal;}
+
+p.Step, li.Step, div.Step
+
+	{mso-style-name:Step;
+
+	mso-style-parent:"Heading 3";
+
+	margin-top:12.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	mso-pagination:none;
+
+	page-break-after:avoid;
+
+	mso-list:l6 level1 lfo7;
+
+	tab-stops:list .75in;
+
+	font-size:13.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:Arial;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";
+
+	font-weight:bold;
+
+	mso-bidi-font-weight:normal;}
+
+p.Text, li.Text, div.Text
+
+	{mso-style-name:Text;
+
+	margin-top:0in;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:0in;
+
+	text-align:justify;
+
+	mso-pagination:none;
+
+	font-size:11.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.heading2, li.heading2, div.heading2
+
+	{mso-style-name:heading2;
+
+	mso-style-next:p1a;
+
+	margin-top:10.0pt;
+
+	margin-right:0in;
+
+	margin-bottom:5.0pt;
+
+	margin-left:0in;
+
+	text-align:justify;
+
+	mso-pagination:lines-together;
+
+	page-break-after:avoid;
+
+	mso-hyphenate:none;
+
+	tab-stops:25.5pt;
+
+	font-size:10.0pt;
+
+	font-family:Times;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";
+
+	font-weight:bold;
+
+	mso-bidi-font-weight:normal;}
+
+p.p1a, li.p1a, div.p1a
+
+	{mso-style-name:p1a;
+
+	mso-style-next:Normal;
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	text-align:justify;
+
+	mso-pagination:none;
+
+	font-size:10.0pt;
+
+	font-family:Times;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+span.Code
+
+	{mso-style-name:Code;
+
+	mso-ascii-font-family:"Courier New";
+
+	mso-hansi-font-family:"Courier New";}
+
+span.Definition
+
+	{mso-style-name:Definition;
+
+	mso-ansi-font-size:10.0pt;
+
+	font-style:italic;}
+
+span.Emphasize
+
+	{mso-style-name:Emphasize;
+
+	mso-ansi-font-size:10.0pt;
+
+	font-style:italic;}
+
+p.Reference, li.Reference, div.Reference
+
+	{mso-style-name:Reference;
+
+	margin-top:0in;
+
+	margin-right:0in;
+
+	margin-bottom:6.0pt;
+
+	margin-left:0in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:11.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.Bulletedlist, li.Bulletedlist, div.Bulletedlist
+
+	{mso-style-name:"Bulleted list";
+
+	mso-style-parent:Text;
+
+	margin-top:0in;
+
+	margin-right:0in;
+
+	margin-bottom:3.0pt;
+
+	margin-left:.5in;
+
+	text-align:justify;
+
+	text-indent:-.25in;
+
+	mso-pagination:widow-orphan;
+
+	mso-list:l9 level1 lfo12;
+
+	tab-stops:list .5in;
+
+	font-size:11.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.Bu, li.Bu, div.Bu
+
+	{mso-style-name:Bu;
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	tab-stops:.5in;
+
+	font-size:12.0pt;
+
+	mso-bidi-font-size:10.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+span.msoIns
+
+	{mso-style-type:export-only;
+
+	mso-style-name:"";
+
+	text-decoration:underline;
+
+	text-underline:single;
+
+	color:teal;}
+
+ /* Page Definitions */
+
+@page
+
+	{mso-endnote-numbering-style:arabic;}
+
+
+div.Section1
+
+	{page:Section1;}
+
+ /* List Definitions */
+
+@list l0
+
+	{mso-list-id:-2;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:-1;}
+
+@list l0:level1
+
+	{mso-level-start-at:0;
+
+	mso-level-text:*;
+
+	mso-level-tab-stop:none;
+
+	mso-level-number-position:left;
+
+	margin-left:0in;
+
+	text-indent:0in;}
+
+@list l1
+
+	{mso-list-id:99836943;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:123602544;}
+
+@list l1:level1
+
+	{mso-level-text:"%1\)";
+
+	mso-level-tab-stop:.75in;
+
+	mso-level-number-position:left;
+
+	margin-left:.75in;
+
+	text-indent:-.25in;}
+
+@list l2
+
+	{mso-list-id:406460665;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:67698689;}
+
+@list l2:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l3
+
+	{mso-list-id:499539131;
+
+	mso-list-template-ids:1486763522;}
+
+@list l3:level1
+
+	{mso-level-text:"%1\)";
+
+	mso-level-tab-stop:.75in;
+
+	mso-level-number-position:left;
+
+	margin-left:.75in;
+
+	text-indent:-.25in;}
+
+@list l3:level2
+
+	{mso-level-number-format:alpha-lower;
+
+	mso-level-tab-stop:1.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:1.25in;
+
+	text-indent:-.25in;}
+
+@list l3:level3
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:1.75in;
+
+	mso-level-number-position:right;
+
+	margin-left:1.75in;
+
+	text-indent:-9.0pt;}
+
+@list l3:level4
+
+	{mso-level-tab-stop:2.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:2.25in;
+
+	text-indent:-.25in;}
+
+@list l3:level5
+
+	{mso-level-number-format:alpha-lower;
+
+	mso-level-tab-stop:2.75in;
+
+	mso-level-number-position:left;
+
+	margin-left:2.75in;
+
+	text-indent:-.25in;}
+
+@list l3:level6
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:3.25in;
+
+	mso-level-number-position:right;
+
+	margin-left:3.25in;
+
+	text-indent:-9.0pt;}
+
+@list l3:level7
+
+	{mso-level-tab-stop:3.75in;
+
+	mso-level-number-position:left;
+
+	margin-left:3.75in;
+
+	text-indent:-.25in;}
+
+@list l3:level8
+
+	{mso-level-number-format:alpha-lower;
+
+	mso-level-tab-stop:4.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:4.25in;
+
+	text-indent:-.25in;}
+
+@list l3:level9
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:4.75in;
+
+	mso-level-number-position:right;
+
+	margin-left:4.75in;
+
+	text-indent:-9.0pt;}
+
+@list l4
+
+	{mso-list-id:691494428;
+
+	mso-list-template-ids:773752122;}
+
+@list l4:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l4:level2
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:1.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l4:level3
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:1.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l4:level4
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:2.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l4:level5
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:2.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l4:level6
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:3.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l4:level7
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:3.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l4:level8
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:4.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l4:level9
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:4.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l5
+
+	{mso-list-id:841511478;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:67698689;}
+
+@list l5:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l6
+
+	{mso-list-id:1108240419;
+
+	mso-list-template-ids:-746397910;}
+
+@list l6:level1
+
+	{mso-level-style-link:Step;
+
+	mso-level-text:"Step %1\.";
+
+	mso-level-tab-stop:.75in;
+
+	mso-level-number-position:left;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;}
+
+@list l6:level2
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:1.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l6:level3
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:1.5in;
+
+	mso-level-number-position:right;
+
+	text-indent:-9.0pt;}
+
+@list l6:level4
+
+	{mso-level-tab-stop:2.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;}
+
+@list l6:level5
+
+	{mso-level-number-format:alpha-lower;
+
+	mso-level-tab-stop:2.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;}
+
+@list l6:level6
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:3.0in;
+
+	mso-level-number-position:right;
+
+	text-indent:-9.0pt;}
+
+@list l6:level7
+
+	{mso-level-tab-stop:3.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;}
+
+@list l6:level8
+
+	{mso-level-number-format:alpha-lower;
+
+	mso-level-tab-stop:4.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;}
+
+@list l6:level9
+
+	{mso-level-number-format:roman-lower;
+
+	mso-level-tab-stop:4.5in;
+
+	mso-level-number-position:right;
+
+	text-indent:-9.0pt;}
+
+@list l7
+
+	{mso-list-id:1111364086;
+
+	mso-list-template-ids:67698725;}
+
+@list l7:level1
+
+	{mso-level-style-link:"Heading 1";
+
+	mso-level-text:%1;
+
+	mso-level-tab-stop:.3in;
+
+	mso-level-number-position:left;
+
+	margin-left:.3in;
+
+	text-indent:-.3in;}
+
+@list l7:level2
+
+	{mso-level-style-link:"Heading 2";
+
+	mso-level-text:"%1\.%2";
+
+	mso-level-tab-stop:.4in;
+
+	mso-level-number-position:left;
+
+	margin-left:.4in;
+
+	text-indent:-.4in;}
+
+@list l7:level3
+
+	{mso-level-style-link:"Heading 3";
+
+	mso-level-text:"%1\.%2\.%3";
+
+	mso-level-tab-stop:.5in;
+
+	mso-level-number-position:left;
+
+	margin-left:.5in;
+
+	text-indent:-.5in;}
+
+@list l7:level4
+
+	{mso-level-text:"%1\.%2\.%3\.%4";
+
+	mso-level-tab-stop:.6in;
+
+	mso-level-number-position:left;
+
+	margin-left:.6in;
+
+	text-indent:-.6in;}
+
+@list l7:level5
+
+	{mso-level-style-link:"Heading 5";
+
+	mso-level-text:"%1\.%2\.%3\.%4\.%5";
+
+	mso-level-tab-stop:.7in;
+
+	mso-level-number-position:left;
+
+	margin-left:.7in;
+
+	text-indent:-.7in;}
+
+@list l7:level6
+
+	{mso-level-style-link:"Heading 6";
+
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+
+	mso-level-tab-stop:.8in;
+
+	mso-level-number-position:left;
+
+	margin-left:.8in;
+
+	text-indent:-.8in;}
+
+@list l7:level7
+
+	{mso-level-style-link:"Heading 7";
+
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+
+	mso-level-tab-stop:.9in;
+
+	mso-level-number-position:left;
+
+	margin-left:.9in;
+
+	text-indent:-.9in;}
+
+@list l7:level8
+
+	{mso-level-style-link:"Heading 8";
+
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+
+	mso-level-tab-stop:1.0in;
+
+	mso-level-number-position:left;
+
+	margin-left:1.0in;
+
+	text-indent:-1.0in;}
+
+@list l7:level9
+
+	{mso-level-style-link:"Heading 9";
+
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+
+	mso-level-tab-stop:1.1in;
+
+	mso-level-number-position:left;
+
+	margin-left:1.1in;
+
+	text-indent:-1.1in;}
+
+@list l8
+
+	{mso-list-id:1228221387;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:67698689;}
+
+@list l8:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l9
+
+	{mso-list-id:1628009151;
+
+	mso-list-type:simple;
+
+	mso-list-template-ids:-756409314;}
+
+@list l9:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-style-link:"Bulleted list";
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.25in;
+
+	mso-level-number-position:left;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l10
+
+	{mso-list-id:1910192437;
+
+	mso-list-template-ids:-1252631996;}
+
+@list l10:level1
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l10:level2
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:1.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l10:level3
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:1.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l10:level4
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:2.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l10:level5
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:2.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l10:level6
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:3.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l10:level7
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:3.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l10:level8
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:o;
+
+	mso-level-tab-stop:4.0in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:"Courier New";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+@list l10:level9
+
+	{mso-level-number-format:bullet;
+
+	mso-level-text:\F0A7;
+
+	mso-level-tab-stop:4.5in;
+
+	mso-level-number-position:left;
+
+	text-indent:-.25in;
+
+	font-family:Wingdings;}
+
+@list l0:level1 lfo1
+
+	{mso-level-start-at:1;
+
+	mso-level-number-format:bullet;
+
+	mso-level-numbering:continue;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:none;
+
+	mso-level-number-position:left;
+
+	mso-level-legacy:yes;
+
+	mso-level-legacy-indent:.25in;
+
+	mso-level-legacy-space:0in;
+
+	margin-left:.25in;
+
+	text-indent:-.25in;
+
+	font-family:Symbol;}
+
+@list l0:level1 lfo2
+
+	{mso-level-start-at:1;
+
+	mso-level-number-format:bullet;
+
+	mso-level-numbering:continue;
+
+	mso-level-text:\F0B7;
+
+	mso-level-tab-stop:none;
+
+	mso-level-number-position:left;
+
+	mso-level-legacy:yes;
+
+	mso-level-legacy-indent:.5in;
+
+	mso-level-legacy-space:0in;
+
+	text-indent:-.5in;
+
+	font-family:Symbol;}
+
+ol
+
+	{margin-bottom:0in;}
+
+ul
+
+	{margin-bottom:0in;}
+
+-->
+
+</style>
+</head>
+
+<body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in">
+<div class="Section1"><div id="mainheadline"><h1 align="center" style="margin-left:0in;text-align:center;text-indent:0in;
+
+mso-list:none;tab-stops:.5in"><span style="font-size:16.0pt;mso-bidi-font-size:
+
+10.0pt">Ontology Development 101: A Guide
+to Creating Your First Ontology</span></h1></div><p class="MsoNormal" align="center" style="text-align:center;mso-pagination:widow-orphan">Natalya
+F. Noy<span style="mso-spacerun: yes">&nbsp; </span>and Deborah L. McGuinness</p>
+
+<p class="MsoNormal" align="center" style="text-align:center;mso-pagination:widow-orphan">Stanford
+University, Stanford, CA, 94305</p>
+
+<p class="MsoNormal" align="center" style="text-align:center;mso-pagination:widow-orphan">noy@smi.stanford.edu<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>and<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span>dlm@ksl.stanford.edu</p><div id="mainheadline"><h1><a name="Section1"></a>1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Why develop an ontology?</h1></div><p class="Text" style="mso-pagination:widow-orphan">In recent years the development of
+ontologies&#151;explicit formal specifications of the terms in the domain and relations
+among them <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Gruber 1993)</span>&#151;has
+been moving from the realm of Artificial-Intelligence laboratories to the desktops of
+domain experts. Ontologies have become common on the World-Wide Web. The ontologies on the
+Web range from large taxonomies categorizing Web sites (such as on Yahoo!) to
+categorizations of products for sale and their features (such as on Amazon.com). The WWW
+Consortium (W3C) is developing the Resource Description Framework <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Brickley and Guha 1999)</span>, a language
+for encoding knowledge on Web pages to make it understandable to electronic agents
+searching for information.<span style="mso-spacerun: yes">&nbsp; </span>The Defense
+Advanced Research Projects Agency (DARPA), in conjunction with the W3C, is developing
+DARPA Agent Markup Language (DAML) by extending RDF with more expressive constructs aimed
+at facilitating agent interaction on the Web <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Hendler and McGuinness 2000)</span>. Many
+disciplines now develop standardized ontologies that domain experts can use to share and
+annotate information in their fields. Medicine, for example, has produced large,
+standardized, structured vocabularies such as <span style="text-transform:uppercase">snomed</span>
+<span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Price and Spackman 2000)</span> and
+the semantic network of the Unified Medical Language System <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Humphreys and Lindberg 1993)</span>. Broad
+general-purpose ontologies are emerging as well. For example,<span style="mso-spacerun: yes">&nbsp; </span>the United Nations Development Program and Dun
+&amp; Bradstreet combined their efforts to develop the UNSPSC ontology which provides
+terminology for products and services (<a href="http://www.unspsc.org">www.unspsc.org</a>).</p>
+
+<p class="Text" style="mso-pagination:widow-orphan">An ontology defines a common
+vocabulary for researchers who need to share information in a domain. It includes
+machine-interpretable definitions of basic concepts in the domain and relations among
+them.</p>
+
+<p class="Text" style="mso-pagination:widow-orphan">Why would someone want to develop an
+ontology? Some of the reasons are:</p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To share common understanding of the structure of information among people
+or software agents</p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To enable reuse of domain knowledge</p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To make domain assumptions explicit</p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To separate domain knowledge from the operational knowledge</p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To analyze domain knowledge</p>
+
+<p class="Text"><i style="mso-bidi-font-style:normal">Sharing common understanding of the
+structure of information among people or software agents </i><span style="mso-spacerun: yes">&nbsp;</span>is one of the more common goals in developing
+ontologies <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Musen 1992; Gruber 1993)</span>.
+For example, suppose several different Web sites contain medical information or provide
+medical e-commerce services. If these Web sites share and publish the same underlying
+ontology of the terms they all use, then computer agents can extract and aggregate
+information from these different sites. The agents can use this aggregated information to
+answer user queries or as input data to other applications.</p>
+
+<p class="Text" style="mso-pagination:widow-orphan"><i style="mso-bidi-font-style:
+
+normal">Enabling reuse of domain knowledge</i> was one of
+the driving forces behind recent surge in ontology research. For example, models for many
+different domains need to represent the notion of time. This representation includes the
+notions of time intervals, points in time, relative measures of time, and so on. If one
+group of researchers develops such an ontology in detail, others can simply reuse it for
+their domains. Additionally, if we need to build a large ontology, we can integrate
+several existing ontologies describing portions of the large domain. We can also reuse a
+general ontology, such as the UNSPSC ontology, and extend it to describe our domain of
+interest.</p>
+
+<p class="Text" style="mso-pagination:widow-orphan"><i style="mso-bidi-font-style:
+
+normal">Making explicit domain assumptions </i>underlying
+an implementation makes it possible to change these assumptions easily if our knowledge
+about the domain changes. Hard-coding assumptions about the world in programming-language
+code makes these assumptions not only hard to find and understand but also hard to change,
+in particular for someone without programming expertise. In addition, explicit
+specifications of domain knowledge are useful for new users who must learn what terms in
+the domain mean.<span style="mso-spacerun: yes">&nbsp; </span></p>
+
+<p class="Text" style="mso-pagination:widow-orphan"><i style="mso-bidi-font-style:
+
+normal">Separating the domain knowledge from the
+operational knowledge </i>is another common use of ontologies. We can describe a task of
+configuring a product from its components according to a required specification and
+implement a program that does this configuration independent of the products and
+components themselves <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(McGuinness and
+Wright 1998)</span>. We can then develop an ontology of PC-components and characteristics
+and apply the algorithm to configure made-to-order PCs. We can also use the same algorithm
+to configure elevators if we &#147;feed&#148; an elevator component ontology to it <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Rothenfluh et al. 1996)</span>.</p>
+
+<p class="Text" style="mso-pagination:widow-orphan"><i style="mso-bidi-font-style:
+
+normal">Analyzing domain knowledge </i>is possible once a
+declarative specification of the terms is available.<span style="mso-spacerun: yes">&nbsp;
+</span>Formal analysis of terms is extremely valuable when both attempting to reuse
+existing ontologies and extending them <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(McGuinness et al. 2000)</span>.</p>
+
+<p class="Text">Often an ontology of the domain is not a goal in itself. Developing an
+ontology is akin to defining a set of data and their structure for other programs to use.
+Problem-solving methods, domain-independent applications, and software agents use
+ontologies and knowledge bases built from ontologies as data. For example, in this paper
+we develop an ontology of wine and food and appropriate combinations of wine with meals.
+This ontology can then be used as a basis for some applications in a suite of
+restaurant-managing tools: One application could create wine suggestions for the menu of
+the day or answer queries of waiters and customers. Another application could analyze an
+inventory list of a wine cellar and suggest which wine categories to expand and which
+particular wines to purchase for upcoming menus or cookbooks.</p>
+
+<h4 style="mso-pagination:widow-orphan">About this guide</h4>
+
+<p class="Text">We build on our experience using Protégé-2000 <span style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Protege 2000)</span></span>, Ontolingua <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Ontolingua 1997)</span></span>, Chimaera <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Chimaera 2000)</span></span> as
+ontology-editing environments. In this guide, we use Protégé-2000 for our examples.</p>
+
+<p class="Text">The wine and food example that we use throughout this guide, is loosely
+based on an example knowledge base presented in the paper describing CLASSIC&#151;a
+knowledge-representation system based on a description-logics approach <span style="font-size:
+
+12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Brachman et al. 1991)</span></span>. The
+CLASSIC tutorial <span style="font-size:12.0pt;
+
+mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(McGuinness et al. 1994)</span></span> has
+developed this example further. Protégé-2000 and other frame-based systems describe
+ontologies declaratively, stating explicitly what the class hierarchy is and to which
+classes individuals belong. </p>
+
+<p class="Text">Some ontology-design ideas in this guide originated from the literature on
+object-oriented design <span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Rumbaugh et
+al. 1991; Booch et al. 1997)</span>. However, ontology development is different from
+designing classes and relations in object-oriented programming. Object-oriented
+programming centers primarily around methods on classes&#151;a programmer makes design
+decisions based on the <i style="mso-bidi-font-style:normal">operational </i>properties of
+a class, whereas an ontology designer makes these decisions based on the <i style="mso-bidi-font-style:normal">structural</i> properties of a class. As a result, a
+class structure and relations among classes in an ontology are different from the
+structure for a similar domain in an object-oriented program.</p>
+
+<p class="Text">It is impossible to cover all the issues that an ontology developer may
+need to grapple with and we are not trying to address all of them in this guide. Instead,
+we try to provide a starting point; an initial guide that would help a new ontology
+designer to develop ontologies. At the end, we suggest places to look for explanations of
+more complicated structures and design mechanisms if the domain requires them.</p>
+
+<p class="Text">Finally, there is no single correct ontology-design methodology and we did
+not attempt to define one. The ideas that we present here are the ones that we found
+useful in our own ontology-development experience. At the end of this guide we suggest a
+list of references for alternative methodologies.</p><div id="mainheadline"><h1><a name="Section2"></a>2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What is in an ontology?</h1></div><p class="Text" style="mso-pagination:widow-orphan">The Artificial-Intelligence literature
+contains many definitions of an ontology; many of these contradict one another. For the
+purposes of this guide an <b style="mso-bidi-font-weight:
+
+normal">ontology</b> is a
+formal explicit description of concepts in a domain of discourse (<b style="mso-bidi-font-weight:normal">classes </b>(sometimes called <b style="mso-bidi-font-weight:normal">concepts</b>)), properties of each concept describing
+various features and attributes of the concept (<b style="mso-bidi-font-weight:normal">slots
+</b>(sometimes called<b style="mso-bidi-font-weight:normal"> roles </b>or<b style="mso-bidi-font-weight:
+
+normal"> properties</b>)), and restrictions on slots (<b style="mso-bidi-font-weight:
+
+normal">facets </b>(sometimes called <b style="mso-bidi-font-weight:normal">role restrictions</b>)). An ontology together with a
+set of individual <b style="mso-bidi-font-weight:normal">instances</b> of classes
+constitutes a <b style="mso-bidi-font-weight:normal">knowledge base</b>. In reality, there
+is a fine line where the ontology ends and the knowledge base begins.</p>
+
+<p class="Text">Classes are the focus of most ontologies. Classes describe concepts in the
+domain. For example, a class of wines represents all wines. Specific wines are instances
+of this class. The Bordeaux wine in the glass in front of you while you read this document
+is an instance of<span style="mso-spacerun: yes">&nbsp; </span>the class of Bordeaux
+wines. A class can have <b style="mso-bidi-font-weight:normal">subclasses</b> that
+represent concepts that are more specific than the superclass. For example, we can divide
+the class of all wines into red, white, and rosé wines. Alternatively, we can divide a
+class of all wines into sparkling and non-sparkling wines.<span style="mso-spacerun: yes">&nbsp;
+</span></p>
+
+<p class="Text" style="mso-pagination:widow-orphan">Slots<b style="mso-bidi-font-weight:
+
+normal"> </b>describe properties of classes and instances:
+<span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Château
+Lafite Rothschild Pauillac</span></span> wine has a full body; it is produced by the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Château
+Lafite Rothschild</span></span> winery. We have two slots describing the wine in this
+example: the slot body with the value full and the slot maker with the value <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Château
+Lafite Rothschild</span></span> winery. At the class level, we can say that instances of
+the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+will have slots describing their <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">flavor</span></span>,
+<span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">body</span></span>,
+<span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">sugar</span></span>
+<span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">level</span></span>,
+the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+of the wine and so on.<a href="#_footnote1" name="_ftntref1"><span class="MsoFootnoteReference"><span style="font-size:10.0pt"><span style="mso-special-character:footnote">[1]</span></span></span></a></p>
+
+<p class="Text" style="mso-pagination:widow-orphan">All instances of the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>,
+and its subclass Pauillac, have a slot <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+the value of which is an instance of the class Winery (<a href="#Figure1"><span style="mso-field-code:
+
+&quot;REF _Ref505769612 \\h&quot;">Figure 1</span></a>). All
+instances of the class Winery have a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+that refers to all the wines (instances of the class Wine and its subclasses) that the
+winery produces.</p>
+
+<p class="Text" style="mso-pagination:widow-orphan">In practical terms, developing an
+ontology includes: </p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>defining classes in the ontology, </p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>arranging the classes in a taxonomic (subclass&#150;superclass) hierarchy, </p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>defining slots and describing allowed values for these slots, </p>
+
+<p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>filling in the values for slots for instances. </p>
+
+<p class="Text" style="mso-pagination:widow-orphan">We can then create a knowledge base by
+defining individual instances of these classes filling in specific slot value information
+and additional slot restrictions.<span style="mso-ignore:vglayout"> </span></p>
+<span style="mso-ignore:vglayout">
+
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="120" height="0"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><img src="image002.jpg" v:shapes="_x0000_s1044" WIDTH="306" HEIGHT="237"></td>
+  </tr>
+</table>
+</span>
+<dd><a name="Figure1"></a>Figure <span style="mso-field-code:&quot;SEQ Figure \\* ARABIC&quot;">1</span>.<span style="mso-spacerun: yes">&nbsp; </span>Some classes, instances, and relations among them
+  in the wine domain.<span style="mso-spacerun: yes">&nbsp; </span>We used black for classes
+  and red for instances. Direct links represent slots and internal links such as instance-of
+  and subclass-of.<div id="mainheadline"><h1><a name="Section3"></a>3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>A Simple Knowledge-Engineering Methodology</h1></div><p class="Text">As we said earlier, there is no one &#147;correct&#148; way or methodology
+  for developing ontologies. Here we discuss general issues to consider and offer one
+  possible process for developing an ontology. We describe an iterative approach to ontology
+  development: we start with a rough first pass at the ontology. We then revise and refine
+  the evolving ontology and fill in the details. Along the way, we discuss the modeling
+  decisions that a designer needs to make, as well as the pros, cons, and implications of
+  different solutions.</p>
+  <p class="Text" style="mso-pagination:widow-orphan">First, we would like to emphasize some
+  fundamental rules in ontology design to which we will refer many times. These rules may
+  seem rather dogmatic. They can help, however, to make design decisions in many cases. </p>
+  <p class="Rule" style="margin-left:.75in;text-indent:-.25in;mso-pagination:widow-orphan;
+
+mso-list:l1 level1 lfo4;tab-stops:list .75in">1)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>There
+  is no one correct way to model a domain&#151; there are always viable alternatives. The
+  best solution almost always depends on the application that you have in mind and the
+  extensions that you anticipate.</p>
+  <p class="Rule" style="margin-left:.75in;text-indent:-.25in;mso-pagination:widow-orphan;
+
+mso-list:l1 level1 lfo4;tab-stops:list .75in">2)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Ontology
+  development is necessarily an iterative process.</p>
+  <p class="Rule" style="margin-left:.75in;text-indent:-.25in;mso-pagination:widow-orphan;
+
+mso-list:l1 level1 lfo4;tab-stops:list .75in">3)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Concepts
+  in the ontology should be close to objects (physical or logical) and relationships in your
+  domain of interest. These are most likely to be nouns (objects) or verbs (relationships)
+  in sentences that describe your domain.</p>
+  <p class="Text">That is, deciding what we are going to use the ontology for, and how
+  detailed or general the ontology is going to be will guide many of the modeling decisions
+  down the road. Among several viable alternatives, we will need to determine which one
+  would work better for the projected task, be more intuitive, more extensible, and more
+  maintainable. We also need to remember that an ontology is a model of reality of the world
+  and the concepts in the ontology must reflect this reality. After we define an initial
+  version of the ontology, we can evaluate and debug it by using it in applications or
+  problem-solving methods or by discussing it with experts in the field, or both. As a
+  result, we will almost certainly need to revise the initial ontology. This process of
+  iterative design will likely continue through the entire lifecycle of the ontology. </p>
+  <p class="Step"><a name="Step1"></a>Step 1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Determine the domain and scope of the ontology</p>
+  <p class="Text">We suggest starting the development of an ontology by defining its domain
+  and scope. That is, answer several basic questions: </p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>What is the domain that the ontology will cover?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>For what<span style="mso-spacerun: yes">&nbsp; </span>we are going to use
+  the ontology?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>For what types of questions the information in the ontology should provide
+  answers?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Who will use and maintain the ontology?</p>
+  <p class="Text">The answers to these questions may change during the ontology-design
+  process, but at any given time they help limit the scope of the model. </p>
+  <p class="Text">Consider the ontology of wine and food that we introduced earlier.
+  Representation of food and wines is the domain of the ontology. We plan to use this
+  ontology for the applications that suggest good combinations of wines and food. </p>
+  <p class="Text">Naturally, the concepts describing different types of wines, main food
+  types, the notion of a good combination of wine and food and a bad combination will figure
+  into our ontology. At the same time, it is unlikely that the ontology will include
+  concepts for managing inventory in a winery or employees in a restaurant even though these
+  concepts are somewhat related to the notions of wine and food.</p>
+  <p class="Text">If the ontology we are designing will be used to assist in
+  natural-language processing of articles in wine magazines, it may be important to include
+  synonyms and part-of-speech information for concepts in the ontology. If the ontology will
+  be used to help restaurant customers decide which wine to order, we need to include
+  retail-pricing information.<span style="mso-spacerun: yes">&nbsp; </span>If it is used for
+  wine buyers in stocking a wine cellar, wholesale pricing and availability may be
+  necessary.<span style="mso-spacerun: yes">&nbsp; </span>If the people who will maintain
+  the ontology describe the domain in a language that is different from the language of the
+  ontology users, we may need to provide the mapping between the languages.</p>
+  <h4 style="mso-pagination:widow-orphan">Competency questions.</h4>
+  <p class="Text">One of the ways to determine the scope of the ontology is to sketch a list
+  of questions that a knowledge base based on the ontology should be able to answer, <b style="mso-bidi-font-weight:normal">competency questions</b> <span style="font-size:12.0pt;
+
+mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Gruninger and Fox 1995)</span></span>.
+  These questions will serve as the litmus test later: Does the ontology contain enough
+  information to answer these types of questions? Do the answers require a particular level
+  of detail or representation of a particular area? These competency questions are just a
+  sketch and do not need to be exhaustive.</p>
+  <p class="Text">In the wine and food domain, the following are the possible competency
+  questions:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Which wine characteristics should I consider when choosing a wine?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Is Bordeaux a red or white wine?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Does Cabernet Sauvignon go well with seafood?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>What is the best choice of wine for grilled meat?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Which characteristics of a wine affect its appropriateness for a dish?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Does a bouquet or body of a specific wine change with vintage year?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>What were good vintages for Napa Zinfandel?</p>
+  <p class="Text">Judging from this list of questions, the ontology will include the
+  information on various wine characteristics and wine types, vintage years&#151;good and
+  bad ones&#151;classifications of foods that matter for choosing an appropriate wine,
+  recommended combinations of wine and food.</p>
+  <p class="Step"><a name="Step2"></a>Step 2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Consider reusing existing ontologies</p>
+  <p class="Text">It is almost always worth considering what someone else has done and
+  checking if we can refine and extend existing sources for our particular domain and task.
+  Reusing existing ontologies may be a requirement if our system needs to interact with
+  other applications that have already committed to particular ontologies or controlled
+  vocabularies.<span style="mso-spacerun:
+
+yes">&nbsp; </span>Many ontologies are already
+  available in electronic form and can be imported into an ontology-development environment
+  that you are using. The formalism in which an ontology is expressed often does not matter,
+  since many knowledge-representation systems can import and export ontologies. Even if a
+  knowledge-representation system cannot work directly with a particular formalism, the task
+  of translating an ontology from one formalism to another is usually not a difficult one. </p>
+  <p class="Text">There are libraries of reusable ontologies on the Web and in the
+  literature. For example, we can use the Ontolingua ontology library (<a href="http://www.ksl.stanford.edu/software/ontolingua/">http://www.ksl.stanford.edu/software/ontolingua/</a>)
+  or the DAML ontology library (<a href="http://www.daml.org/ontologies/">http://www.daml.org/ontologies/</a>).<span style="mso-spacerun: yes">&nbsp; </span>There are also a number of publicly available
+  commercial ontologies (e.g., UNSPSC (www.unspsc.org), RosettaNet (www.rosettanet.org),
+  DMOZ (www.dmoz.org)).</p>
+  <p class="Text">For example, a knowledge base of French wines may already exist. If we can
+  import this knowledge base and the ontology on which it is based, we will have not only
+  the classification of French wines but also the first pass at the classification of wine
+  characteristics used to distinguish and describe the wines. Lists of wine properties may
+  already be available from commercial Web sites such as <a href="http://www.wines.com/">www.wines.com</a>
+  that customers consider use to buy wines.</p>
+  <p class="Text">For this guide however we will assume that no relevant ontologies already
+  exist and start developing the ontology from scratch.</p>
+  <p class="Step"><a name="Step3"></a>Step 3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Enumerate important terms in the ontology</p>
+  <p class="Text">It is useful to write down a list of all terms we would like either to
+  make statements about or to explain to a user. What are the terms we would like to talk
+  about? What properties do those terms have? What would we like to say about those terms?
+  For example, important wine-related terms will include <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">wine</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">grape</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">location</span></span><i style="mso-bidi-font-style:normal">, </i>a wine&#146;s <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">color</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">body</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">flavor</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">sugar
+  content</span></span>; different types of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">food</span></span>,
+  such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">fish</span></span><i style="mso-bidi-font-style:normal"> </i>and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">red
+  meat</span></span>; subtypes of wine such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">white
+  wine</span></span>, and so on. Initially, it is important to get a comprehensive list of
+  terms without worrying about overlap between concepts they represent, relations among the
+  terms, or any properties that the concepts may have, or whether the concepts are classes
+  or slots.. </p>
+  <p class="Text">The next two steps&#151;developing the class hierarchy and defining
+  properties of concepts (slots)&#151;are closely intertwined. It is hard to do one of them
+  first and then do the other. Typically, we create a few definitions of the concepts in the
+  hierarchy and then<span style="mso-spacerun: yes">&nbsp; </span>continue by describing
+  properties of these concepts and so on. These two steps are also the most important<span style="mso-spacerun: yes">&nbsp; </span>steps in the ontology-design process. We will
+  describe them here briefly and then spend the next two sections discussing the more
+  complicated issues that need to be considered, common pitfalls, decisions to make, and so
+  on. </p>
+  <p class="Step"><a name="Step4"></a>Step 4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Define the classes and the class hierarchy</p>
+  <p class="Text">There are several possible approaches in developing a class hierarchy <span style="font-size:
+
+12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Uschold and Gruninger 1996)</span></span>:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>A <b style="mso-bidi-font-weight:normal">top-down</b> development process
+  starts with the definition of the most general concepts in the domain and subsequent
+  specialization of the concepts. For example, we can start with creating classes for the
+  general concepts of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Food</span></span>.
+  Then we specialize the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class by creating some of its subclasses: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Rosé
+  wine</span></span>. We can further categorize the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span><i style="mso-bidi-font-style:normal"> </i>class, for example, into <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Syrah</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Burgundy</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Cabernet
+  Sauvignon</span></span>, and so on.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>A <b style="mso-bidi-font-weight:normal">bottom-up</b> development process
+  starts with the definition of the most specific classes, the leaves of the hierarchy, with
+  subsequent grouping of these classes into more general concepts. For example, we start by
+  defining classes for <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Pauillac</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Margaux</span></span>
+  wines. We then create a common superclass for these two classes&#151;<span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Medoc</span></span>&#151;which
+  in turn is a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Bordeaux</span></span>.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>A <b style="mso-bidi-font-weight:normal">combination</b> development process
+  is a combination of the top-down and bottom-up approaches: We define the more salient
+  concepts first and then generalize and specialize them appropriately. We might start with
+  a few top-level concepts such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>,
+  and a few specific concepts, such as <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Margaux</span></span>
+  . We can then relate them to a middle-level concept, such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Medoc</span></span>.<span style="mso-spacerun: yes">&nbsp; </span>Then we may want to generate all of the regional
+  wine classes from France, thereby generating a number of middle-level concepts.</p>
+  <p class="Text"><a href="#Figure2"><span style="mso-field-code:&quot;REF _Ref505772507 \\h &#01; \\* MERGEFORMAT&quot;">Figure 2</span></a>
+  shows a possible breakdown among the different levels of generality. </p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="60" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image004.jpg" v:shapes="_x0000_s1054" WIDTH="386" HEIGHT="347"></span></td>
+    </tr>
+  </table>
+  <p class="MsoCaption"><a name="Figure2"></a>Figure <span style="mso-field-code:
+
+&quot;SEQ Figure \\* ARABIC&quot;">2</span>. The different
+  levels of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  taxonomy: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>,
+  <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Rosé
+  wine</span></span> are more general concepts, the top level. <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Pauillac</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Margaux</span></span>
+  are the most specific classes in the hierarchy, the bottom level. </p>
+  <p class="Text">None of these three methods is inherently better than any of the others.
+  The approach to take depends strongly on the personal view of the domain. If a developer
+  has a systematic top-down view of the domain, then it may be easier to use the top-down
+  approach. The combination approach is often the easiest for many ontology developers,
+  since the concepts &#147;in the middle&#148; tend to be the more descriptive concepts in
+  the domain <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:
+
+&quot;ADDIN ENRfu&quot;">(Rosch 1978)</span></span>.</p>
+  <p class="Text">If you tend to think of wines by distinguishing the most general
+  classification first, then the top-down approach may work better for you. If you&#146;d
+  rather start by getting grounded with specific examples, the bottom-up approach may be
+  more appropriate. </p>
+  <p class="Text">Whichever approach we choose, we usually start by defining classes. From
+  the list created in <a href="#Step3"><span style="mso-field-code:&quot;REF _Ref505749890 \\r \\h &#01; \\* MERGEFORMAT&quot;">Step 3</span></a>,
+  we select the terms that describe objects having independent existence rather than terms
+  that describe these objects. These terms will be classes in the ontology and will become
+  anchors in the class hierarchy.<a href="#_footnote2" name="_ftntref2"><span class="MsoFootnoteReference"><span style="font-size:10.0pt"><span style="mso-special-character:footnote">[2]</span></span></span></a> We organize the
+  classes into a hierarchical taxonomy by asking if by being an instance of one class, the
+  object will necessarily (i.e., by definition) be an instance of some other class.</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">If a class A is a superclass of class
+  B, then every instance of B is also an instance of A</p>
+  <p class="Text">In other words, the class B represents a concept that is a &#147;kind
+  of&#148; A.</p>
+  <p class="Text">For example, every Pinot Noir wine is necessarily a red wine. Therefore
+  the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Pinot<span style="mso-spacerun: yes">&nbsp; </span>Noir</span></span> class is a subclass of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> class.</p>
+  <p class="Text"><a href="#Figure2"><span style="mso-field-code:&quot;REF _Ref505772507 \\h &#01; \\* MERGEFORMAT&quot;">Figure 2</span></a>
+  shows a part of the class hierarchy for the Wine ontology. <a href="#Section4">Section <span style="mso-field-code:&quot;REF _Ref505687674 \\r \\h &#01; \\* MERGEFORMAT&quot;">4</span></a>
+  contains a detailed discussion of things to look for when defining a class hierarchy. <span style="mso-ignore:vglayout"></p>
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="14" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image006.gif" v:shapes="_x0000_s1053" WIDTH="524" HEIGHT="174"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure3"></a>Figure <span style="mso-field-code:
+
+&quot;SEQ Figure \\* ARABIC&quot;">3</span>. The slots for the
+  class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  and the facets for these slots. The &#147;I&#148; icon next to the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+  slot indicates that the slot has an inverse (<a href="#Section51">Section <span style="mso-field-code:
+
+&quot;REF _Ref506021276 \\r \\h&quot;">5.1</span></a>)</p>
+  <p class="Step"><a name="Step5"></a>Step 5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Define
+  the properties of classes&#151;slots</p>
+  <p class="Text">The classes alone will not provide enough information to answer the
+  competency questions from <a href="#Step1"><span style="mso-field-code:&quot;REF _Ref505772794 \\r \\h &#01; \\* MERGEFORMAT&quot;">Step 1</span></a>.
+  Once we have defined some of the classes, we must describe the internal structure of
+  concepts. </p>
+  <p class="Text">We have already selected classes from the list of terms we created in <a href="#Step3"><span style="mso-field-code:&quot;REF _Ref505749890 \\r \\h &#01; \\* MERGEFORMAT&quot;">Step 3</span></a>.
+  Most of the remaining terms are likely to be properties of these classes. These terms
+  include, for example, a wine&#146;s <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">color,
+  body, flavor</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">sugar
+  content</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">location</span></span>
+  of a winery. </p>
+  <p class="Text">For each property in the list, we must determine which class it describes.
+  These properties become slots attached to classes. Thus, the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class will have the following slots: <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">color</span></span>,<span style="mso-spacerun: yes">&nbsp; </span><span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">body</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">flavor</span></span>,
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">sugar</span></span>.
+  And the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery
+  </span></span>will have a <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">location
+  </span></span>slot.</p>
+  <p class="Text">In general, there are several types of object properties that can become
+  slots in an ontology:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>&#147;intrinsic&#148; properties such as the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">flavor</span></span>
+  of a wine;</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>&#147;extrinsic&#148; properties such as a wine&#146;s <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">name,
+  </span></span>and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">area
+  </span></span>it comes from;</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>parts, if the object is structured; these can be both physical and abstract
+  &#147;parts&#148; (e.g., the courses of a meal)</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>relationships to other individuals; these are the relationships between
+  individual members of the class and other items (e.g., the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">maker</span></span>
+  of a wine, representing a relationship between a wine and a winery, and the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">grape</span></span>
+  the wine is made from.)</p>
+  <p class="Text">Thus, in addition to the properties we have identified earlier, we need to
+  add the following slots to the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">name</span></span>,
+  <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">area</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">grape</span></span>.
+  <a href="#Figure3">Figure 3</a> shows the slots for the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>.
+  </p>
+  <p class="Text">All subclasses of a class <b style="mso-bidi-font-weight:normal">inherit</b>
+  the slot of that class. For example, all the slots of the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  will be inherited to all subclasses of Wine, including <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  Wine</span></span>. We will add an additional slot, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">tannin
+  level</span></span> (low, moderate, or high), to the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine </span></span>class. The <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">tannin
+  level</span></span> slot will be inherited by all the classes representing red wines (such
+  as <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Bordeaux</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Beaujolais</span></span>).</p>
+  <p class="Text">A slot should be attached at the most general class that can have that
+  property. For instance, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">body</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">color</span></span>
+  of a wine should be attached at the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>,
+  since it is the most general class whose instances will have body and color.<span style="mso-spacerun: yes">&nbsp; </span></p>
+  <p class="Step"><a name="Step6"></a>Step 6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Define the facets of the slots</p>
+  <p class="Text">Slots can have different facets describing the value type, allowed values,
+  the number of the values (cardinality), and other features of the values the slot can
+  take. For example, the value of a <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">name
+  </span></span>slot (as in &#147;the name of a wine&#148;) is one string. That is, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">name
+  </span></span>is a slot with value type String. A slot <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  (as in &#147;a winery <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  these wines&#148;) can have multiple values and the values are instances of the class
+  Wine. That is, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">produces</span></span>
+  is a slot with value type <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Instance</span></span>
+  with <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>
+  as allowed class. </p>
+  <p class="Text">We will now describe several common facets.</p>
+  <h4 style="mso-pagination:widow-orphan">Slot cardinality</h4>
+  <p class="Text">Slot cardinality defines how many values a slot can have. Some systems
+  distinguish only between single cardinality (allowing at most one value) and multiple
+  cardinality (allowing any number of values). A <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">body</span></span>
+  of a wine will be a single cardinality slot (a wine can have only one body). Wines
+  produced by a particular winery fill in a multiple-cardinality slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  for a <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Winery</span></span>
+  class.</p>
+  <p class="Text">Some systems allow specification of a minimum and maximum cardinality to
+  describe the number of slot values more precisely. Minimum cardinality of N means that a
+  slot must have at least N values. For example, the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">grape</span></span>
+  slot of a Wine has a minimum cardinality of 1: each wine is made of at least one variety
+  of grape. Maximum cardinality of M means that a slot can have at most M values. The
+  maximum cardinality for the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">grape</span></span>
+  slot for single varietal wines is 1: these wines are made from only one variety of grape.
+  Sometimes it may be useful to set the maximum cardinality to 0. This setting would
+  indicate that the slot cannot have any values for a particular subclass. </p>
+  <h4 style="mso-pagination:widow-orphan">Slot-value type</h4>
+  <p class="Text">A value-type facet describes what types of values can fill in the slot.
+  Here is a list of the more common value types:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b style="mso-bidi-font-weight:normal">String</b> is the simplest value type
+  which is used for slots such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">name</span></span>:
+  the value is a simple string</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b style="mso-bidi-font-weight:normal">Number</b> (sometimes more specific
+  value types of Float and Integer are used) describes slots with numeric values. For
+  example, a <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">price</span></span>
+  of a wine can have a value type Float</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b style="mso-bidi-font-weight:normal">Boolean</b> slots are simple
+  yes&#150;no flags. For example, if we choose not to represent sparkling wines as a
+  separate class, whether or not a wine is sparkling can be represented as a value of a
+  Boolean slot: if the value is &#147;true&#148; (&#147;yes&#148;) the wine is sparkling and
+  if the value is &#147;false&#148; (&#147;no&#148;) the wine is not a sparkling one.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b style="mso-bidi-font-weight:normal">Enumerated </b>slots specify a list
+  of specific allowed values for the slot. For example, we can specify that the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">flavor</span></span>
+  slot can take on one of the three possible values: <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">strong</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">moderate</span></span>,
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">delicate</span></span>.
+  In Protégé-2000 the enumerated slots are of type <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Symbol</span></span>.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b style="mso-bidi-font-weight:normal">Instance</b>-type slots allow
+  definition of relationships between individuals. Slots with value type Instance must also
+  define a list of allowed classes from which the instances can come. For example, a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  for the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  may have instances of the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  as its values.<a href="#_footnote3" name="_ftntref3"><span style="mso-bookmark:_Ref498838109"><span class="MsoFootnoteReference"><span style="font-size:10.0pt"><span style="mso-special-character:footnote">[3]</span></span></span></span></a></p>
+  <p><a href="#Figure4"><span style="mso-field-code:&quot;REF _Ref505767442 \\h&quot;">Figure
+  4</span></a> shows a definition of the slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  at the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>.
+  </p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="61" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image008.jpg" v:shapes="_x0000_s1042" WIDTH="433" HEIGHT="259"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure4"></a>Figure <span style="mso-field-code:
+
+&quot;SEQ Figure \\* ARABIC&quot;">4</span>. The definition of a
+  slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  that describes the wines produced by a winery. The slot has cardinality multiple, value
+  type Instance, and the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  as the allowed class for its values.</p>
+  <h4 style="mso-pagination:widow-orphan">Domain and range of a slot</h4>
+  <p class="Text">Allowed classes for slots of type Instance are often called a <b style="mso-bidi-font-weight:normal">range</b> of a slot. In the example in <a href="#Figure4"><span style="mso-field-code:&quot;REF _Ref505767442 \\h &#01; \\* MERGEFORMAT&quot;">Figure 4</span></a>
+  the class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  is the range of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  slot. Some systems allow restricting the range of a slot when the slot is attached for a
+  particular class. </p>
+  <p class="Text">The classes to which a slot is attached or a classes which property a slot
+  describes, are called the <b style="mso-bidi-font-weight:normal">domain</b> of the slot.
+  The <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  class is the domain of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  slot. In the systems where we <i style="mso-bidi-font-style:normal">attach</i> slots to
+  classes, the classes to which the slot is attached usually constitute the domain of that
+  slot. There is no need to specify the domain separately.</p>
+  <p class="Text">The basic rules for determining a domain and a range of a slot are
+  similar: </p>
+  <p class="Rule">When defining a domain or a range for a slot, find the most general
+  classes or class that can be respectively the domain or the range for the slots . </p>
+  <p class="Rule">On the other hand, do not define a domain and range that is overly
+  general: all the classes in the domain of a slot should be described by the slot and
+  instances of all the classes in the range of a slot should be potential fillers for the
+  slot. an overly general class for range (i.e., one would not want to make the range THING)
+  but one would want to choose a class that will cover all fillers</p>
+  <p class="Text">Instead of listing all possible subclasses of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class for the range of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  slot, just list <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>.
+  At the same time, we do not want to specify the range of the slot as THING&#151;the most
+  general class in an ontology.</p>
+  <p class="Text">In more specific terms:</p>
+  <p class="Rule">If a list of classes defining a range or a<span style="mso-spacerun: yes">&nbsp;
+  </span>domain of a slot includes a class and its subclass, remove the subclass.</p>
+  <p class="Text">If the range of the slot contains both the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> class, we can remove the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Red
+  Wine</span></span> from the range because it does not add any new information: The <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> is a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>
+  and therefore the slot range already implicitly includes it as well as all other
+  subclasses of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class.</p>
+  <p class="Rule">If a list of classes defining a range or a<span style="mso-spacerun: yes">&nbsp;
+  </span>domain of a slot contains all subclasses of a class A, but not the class A itself,
+  the range should contain only the class A and not the subclasses.</p>
+  <p class="Text">Instead of defining the range of the slot to include <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  Wine</span></span>, and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Rose
+  Wine</span></span> (enumerating all the direct subclasses of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>),
+  we can limit the range to the class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  itself. </p>
+  <p class="Rule">If a list of classes defining a range or a<span style="mso-spacerun: yes">&nbsp;
+  </span>domain of a slot contains all but a few subclasses of a class A, consider if the
+  class A would make a more<span style="mso-spacerun: yes">&nbsp; </span>appropriate range
+  definition.</p>
+  <p class="Text">In systems where attaching a slot to a class is the same as adding the
+  class to the domain of the slot, the same rules apply to slot attachment: On the one hand,
+  we should try to make it as general as possible. On the other hand, we must ensure that
+  each class to which we attach the slot can indeed have the property that the slot
+  represents. We can attach the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">tannin
+  level</span></span> slot to each of the classes representing red wines (e.g., <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Bordeaux</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Merlot</span></span>,
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Beaujolais</span></span>,
+  etc.). However, since all red wines have the tannin-level property, we should instead
+  attach the slot to this more general class of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wines</span></span>. Generalizing the domain of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">tannin
+  level</span></span> slot further (by attaching it to the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class instead) would not be correct since we do not use tannin level to describe white
+  wines for example.</p>
+  <p class="Step"><a name="Step7"></a>Step 7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Create instances</p>
+  <p class="Text">The last step is creating individual instances of classes in the
+  hierarchy. Defining an individual instance of a class requires (1) choosing a class, (2)
+  creating an individual instance of that class, and (3) filling in the slot values. For
+  example, we can create an individual instance <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chateau-Morgon-Beaujolais</span></span>
+  to represent a specific type of Beaujolais wine.<span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+  Chateau-Morgon-Beaujolais</span></span> is an instance of the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Beaujolais</span></span>
+  representing all Beaujolais wines. This instance has the following slot values defined (<a href="Figure5"><span style="mso-field-code:&quot;REF _Ref505767515 \\h &#01; \\* MERGEFORMAT&quot;">Figure 5</span></a>):</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Body:<span style="mso-spacerun: yes">&nbsp; </span>Light </p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Color:<span style="mso-spacerun: yes">&nbsp; </span>Red </p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Flavor:<span style="mso-spacerun: yes">&nbsp; </span>Delicate </p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Tannin level: Low</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Grape:<span style="mso-spacerun: yes">&nbsp; </span>Gamay (instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine
+  grape</span></span> class)</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Maker: Chateau-Morgon (instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery
+  </span></span>class)</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Region:<span style="mso-spacerun: yes">&nbsp; </span>Beaujolais (instance of
+  the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine-Region</span></span>
+  class)</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Sugar:<span style="mso-spacerun: yes">&nbsp; </span>Dry</p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="24" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image010.jpg" v:shapes="_x0000_s1043" WIDTH="520" HEIGHT="270"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure5"></a>Figure <span style="mso-field-code:
+
+&quot;SEQ Figure \\* ARABIC&quot;">5</span>. The definition of
+  an instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Beaujolais</span></span>
+  class. The instance is <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Chateua
+  Morgon Beaujolais</span></span> from the Beaujolais region, produced from the Gamay grape
+  by the Chateau Morgon winery. It has a light body, delicate flavor, red color, and low
+  tannin level. It is a dry wine.</p><div id="mainheadline"><h1 style="mso-pagination:widow-orphan"><a name="Section4"></a><span style="mso-bookmark:_Ref505687674">4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Defining classes and a class hierarchy</span></h1></div><p class="Text">This section discussed things to look out for and errors that are easy to
+  make when defining classes and a class hierarchy (<a href="#Step4">Step 4</a> from <a href="#Section3">Section 3</a>). As we have mentioned before, there is no single correct
+  class hierarchy for any given domain. The hierarchy depends on the possible uses of the
+  ontology, the level of the detail that is necessary for the application, personal
+  preferences, and sometimes requirements for compatibility with other models. However, we
+  discuss several guidelines to keep in mind when developing a class hierarchy. After
+  defining a considerable number of new classes, it is helpful to stand back and check if
+  the emerging hierarchy conforms to these guidelines.</p>
+  <h2 style="mso-pagination:widow-orphan"><a name="Section41"></a><span style="mso-bookmark:_Ref497195628">4.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Ensuring that the class hierarchy is correct</span></h2>
+  <h4 style="mso-pagination:widow-orphan">An &#147;is-a&#148; relation</h4>
+  <p class="Text">The class hierarchy represents an &#147;is-a&#148; relation: a class A is
+  a subclass of B if every instance of B is also an instance of A. For example, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>
+  is a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White</span></span>
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">wine</span></span>.
+  Another way to think of the taxonomic relation is as a &#147;kind-of&#148; relation: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>
+  is a kind of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>. A jetliner is a kind of an aircraft. Meat is a kind of food. </p>
+  <p class="Rule" style="mso-pagination:widow-orphan">A subclass of a class represents a
+  concept that is a &#147;kind of&#148; the concept that the superclass represents.</p>
+  <h4 style="mso-pagination:widow-orphan">A single wine is not a subclass of all wines</h4>
+  <p class="Text">A common modeling mistake is to include both a singular and a plural
+  version of the same concept in the hierarchy making the former a subclass of the latter.
+  For example, it is wrong to define a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wines</span></span>
+  and a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>
+  as a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wines</span></span>.
+  Once you think of the hierarchy as representing the &#147;kind-of&#148; relationship, the
+  modeling error becomes clear: a single <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  is not a <b style="mso-bidi-font-weight:normal">kind of</b> <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wines</span></span>.
+  The best way to avoid such an error is always to use either singular or plural in naming
+  classes (see <a href="#Section6">Section <span style="mso-field-code:&quot;REF _Ref497194569 \\r \\h&quot;">6</span></a> for the
+  discussion on naming concepts). </p>
+  <h4 style="mso-pagination:widow-orphan">Transitivity of the hierarchical relations</h4>
+  <p class="Text">A subclass relationship is transitive:</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">If B is a subclass of A and C is a
+  subclass of B, then C is a subclass of A</p>
+  <p class="Text">For example, we can define a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>,
+  and then define a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> as a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>.
+  Then we define a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>
+  as a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>. Transitivity of the subclass relationship means that the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay
+  </span></span>is also a subclass of <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>.
+  Sometimes we distinguish between direct subclasses and indirect subclasses. A <b style="mso-bidi-font-weight:normal">direct subclass</b> is the &#147;closest&#148;
+  subclass of the class: there are no classes between a class and its direct subclass in a
+  hierarchy. That is, there are no other classes in the hierarchy between a class and its
+  direct superclass. In our example, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>
+  is a direct subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> and is not a direct subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>.</p>
+  <h4 style="mso-pagination:widow-orphan">Evolution of a class hierarchy</h4>
+  <p class="Text">Maintaining a consistent class hierarchy may become challenging as domains
+  evolve. For example, for many years, all Zinfandel wines were red. Therefore, we define a
+  class of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Zinfandel</span></span>
+  wines as a subclass of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> class. Sometimes, however, wine makers began to press the grapes and to
+  take away the color-producing aspects of the grapes immediately, thereby modifying the
+  color of the resulting wine. Thus, we get &#147;white zinfandel&#148; whose color is rose.
+  Now we need to break the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Zinfandel</span></span>
+  class into two classes of zinfandel&#151;<span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  zinfandel</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  zinfandel</span></span>&#151;and classify them as subclasses of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Rose
+  wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> respectively.<span style="mso-spacerun: yes">&nbsp; </span></p>
+  <h4 style="mso-pagination:widow-orphan">Classes and their names</h4>
+  <p class="Text">It is important to distinguish between a class and its name:</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">Classes represent concepts in the
+  domain and not the words that denote these concepts.</p>
+  <p class="Text">The name of a class may change if we choose a different terminology, but
+  the term itself represents the objective reality in the world. For example, we may create
+  a class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Shrimps</span></span>,
+  and then rename it to <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Prawns</span></span>&#151;the
+  class still represents the same concept. Appropriate wine combinations that referred to
+  shrimp dishes should refer to prawn dishes. In more practical terms, the following rule
+  should always be followed:</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">Synonyms for the same concept do not
+  represent different classes</p>
+  <p class="Text">Synonyms are just different names for a concept or a term. Therefore, we
+  should <b style="mso-bidi-font-weight:normal">not</b> have a class called <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Shrimp</span></span>
+  and a class called <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Prawn</span></span>,
+  and, possibly a class called <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Crevette</span></span>.
+  Rather, there is one class, named either <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Shrimp</span></span>
+  or <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Prawn</span></span>.
+  Many systems allow associating a list of synonyms,<span style="mso-spacerun: yes">&nbsp; </span>translations,
+  or presentation names with a class. If a system does not allow this associations, synonyms
+  could always be listed in the class documentation.</p>
+  <h4 style="mso-pagination:widow-orphan">Avoiding class cycles</h4>
+  <p class="Text">We should avoid <b style="mso-bidi-font-weight:normal">cycles</b> in the
+  class hierarchy. We say that there is a cycle in a hierarchy when some class A has a
+  subclass B and at the same time B is a superclass of A. Creating such a cycle in a
+  hierarchy amounts to declaring that the classes A and B are equivalent: all instances of A
+  are instances of B and all instances of B are also instances of A. Indeed, since B is a
+  subclass of A, all B&#146;s instances must be instances of the class A. Since A is a
+  subclass of B, all A&#146;s instances must also be instances of the class B.</p>
+  <h2 style="mso-pagination:widow-orphan">4.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Analyzing
+  siblings in a class hierarchy</h2>
+  <h4 style="mso-pagination:widow-orphan">Siblings in a class hierarchy</h4>
+  <p class="Text"><b style="mso-bidi-font-weight:normal">Siblings</b> in the hierarchy are
+  classes that are direct subclasses of the same class (see <a href="#Section41">Section <span style="mso-field-code:&quot;REF _Ref505767590 \\r \\h&quot;">4.1</span></a>).</p>
+  <p class="Rule">All the siblings in the hierarchy (except for the ones at the root) must
+  be at the same level of generality.</p>
+  <p class="Text">For example, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>
+  should not be subclasses of the same class (say, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>).
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">White
+  wine</span></span> is a more general concept than <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chardonnay</span></span>.
+  Siblings should represent concepts that fall &#147;along the same line&#148; in the same
+  way that<span style="mso-spacerun: yes">&nbsp; </span>same-level sections in a book are at
+  the same level of generality. In that sense, requirements for a class hierarchy are
+  similar to the requirements for a book outline.</p>
+  <p class="Text">The concepts at the root of the hierarchy however (which are often
+  represented as direct subclasses of some very general class, such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Thing</span></span>)
+  represent major divisions of the domain and do not have to be similar concepts.</p>
+  <h4 style="mso-pagination:widow-orphan">How many is too many and how few is too few?</h4>
+  <p class="Text">There are no hard rules for the number of direct subclasses that a class
+  should have. However, many well structured ontologies have between two and a dozen direct
+  subclasses. Therefore, the following two guidelines:</p>
+  <p class="Rule"><span style="mso-bookmark:_Ref498840818">If a class has only one direct
+  subclass there may be a modeling problem or the ontology is not complete.</span></p>
+  <p class="Rule"><span style="mso-bookmark:_Ref498840818">If there are more than a dozen
+  subclasses for a given class then additional intermediate categories may be necessary. </span></p>
+  <p><span style="mso-bookmark:_Ref498840818">The first of the two rules is similar to a
+  typesetting rule that bulleted lists should never have only one bullet point. For example,
+  most of the red Burgundy wines are Côtes d&#146;Or wines. Suppose we wanted to represent
+  only this majority type of Burgundy wines. We could create a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Burgundy</span></span> and then a single subclass <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or</span></span> (<a href="#Figure6"><span style="mso-field-code:&quot;REF _Ref505767329 \\h&quot;">Figure 6</span>a</a>). However,
+  if in our representation red Burgundy and Côtes d&#146;Or wines are essentially
+  equivalent (all red Burgundy wines are Côtes d&#146;Or wines and all Côtes d&#146;Or
+  wines are red Burgundy wines), creating the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or</span></span> class is not necessary and does not add any new information to the
+  representation. If we were to include Côtes Chalonnaise wines, which are cheaper Burgundy
+  wines from the region just South of Côtes d&#146;Or, then we will create two subclasses
+  of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Burgundy</span></span>
+  class: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  Chalonnaise</span></span> (<a href="#Figure6"><span style="mso-field-code:&quot;REF _Ref505767329 \\h&quot;">Figure 6</span>b</a>).</span> </p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="48" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image012.gif" v:shapes="_x0000_s1055" WIDTH="437" HEIGHT="104"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure6"></a>Figure <span style="mso-field-code:
+
+&quot;SEQ Figure \\* ARABIC&quot;">6</span>. Subclasses of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Burgundy</span></span> class. Having a single subclass of a class usually points to a
+  problem in modeling.</p>
+  <p class="Text">Suppose now that we list all types of wines as direct subclasses of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>
+  class. This list would then include such more general types of wine as Beaujolais and
+  Bordeaux, as well as more specific types such as Paulliac and Margaux (<a href="#Figure7"><span style="mso-field-code:&quot;REF _Ref505767329 \\h&quot;">Figure 7</span>a</a>). The class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  has too many direct subclasses and, indeed, for the ontology to reflect the different
+  types of wine in a more organized manner, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Medoc</span></span>
+  should be a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Bordeaux</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or</span></span> should be a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Burgundy</span></span>.
+  Also having such intermediate categories as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> would also reflect the conceptual model of the domain of wines that
+  many people have (<a href="#Figure7"><span style="mso-field-code:&quot;REF _Ref505767329 \\h&quot;">Figure 7</span>b</a>). </p>
+  <p>However, if no natural classes exist to group concepts in the long list of siblings,
+  there is no need to create artificial classes&#151;just leave the classes the way they
+  are. After all, the ontology is a reflection of the real world, and if no categorization
+  exists in the real world, then the ontology should reflect that. </p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="62" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image014.gif" v:shapes="_x0000_s1056" WIDTH="415" HEIGHT="562"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure7"></a>Figure <span style="mso-field-code:&quot;SEQ Figure \\* ARABIC&quot;">7</span>. Categorizing wines.
+  Having all the wines and types of wine versus having several levels of categorization.</p>
+  <h2 style="mso-pagination:widow-orphan">4.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Multiple
+  inheritance</h2>
+  <p class="Text">Most knowledge-representation systems allow <b style="mso-bidi-font-weight:
+
+normal">multiple inheritance</b> in the class hierarchy: a
+  class can be a subclass of several classes. Suppose we would like to create a separate
+  class of dessert wines, the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Dessert
+  wine</span></span> class. The Port wine is both a red wine and a dessert wine.<a href="#_footnote4" name="_ftntref4"><span class="MsoFootnoteReference"><span style="font-size:10.0pt"><span style="mso-special-character:footnote">[4]</span></span></span></a>
+  Therefore, we define a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Port</span></span>
+  to have two superclasses: <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Dessert
+  wine</span></span>. All instances of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Port</span></span>
+  class will be instances of both the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine </span></span>class and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Dessert
+  wine</span></span> class. The <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Port</span></span>
+  class will inherit its slots and their facets from both its parents. Thus, it will inherit
+  the value SWEET for the slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Sugar
+  </span></span>from the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Dessert
+  wine</span></span> class and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">tannin
+  level</span></span> slot and the value for its color slot from the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> class.</p>
+  <h2 style="mso-pagination:widow-orphan">4.4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>When
+  to introduce a new class (or not)</h2>
+  <p class="Text">One of the hardest decisions to make during modeling is when to introduce
+  a new class or when to represent a distinction through different property values. It is
+  hard to navigate both an extremely nested hierarchy with many extraneous classes and a
+  very flat hierarchy that has too few classes with too much information encoded in slots.
+  Finding the appropriate balance though is not easy.</p>
+  <p class="Text">There are several rules of thumb that help decide when to introduce new
+  classes in a hierarchy.</p>
+  <p class="Rule">Subclasses of a class usually (1) have additional properties that the
+  superclass does<span style="mso-spacerun: yes">&nbsp; </span>not have, or (2) restrictions
+  different from those of the superclass, or (3) participate in different relationships than
+  the superclasses </p>
+  <p class="Text">Red wines can have different levels of tannin, whereas this property is
+  not used to describe wines in general. The value for the sugar slot of the Dessert wine is
+  SWEET, whereas it is not true of the superclass of the Dessert Wine class. Pinot Noir
+  wines may go well with seafood whereas other red wines do not. In other words, we
+  introduce a new class in the hierarchy usually only when there is something that we can
+  say about this class that we cannot say about the superclass.</p>
+  <p class="Text">In practical terms, each subclass should either have new slots added to
+  it, or have new slot values defined, or override some facets for the inherited slots. </p>
+  <p class="Text">However, sometimes it may be useful to create new classes even if they do
+  not introduce any new properties. </p>
+  <p class="Rule" style="mso-pagination:widow-orphan">Classes in terminological hierarchies
+  do not have to introduce new properties</p>
+  <p class="Text">For example, some ontologies include large reference hierarchies of common
+  terms used in the domain. For example, an ontology underlying an electronic medical-record
+  system may include a classification of various diseases. This classification may be just
+  that&#151;a hierarchy of terms, without properties (or with the same set of properties).
+  In that case, it is still useful to organize the terms in a hierarchy rather than a flat
+  list because it will (1) allow easier exploration and navigation and (2) enable a doctor
+  to choose easily a level of generality of the term that is appropriate for the situation.</p>
+  <p class="Text">Another reason to introduce new classes without any new properties is to
+  model concepts among which domain experts commonly make a distinction even though we may
+  have decided not to model the distinction itself. Since we use ontologies to facilitate
+  communication among domain experts and between domain experts and knowledge-based systems
+  we would like to reflect the expert&#146;s view of the domain in the ontology. </p>
+  <p class="Text">Finally, we should not create subclasses of a class for each additional
+  restriction.<span style="mso-spacerun: yes">&nbsp; </span>For example, we introduced the
+  classes <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>, and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Rose
+  wine</span></span><span style="mso-spacerun: yes">&nbsp; </span>because this distinction
+  is a natural one in the wine world. We did not introduce classes<span style="mso-spacerun: yes">&nbsp; </span>for delicate wine, moderate wine, and so on. When
+  defining a class hierarchy, our goal is to strike a balance between creating new classes
+  useful for class organization and creating too many classes.</p>
+  <h2 style="mso-pagination:widow-orphan">4.5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A
+  new class or a property value?</h2>
+  <p class="Text">When modeling a domain, we often need to decide whether to model a
+  specific distinction (such as white, red, or rosé wine) as a property value or as a set
+  of classes again depends on the scope of the domain and the task at hand.<span style="mso-spacerun: yes">&nbsp; </span></p>
+  <p class="Text">Do we create a class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> or do we simply create a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  and fill in different values for the slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">color</span></span>?
+  The answer usually lies in the scope that we defined for the ontology. How important the
+  concept of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">White
+  wine</span></span> is in our domain? If wines have only marginal importance in the domain
+  and whether or not the wine is white does not have any particular implications for its
+  relations to other objects, then we shouldn&#146;t introduce a separate class for white
+  wines. For a domain model used in a factory producing wine labels, rules for wine labels
+  of any color are the same and the distinction is not very important. Alternatively, for
+  the representation of wine, food, and their appropriate combinations a red wine is very
+  different from a white wine: it is paired with different foods, has different properties,
+  and so on. Similarly, color of wine is important for the wines knowledge base that we may
+  use to determine wine-tasting order.<span style="mso-spacerun: yes">&nbsp; </span>Thus, we
+  create a separate class for <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>.</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">If the concepts with different slot
+  values become restrictions for different slots in other classes, then we should create a new class for the distinction. Otherwise, we represent
+  the distinction in a slot value.</p>
+  <p class="Text">Similarly, our wine ontology has such classes as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Merlot</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  Merlot</span></span>, rather than a single class for all Merlot wines: red Merlots and
+  white Merlots are really different wines (made from the same grape) and if we are
+  developing a detailed ontology of wine, this distinction is important.</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">If a distinction is important in the
+  domain and we think of the objects with different values for the distinction as different
+  kinds of objects,<span style="mso-spacerun: yes">&nbsp; </span>then we should create a new
+  class for the distinction.</p>
+  <p class="Text">Considering potential individual instances of a class may also be helpful
+  in deciding whether or not to introduce a new class.</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">A class to which an individual
+  instance belongs should not change often.</p>
+  <p class="Text">Usually when we use extrinsic rather than intrinsic properties of concepts
+  to differentiate among classes, instances of those classes will have to migrate often from
+  one class to another. For example, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chilled
+  wine</span></span> should not be a class in an ontology describing wine bottles in a
+  restaurant. The property c<span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">hilled</span></span>
+  should simply be an attribute of wine in a bottle since an instance of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Chilled
+  wine</span></span> can easily cease being an instance of this class and then become an
+  instance of this class again.</p>
+  <p class="Text">Usually numbers, colors, locations are slot values and do not cause the
+  creation of new classes. Wine, however, is a notable exception since the color of the wine
+  is so paramount to the description of wine. </p>
+  <p class="Text">For another example, consider the human-anatomy ontology. When we
+  represent ribs, do we create a class for each of the &#147;1<sup>st</sup> left rib&#148;,
+  &#147;2<sup>nd</sup> left rib&#148;, and so on? Or do we have a class Rib with slots for
+  the order and the lateral position (left-right)?<a href="#_footnote5" name="_ftntref5"><span class="MsoFootnoteReference"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-special-character:
+
+footnote">[5]</span></span></span></a> If the information
+  about each of the ribs that we represent in the ontology is significantly different, then
+  we should indeed create a class for each of the ribs. That is, if we want to represent
+  details adjacency and location information (which is different for each rib) as well as
+  specific functions that each rib playa and organs it protects, we want the classes. If we
+  are modeling anatomy at a slightly lesser level of generality, and all ribs are very
+  similar as far as our potential applications are concerned (we just talk about which rib
+  is broken on the X-Ray without implications for other parts of the body), we may want to
+  simplify our hierarchy and have just the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Rib</span></span>,
+  with two slots: <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">lateral
+  position</span></span>, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">order</span></span>.</p>
+  <h2 style="mso-pagination:widow-orphan">4.6<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>An
+  instance or a class?</h2>
+  <p class="Text">Deciding whether a particular concept is a class in an ontology or an
+  individual instance depends on what the potential applications of the ontology are.
+  Deciding where classes end and individual instances begin starts with deciding what is the
+  lowest level of granularity in the representation. The level of granularity is in turn
+  determined by a potential application of the ontology. In other words, what are the most
+  specific items that are going to be represented in the knowledge base? Going back to the
+  competency questions we identified in <a href="#Step1"><span style="mso-field-code:&quot;REF _Ref505772794 \\r \\h &#01; \\* MERGEFORMAT&quot;">Step 1</span></a>
+  in Section 3, the most specific concepts that will constitute answers to those questions
+  are very good candidates for individuals in the knowledge base. </p>
+  <p class="Rule" style="mso-pagination:widow-orphan">Individual instances are the most
+  specific concepts represented in a knowledge base. </p>
+  <p class="Text">For example, if we are only going to talk about pairing wine with food we
+  will not be interested in the specific physical bottles of wine. Therefore, such terms as <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Sterling
+  Vineyards Merlot</span></span> are probably going to be the most specific terms we use.
+  Therefore, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Sterling
+  Vineyards Merlot</span></span> would be an instance in the knowledge base.</p>
+  <p class="Text">On the other hand, if we would like to maintain an inventory of wines in
+  the restaurant in addition to the knowledge base of good wine-food pairings, individual
+  bottles of each wine may become individual instances in our knowledge base.</p>
+  <p class="Text">Similarly, if we would like to record different properties for each
+  specific vintage of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Sterling
+  Vineyards Merlot,</span></span> then the specific vintage of the wine is an instance in a
+  knowledge base and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Sterling
+  Vineyards Merlot</span></span> is a class containing instances for all its vintages.</p>
+  <p class="Text">Another rule can &#147;move&#148; some individual instances into the set
+  of classes:</p>
+  <p class="Rule" style="mso-pagination:widow-orphan">If concepts form a natural hierarchy,
+  then we should represent them as classes</p>
+  <p class="Text">Consider the wine regions. Initially, we may define main wine regions,
+  such as France, United States, Germany, and so on, as classes and specific wine regions
+  within these large regions as instances. For example, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Bourgogne
+  region</span></span> is an instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">French
+  region</span></span> class. However, we would also like to say that the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or region</span></span> is a <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Bourgogne
+  region</span></span>. Therefore, <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Bourgogne
+  region </span></span>must be a class (in order to have subclasses or instances). However,
+  making <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Bourgogne
+  region</span></span> a class and <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Cotes
+  d&#146;Or region</span></span> an instance of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Bourgogne
+  region</span></span> seems arbitrary: it is very hard to clearly distinguish which regions
+  are classes and which are instances. Therefore, we define all wine regions as classes.
+  Protégé-2000 allows users to specify some classes as Abstract, signifying that the class
+  cannot have any direct instances. In our case, all region classes are abstract (<a href="#Figure8"><span style="mso-field-code:&quot;REF _Ref505773514 \\h&quot;">Figure 8</span></a>).</p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="150" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image016.jpg" v:shapes="_x0000_s1048" WIDTH="258" HEIGHT="273"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure8"></a>Figure <span style="mso-field-code:&quot;SEQ Figure \\* ARABIC&quot;">8</span>. Hierarchy of wine
+  regions. The &quot;A&quot; icons next to class names indicate that the classes are
+  abstract and cannot have any direct instances.</p>
+  <p class="Text">The same class hierarchy would be incorrect if we omitted the word
+  &#147;region&#148; from the class names. We cannot say that the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Alsace</span></span>
+  is a subclass of the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">France</span></span>:
+  Alsace is not a kind of France. However, Alsace region is a kind of a French region.</p>
+  <p class="Text">Only classes can be arranged in a hierarchy&#151;knowledge-representation
+  systems do not have a notion of sub-instance. Therefore, if there is a natural hierarchy
+  among terms, such as in terminological hierarchies from Section <span style="mso-field-code:&quot;REF _Ref505767669 \\r \\h&quot;">4.2</span>, we should define
+  these terms as classes even though they may not have any instances of their own.</p>
+  <h2 style="mso-pagination:widow-orphan">4.7<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Limiting
+  the scope</h2>
+  <p class="Text">As a final note on defining a class hierarchy, the following set of rules
+  is always helpful in deciding when an ontology definition is complete:</p>
+  <p class="Rule">The ontology should not contain all the possible information about the
+  domain: you do not need to specialize (or generalize) more than you need for your
+  application (at most one extra level each way).</p>
+  <p class="Text">For our wine and food example, we do not need to know what paper is used
+  for the labels or how to cook shrimp dishes. </p>
+  <p class="Text">Similarly, the ontology should not contain all the possible properties of
+  and distinctions among classes in the hierarchy.</p>
+  <p class="Text">In our ontology, we certainly do not include all the properties that a
+  wine or food could have.<span style="mso-spacerun: yes">&nbsp; </span>We represented the
+  most salient properties of the classes of items in our ontology.<span style="mso-spacerun: yes">&nbsp; </span>Even though wine books would tell us the size of
+  grapes, we have not included this knowledge.<span style="mso-spacerun: yes">&nbsp; </span>Similarly,
+  we have not added all relationships that one could imagine among all the terms in our
+  system.<span style="mso-spacerun: yes">&nbsp; </span>For example, we do not include
+  relationships such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">favorite
+  wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">favorite
+  food</span></span> in the ontology just to allow a more complete representation of all of
+  the interconnections between the terms we have defined.</p>
+  <p class="Text">The last rules also applies to establishing relations among concepts that
+  we have already included in the ontology. Consider an ontology describing biology
+  experiments. The ontology will likely contain a concept of <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Biological
+  organisms</span></span>. It will also contain a concept of an <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Experimenter</span></span>
+  performing an experiment (with his name, affiliation, etc.). It is true that an
+  experimenter, as a person, also happens to be a biological organism. However, we probably
+  should not incorporate this distinction in the ontology: for the purposes of this
+  representation an experimenter is not a biological organism and we will probably never
+  conduct experiments on the experimenters themselves. If we were representing everything we
+  can say about the classes in the ontology, an <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Experimenter</span></span>
+  would become a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Biological
+  Organism</span></span>. However, we do not need to include this knowledge for the
+  foreseeable applications. In fact, including this type of additional classification for
+  existing classes actually hurts: now an instance of an Experimenter will have slots for
+  weight, age, species, and other data pertaining to a<span style="mso-spacerun: yes">&nbsp;
+  </span>biological organism, but absolutely irrelevant in the context of describing an
+  experiment. However, we should record such design decision in the documentation for the
+  benefit of the users who will be looking at this ontology and who may not be aware of the
+  application we had in mind.</p>
+  <h2 style="mso-pagination:widow-orphan">4.8<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Disjoint
+  subclasses</h2>
+  <p class="Text">Many systems allow us to specify explicitly that several classes are <b style="mso-bidi-font-weight:normal">disjoint</b>. Classes are disjoint if they cannot have
+  any instances in common. For example, the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Dessert
+  wine</span></span> and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span><span style="mso-spacerun: yes">&nbsp; </span>classes in our ontology
+  are <i style="mso-bidi-font-style:normal">not</i> disjoint: there are many wines that are
+  instances of both. The <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Rothermel
+  Trochenbierenauslese Riesling</span></span> instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Sweet
+  Riesling</span></span> class is one such example. At the same time, the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span> classes are disjoint: no wine can be simultaneously red and white.
+  Specifying that classes are disjoint<span style="mso-spacerun: yes">&nbsp; </span>enables
+  the system to validate the ontology better. If we declare the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span> and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">White
+  wine</span></span> classes to be disjoint and later create a class that is a subclass of
+  both <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Riesling</span></span>
+  (a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  wine</span></span>) and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Port</span></span>
+  (a subclass of <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  wine</span></span>), a system can indicate that there is a modeling error.</p><div id="mainheadline"><h1 style="mso-pagination:widow-orphan">5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Defining properties&#151;more details</h1></div><p class="Text">In this section we discuss several more details to keep in mind when
+  defining slots in the ontology (<span style="mso-field-code:&quot;REF _Ref505750036 \\r \\h&quot;">Step 5</span> and <span style="mso-field-code:&quot;REF _Ref505750042 \\r \\h&quot;">Step 6</span> in Section <span style="mso-field-code:&quot;REF _Ref497194107 \\r \\h&quot;">3</span>). Mainly, we discuss
+  inverse slots and default values for a slot.</p>
+  <h2 style="mso-pagination:widow-orphan"><a name="Section51"></a>5.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Inverse
+  slots</h2>
+  <p class="Text">A value of a slot may depend on a value of another slot. For example, if a
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">wine</span></span>
+  was <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produced
+  by</span></span> a <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span>,
+  then the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span>
+  <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">produces</span></span>
+  that <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">wine</span></span>.
+  These two relations, <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>,
+  are called <b style="mso-bidi-font-weight:normal">inverse relations</b>. Storing the
+  information &#147;in both directions&#148; is redundant. When we know that a wine is
+  produced by a winery, an application using the knowledge base can always infer the value
+  for the inverse relation that the winery produces the wine. However, from the
+  knowledge-acquisition perspective it is convenient to have both pieces of information
+  explicitly available. This approach allows users to fill in the wine in one case and the
+  winery in another.. The knowledge-acquisition system could then automatically fill in the
+  value for the inverse relation insuring consistency of the knowledge base.</p>
+  <p class="Text">Our example has a pair of<span style="mso-spacerun: yes">&nbsp; </span>inverse
+  slots: the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+  slot of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class and the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  slot of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  class. When a user creates an instance of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class and fills in the value for the <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker
+  </span></span>slot, the system automatically adds the newly created instance to the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  slot of the corresponding <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  instance. For instance, when we say that Sterling Merlot is produced by the Sterling
+  Vineyard winery, the system would automatically add Sterling Merlot to the list of wines
+  that the Sterling Vineyard winery produces. (<a href="#Figure9"><span style="mso-field-code:&quot;REF _Ref505773530 \\h&quot;">Figure 9</span></a>).</p>
+  <span style="mso-ignore:vglayout"><table cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="53" height="0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="image018.gif" v:shapes="_x0000_s1057" WIDTH="451" HEIGHT="359"></span></td>
+    </tr>
+  </table>
+  <p><a name="Figure9"></a>Figure <span style="mso-field-code:&quot;SEQ Figure \\* ARABIC&quot;">9</span>. Instances with inverse
+  slots. The slot <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">produces</span></span>
+  for the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  is an inverse of the slot<span style="mso-spacerun: yes">&nbsp; </span><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">maker</span></span>
+  for the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>.
+  Filling in one of the slots triggers an automatic update of the other. </p>
+  <h2 style="mso-pagination:widow-orphan">5.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Default
+  values</h2>
+  <p class="Text">Many frame-based systems allow specification of default values for slots.<span style="mso-spacerun: yes">&nbsp; </span>If a particular slot value is the same for most
+  instances of a class, we can define this value to be a <b style="mso-bidi-font-weight:normal">default</b> <b style="mso-bidi-font-weight:
+
+normal">value</b>
+  for the slot. Then, when each new instance of a class containing this slot is created, the
+  system fills in the default value automatically. We can then change the value to any other
+  value that the facets will allow. That is, default values are there for convenience: they
+  do not enforce any new restrictions on the model or change the model in any way. </p>
+  <p class="Text">For example, if the majority of wines we are going to discuss are
+  full-bodied wines, we can have &#147;full&#148; as a default value for the body of the
+  wine. Then, unless we say otherwise, all wines we define would be full-bodied. </p>
+  <p class="Text">Note that this is different from<b style="mso-bidi-font-weight:
+
+normal">
+  slot values</b>. Slot values cannot be changed. For example, we can say that the slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">sugar</span></span>
+  has value SWEET for the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Dessert
+  wine </span></span>class. Then all the subclasses and instances of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Dessert
+  wine</span></span> class will have the SWEET value for the slot <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">sugar</span></span>.
+  This value cannot be changed in any of the subclasses or instances of the class.</p><div id="mainheadline"><h1 style="mso-pagination:widow-orphan"><a name="Section6"></a>6<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>What&#146;s in a name?</h1></div><p class="Text">Defining naming conventions for concepts in an ontology and then strictly
+  adhering to these conventions not only makes the ontology easier to understand but also
+  helps avoid some common modeling mistakes. There are many alternatives in naming concepts.
+  Often there is no particular reason to choose one or another alternative. However, we need
+  to</p>
+  <p class="Rule">Define a naming convention for classes and slots and adhere to it.</p>
+  <p class="Text">The following features of a knowledge representation system affect the
+  choice of naming conventions:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Does the system have the same name space for classes, slots, and instances?
+  That is, does the system allow having a class and a slot with the same name (such as a
+  class <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span>
+  and a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">winery</span></span>)?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Is the system case-sensitive? That is, does the system treat the names that
+  differ only in case as different names (such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">winery</span></span>)?</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>What delimiters does the system allow in the names? That is, can names
+  contain spaces, commas, asterisks, and so on?</p>
+  <p class="Text">Protégé-2000, for example, maintains a single name space for all its
+  frames. It is case-sensitive. Thus, we cannot have a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span>
+  and a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">winery</span></span>.
+  We can, however, have a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>
+  (not the upper-case) and a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">winery</span></span>.
+  CLASSIC, on the other hand, is not case sensitive and maintains different name spaces for
+  classes, slots, and individuals. Thus, from a system perspective, there is no problem in
+  naming both a class and a slot <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Winery</span></span>.</p>
+  <h2 style="mso-pagination:widow-orphan">6.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Capitalization
+  and delimiters</h2>
+  <p class="Text">First, we can greatly improve the readability of an ontology if we use
+  consistent capitalization for concept names. For example, it is common to capitalize class
+  names and use lower case for slot names (assuming the system is case-sensitive). </p>
+  <p class="Text">When a concept name contains more than one word (such as <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Meal
+  course</span></span>) we need to delimit the words. Here are some possible choices.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Use Space: <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Meal
+  course</span></span> (many systems, including Protégé, allow spaces in concept names).<span style="mso-spacerun: yes">&nbsp; </span></p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Run the words together and capitalize each new word: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">MealCourse
+  </span></span></p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Use an underscore or dash or other delimiter in the name: <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Meal_Course</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Meal_course</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Meal-Course</span></span><i style="mso-bidi-font-style:normal">, </i><span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Meal-course</span></span>.
+  (If you use delimiters, you will also need to decide whether or not each new word is
+  capitalized)</p>
+  <p class="Text">If the knowledge-representation system allows spaces in names, using them
+  may be the most intuitive solution for many ontology developers. It is however, important
+  to consider other systems with which your system may interact.<span style="mso-spacerun: yes">&nbsp; </span>If those systems do not use spaces or if your
+  presentation medium does not handle spaces well, it can be useful to use another method.</p>
+  <h2 style="mso-pagination:widow-orphan">6.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Singular
+  or plural</h2>
+  <p class="Text">A class name represents a collection of objects. For example, a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine
+  </span></span>actually represents all wines. Therefore, it could be more natural for some
+  designers to call the class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wines</span></span>
+  rather than <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Wine</span></span>.
+  No alternative is better or worse than the other (although singular for class names is
+  used more often in practice). However, whatever the choice, it should be consistent
+  throughout the whole ontology. Some systems even require their users to declare in advance
+  whether or not they are going to use singular or plural for concept names and do not allow
+  them to stray from that choice. </p>
+  <p class="Text">Using the same form all the time also prevents a designer from making such
+  modeling mistakes as creating a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Wines</span></span>
+  and then creating a class <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  as its subclass (see <a href="#Section41">Section <span style="mso-field-code:&quot;REF _Ref505767590 \\r \\h&quot;">4.1</span></a>).</p>
+  <h2 style="mso-pagination:widow-orphan">6.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Prefix
+  and suffix conventions</h2>
+  <p class="Text">Some knowledge-base methodologies suggest using prefix and suffix
+  conventions in the names to distinguish between classes and slots.<span style="mso-spacerun: yes">&nbsp; </span>Two common practices are to add a <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">has-</span></span>
+  or a suffix <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">&#150;of</span></span>
+  to slot names.<span style="mso-spacerun:
+
+yes">&nbsp; </span>Thus, our slots become <span class="Code"><span style="font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">has-maker</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">has-winery</span></span>
+  if we chose the <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">has-</span></span>
+  convention. The slots become <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">maker-of</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">winery-of</span></span>
+  if we chose the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">of-</span></span>
+  convention.<span style="mso-spacerun: yes">&nbsp; </span>This approach allows anyone
+  looking at a term to determine immediately if the term is a class or a slot.<span style="mso-spacerun: yes">&nbsp; </span>However, the term names become slightly longer. </p>
+  <h2 style="mso-pagination:widow-orphan">6.4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Other
+  naming considerations</h2>
+  <p class="Text">Here are a few more things to consider when defining naming conventions:</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Do not add strings such as &#147;class&#148;, &#147;property&#148;,
+  &#147;slot&#148;, and so on to concept names.</p>
+  <p class="Text">It is always clear form the context whether the concept is a class or a
+  slot, for example. In addition is you use different naming conventions for classes and
+  slots (say, capitalization and no capitalization respectively), the name itself would be
+  indicative of what the concept is.</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>It is usually a good idea to avoid abbreviations in concept names (that is,
+  use <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Cabernet
+  Sauvignon</span></span> rather than <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">Cab</span></span>)</p>
+  <p class="Bulletedlist"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Names of direct subclasses of a class should either all include or not
+  include the name of the superclass. For example, if we are creating two subclasses of the <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">Wine</span></span>
+  class to represent red and white wines, the two subclass names should be either <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White
+  Wine</span></span> or <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red</span></span>
+  and <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+
+&quot;Times New Roman&quot;">White</span></span>,
+  but not <span class="Code"><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Red
+  Wine</span></span> and <span class="Code"><span style="font-family:&quot;Courier New&quot;;
+
+mso-bidi-font-family:&quot;Times New Roman&quot;">White</span></span>.
+  </p><div id="mainheadline"><h1 style="mso-pagination:widow-orphan">7<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Other Resources</h1></div><p class="Text">We have used Protégé-2000 as an ontology-developing environment for our
+  examples. Duineveld and colleagues <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Duineveld et al. 2000)</span></span>
+  describe and compare a number of other ontology-development environments.<span style="mso-spacerun: yes">&nbsp; </span></p>
+  <p class="Text">We have tried to address the very basics of ontology development and have
+  not discussed many of the advanced topics or alternative methodologies for ontology
+  development. Gómez-Pérez <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Gómez-Pérez 1998)</span></span> and
+  Uschold <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Uschold and Gruninger 1996)</span></span>
+  present alternative ontology-development methodologies. The Ontolingua tutorial <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Farquhar 1997)</span></span> discusses
+  some formal aspects of knowledge modeling.<span style="mso-spacerun: yes">&nbsp;&nbsp; </span></p>
+  <p class="Text">Currently, researchers emphasize not only ontology development, but also
+  ontology analysis.<span style="mso-spacerun: yes">&nbsp; </span>As more ontologies are
+  generated and reused, more tools will be available to analyze ontologies. For example,
+  Chimaera <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(McGuinness et al. 2000)</span></span>
+  provides diagnostic tools for analyzing ontologies. The analysis that Chimaera performs
+  includes both a check for logical correctness of an ontology and diagnostics of common
+  ontology-design errors. An ontology designer may want to run Chimaera diagnostics over the
+  evolving ontology to determine the conformance to common ontology-modeling practices.</p><div id="mainheadline"><h1 style="mso-pagination:widow-orphan">8<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Conclusions</h1></div><p class="Text">In this guide, we have described an ontology-development methodology for
+  declarative frame-based systems. We listed the steps in the ontology-development process
+  and addressed the complex issues of defining class hierarchies and properties of classes
+  and instances. However, after following all the rules and suggestions, one of the most
+  important things to remember is the following: <i style="mso-bidi-font-style:normal">there
+  is no single correct ontology for any domain</i>. Ontology design is a creative process
+  and no two ontologies designed by different people would be the same. The potential
+  applications of the ontology and the designer&#146;s understanding and view of the domain
+  will undoubtedly affect ontology design choices. &#147;The proof is in the
+  pudding&#148;&#151;we can assess the quality of our ontology only by using it in
+  applications for which we designed it.<span style="mso-spacerun: yes">&nbsp; </span></p><div id="mainheadline"><h1 style="margin-left:0in;text-indent:0in;mso-pagination:widow-orphan;
+
+mso-list:none;tab-stops:.5in">Acknowledgments</h1></div><p class="Text">Protégé-2000 (<a href="http://protege.stanford.edu/">http://protege.stanford.edu</a>)
+  was developed by Mark Musen&#146;s group at Stanford Medical Informatics. We generated
+  some of the figures with the OntoViz plugin to Protégé-2000. We imported the initial
+  version of the wine ontology from the Ontolingua ontology library (<a href="http://www.ksl.stanford.edu/software/ontolingua/">http://www.ksl.stanford.edu/software/ontolingua/</a>)
+  which in turn used a version published by Brachman and colleagues <span style="font-size:12.0pt;mso-bidi-font-size:
+
+10.0pt"><span style="mso-field-code:&quot;ADDIN ENRfu&quot;">(Brachman et al. 1991)</span></span> and
+  distributed with the CLASSIC knowledge representation system. We then modified the
+  ontology to present conceptual-modeling principles for declarative frame-based ontologies.
+  Ray Fergerson&#146;s and Mor Peleg&#146;s extensive comments on earlier drafts greatly
+  improved this paper.</p><div id="mainheadline"><h1 style="margin-left:0in;text-indent:0in;mso-pagination:widow-orphan;
+
+mso-list:none;tab-stops:.5in">References</h1></div><p class="Reference">Booch, G., Rumbaugh, J. and Jacobson, I. (1997). <i style="mso-bidi-font-style:normal">The Unified Modeling Language user guide</i>:
+  Addison-Wesley.</p>
+  <p class="Reference">Brachman, R.J., McGuinness, D.L., Patel-Schneider, P.F., Resnick,
+  L.A. and Borgida, A. (1991). Living with CLASSIC: When and how to use KL-ONE-like
+  language. <i style="mso-bidi-font-style:normal">Principles of Semantic Networks</i>. J. F.
+  Sowa, editor, Morgan Kaufmann<b style="mso-bidi-font-weight:
+
+normal">: </b>401-456.</p>
+  <p class="Reference">Brickley, D. and Guha, R.V. (1999). Resource Description Framework
+  (RDF) Schema Specification. Proposed Recommendation, World Wide Web Consortium<b style="mso-bidi-font-weight:normal">: </b>http://www.w3.org/TR/PR-rdf-schema.</p>
+  <p class="Reference">Chimaera (2000). Chimaera Ontology Environment.
+  www.ksl.stanford.edu/software/chimaera</p>
+  <p class="Reference">Duineveld, A.J., Stoter, R., Weiden, M.R., Kenepa, B. and Benjamins,
+  V.R. (2000). WonderTools? A comparative study of ontological engineering tools. <i style="mso-bidi-font-style:normal">International Journal of Human-Computer Studies</i> <b style="mso-bidi-font-weight:normal">52</b>(6): 1111-1133.</p>
+  <p class="Reference">Farquhar, A. (1997). Ontolingua tutorial.
+  http://ksl-web.stanford.edu/people/axf/tutorial.pdf</p>
+  <p class="Reference">Gómez-Pérez, A. (1998). Knowledge sharing and reuse. <i style="mso-bidi-font-style:normal">Handbook of Applied Expert Systems</i>. Liebowitz,
+  editor, CRC Press.</p>
+  <p class="Reference">Gruber, T.R. (1993). A Translation Approach to Portable Ontology
+  Specification. <i style="mso-bidi-font-style:normal">Knowledge Acquisition</i> <b style="mso-bidi-font-weight:normal">5</b>: 199-220.</p>
+  <p class="Reference">Gruninger, M. and Fox, M.S. (1995). Methodology for the Design and
+  Evaluation of Ontologies. In: <i style="mso-bidi-font-style:normal">Proceedings of the
+  Workshop on Basic Ontological Issues in Knowledge Sharing, IJCAI-95</i>, Montreal.</p>
+  <p class="Reference">Hendler, J. and McGuinness, D.L. (2000). The DARPA Agent Markup
+  Language. <i style="mso-bidi-font-style:normal">IEEE Intelligent Systems</i> <b style="mso-bidi-font-weight:normal">16</b>(6): 67-73.</p>
+  <p class="Reference">Humphreys, B.L. and Lindberg, D.A.B. (1993). The UMLS project: making
+  the conceptual connection between users and the information they need. <i style="mso-bidi-font-style:normal">Bulletin of the Medical Library Association</i> <b style="mso-bidi-font-weight:normal">81</b>(2): 170.</p>
+  <p class="Reference">McGuinness, D.L., Abrahams, M.K., Resnick, L.A., Patel-Schneider,
+  P.F., Thomason, R.H., Cavalli-Sforza, V. and Conati, C. (1994). Classic Knowledge
+  Representation System Tutorial.
+  http://www.bell-labs.com/project/classic/papers/ClassTut/ClassTut.html</p>
+  <p class="Reference">McGuinness, D.L., Fikes, R., Rice, J. and Wilder, S. (2000). An
+  Environment for Merging and Testing Large Ontologies. <i style="mso-bidi-font-style:
+
+normal">Principles of Knowledge Representation and
+  Reasoning: Proceedings of the Seventh International Conference (KR2000)</i>. A. G. Cohn,
+  F. Giunchiglia and B. Selman, editors. San Francisco, CA, Morgan Kaufmann Publishers.</p>
+  <p class="Reference">McGuinness, D.L. and Wright, J. (1998). Conceptual Modeling for
+  Configuration: A Description Logic-based Approach. <i style="mso-bidi-font-style:
+
+normal">Artificial Intelligence for Engineering Design,
+  Analysis, and Manufacturing - special issue on Configuration</i>.</p>
+  <p class="Reference">Musen, M.A. (1992). Dimensions of knowledge sharing and reuse. <i style="mso-bidi-font-style:normal">Computers and Biomedical Research</i> <b style="mso-bidi-font-weight:normal">25</b>: 435-467.</p>
+  <p class="Reference">Ontolingua (1997). Ontolingua System Reference Manual.
+  http://www-ksl-svc.stanford.edu:5915/doc/frame-editor/index.html</p>
+  <p class="Reference">Price, C. and Spackman, K. (2000). SNOMED clinical terms. <i style="mso-bidi-font-style:normal">BJHC&amp;IM-British Journal of Healthcare Computing
+  &amp; Information Management</i> <b style="mso-bidi-font-weight:normal">17</b>(3): 27-31.</p>
+  <p class="Reference">Protege (2000). The Protege Project. http://protege.stanford.edu</p>
+  <p class="Reference">Rosch, E. (1978). Principles of Categorization. <i style="mso-bidi-font-style:normal">Cognition and Categorization</i>. R. E. and B. B.
+  Lloyd, editors. Hillside, NJ, Lawrence Erlbaum Publishers<b style="mso-bidi-font-weight:normal">: </b>27-48.</p>
+  <p class="Reference">Rothenfluh, T.R., Gennari, J.H., Eriksson, H., Puerta, A.R., Tu, S.W.
+  and Musen, M.A. (1996). Reusable ontologies, knowledge-acquisition tools, and performance
+  systems:<span style="mso-spacerun: yes">&nbsp; </span>PROTÉGÉ-II solutions to
+  Sisyphus-2. <i style="mso-bidi-font-style:normal">International Journal of Human-Computer
+  Studies</i> <b style="mso-bidi-font-weight:normal">44</b>: 303-332.</p>
+  <p class="Reference">Rumbaugh, J., Blaha, M., Premerlani, W., Eddy, F. and Lorensen, W.
+  (1991). <i style="mso-bidi-font-style:normal">Object-oriented modeling and design</i>.
+  Englewood Cliffs, New Jersey: Prentice Hall.</p>
+  <p class="Reference">Uschold, M. and Gruninger, M. (1996). Ontologies: Principles, Methods
+  and Applications. <i style="mso-bidi-font-style:normal">Knowledge Engineering Review</i> <b style="mso-bidi-font-weight:normal">11</b>(2).</p>
+</dd>
+</div><div style="mso-element:footnote-list">
+<dd><hr align="left" size="1" width="33%">
+  <div style="mso-element:footnote" id="ftn1"><p class="MsoFootnoteText"><a name="_footnote1"></a><a href="#_ftntref1"><span class="MsoFootnoteReference"><span style="mso-special-character:
+
+footnote">[1]</span></span></a> We capitalize class names
+  and start slot names with low-case letters. We also use <span class="Code"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:
+
+&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">typewriter
+  font</span></span> for all terms from the example ontology. </p>
+  </div><div style="mso-element:footnote" id="ftn2"><p class="MsoFootnoteText"><a name="_footnote2"></a><a href="#_footnote2"><span class="MsoFootnoteReference"><span style="mso-special-character:
+
+footnote">[2]</span></span></a> We can also view classes
+  as unary predicates&#151;questions that have one argument.<span style="mso-spacerun: yes">&nbsp;
+  </span>For example, &#147;Is this object a wine?&#148;<span style="mso-spacerun: yes">&nbsp;
+  </span>Unary predicates (or classes) contrast with binary predicates (or
+  slots)&#151;questions that have two arguments.<span style="mso-spacerun: yes">&nbsp; </span>For
+  example, &#147;Is the flavor of this object strong?&#148; &#147;What is the flavor of this
+  object?&#148;</p>
+  </div><div style="mso-element:footnote" id="ftn3"><p class="MsoFootnoteText"><a name="_footnote3"></a><a href="#_footnote3"><span class="MsoFootnoteReference"><span style="mso-special-character:
+
+footnote">[3]</span></span></a> Some systems just specify
+  value type with a class instead of requiring a special statement of instance type slots.</p>
+  </div><div style="mso-element:footnote" id="ftn4"><p class="MsoFootnoteText"><a name="_footnote4"></a><a href="#_footnote4"><span class="MsoFootnoteReference"><span style="mso-special-character:
+
+footnote">[4]</span></span></a> We chose to represent
+  only red Ports in our ontology: white Ports do exist but they are extremely uncommon.</p>
+  </div><div style="mso-element:footnote" id="ftn5"><p class="MsoFootnoteText" style="mso-pagination:widow-orphan"><a name="_footnote5"></a><a href="#_footnote5"><span class="MsoFootnoteReference"><span style="mso-special-character:footnote">[5]</span></span></a>
+  Here we assume that each anatomical organ is a class since we would also like to talk
+  about &#147;John&#146;s 1<sup>st</sup> left rib.&#148; Individual organs of existing
+  people would be represented as individuals in our ontology. </p>
+  </div></dd>
+</div>
+</body>
+</html>
