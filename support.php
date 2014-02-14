@@ -53,37 +53,37 @@
           </div><!-- /end .row -->
         </div><!-- /end .panel -->
 
-            <div id="protegeUserMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
-              <a href="#" data-dismiss="modal" class="close-modal-icon close-modal" data-related_form="protegeUserSubscribe"></a>
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h3 class="heading-b">Subscribe to the Protégé User Support mailing list</h3>
-                        <form id="protegeUserSubscribe" method="" action="">
-                          <label>Name</label>
-                          <input type="text" name="fullname" placeholder="Enter your name">
-                          <label>Email</label>
-                          <input type="email" name="email" placeholder="Enter your email">
-                          <p>Receive list mail batched in a daily digest?</p>
-                          <input type="radio" name="digest" value="1"> <span>Yes</span>
-                          <input type="radio" name="digest" value="0"> <span>No</span>
-                          <a href="#" data-dismiss="modal" class="cancel-modal close-modal" data-related_form="protegeUserSubscribe">Cancel</a>
-                          <button id="signUpProtegeUserList" type="submit" class="btn btn-b pull-right close-modal" data-related_form="protegeUserSubscribe">Sign Up</button>
-                        </form>
-                      </div><!-- /end .col-6 -->
-                      <div class="col-6 with-bg">
-                        <ul class="list-b">
-                          <li><a href="http://protege-project.136.n4.nabble.com/" class="external-link">Archive</a> hosted by Nabbble</li>
-                          <li><a href="https://mailman.stanford.edu/pipermail/protege-user/" class="external-link">Archive</a> hosted by Stanford IT Services</li>
-                        </ul>
-                      </div><!-- /end .col-6 -->
-                    </div><!-- /end .row -->
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
+        <div id="protegeUserMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+          <a href="#" data-dismiss="modal" class="close-modal-icon close-modal" data-related_form="protegeUserSubscribe"></a>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h3 class="heading-b">Subscribe to the Protégé User Support mailing list</h3>
+                    <form id="protegeUserSubscribe" method="" action="">
+                      <label>Name</label>
+                      <input type="text" name="fullname" placeholder="Enter your name">
+                      <label>Email</label>
+                      <input type="email" name="email" placeholder="Enter your email">
+                      <p>Receive list mail batched in a daily digest?</p>
+                      <input type="radio" name="digest" value="1"> <span>Yes</span>
+                      <input type="radio" name="digest" value="0"> <span>No</span>
+                      <a href="#" data-dismiss="modal" class="cancel-modal close-modal" data-related_form="protegeUserSubscribe">Cancel</a>
+                      <button id="signUpProtegeUserList" type="submit" class="btn btn-b pull-right close-modal" data-related_form="protegeUserSubscribe">Sign Up</button>
+                    </form>
+                  </div><!-- /end .col-6 -->
+                  <div class="col-6 with-bg">
+                    <ul class="list-b">
+                      <li><a href="http://protege-project.136.n4.nabble.com/" class="external-link">Archive</a> hosted by Nabbble</li>
+                      <li><a href="https://mailman.stanford.edu/pipermail/protege-user/" class="external-link">Archive</a> hosted by Stanford IT Services</li>
+                    </ul>
+                  </div><!-- /end .col-6 -->
+                </div><!-- /end .row -->
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
         <div class="panel clearfix">
           <div class="row">
