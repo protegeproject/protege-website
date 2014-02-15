@@ -229,7 +229,7 @@
             <p>
               Top-level entry point for all documentation pertaining to the latest version of Protégé Desktop, including an overview of editor features, links to tutorials, release notes, etc.
             </p>
-            <span class="offset-raquo">&raquo;</span><a href="http://protege.stanford.edu/publications/ontology_development/ontology101.pdf" class="link-c" target="_blank">Ontology Development 101</a>
+            <span class="offset-raquo">&raquo;</span><a href="http://protegewiki.stanford.edu/wiki/Ontology101" class="link-c" target="_blank">Ontology Development 101</a>
             <p>
               A guide to creating your first ontology.
             </p>
