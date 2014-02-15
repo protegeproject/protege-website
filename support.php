@@ -259,6 +259,9 @@
             <p>
               Official home of the Protégé Desktop code base and issue tracker.
             </p>
+            <span class="offset-raquo">&raquo;</span><a href="http://protege.stanford.edu/protege/4.3/docs/api/" class="link-c" target="_blank">Protégé Desktop Javadoc</a>
+            <p>
+            </p>
           </div><!-- /end #developers -->
         </div><!-- /end .tab-content -->
       </div><!-- /end .col-8 -->
