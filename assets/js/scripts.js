@@ -388,12 +388,6 @@
     e.preventDefault();
   })
 
-  // Functionality to show Announcement Mailing List Modal
-  $('#showAnnouncementMailingList').on('click', function(e) {
-    $('#announcementMailingList').modal('show');
-    e.preventDefault();
-  })
-
   // Functionality to show Protege web Screenshots Modal
   $('#showScreenShotsModalWeb').on('click', function(e) {
     $('#screenShotsModalWeb').modal('show');

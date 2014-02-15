@@ -30,6 +30,14 @@
     event.preventDefault();
   })
 
+  // Protege Announce mailing list
+
+  // Show Protege Announce mailing list modal dialog
+  $('#showAnnouncementMailingList').on('click', function(e) {
+    $('#announcementMailingList').modal('show');
+    e.preventDefault();
+  })
+
   // Helpers
 
   $(".close-modal").on("click", function(event) {
