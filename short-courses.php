@@ -59,16 +59,18 @@
         <h3 class="heading-c upcase">Who Should Attend</h3>
         <p>
           Target audience members are everyone from complete beginners to intermediate 
-          users of Protégé Desktop or WebProtégé. No prior experience with the Protégé 
+          users of <a href="products.php#desktop-protege">Protégé Desktop</a> or <a href="products.php#web-protege">WebProtégé</a>. No prior experience with the Protégé 
           toolset and/or ontology development is required.
         </p>
         <p>
-          New course offerings are posted on this page. Alternative ways to be notified 
-          of upcoming offerings include following us on Twitter, liking us on Facebook, 
-          and/or subscribing to the protégé-announce mailing list (low-traffic, announcement-only).
+          New course offerings are advertised in a banner at the top of our website. Alternative ways to be notified 
+          of upcoming offerings include following us on <a href="https://twitter.com/protegeproject" target="_blankd">Twitter</a>, 
+          liking us on <a href="http://www.facebook.com/pages/Protege-Project/136205016405270" target="_blank">Facebook</a>, 
+          and/or subscribing to the <a href="https://mailman.stanford.edu/mailman/listinfo/protege-announce" target="_blank">protege-announce</a> 
+          mailing list (low-traffic, announcement-only).
         </p>
         <p>
-        <strong>Questions?</strong> Please <a href="mailto:protege-affiliates@lists.stanford.edu">contact</a> the course organizers.
+        <strong>Questions?</strong> Please <a href="mailto:protege-shortcourse@lists.stanford.edu">contact</a> the course organizers.
         </p>
       </div><!-- /end .col-4 -->
       <div class="col-4">
