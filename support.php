@@ -101,7 +101,7 @@
               <a href="http://protege-project.136.n4.nabble.com/" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->            
             <div id="protegeDevMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
-              <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
+              <a href="#" data-dismiss="modal" class="close-modal-icon close-modal" data-related_form="protegeDevSubscribe"></a>
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -116,8 +116,8 @@
                           <p>Receive list mail batched in a daily digest?</p>
                           <input type="radio" name="digest" value="1"> <span>Yes</span>
                           <input type="radio" name="digest" value="0"> <span>No</span>
-                          <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
-                          <button id="signUpProtegeDevList" type="submit" name="email-button" class="btn btn-b pull-right">Sign Up</button>
+                          <a href="#" data-dismiss="modal" class="cancel-modal close-modal" data-related_form="protegeDevSubscribe">Cancel</a>
+                          <button id="signUpProtegeDevList" type="submit" name="email-button" class="btn btn-b pull-right close-modal" data-related_form="protegeDevSubscribe">Sign Up</button>
                         </form>
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
