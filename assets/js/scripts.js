@@ -388,12 +388,6 @@
     e.preventDefault();
   })
 
-  // Functionality to show Web Mailing List Modal
-  $('#showWebMailingList').on('click', function(e) {
-    $('#webMailingList').modal('show');
-    e.preventDefault();
-  })
-
   // Functionality to show Announcement Mailing List Modal
   $('#showAnnouncementMailingList').on('click', function(e) {
     $('#announcementMailingList').modal('show');

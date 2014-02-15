@@ -15,6 +15,14 @@
     event.preventDefault();
   })
 
+  // Protege Developer mailing list
+
+  // Show Protege Developer mailing list modal dialog
+  $('#showWebMailingList').on('click', function(e) {
+    $('#webMailingList').modal('show');
+    e.preventDefault();
+  })
+
   $(".close-modal").on("click", function(event) {
     var $cancelButton = $(this);
     var formId = $cancelButton.data("related_form")
