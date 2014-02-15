@@ -23,6 +23,15 @@
     e.preventDefault();
   })
 
+  // Subscribe to Protege Developer mailing list
+  $("#signUpProtegeDevList").on("click", function(event) {
+    submitSubscribeRequest("https://mailman.stanford.edu/mailman/subscribe/protege-dev", "protegeDevSubscribe");
+    $("#protegeDevMailingList").modal('hide');
+    event.preventDefault();
+  })
+
+  // Helpers
+
   $(".close-modal").on("click", function(event) {
     var $cancelButton = $(this);
     var formId = $cancelButton.data("related_form")
