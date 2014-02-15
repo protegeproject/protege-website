@@ -97,10 +97,10 @@
             </div><!-- /end .col-8 -->
 
             <div class="col-3 pull-right">
-              <a href="#" id="showWebMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
+              <a href="#" id="showProtegeDevMailingList" class="btn btn-b btn-small btn-block upcase">Subscribe</a>
               <a href="http://protege-project.136.n4.nabble.com/" class="upcase text-center link-d external-link">Archive &raquo;</a>
             </div><!-- /end .col-4 -->            
-            <div id="webMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+            <div id="protegeDevMailingList" class="modal fade mailingList" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
               <a href="#" data-dismiss="modal" class="close-modal-icon"></a>
               <div class="modal-dialog">
                 <div class="modal-content">

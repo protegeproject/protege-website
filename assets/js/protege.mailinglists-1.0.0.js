@@ -18,8 +18,8 @@
   // Protege Developer mailing list
 
   // Show Protege Developer mailing list modal dialog
-  $('#showWebMailingList').on('click', function(e) {
-    $('#webMailingList').modal('show');
+  $('#showProtegeDevMailingList').on('click', function(e) {
+    $('#protegeDevMailingList').modal('show');
     e.preventDefault();
   })
 
