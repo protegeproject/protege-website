@@ -38,6 +38,13 @@
     e.preventDefault();
   })
 
+  // Subscribe to Protege Announce mailing list
+  $("#signUpProtegeAnnounceList").on("click", function(event) {
+    submitSubscribeRequest("https://mailman.stanford.edu/mailman/subscribe/protege-announce", "protegeAnnounceSubscribe");
+    $("#announcementMailingList").modal('hide');
+    event.preventDefault();
+  })
+
   // Helpers
 
   $(".close-modal").on("click", function(event) {

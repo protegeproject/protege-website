@@ -158,7 +158,7 @@
                     <div class="row">
                       <div class="col-6">
                         <h3 class="heading-b">Subscribe to the Protégé Announcements mailing list</h3>
-                        <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-announce">
+                        <form id="protegeAnnounceSubscribe" method="" action="">
                           <label>Name</label>
                           <input type="text" name="fullname" placeholder="Enter your name">
                           <label>Email</label>
@@ -167,7 +167,7 @@
                           <input type="radio" name="digest" value="1"> <span>Yes</span>
                           <input type="radio" name="digest" value="0"> <span>No</span>
                           <a href="#" data-dismiss="modal" class="cancel-modal">Cancel</a>
-                          <button type="submit" class="btn btn-b pull-right">Sign Up</button>
+                          <button id="signUpProtegeAnnounceList" type="submit" class="btn btn-b pull-right">Sign Up</button>
                         </form>
                       </div><!-- /end .col-6 -->
                       <div class="col-6 with-bg">
