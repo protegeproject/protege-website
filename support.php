@@ -160,9 +160,9 @@
                         <h3 class="heading-b">Subscribe to the Protégé Announcements mailing list</h3>
                         <form method="POST" action="https://mailman.stanford.edu/mailman/subscribe/protege-announce">
                           <label>Name</label>
-                          <input type="text" name="fullname" value="Enter your name">
+                          <input type="text" name="fullname" placeholder="Enter your name">
                           <label>Email</label>
-                          <input type="email" name="email" value="Enter your email">
+                          <input type="email" name="email" placeholder="Enter your email">
                           <p>Receive list mail batched in a daily digest?</p>
                           <input type="radio" name="digest" value="1"> <span>Yes</span>
                           <input type="radio" name="digest" value="0"> <span>No</span>
