@@ -414,7 +414,7 @@
               </a>
             </li>
             <li>
-              <a class="external-link" href="http://protege.stanford.edu/download/registered.html">
+              <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege_Desktop_Old_Versions">
                 <span>&raquo;</span>
                 Older versions
               </a>
