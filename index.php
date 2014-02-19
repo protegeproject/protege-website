@@ -209,7 +209,7 @@
       <h1 class="upcase no-margin">Why Protégé</h1>
       <h2 class="heading-c">
         Protégé’s plug-in architecture can be adapted to build 
-        both simple and complex ontologies and knowledge bases. 
+        both simple and complex ontology-based applications. 
         Developers can integrate the output of Protégé with rule 
         systems or other problem solvers to construct a wide range 
         of intelligent systems.  Most important, the Stanford team 
