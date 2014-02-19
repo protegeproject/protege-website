@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>Stanford</title>
+    <title>prot&eacute;g&eacute;</title>
 
     <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
     <link href="assets/css/lib/colorbox.css" rel="stylesheet">
