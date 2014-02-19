@@ -149,16 +149,16 @@
       </div><!-- /end .col-2 -->
       <div class="col-6">
         <p class="intro-b">
-          At its core, Protégé implements a rich set of knowledge-modeling 
-          structures and actions that support the creation, visualization, 
-          and manipulation of ontologies in various representation formats. 
+          Protégé Desktop is a feature rich ontology editing environment 
+          with full support for the OWL 2 Web Ontology Language, and direct 
+          in-memory connections to description logic reasoners like HermiT and Pellet.
         </p>
         <p>
-          Protégé can be customized to provide domain-friendly support for 
-          creating knowledge models and entering data. Further, Protégé can 
-          be extended by way of a plug-in architecture and a Java-based 
-          Application Programming Interface (API) for building knowledge-based 
-          tools and applications.
+          Protégé Desktop supports creation and editing of one or more ontologies in a single workspace via 
+          a completely customizable user interface.  Visualization tools allow for interactive navigation of 
+          ontology relationships.  Advanced explanation support aids in tracking down inconsistencies.  Refactor 
+          operations available including ontology merging, moving axioms between ontologies, rename of multiple 
+          entities, and more.
         </p>
         <ul class="inline desktop-protege-nav">
            <li>
@@ -443,7 +443,7 @@
         <p>
           Sign up for our free support mailing lists 
           to get your Prot&eacute;g&eacute; questions answered.  The lists 
-          are monitored daily by Prot&eacute;g&eacute; team members and experienced Prot&eacute;g&eacute; 
+          are monitored daily by Prot&eacute;g&eacute; team members and knowledgeable Prot&eacute;g&eacute; 
           users from our worldwide community.
         </p>
         <a href="support.php#mailingListSupport" class="btn btn-d btn-med upcase no-margin">Learn More</a>
