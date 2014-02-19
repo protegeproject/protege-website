@@ -357,10 +357,10 @@
                       Your download should start in a couple 
                       of seconds. If it doesn’t, <a class="alt-download" href="#">click here</a>.
                     </h3>
-                    <p>In the meantime... why not sign up as a Protégé user? Registered users immediately get:</p>
-                    <ul class="list-a">
+                    <p>In the meantime... why not sign up as a Protégé user? <!-- Registered users immediately get: --></p>
+                    <!-- <ul class="list-a">
                       <li>Basic online support</li>
-                    </ul>
+                    </ul> -->
                   </div><!-- /end .col-6 -->
                   <div class="col-6">
                     <form id="signUpForm" method="" action="">
