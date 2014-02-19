@@ -7,8 +7,8 @@
         <div class="col-10">
           <h1>
             Thousands of people all over the world are using the 
-            Prot&eacute;g&eacute; platform.  Interact with us and 
-            make contributions by joining our active community.
+            Prot&eacute;g&eacute; platform.  Join our growing community 
+            to interact with us and make contributions.
           </h1>
         </div><!-- /end .col-10 -->
       </div><!-- /end .row -->
