@@ -860,6 +860,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 #signUpModal p.smaller {
   font-size: 14px;
+  margin-top: 25px;
 }
 
 #signUpModal ul {
