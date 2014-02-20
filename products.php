@@ -357,10 +357,17 @@
                       Your download should start in a couple 
                       of seconds. If it doesn’t, <a class="alt-download" href="#">click here</a>.
                     </h3>
-                    <p>In the meantime... why not sign up as a Protégé user? <!-- Registered users immediately get: --></p>
-                    <!-- <ul class="list-a">
-                      <li>Basic online support</li>
-                    </ul> -->
+                    <p>
+                      In the meantime, please help us by registering in 
+                      the form on the right. Thank you for your support!
+                    </p>
+                    <p class="smaller">
+                      We use registration data to create statistics when 
+                      applying for Prot&eacute;g&eacute; funding. Prizes 
+                      are awared to lucky users who register at milestones, 
+                      e.g., reaching 300,000 registrants. Your data is never 
+                      shared with third parties.
+                    </p>
                   </div><!-- /end .col-6 -->
                   <div class="col-6">
                     <form id="signUpForm" method="" action="">
@@ -380,7 +387,7 @@
                       </div><!-- /end .half -->
                       <label>Project Description</label>
                       <textarea id="project" name="project" placeholder="A few words about your project..."></textarea>
-                      <button id="signUp" type="submit" class="btn btn-b pull-right">Sign Up</button>
+                      <button id="signUp" type="submit" class="btn btn-b pull-right">Register</button>
                     </form>
                   </div><!-- /end .col-6 -->
                 </div><!-- /end .row -->
