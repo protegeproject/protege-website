@@ -131,6 +131,7 @@
   if (navigator.appVersion.indexOf("Linux")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Linux');
+    $('#source').find('option[value="desktop-linux-vm"]').attr("selected",true);
   }
 
   // Hide original dropdown menu
