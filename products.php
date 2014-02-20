@@ -364,7 +364,7 @@
                     <p class="smaller">
                       We use registration data to create statistics when 
                       applying for Prot&eacute;g&eacute; funding. Prizes 
-                      are awared to lucky users who register at milestones, 
+                      are awarded to lucky users who register at milestones, 
                       e.g., reaching 300,000 registrants. Your data is never 
                       shared with third parties.
                     </p>
