@@ -114,8 +114,8 @@
       $('.instruction-panel div:not(.windows-instructions)').addClass('hide');
     }
     $('#source').find('option[value="desktop-win-vm"]').attr("selected",true);
-  } 
-  
+  }
+
   // Customize download button, icon, and instructions for Mac
   if (navigator.appVersion.indexOf("Mac")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
@@ -130,7 +130,7 @@
   }
 
   // Customize download button and instructions for Linux
-  if (navigator.appVersion.indexOf("Linux")!=-1) {
+  if (navigator.userAgent.indexOf("Linux")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Linux');
     $('.generic-instructions').removeClass('hide');
@@ -394,7 +394,7 @@
   }  
 
   // Initial item to have selected on dropdown menu based on OS
-  if (navigator.appVersion.indexOf("Linux")!=-1) {
+  if (navigator.userAgent.indexOf("Linux")!=-1) {
     $('#target dt a').attr('class', 'linux-dropdown-icon');
   }
 
