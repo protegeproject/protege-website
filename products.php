@@ -328,7 +328,7 @@
                 <div class="col-12 hide generic-instructions">
                   <p class="header"><strong>Instructions</strong></p>
                     <ol>
-                      <li>After downloading open a shell and, cd to the directory where you downloaded the installer.</li>
+                      <li>After downloading, open a shell and cd to the directory where you downloaded the installer.</li>
                       <li>At the prompt type: <strong>sh ./install_protege_4.3.bin</strong></li>
                     </ol>
                   <p class="header"><strong>Notes</strong></p>
