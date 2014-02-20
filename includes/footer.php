@@ -70,7 +70,7 @@
           <div class="row copyright">
 
             <div class="col-8">
-              <p>Copyright © 2013 Stanford Center for Biomedical Informatics Research</p>
+              <p>Copyright © 2014 Stanford Center for Biomedical Informatics Research</p>
               <p class="disclaimer">
                 <small>
                   Protégé is a national resource for biomedical ontologies and knowledge 
