@@ -129,6 +129,10 @@
     $('#source').find('option[value="desktop-osx"]').attr("selected",true);
   }
 
+  if (navigator.appVersion.indexOf("Linux")!=-1) {
+    $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
+  }
+
   // Hide original dropdown menu
   $('#source').hide();
 
