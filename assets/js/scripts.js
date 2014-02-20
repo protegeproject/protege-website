@@ -104,7 +104,6 @@
     $('.navbar-wrapper').affix();
   }
 
-
   // Load specific download button for Windows users
   if (navigator.appVersion.indexOf("Win")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
@@ -131,6 +130,7 @@
 
   if (navigator.appVersion.indexOf("Linux")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
+    $('.desktop-download-btn').find('h4').text('Download for Linux');
   }
 
   // Hide original dropdown menu
