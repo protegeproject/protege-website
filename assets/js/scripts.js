@@ -104,7 +104,7 @@
     $('.navbar-wrapper').affix();
   }
 
-  // Load specific download button for Windows users
+  // Customize download button, icon, and instructions for Windows
   if (navigator.appVersion.indexOf("Win")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Windows');
@@ -116,6 +116,7 @@
     $('#source').find('option[value="desktop-win-vm"]').attr("selected",true);
   } 
   
+  // Customize download button, icon, and instructions for Mac
   if (navigator.appVersion.indexOf("Mac")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Mac OSX');
@@ -128,9 +129,14 @@
     $('#source').find('option[value="desktop-osx"]').attr("selected",true);
   }
 
+  // Customize download button and instructions for Linux
   if (navigator.appVersion.indexOf("Linux")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Linux');
+    $('.generic-instructions').removeClass('hide');
+    if ($('div:not(.generic-instructions)')) {
+      $('.instruction-panel div:not(.generic-instructions)').addClass('hide');
+    }
     $('#source').find('option[value="desktop-linux-vm"]').attr("selected",true);
   }
 
