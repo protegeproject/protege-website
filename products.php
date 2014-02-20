@@ -392,7 +392,7 @@
                   </div><!-- /end .col-6 -->
                 </div><!-- /end .row -->
               </div>
-              <a id="closeSignUpModal" href="#" data-dismiss="modal">No thanks, close this window</a>
+              <a id="closeSignUpModal" href="#" data-dismiss="modal">No thanks, I'm already registered</a>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
