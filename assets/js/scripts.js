@@ -391,6 +391,11 @@
   // Initial item to have selected on dropdown menu based on OS
   if (navigator.appVersion.indexOf("Win")!=-1) {
     $('#target dt a').attr('class', 'windows-dropdown-icon');
+  }  
+
+  // Initial item to have selected on dropdown menu based on OS
+  if (navigator.appVersion.indexOf("Linux")!=-1) {
+    $('#target dt a').attr('class', 'linux-dropdown-icon');
   }
 
   // Functionality to show Desktop Download Modal
