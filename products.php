@@ -319,7 +319,7 @@
                   <ul class="list-b">
                     <li>
                       If you do not have a Java virtual machine installed, be sure to download the package above which 
-                      includes one. Otherwise you may need to download one from <a href="http://www.flexerasoftware.com/redirect/redirectJava.htm">Sun's Java web site</a> or contact your OS 
+                      includes one. Otherwise you may need to download one from <a href="http://www.flexerasoftware.com/redirect/redirectJava.htm">Oracle's Java web site</a> or contact your OS 
                       manufacturer.
                     </li>
                   </ul>
@@ -335,7 +335,7 @@
                   <ul class="list-b">
                     <li>
                       If you do not have a Java virtual machine installed, be sure to download the package above which 
-                      includes one. Otherwise you may need to download one from <a href="http://www.flexerasoftware.com/redirect/redirectJava.htm">Sun's Java web site</a> or contact your OS 
+                      includes one. Otherwise you may need to download one from <a href="http://www.flexerasoftware.com/redirect/redirectJava.htm">Oracle's Java web site</a> or contact your OS 
                       manufacturer.
                     </li>
                   </ul>
