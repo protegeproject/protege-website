@@ -1,0 +1,69 @@
+/* portions inspired by css layouts freely available from http://www.code-sucks.com */
+
+a {text-decoration: none;} /* no underline for hyperlinks */
+a:link {color: #327BAA;} /* medium blue */
+a:visited {color: #6F1488;} /* purple */ 
+a:hover {color: #DC7317;} /* bright orange */
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+ 	font-size: 14px;
+}
+
+#wrapper { 
+	margin: 0 auto;
+ 	width: 1022px;
+}
+
+#header {
+	width: 900px;
+ 	margin: 10px 0px 5px 0px;
+ 	padding: 10px;
+ 	border: 1px solid #ccc;
+ 	background: #E9E2E7;
+	text-align: right;
+}
+
+#content { 
+	width: 900px;
+ 	color: #333;
+ 	border: 1px solid #ccc;
+	background: #EBEBE8;
+ 	margin: 0px 0px 5px 0px;
+ 	padding: 10px;
+}
+
+#footer { 
+	color: #333;
+ 	width: 900px;
+ 	border: 1px solid #ccc;
+ 	background: #E9E2E7;
+ 	margin: 0px 0px 10px 0px;
+ 	padding: 10px;
+}
+
+.courseTitle {
+	color: #DC7317;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px; 
+}
+
+.navItem {
+	color: #DC7317;
+	font-weight: bold;
+}
+
+.navItemDisabled {
+	color: #919191;
+}
+
+.dateAndLocation {
+	color:#535353;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.imgDecoration {
+	border: 3px solid #DC7317;
+}
