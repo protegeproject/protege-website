@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#"
+  xml:base="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ontology_Property</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Annotation_Removed</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DirectType_Removed</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Subclass_Removed</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Annotation</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Annotation_Change</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Property_Change</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Added">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Subclass_Added</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TemplateSlot_Removed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Deleted">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual_Deleted</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Deleted_Change</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVote">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AgreeDisagreeVote</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Value">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Maximum_Value</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SimpleProposal">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SimpleProposal</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Name_Changed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Removed">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Superclass_Removed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Annotation_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVote">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FiveStarsVote</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Proposal</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVoteProposal">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FiveStarsVoteProposal</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SeeAlso">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing a reference to another resource</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SeeAlso</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Added">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual_Added</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ontology_Class</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Removed">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Superproperty_Removed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Added">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DomainProperty_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Cardinality">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Minimum_Cardinality</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Question">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing questions about the content</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Question</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AnnotatableThing</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Change</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Explanation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Explanation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing explanations of content</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Added">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Subproperty_Added</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Superproperty_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual_Change</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Composite_Change</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Deleted_Change</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class_Change</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Added">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Superclass_Added</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Documentation_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Advice">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Advice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing advice for the reader</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Documentation_Removed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual_Removed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VotingProposal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Timestamp</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVoteProposal">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AgreeDisagreeVoteProposal</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Deleted">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Deleted_Change</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Property_Deleted</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Modified">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Annotation_Modified</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DirectType_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Created">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Property_Created</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created_Change</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created_Change</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Value">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Minimum_Value</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Value">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Property_Value</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Removed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Subproperty_Removed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ontology_Individual</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Removed">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DomainProperty_Removed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Created">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created_Change</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual_Created</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Cardinality">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Maximum_Cardinality</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Created">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created_Change</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class_Created</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Example">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Example</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing examples</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vote</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Deleted">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class_Deleted</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Deleted_Change</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DisjointClass_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DisjointClass_Added</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Comment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A class of Annotations representing general comments</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Comment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ontology_Component</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TemplateSlot_Added</rdfs:label>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#newName">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >newName</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#title">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >title</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#inverse_of_annotates">
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >inverse_of_annotates</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#voteValue">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >voteValue</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >name</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#sequence">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sequence</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#comment">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >comment</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#action">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >action</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subject">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >subject</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >associatedAnnotations</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#date">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#context">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >context</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_0">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >changes_Slot_0</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates">
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >annotates</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >changes</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#modified">
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >modified</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#related">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >related</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#timestamp">
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >timestamp</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#body">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >body</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subChanges">
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >subChanges</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#author">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >author</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#partOfCompositeChange">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >partOfCompositeChange</rdfs:label>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#created">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >created</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#currentName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >currentName</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#creationName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >creationName</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_1">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >changes_Slot_1</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#applyTo">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >applyTo</rdfs:label>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#oldName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oldName</rdfs:label>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedProperty">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >associatedProperty</rdfs:label>
+    <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#deletionName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >deletionName</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 500)  http://protege.stanford.edu -->

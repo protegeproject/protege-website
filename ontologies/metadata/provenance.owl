@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bp="http://bioportal.bioontology.org#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://protege.stanford.edu/ontologies/metadata/provenance.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://protege.stanford.edu/ontologies/metadata/provenance.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Ontology>
+  <owl:AnnotationProperty rdf:ID="termUrl">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An optional URL where the term can be browsed</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="ontologyName">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Used to denote the source import ontology for an import</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="importDate">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The import date in the form of xsd:datetime</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="ontologyVersion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The source ontology version given by the ontology authors</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="importCreator">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The name of the author who performed the import</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://bioportal.bioontology.org#ontologyId">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The BioPortal ontology version id</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+  </owl:AnnotationProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.7, Build 619)  http://protege.stanford.edu -->

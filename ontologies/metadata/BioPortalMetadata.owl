@@ -1,0 +1,1215 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:metrics="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:changes="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#"
+    xmlns:OMV="http://omv.ontoware.org/2005/05/ontology#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://protege.stanford.edu/ontologies/metadata/BioPortalMetadata.owl#"
+    xmlns:mappings="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#"
+  xml:base="http://protege.stanford.edu/ontologies/metadata/BioPortalMetadata.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <owl:imports rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs"/>
+    <owl:imports rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  <owl:Class rdf:ID="VirtualOntology">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="id"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="isManual"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="oboFoundryID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EvaluationDimension"/>
+  <owl:Class rdf:ID="ViewGenerationEngine">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#documentation">
+            <rdfs:domain>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology">
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:ObjectProperty rdf:ID="administeredBy"/>
+                        </owl:onProperty>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:minCardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:maxCardinality>
+                        <owl:onProperty>
+                          <owl:DatatypeProperty rdf:ID="hasContactEmail"/>
+                        </owl:onProperty>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="isFoundry"/>
+                        </owl:onProperty>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="timestampCreation"/>
+                        </owl:onProperty>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="filePath"/>
+                        </owl:onProperty>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="isVersionOfVirtualOntology"/>
+                        </owl:onProperty>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="internalVersionNumber"/>
+                        </owl:onProperty>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:maxCardinality>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="preferredNameProperty"/>
+                        </owl:onProperty>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="isRemote"/>
+                        </owl:onProperty>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:about="#id"/>
+                        </owl:onProperty>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="synonymProperty"/>
+                        </owl:onProperty>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:maxCardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="statusID"/>
+                        </owl:onProperty>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:cardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:DatatypeProperty rdf:ID="hasContactName"/>
+                        </owl:onProperty>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:maxCardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                    <rdfs:subClassOf>
+                      <owl:Restriction>
+                        <owl:onProperty>
+                          <owl:FunctionalProperty rdf:ID="codingScheme"/>
+                        </owl:onProperty>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >1</owl:maxCardinality>
+                      </owl:Restriction>
+                    </rdfs:subClassOf>
+                  </rdf:Description>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyTask"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+                  <owl:Class rdf:about="#ViewGenerationEngine"/>
+                  <owl:Class rdf:ID="ViewDefinitionLanguage"/>
+                </owl:unionOf>
+              </owl:Class>
+            </rdfs:domain>
+          </rdf:Description>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym">
+            <rdfs:domain>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyTask"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+                  <owl:Class rdf:about="#ViewGenerationEngine"/>
+                  <owl:Class rdf:about="#ViewDefinitionLanguage"/>
+                </owl:unionOf>
+              </owl:Class>
+            </rdfs:domain>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#description">
+            <rdfs:domain>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyTask"/>
+                  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+                  <owl:Class rdf:ID="Project"/>
+                </owl:unionOf>
+              </owl:Class>
+            </rdfs:domain>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#name">
+            <rdfs:domain>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#ViewDefinitionLanguage"/>
+                  <owl:Class rdf:about="#ViewGenerationEngine"/>
+                </owl:unionOf>
+              </owl:Class>
+            </rdfs:domain>
+          </rdf:Description>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OntologyView">
+    <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Ontology">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OntologyGroup">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >string</owl:hasValue>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >string</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >string</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#id"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ViewDefinitionLanguage">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#documentation"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#documentation"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Review">
+    <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BioPortalUser">
+    <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Person"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#timestampCreation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#id"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="username"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="password"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BioPortalUserRole">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#id"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="VirtualView">
+    <rdfs:subClassOf rdf:resource="#VirtualOntology"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasRoles">
+    <rdfs:domain rdf:resource="#BioPortalUser"/>
+    <rdfs:range rdf:resource="#BioPortalUserRole"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="supportedByViewGenerationEngine">
+    <rdfs:range rdf:resource="#ViewGenerationEngine"/>
+    <rdfs:domain rdf:resource="#ViewDefinitionLanguage"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="supportsViewDefinitionLanguage"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="documentationAndSupportReview">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="reviewOnDimension"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >documentation and support</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="qualityOfContentReview">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >quality of content</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#reviewOnDimension"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="institution">
+    <rdfs:domain rdf:resource="#Project"/>
+    <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="degreeOfFormalityReview">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#reviewOnDimension"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >degree of formality</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="correctnessReview">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#reviewOnDimension"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >correctness</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="virtualViewOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasVirtualView"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#VirtualView"/>
+    <rdfs:range rdf:resource="#VirtualOntology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usabilityReview">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >usability</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#reviewOnDimension"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="belongsToGroup">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="containsOntology"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+    <rdfs:range rdf:resource="#OntologyGroup"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#supportsViewDefinitionLanguage">
+    <rdfs:domain rdf:resource="#ViewGenerationEngine"/>
+    <owl:inverseOf rdf:resource="#supportedByViewGenerationEngine"/>
+    <rdfs:range rdf:resource="#ViewDefinitionLanguage"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="currentVersion">
+    <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isViewOnOntologyVersion">
+    <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasView"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#OntologyView"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates">
+    <owl:inverseOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#reviewOnDimension">
+    <rdfs:range rdf:resource="#EvaluationDimension"/>
+    <rdfs:domain rdf:resource="#Review"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usesOntology">
+    <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:domain rdf:resource="#Project"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="domainCoverageReview">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >domain coverage</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#reviewOnDimension"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#containsOntology">
+    <owl:inverseOf rdf:resource="#belongsToGroup"/>
+    <rdfs:domain rdf:resource="#OntologyGroup"/>
+    <rdfs:range rdf:resource="#VirtualOntology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="viewDefinitionLanguage">
+    <rdfs:range rdf:resource="#ViewDefinitionLanguage"/>
+    <rdfs:domain rdf:resource="#OntologyView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasVirtualView">
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+    <owl:inverseOf rdf:resource="#virtualViewOf"/>
+    <rdfs:range rdf:resource="#VirtualView"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="viewGenerationEngine">
+    <rdfs:range rdf:resource="#ViewGenerationEngine"/>
+    <rdfs:domain rdf:resource="#OntologyView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#administeredBy">
+    <rdfs:range rdf:resource="#BioPortalUser"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="administers"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#Project"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#administers">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#Project"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#BioPortalUser"/>
+    <owl:inverseOf rdf:resource="#administeredBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasView">
+    <owl:inverseOf rdf:resource="#isViewOnOntologyVersion"/>
+    <rdfs:range rdf:resource="#OntologyView"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="#username">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BioPortal user name</rdfs:comment>
+    <rdfs:domain rdf:resource="#BioPortalUser"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasContactEmail">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The email address(es)of the contact person(s).</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#Project"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="fileNames">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#classesWithNoDocumentation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="textualReview">
+    <rdfs:domain rdf:resource="#EvaluationDimension"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasContactName">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The name(s) of the contact person(s).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#Project"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#password">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BioPortal user password</rdfs:comment>
+    <rdfs:domain rdf:resource="#BioPortalUser"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="urlHomepage">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#OntologyGroup"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="targetTerminologies">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="rating">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#EvaluationDimension"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="urlPublications">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="viewDefinition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OntologyView"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="annotatesByVirtualID">
+    <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#classesWithMoreThanOnePropertyValueForPropertyWithUniqueValue">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#classesWithNoAuthor">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="virtualURI">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#classesWithMoreThanXSubclasses">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#classesWithSingleSubclass">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="#id">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#BioPortalUser"/>
+          <owl:Class rdf:about="#VirtualOntology"/>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyDomain">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:FunctionalProperty rdf:ID="oboFoundryName"/>
+                </owl:onProperty>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1</owl:maxCardinality>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1</owl:cardinality>
+                <owl:onProperty rdf:resource="#id"/>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+          </rdf:Description>
+          <owl:Class rdf:about="#BioPortalUserRole"/>
+          <owl:Class rdf:about="#OntologyGroup"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The BioPortal id</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#preferredNameProperty">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="authorProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#codingScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#averageNumberOfSiblings">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isRemote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BioPortal internal flag. Specifies whether an ontology is stored in BioPortal or it is remote.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#oboFoundryID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The OBO Foundry id of an OBO ontology.</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isManual">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="documentationProperty">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#maximumNumberOfSiblings">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#maximumDepth">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isVersionOfVirtualOntology">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="hasVersion"/>
+    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#VirtualOntology"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isFoundry">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#internalVersionNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#statusID">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BioPortal upload status ID.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="propertyWithUniqueValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://protege.stanford.edu/ontologies/metrics/metrics.rdfs#preferredMaximumSubclassLimit">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#filePath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#oboFoundryName">
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The OBO Foundry name of an ontology domain (a.k.a. category).</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#timestampCreation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The date and time when the referred element (user, ontology, etc.) was created in BioPortal.
+In case of ontology versions, this represents the date and time when it was uploaded into BioPortal.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#BioPortalUser"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#synonymProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#hasVersion">
+    <owl:inverseOf rdf:resource="#isVersionOfVirtualOntology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+    <rdfs:domain rdf:resource="#VirtualOntology"/>
+  </owl:InverseFunctionalProperty>
+  <ViewDefinitionLanguage rdf:ID="ManualViewDefinitionLanguage">
+    <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >View definition by manual selection</OMV:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manual</rdfs:label>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Manual</OMV:name>
+  </ViewDefinitionLanguage>
+  <rdf:Description rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#source">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          <rdf:Description rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OWL-Lite">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-LITE</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-Lite</OMV:name>
+  </rdf:Description>
+  <OMV:Organisation rdf:ID="OBO_Foundry">
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO Foundry</OMV:name>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Foundry</OMV:acronym>
+  </OMV:Organisation>
+  <OMV:OntologyLanguage rdf:ID="OBO">
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO</OMV:name>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO</OMV:acronym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO</rdfs:label>
+  </OMV:OntologyLanguage>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#URI">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ViewDefinitionLanguage"/>
+          <owl:Class rdf:about="#ViewGenerationEngine"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#DAML-OIL">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DAML-OIL</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DAML-OIL</OMV:name>
+  </rdf:Description>
+  <OMV:OntologyLanguage rdf:ID="RRF">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RRF</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RRF</OMV:name>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RRF</rdfs:label>
+  </OMV:OntologyLanguage>
+  <OMV:OntologyLanguage rdf:ID="LexGrid-XML">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LexGrid-XML</rdfs:label>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LEXGRID-XML</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LexGrid-XML</OMV:name>
+  </OMV:OntologyLanguage>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#RDF-S">
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RDF-S</OMV:name>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RDF-S</OMV:acronym>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ontologyLanguage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OWL">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL</OMV:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OWL-DL">
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-DL</OMV:name>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-DL</OMV:acronym>
+  </rdf:Description>
+  <OMV:Organisation rdf:ID="caBIG">
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >caBIG</OMV:name>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >caBIG</OMV:acronym>
+  </OMV:Organisation>
+  <OMV:OntologyEngineeringTool rdf:ID="Protege">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protégé</rdfs:label>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protege</OMV:name>
+  </OMV:OntologyEngineeringTool>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#version">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+          <owl:Class rdf:about="#ViewDefinitionLanguage"/>
+          <owl:Class rdf:about="#ViewGenerationEngine"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#hasDomain">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >domain</rdfs:label>
+  </rdf:Description>
+  <ViewDefinitionLanguage rdf:ID="RVL">
+    <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A "full-fledged" view definition language for creating virtual RDF/S resource descriptions and schemas from (meta)classes, properties, and resource descriptions.</OMV:description>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RVL</OMV:name>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RVL</rdfs:label>
+    <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.ics.forth.gr/isl/publications/paperlink/iswc03.pdf</OMV:documentation>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RVL</OMV:acronym>
+  </ViewDefinitionLanguage>
+  <OMV:OntologyEngineeringTool rdf:ID="OBOEdit">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO-Edit</rdfs:label>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OBO-Edit</OMV:name>
+  </OMV:OntologyEngineeringTool>
+  <rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#OWL-Full">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-FULL</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OWL-Full</OMV:name>
+  </rdf:Description>
+  <ViewDefinitionLanguage rdf:ID="RQL">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RQL</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RQL</OMV:name>
+    <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The RDF Query Language (RQL)</OMV:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RQL</rdfs:label>
+    <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://139.91.183.30:9090/RDF/RQL/</OMV:documentation>
+  </ViewDefinitionLanguage>
+  <rdf:Description rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#target">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          <rdf:Description rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </rdf:Description>
+  <OMV:OntologyLanguage rdf:ID="Protege-Frames">
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PROTEGE</OMV:acronym>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protege-Frames</OMV:name>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protege-Frames</rdfs:label>
+  </OMV:OntologyLanguage>
+  <OMV:KnowledgeRepresentationParadigm rdf:ID="DAG">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Directed Acyclic Graph</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DAG</rdfs:label>
+  </OMV:KnowledgeRepresentationParadigm>
+  <ViewGenerationEngine rdf:ID="Jena-ARQ">
+    <supportsViewDefinitionLanguage>
+      <ViewDefinitionLanguage rdf:ID="ARQ-Language">
+        <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ARQ</OMV:acronym>
+        <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >The ARQ Query Engine's own query language</OMV:description>
+        <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ARQ-Language</OMV:name>
+        <supportedByViewGenerationEngine rdf:resource="#Jena-ARQ"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ARQ-Language</rdfs:label>
+      </ViewDefinitionLanguage>
+    </supportsViewDefinitionLanguage>
+    <supportsViewDefinitionLanguage>
+      <ViewDefinitionLanguage rdf:ID="SPARQL">
+        <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SPARQL</OMV:acronym>
+        <supportedByViewGenerationEngine rdf:resource="#Jena-ARQ"/>
+        <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >http://www.w3.org/TR/rdf-sparql-query/</OMV:documentation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SPARQL</rdfs:label>
+        <supportedByViewGenerationEngine>
+          <ViewGenerationEngine rdf:ID="Virtuoso">
+            <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Virtuoso SPARQL</OMV:name>
+            <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Virtuoso</OMV:acronym>
+            <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/VOSSPARQL</OMV:documentation>
+            <supportsViewDefinitionLanguage>
+              <ViewDefinitionLanguage rdf:ID="vSPARQL">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >vSPARQL</rdfs:label>
+                <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >vSPARQL</OMV:name>
+                <supportedByViewGenerationEngine rdf:resource="#Virtuoso"/>
+              </ViewDefinitionLanguage>
+            </supportsViewDefinitionLanguage>
+            <supportsViewDefinitionLanguage rdf:resource="#SPARQL"/>
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Virtuoso SPARQL</rdfs:label>
+          </ViewGenerationEngine>
+        </supportedByViewGenerationEngine>
+        <supportedByViewGenerationEngine>
+          <ViewGenerationEngine rdf:ID="Sesame-SPARQL_Engine">
+            <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SPARQL Engine</OMV:acronym>
+            <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sesame/SPARQL Engine</OMV:name>
+            <supportsViewDefinitionLanguage rdf:resource="#SPARQL"/>
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sesame / SPARQL Engine</rdfs:label>
+          </ViewGenerationEngine>
+        </supportedByViewGenerationEngine>
+        <supportedByViewGenerationEngine>
+          <ViewGenerationEngine rdf:ID="RedLand-Rasqal">
+            <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Redland/Rasqal</OMV:name>
+            <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rasqal</OMV:acronym>
+            <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://librdf.org/rasqal/</OMV:documentation>
+            <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Redland RDF library using the Rasqal RDF Query Library</OMV:description>
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Redland / Rasqal</rdfs:label>
+            <supportsViewDefinitionLanguage>
+              <ViewDefinitionLanguage rdf:ID="RDQL">
+                <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >RDQL</OMV:name>
+                <supportedByViewGenerationEngine rdf:resource="#RedLand-Rasqal"/>
+                <supportedByViewGenerationEngine rdf:resource="#Jena-ARQ"/>
+                <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >http://www.w3.org/Submission/2004/SUBM-RDQL-20040109/</OMV:documentation>
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >RDQL - RDF Data Query Language</rdfs:label>
+                <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >RDF Data Query Language (RDQL)</OMV:description>
+                <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >RDQL</OMV:acronym>
+              </ViewDefinitionLanguage>
+            </supportsViewDefinitionLanguage>
+            <supportsViewDefinitionLanguage rdf:resource="#SPARQL"/>
+          </ViewGenerationEngine>
+        </supportedByViewGenerationEngine>
+        <supportedByViewGenerationEngine>
+          <ViewGenerationEngine rdf:ID="Pellet">
+            <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pellet</OMV:name>
+            <supportsViewDefinitionLanguage rdf:resource="#SPARQL"/>
+            <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pellet</OMV:acronym>
+            <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://clarkparsia.com/pellet</OMV:documentation>
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pellet</rdfs:label>
+          </ViewGenerationEngine>
+        </supportedByViewGenerationEngine>
+        <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SPARQL Query Language for RDF</OMV:description>
+        <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SPARQL</OMV:name>
+      </ViewDefinitionLanguage>
+    </supportsViewDefinitionLanguage>
+    <OMV:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ARQ</OMV:acronym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jena / ARQ</rdfs:label>
+    <OMV:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jena/ARQ</OMV:name>
+    <supportsViewDefinitionLanguage rdf:resource="#RDQL"/>
+    <OMV:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ARQ is a query engine for Jena that supports the SPARQL RDF Query language.</OMV:description>
+    <OMV:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://jena.sourceforge.net/ARQ/</OMV:documentation>
+  </ViewGenerationEngine>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536)  http://protege.stanford.edu -->
