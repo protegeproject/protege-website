@@ -113,7 +113,7 @@
     if ($('div:not(.windows-instructions)')) {
       $('.instruction-panel div:not(.windows-instructions)').addClass('hide');
     }
-    $('#source').find('option[value="desktop-win-vm"]').attr("selected",true);
+    $('#source').find('option[value=' + getInstallerValue() + ']').attr('selected', true);
   }
 
   // Customize download button, icon, and instructions for Mac
@@ -126,7 +126,7 @@
     if ($('div:not(.osx-instructions)')) {
       $('.instruction-panel div:not(.osx-instructions)').addClass('hide');
     }
-    $('#source').find('option[value="desktop-osx"]').attr("selected",true);
+    $('#source').find('option[value=' + getInstallerValue() + ']').attr('selected', true);
   }
 
   // Customize download button and instructions for Linux
@@ -137,9 +137,24 @@
     if ($('div:not(.generic-instructions)')) {
       $('.instruction-panel div:not(.generic-instructions)').addClass('hide');
     }
-    $('#source').find('option[value="desktop-linux-vm"]').attr("selected",true);
+    $('#source').find('option[value=' + getInstallerValue() + ']').attr('selected', true);
   }
-
+  
+  function getInstallerValue() {
+    var installerValue;
+    var is64Bit = (navigator.userAgent.indexOf("64") != -1);
+    var agent = navigator.userAgent;
+    
+    if (agent.indexOf("Win") != -1) {
+      installerValue = (is64Bit) ? "desktop-win-64-vm" : "desktop-win-vm";
+    } else if (agent.indexOf("Linux") != -1) {
+      installerValue = (is64Bit) ? "desktop-linux-64-vm" : "desktop-linux-vm";
+    } else if (agent.indexOf("Mac") != -1) {
+      installerValue = "desktop-osx";
+    }
+    return installerValue;
+  }
+  
   // Hide original dropdown menu
   $('#source').hide();
 
