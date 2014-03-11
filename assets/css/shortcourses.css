@@ -67,3 +67,15 @@ body {
 .imgDecoration {
 	border: 3px solid #DC7317;
 }
+
+/* Lodging page */
+
+.bottomBorder { 
+	border-bottom-style: dotted; 
+	border-bottom-width: thin; 
+	padding-bottom:3px; 
+}
+
+.hotelName { 
+	font-weight:bold; 
+}
