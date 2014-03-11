@@ -79,3 +79,40 @@ body {
 .hotelName { 
 	font-weight:bold; 
 }
+
+/* Schedule page */
+
+.outline {
+	border: 1px solid #BFBCB5;
+}
+
+.schedule {
+	margin-bottom: 5px; 
+	border: 1px solid #BFBCB5;
+}
+
+.day-color {
+	background-color: #EDEEC1;
+}
+
+.break-color {
+	background-color: #C1EEEE;
+}
+
+.meals-color {
+	background-color: #D9C1EE;
+}
+
+.special-event-color {
+	background-color: #EEC1D7;
+}
+
+.presenter {
+	font-size: 12px; 
+	font-style: italic;
+}
+
+
+
+
+
