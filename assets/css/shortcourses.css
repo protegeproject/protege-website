@@ -112,7 +112,21 @@ body {
 	font-style: italic;
 }
 
+/* Content page */
 
+.topics {
+	margin-left: 11px; 
+	margin-right:15px;
+}
 
+.topics ul li {
+	padding-bottom: 3px;
+}
 
+.courseDay {
+	color: #DC7317;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px; 
+}
 
