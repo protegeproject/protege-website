@@ -1,0 +1,24 @@
+
+Enterprise Vocabulary Development in Protege/OWL:  Workflow and Concept History Requirements
+
+Sherri De Coronado, Gilberto Fragoso (NCI)
+
+The National Cancer Institute has developed the NCI Thesaurus, a rich and
+complex vocabulary that provides consistent, unambiguous codes and
+definitions for concepts used in cancer research.  A lexical component
+provides human usable definition and other information.  Description logic
+is used to ensure complete, consistent and non-redundant definitions in the
+formal sense.  NCI Thesaurus enables retrieval of information across a wide
+range of domains used in cancer research, facilitating translational
+research. This vocabulary was originally built using Ontylog, a proprietary
+description logic developed explicitly for building large complex
+terminologies.  We have converted the Ontylog version of NCI Thesaurus to
+OWL, and are beginning to test the features of Protege OWL in a multi-user
+environment with a database backend to determine whether it could be used be
+used to support the operational needs of NCI Thesaurus development and
+maintenance.  Other tools such as Prompt and PromptViz would allow us to
+visualize and review changes between development baselines.  However, we
+anticipate additional work that would include the modification, via plugins
+or directly on the code base (in collaboration with the Protege team), of
+Protege to support workflow in a collaborative environment, as well as
+concept history tracking and various (NCI) business rules.  

@@ -1,0 +1,21 @@
+A:link {color:blue;}
+A:visited {color:purple;}
+A:active {color:red;}
+
+.calendarDays {font-family:verdana,arial,helvetica,sans-serif; font-size:14px; font-weight:bold}
+.conferenceTitle {font-family:verdana,arial,helvetica,sans-serif; font-weight:bold; font-size:large;}
+
+.bodyMargin {margin-right:1%;}
+.bodyText {font-family:verdana,arial,helvetica,sans-serif; font-size:12px;}
+.bodyTextBold {font-family:verdana,arial,helvetica,sans-serif; font-size:12px; font-weight:bold;}
+.bodyTextBoldRed {font-family:verdana,arial,helvetica,sans-serif; font-size:12px; font-weight:bold; color:red;}
+
+.goTop {font-family:verdana,arial,helvetica,sans-serif; font-size:9px; padding-bottom:3px}
+
+.navBarText {font-family:verdana,arial,helvetica,sans-serif; font-size:12px;}
+
+.schedule {font-family:verdana,arial,helvetica,sans-serif; font-size:10px;}
+.sponsors {font-family:verdana,arial,helvetica,sans-serif; font-size:11px; font-weight:bold; color:#B8860B;}
+.sponsors2 {font-family:verdana,arial,helvetica,sans-serif; font-size:11px; font-weight:bold;}
+
+.titleText {font-family:verdana,arial,helvetica,sans-serif; font-size:14px;}

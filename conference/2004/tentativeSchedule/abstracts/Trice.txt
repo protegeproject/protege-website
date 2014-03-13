@@ -1,0 +1,33 @@
+Using Protégé in a Domain-Driven Software Product Development Process
+
+Andrew Trice, Ph.D.
+Director of Product Analysis and Interface Design
+Workscape, Inc.
+
+ABSTRACT
+
+This presentation will report on some highlights of the use of Protégé to construct a domain model in the human resources (HR) area, specifically managerial compensation planning.  This domain involves specifying a complex set of relationships between types of compensation programs employed at large organizations (e.g. base pay increases, bonus, stock awards, other non-cash benefits), corporate budget allocations and transfers, multiple organizational hierarchies used for compensation eligibility and award approval, and decision support concepts (e.g. budget modeling, guidelines and limits).
+
+At Workscape, a major provider of HR software solutions, we have been evolving this domain model over the last several months and leveraging it in the construction of a next-generation product to support complex compensation planning problems.  Early results have been encouraging, and project is ongoing.
+
+Some of the salient topics to be covered in this presentation are as follows:
+
+- The process of cultivating acceptance of a domain modeling tool as a supplement to an object-oriented modeling tool in a software product company; 
+
+- Embedding the use of Protégé within a software product development process;
+
+- Custom Protégé Metaclasses useful for supporting software product development;
+
+- Experience with exporting Protégé models to Rational Rose;
+
+- Use of advanced Protégé widgets in the domain modeling process, e.g., 
+	Graph Widget for modeling organizational hierarchies
+	Table Widget for UI prototyping;
+
+- Use of Protégé forms as mockups for product usability testing;
+
+- Metrics on the domain model;
+
+- Role of Protégé in developing business services;
+
+- Suggested extensions to the tool that would be particularly useful for software product development

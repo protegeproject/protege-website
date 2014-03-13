@@ -1,0 +1,6 @@
+
+Ontology Maintenance Support: Texts, Tools, and Theories 
+Christopher Welty, IBM Watson Research Center
+
+The human practice of ontology engineering, in particular maintenance, can be significantly improved with help from a variety of sources. In this community, the impact of tools such as Protege may be obvious, but it has been also been demonstrated that a rigorous theory of ontology development, such as OntoClean, can improve performance of Ontology-based systems, and that text analysis can help improve the development speed and accuracy of ontology maintenance. ÊWe have been working on combining the "three ts" -- texts, tools, and theories -- into a Protege-based environment for ontology maintenance supported by text analysis and the OntoClean methodology. In this talk, I will give a brief overview of the technologies we are combining and show some examples of how the ontology maintenance process can be improved. 
+

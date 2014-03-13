@@ -1,0 +1,32 @@
+Poster Topic: Protégé integration with the Eclipse platform
+
+Presenter/Coordinator: Thomas Johnson
+Team members: Thomas Johnson, Harold Solbrig, Dan Armbrust
+Organization: Mayo Foundation Division of Biomedical Informatics
+
+Description:
+The Eclipse Platform (http://www.eclipse.org) provides an 
+extensible open source framework for tools integration. While this framework is 
+separate from the Protégé application and plug-in architecture, it is possible 
+to provide meaningful interaction between the two environments.
+
+Historically, there have been barriers to establishing this interaction, 
+foremost being incompatible widget toolkits (Eclipse SWT versus JFC/Swing). 
+However, this situation has changed with the introduction of Eclipse Version 
+3.0, which allows Swing-based components to reside within Eclipse-based 
+views.
+
+This poster will demonstrate interaction between the two environments, 
+highlighted by working examples. We will disseminate code to monitor Protégé 
+events from Eclipse plug-ins, as well as to communicate with Protégé objects and 
+user interface components from Eclipse views.
+
+In addition to demonstration, we are hopeful that the poster session will 
+encourage informal discussion regarding potential enhancements and future 
+direction for this work.
+
+An initial description of this work is available at 
+http://informatics.mayo.edu/index.php?page=220; enhancements are anticipated
+by the time of the conference. (Note: in the event that the direct link changes,
+please go to http://informatics.mayo.edu and select
+Implementation->LexGrid Editor->Protege/Eclipse via the left-hand panel).

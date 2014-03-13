@@ -1,0 +1,4 @@
+Future Direction of Protege
+Ray Fergerson, Stanford University
+
+The will primarily be an open discussion forum about the future of Protege. I will very briefly present some of our current plans and possibilities for future work.  We will then open the floor to members of the audience make suggestions, comments, and complaints.

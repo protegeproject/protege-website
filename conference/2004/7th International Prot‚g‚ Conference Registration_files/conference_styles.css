@@ -1,0 +1,42 @@
+A:link {
+	COLOR: blue
+}
+A:visited {
+	COLOR: purple
+}
+A:active {
+	COLOR: red
+}
+.calendarDays {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.conferenceTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: large; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.bodyMargin {
+	MARGIN-LEFT: 2%; MARGIN-RIGHT: 1%
+}
+.bodyText {
+	FONT-SIZE: 12px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.bodyTextBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.goTop {
+	FONT-SIZE: 9px; PADDING-BOTTOM: 3px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.navBarText {
+	FONT-SIZE: 12px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.schedule {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.sponsors {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #b8860b; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.sponsors2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.titleText {
+	FONT-SIZE: 14px; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}

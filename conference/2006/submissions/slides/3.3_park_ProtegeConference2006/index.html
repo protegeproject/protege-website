@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<STYLE>
+td { font-family:Arial, Helvetica; font-size:8.0pt; font-weight:normal; }
+</STYLE>
+<script Language="JavaScript1.2">
+<!--
+var IE = 0; var IE5 = 0; var NS = 0; var GECKO = 0;
+var openpopups = new Array();
+if (document.all) {     // Internet Explorer Detected
+	OS = navigator.platform;
+	VER = new String(navigator.appVersion);
+	VER = VER.substr(VER.indexOf("MSIE")+5, VER.indexOf(" "));
+	if ((VER <= 5) && (OS == "Win32")) {
+		IE5 = true;
+	} else {
+		IE = true;
+	}
+}
+else if (document.layers) {   // Netscape Navigator Detected
+	NS = true;
+}
+else if (document.getElementById) { // Netscape 6 Detected
+	GECKO = true;
+}
+else {
+	alert("Unrecognized Browser Detected. Sorry, your browser is not compatible.");
+}
+
+function handleResize() {
+	location.reload();
+	return false;
+}
+
+if ((NS) && (navigator.platform == "MacPPC")) {
+	window.captureEvents(Event.RESIZE);
+	window.onresize = handleResize;
+}
+
+function openNewWindow(url, name, features){
+	hideHints(1);
+	var popBox = window.open(url, name, features);
+	popBox.focus();
+return;
+}
+
+function openFile(url, name) {
+	hideHints(1);
+	var popBox = window.open(url, name);
+	popBox.focus();
+return;
+}
+
+function loadFile(url, name) {
+	hideHints(1);
+	window.location.href = url;
+return;
+}
+
+function showHint(event, popupName) {
+	hideHints(1);
+	if (GECKO) {
+		document.getElementById(popupName).style.left = event.layerX+10;
+		document.getElementById(popupName).style.top = event.layerY+10;
+		document.getElementById(popupName).style.background = "#FFFED9";
+		document.getElementById(popupName).style.visibility = "visible";
+		openpopups.push(popupName);
+	}
+	else if (NS) {
+		document.layers[popupName].moveTo(event.pageX+10, event.pageY+10);
+		document.layers[popupName].bgColor = "#FFFED9";
+		document.layers[popupName].visibility = "show";
+		openpopups.push(popupName);
+	}
+	else if (IE || IE5) {
+		window.event.cancelBubble = true;
+		document.all[popupName].style.left = window.event.clientX+10 + document.body.scrollLeft;
+		document.all[popupName].style.top = window.event.clientY+10 + document.body.scrollTop;
+		document.all[popupName].style.visibility = "visible";
+		openpopups[openpopups.length] = popupName;
+	}
+	return false;
+}
+
+function hideHints(fromBody) {
+	var popupname;
+	for (var i = 0; i < openpopups.length; i++) {
+		popupname = new String (openpopups[i]);
+		if ( IE || (GECKO && fromBody == 1)) {
+			document.getElementById(popupname).style.visibility = "hidden";
+		}
+		else if (NS) {
+			document.layers[popupname].visibility = "hide";
+		}
+		else if (IE5) {
+			document.all[popupname].style.visibility = "hidden";
+		}
+	}
+	openpopups = new Array();
+	return;
+}
+
+//-->
+</script>
+</head>
+
+<body onClick="hideHints(0); return false;">
+<center><div id="mainheadline"><h1>Ontology Federation with Subject Maps</h1></div></center>
+<center><h2>Presentation for the Protégé Conference: July 24, 2006</h2></center>
+<center><h2>Jack Park</h2></center>
+<center><h3>SRI International</h3></center>
+<center><h2>Patrick Durusau</h2></center>
+<table><tr><td width='10000' nowrap>
+<div id=OuterDiv stlye='position:relative;width:100%;height:100%'>
+<IMG Suppress=true SRC="images/1921251441153239333357_map.jpg" Width="959" Height="552" HSpace=0 VSpace=0 Border=0 usemap="#1921251441153239333357_map">
+<MAP name="1921251441153239333357_map">
+<a name="nid1921251441153239428014_1921251441153239333357"><AREA Shape="rect" Coords="225,308,550,339" HREF="" onClick="javascript:openNewWindow('details/1921251441153239428014.html','1921251441153239428014','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="372,271,405,304" HREF="" onClick="javascript:openNewWindow('details/1921251441153239428014.html','1921251441153239428014','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<AREA Shape="rect" Coords="405,266,415,282" onClick="javascript:openNewWindow('details/1921251441153239428014.html','1921251441153239428014','width=530, height=420, scrollbars=yes, resizable=yes')" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921251441153239428014text'); return false;"/>
+<a name="nid1921251441153239485216_1921251441153239333357"><AREA Shape="rect" Coords="325,131,448,162" HREF="" onClick="javascript:openNewWindow('details/1921251441153239485216.html','1921251441153239485216','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="339,55,435,127" HREF="openFile('images/External_Image_1153239484785.jpg', '1921251441153239485216')" target="_blank" onClick="openFile('images/External_Image_1153239484785.jpg', '1921251441153239485216')"/>
+<a name="nid1921251441153239793890_1921251441153239333357"><AREA Shape="rect" Coords="577,216,733,247" HREF="" onClick="javascript:openNewWindow('details/1921251441153239793890.html','1921251441153239793890','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="639,179,672,212" HREF="" onClick="javascript:openNewWindow('details/1921251441153239793890.html','1921251441153239793890','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<AREA Shape="rect" Coords="672,174,682,190" onClick="javascript:openNewWindow('details/1921251441153239793890.html','1921251441153239793890','width=530, height=420, scrollbars=yes, resizable=yes')" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921251441153239793890text'); return false;"/>
+<a name="nid1921251441153239941752_1921251441153239333357"><AREA Shape="rect" Coords="759,217,954,248" HREF="" onClick="javascript:openNewWindow('details/1921251441153239941752.html','1921251441153239941752','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="841,180,873,213" HREF="javascript:loadFile('Subject_Mapping_1921251441153239941752.html','1921251441153239941752')" onClick="javascript:loadFile('Subject_Mapping_1921251441153239941752.html','1921251441153239941752')"/>
+<AREA Shape="rect" Coords="841,180,873,213" HREF="javascript:openNewWindow('details/1921251441153239941752.html','1921251441153239941752','width=530, height=420, scrollbars=yes, resizable=yes');" onClick="javascript:openNewWindow('details/1921251441153239941752.html','1921251441153239941752','width=530, height=420, scrollbars=yes, resizable=yes');"/><a name="nid1921251441153239979186_1921251441153239333357"><AREA Shape="rect" Coords="564,423,745,454" HREF="" onClick="javascript:openNewWindow('details/1921251441153239979186.html','1921251441153239979186','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="639,386,672,419" HREF="" onClick="javascript:openNewWindow('details/1921251441153239979186.html','1921251441153239979186','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<AREA Shape="rect" Coords="672,381,682,397" onClick="javascript:openNewWindow('details/1921251441153239979186.html','1921251441153239979186','width=530, height=420, scrollbars=yes, resizable=yes')" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921251441153239979186text'); return false;"/>
+<a name="nid1921251441153240347846_1921251441153239333357"><AREA Shape="rect" Coords="291,515,483,546" HREF="" onClick="javascript:openNewWindow('details/1921251441153240347846.html','1921251441153240347846','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="339,439,435,511" HREF="openFile('images/External_Image_1153240347816.jpg', '1921251441153240347846')" target="_blank" onClick="openFile('images/External_Image_1153240347816.jpg', '1921251441153240347846')"/>
+<a name="nid13010765211153433628445_1921251441153239333357"><AREA Shape="rect" Coords="85,231,215,262" HREF="" onClick="javascript:openNewWindow('details/13010765211153433628445.html','13010765211153433628445','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="102,155,198,227" HREF="openFile('images/External_Image_1153433628095.jpg', '13010765211153433628445')" target="_blank" onClick="openFile('images/External_Image_1153433628095.jpg', '13010765211153433628445')"/>
+<a name="nid13010765211153433632321_1921251441153239333357"><AREA Shape="rect" Coords="81,457,211,488" HREF="" onClick="javascript:openNewWindow('details/13010765211153433632321.html','13010765211153433632321','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="98,381,194,453" HREF="openFile('images/External_Image_1153433632291.jpg', '13010765211153433632321')" target="_blank" onClick="openFile('images/External_Image_1153433632291.jpg', '13010765211153433632321')"/>
+</MAP></div>
+</td></tr></table>
+<div id="1921251441153239428014text" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="150" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="150">
+			<td width="150" style="hint"><p>
+				We wish to federate multiple ontologies. What processes are available?
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921251441153239793890text" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="150" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="150">
+			<td width="150" style="hint"><p>
+				Subject-centric merging
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921251441153239979186text" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="150" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="150">
+			<td width="150" style="hint"><p>
+				Not discussed here
+			</p></td>
+		</tr>
+	</table>
+</div>
+(c)2006, Jack Park and Patrick Durusau<br />
+<!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+Made with <a href="http://compendiuminstitute.org/"/>Compendium</a>
+</body></html>

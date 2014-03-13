@@ -1,0 +1,4 @@
+The Protege Project: Past, Present, and Future
+Ray Fergerson, Stanford University
+
+We will review the history of the Protege project from its inception in the mid-1980Õs to its current status. The focus will be on the state of the system at the various Protege Workshops over the years and on the growth of its user community.  We will also make some rough guesses about where the project is going.

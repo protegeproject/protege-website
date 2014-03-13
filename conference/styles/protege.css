@@ -1,0 +1,167 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+ 
+a {text-decoration: none;} /* no underline for hyperlinks */
+a:link {color: #327BAA;} /* medium blue */
+a:visited {color: #6F1488;} /* purple */ 
+a:hover {color: #DC7317;} /* bright orange */
+ 
+.top {
+	width: 100%;
+	height: 72px; 
+	padding: 3px;
+}
+
+.left {
+	position: absolute;
+	top: 103px; /* 100px + 25px + 1px + 1px */
+	left: 0px;
+	width: 170px;
+	line-height: 16px;
+	text-align: right;
+	border-top: 1px solid;
+	border-top-color: #BFBCB5; /* medium grey */
+}
+
+.middle {
+	/* top, right, bottom, left */
+	margin: -1px 81px 0px 170px;
+	border-left: 1px solid;
+	border-left-color: #BFBCB5; /* medium grey */
+	border-right: 1px solid;
+	border-right-color: #EBEBE8; /* light grey */
+}
+
+.right {
+	position: absolute;
+	top: 103px;
+	right: 0px;
+	width: 70px;
+	padding-left: 10px;
+	line-height: 16px;
+}
+
+.topNavBar {
+	position: absolute;
+	top: 46px;
+	left: 68px;
+	width: 704px;
+	font-family: Tahoma;
+	font-size: 11px;	
+	font-weight: bold;
+	line-height: 16px;
+	border-top: 1px solid;
+	border-top-color: #BFBCB5; /* medium grey */
+}
+
+.pageTitle {
+	height: 25px;
+	/* top, right, bottom, left */
+	margin: 0px 81px 0px 170px;
+	color: #AE5B08; /* burnt orange */
+	font-family: Arial;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	border-left: 1px solid;	
+	border-left-color: #BFBCB5; /* medium grey */
+	border-bottom: 1px solid;	
+	border-bottom-color: #BFBCB5; /* medium grey */
+}
+
+.subSectionNav {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.bodyTextSmBld {
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 11px; 
+	line-height: 16px;
+}
+
+.bodyText {
+	font-family: Georgia;
+	font-size: 14px; 
+	line-height: 16px;
+}
+
+.bodyTextTitle {
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 14px; 
+	line-height: 16px;
+}
+
+.bodyTextYellowTitle {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 16px; 
+	line-height: 16px;
+	color: #AE5B08; /* burnt orange */
+}
+
+.bodyTextHeader {
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 18px; 
+	line-height: 18px;
+}
+
+.sidebarTitle {
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	color: #AE5B08; /* burnt orange */
+}
+
+.sidebarText {
+	font-family: Georgia;
+	font-size: 11px;
+	line-height: 16px;
+}
+
+.sidebarTextBold {
+	font-family: Georgia;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+.footerNav {
+	/* top, right, bottom, left */
+	margin: 10px 81px 0px 0px;
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 9px;
+	line-height: 16px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.legal {
+	/* top, right, bottom, left */
+	margin: 10px 81px 0px 0px;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 16px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.w3 {
+	/* top, right, bottom, left */
+	margin: 10px 81px 0px 0px;
+}
+
+.listNoPad {
+	list-style-type: disc; 
+	margin: 5px 10px 2px 15px; 
+	padding-left: 0px;
+}

@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<STYLE>
+td { font-family:Arial, Helvetica; font-size:8.0pt; font-weight:normal; }
+</STYLE>
+<script Language="JavaScript1.2">
+<!--
+var IE = 0; var IE5 = 0; var NS = 0; var GECKO = 0;
+var openpopups = new Array();
+if (document.all) {     // Internet Explorer Detected
+	OS = navigator.platform;
+	VER = new String(navigator.appVersion);
+	VER = VER.substr(VER.indexOf("MSIE")+5, VER.indexOf(" "));
+	if ((VER <= 5) && (OS == "Win32")) {
+		IE5 = true;
+	} else {
+		IE = true;
+	}
+}
+else if (document.layers) {   // Netscape Navigator Detected
+	NS = true;
+}
+else if (document.getElementById) { // Netscape 6 Detected
+	GECKO = true;
+}
+else {
+	alert("Unrecognized Browser Detected. Sorry, your browser is not compatible.");
+}
+
+function handleResize() {
+	location.reload();
+	return false;
+}
+
+if ((NS) && (navigator.platform == "MacPPC")) {
+	window.captureEvents(Event.RESIZE);
+	window.onresize = handleResize;
+}
+
+function openNewWindow(url, name, features){
+	hideHints(1);
+	var popBox = window.open(url, name, features);
+	popBox.focus();
+return;
+}
+
+function openFile(url, name) {
+	hideHints(1);
+	var popBox = window.open(url, name);
+	popBox.focus();
+return;
+}
+
+function loadFile(url, name) {
+	hideHints(1);
+	window.location.href = url;
+return;
+}
+
+function showHint(event, popupName) {
+	hideHints(1);
+	if (GECKO) {
+		document.getElementById(popupName).style.left = event.layerX+10;
+		document.getElementById(popupName).style.top = event.layerY+10;
+		document.getElementById(popupName).style.background = "#FFFED9";
+		document.getElementById(popupName).style.visibility = "visible";
+		openpopups.push(popupName);
+	}
+	else if (NS) {
+		document.layers[popupName].moveTo(event.pageX+10, event.pageY+10);
+		document.layers[popupName].bgColor = "#FFFED9";
+		document.layers[popupName].visibility = "show";
+		openpopups.push(popupName);
+	}
+	else if (IE || IE5) {
+		window.event.cancelBubble = true;
+		document.all[popupName].style.left = window.event.clientX+10 + document.body.scrollLeft;
+		document.all[popupName].style.top = window.event.clientY+10 + document.body.scrollTop;
+		document.all[popupName].style.visibility = "visible";
+		openpopups[openpopups.length] = popupName;
+	}
+	return false;
+}
+
+function hideHints(fromBody) {
+	var popupname;
+	for (var i = 0; i < openpopups.length; i++) {
+		popupname = new String (openpopups[i]);
+		if ( IE || (GECKO && fromBody == 1)) {
+			document.getElementById(popupname).style.visibility = "hidden";
+		}
+		else if (NS) {
+			document.layers[popupname].visibility = "hide";
+		}
+		else if (IE5) {
+			document.all[popupname].style.visibility = "hidden";
+		}
+	}
+	openpopups = new Array();
+	return;
+}
+
+//-->
+</script>
+</head>
+
+<body onClick="hideHints(0); return false;">
+<table><tr><td width='10000' nowrap>
+<div id=OuterDiv stlye='position:relative;width:100%;height:100%'>
+<IMG Suppress=true SRC="images/13010765211153496223913_map.jpg" Width="951" Height="481" HSpace=0 VSpace=0 Border=0 usemap="#13010765211153496223913_map">
+<MAP name="13010765211153496223913_map">
+<a name="nid13010765211153497217612_13010765211153496223913"><AREA Shape="rect" Coords="82,289,208,320" HREF="" onClick="javascript:openNewWindow('details/13010765211153497217612.html','13010765211153497217612','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="129,252,161,285" HREF="" onClick="javascript:openNewWindow('details/13010765211153497217612.html','13010765211153497217612','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<a name="nid13010765211153497227997_13010765211153496223913"><AREA Shape="rect" Coords="229,138,427,169" HREF="" onClick="javascript:openNewWindow('details/13010765211153497227997.html','13010765211153497227997','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="312,101,344,134" HREF="" onClick="javascript:openNewWindow('details/13010765211153497227997.html','13010765211153497227997','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<a name="nid13010765211153497250729_13010765211153496223913"><AREA Shape="rect" Coords="186,423,422,454" HREF="" onClick="javascript:openNewWindow('details/13010765211153497250729.html','13010765211153497250729','width=530, height=420, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="288,386,320,419" HREF="" onClick="javascript:openNewWindow('details/13010765211153497250729.html','13010765211153497250729','width=530, height=420, scrollbars=yes, resizable=yes');"/>
+<a name="nid13010765211153497288414_13010765211153496223913"><AREA Shape="rect" Coords="462,444,698,475" HREF="" onClick="javascript:openNewWindow('details/13010765211153497288414.html','13010765211153497288414','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="532,368,628,440" HREF="openFile('images/External_Image_1153497288384.jpg', '13010765211153497288414')" target="_blank" onClick="openFile('images/External_Image_1153497288384.jpg', '13010765211153497288414')"/>
+<a name="nid13010765211153497292409_13010765211153496223913"><AREA Shape="rect" Coords="729,444,948,475" HREF="" onClick="javascript:openNewWindow('details/13010765211153497292409.html','13010765211153497292409','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="791,368,887,440" HREF="openFile('images/External_Image_1153497292379.jpg', '13010765211153497292409')" target="_blank" onClick="openFile('images/External_Image_1153497292379.jpg', '13010765211153497292409')"/>
+<a name="nid13010765211153497643534_13010765211153496223913"><AREA Shape="rect" Coords="487,157,701,188" HREF="" onClick="javascript:openNewWindow('details/13010765211153497643534.html','13010765211153497643534','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="546,81,642,153" HREF="openFile('images/External_Image_1153497643504.jpg', '13010765211153497643534')" target="_blank" onClick="openFile('images/External_Image_1153497643504.jpg', '13010765211153497643534')"/>
+<a name="nid13010765211153497646368_13010765211153496223913"><AREA Shape="rect" Coords="746,158,943,189" HREF="" onClick="javascript:openNewWindow('details/13010765211153497646368.html','13010765211153497646368','width=530, height=450, scrollbars=yes, resizable=yes');"/></a>
+<AREA Shape="rect" Coords="797,82,893,154" HREF="openFile('images/External_Image_1153497646338.jpg', '13010765211153497646368')" target="_blank" onClick="openFile('images/External_Image_1153497646338.jpg', '13010765211153497646368')"/>
+</MAP></div>
+</td></tr></table>
+</body></html>
