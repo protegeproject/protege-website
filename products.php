@@ -51,7 +51,7 @@
             <a href="assets/img/screenshots/webprotege-screenshot-7.jpg" class="gallery1 inline-link link-b hidden"></a>
           </li>
           <li class="tooltip-activate">
-            <a href="#">
+            <a id="documentation-menu-title" href="#">
               <span class="pictogram folder-icon"></span>
               Documentation
             </a>
@@ -82,7 +82,7 @@
               </div><!-- /end .tooltip -->
           </li><!-- /end .tool-tip-activate -->
           <li class="tooltip-activate resources">
-            <a href="#">
+            <a id="resources-menu-title" href="#">
               <span class="pictogram plus-icon"></span>
                 Resources
             </a>
@@ -172,7 +172,7 @@
             <a href="assets/img/screenshots/desktopprotege-screenshot-5.jpg" class="gallery2 inline-link link-b hidden"></a>
           </li>
           <li class="tooltip-activate">
-            <a href="#" class="inline-link link-b">
+            <a id="documentation-menu-title" href="#" class="inline-link link-b">
               <span class="pictogram folder-icon"></span>
               Documentation
             </a>
@@ -203,7 +203,7 @@
               </div><!-- /end .tooltip -->
           </li><!-- /end .tool-tip-activate -->
           <li class="tooltip-activate resources">
-            <a href="#" class="inline-link link-b">
+            <a id="resources-menu-title" href="#" class="inline-link link-b">
               <span class="pictogram plus-icon"></span>
               Resources
             </a>              
@@ -398,7 +398,7 @@
         </div><!-- /.modal -->
 
       <div class="tooltip-activate">
-        <a class="text-center link-b external-link" href="#">Other downloads &raquo;</a>
+        <a id="downloads-menu-title" class="text-center link-b">Other downloads &raquo;</a>
         <div class="tooltip bottom visually-hidden other-downloads">
           <div class="tooltip-inner">
             <ul>

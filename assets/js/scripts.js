@@ -602,5 +602,17 @@
   $("#closeSignUpModal").on("click", function() {
     resetRegForm();
   })
+  
+  $("a[id=documentation-menu-title]").on("click", function(event) {
+    event.preventDefault();
+  })
+
+  $("a[id=resources-menu-title]").on("click", function(event) {
+    event.preventDefault();
+  })
+
+  $("#downloads-menu-title").on("click", function(event) {
+    event.preventDefault();
+  })
  
 })(jQuery);
