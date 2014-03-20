@@ -38,7 +38,7 @@
     <div class="row">
 
       <div class="col-8">
-        <h3 class="heading-a upcase">Trusted by over <big class="type-a">241,003</big> users</h3>
+        <h3 class="heading-a upcase">Trusted by over <big class="type-a">242,595</big> users</h3>
       </div><!-- /end .col-8 -->
 
       <div class="col-4">
