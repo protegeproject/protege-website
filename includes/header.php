@@ -35,25 +35,23 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   
-  <!-- Uncomment this block to advertise new short courses and conferences -->
-  
-  <!-- <div class="map-course-container">
+  <div class="map-course-container">
     <div class="newest-course text-center">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <p class="no-margin para-a"><strong class="upcase bold-a">New Protégé Short Course:</strong> <a class="open-map" href="#">March 26-28 @ Stanford University - Stanford, CA</a></p>
-          </div>
+          </div><!-- /end .col-12 -->
           <a href="#" class="pictogram pull-right open-map-icon"></a>
-        </div>
-      </div>
-    </div>
+        </div><!-- /end .row -->
+      </div><!-- /end .container -->
+    </div><!-- /end .newest-course -->
 
     <div class="map-container">
       <div id="map-canvas" class="first-map"></div>
       <span class="pictogram close-map"></span>
-    </div>
-  </div>-->
+    </div><!-- /end .map-container -->
+  </div><!-- /end .map-course-container -->
 
   <header class="navbar-wrapper">
 
