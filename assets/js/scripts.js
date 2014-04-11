@@ -2,6 +2,9 @@
 
   // Remove Map Canvas ID on Short Courses page to eliminate duplicate IDs
   $('.short-courses .event').removeAttr('id', 'map-canvas')
+  
+  // Hide short course banner for now.  No new offerings at the current time.
+  $('.map-course-container').hide();
 
   // Hide .map-container on page load
   $('.map-container').hide();
