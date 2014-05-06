@@ -20,15 +20,15 @@
   <div class="container" style="width:675px;">
     <div class="row">
       <div class="col-3 registered-users">
-        <big class="type-b">242,595</big>
+        <big class="type-b">244,817</big>
         <small class="type-a upcase">Registered Users</small>
       </div><!-- /end .col-3 -->
       <div class="col-3 user-list-members">
-        <big class="type-b">18,012</big>
+        <big class="type-b">18,033</big>
         <small class="type-a upcase">protege-announce<br />list members</small>
       </div><!-- /end .col-3 -->
       <div class="col-3 last discussion-list-members">
-        <big class="type-b">3,490</big>
+        <big class="type-b">3,460</big>
         <small class="type-a upcase">protege-user<br />list members</small>
       </div><!-- /end .col-3 -->
     </div><!-- /end .row -->
