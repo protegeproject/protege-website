@@ -245,7 +245,9 @@
           <li>Highly pluggable architecture</li>
           <li>Cross compatible with WebProt&eacute;g&eacute;</li>
         </ul>
-        <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn showDownloadDesktop">
+        
+        <!-- Download button for Protege Desktop -->
+        <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn">
           <div class="media">
             <div class="pull-left">
               <span class="generic-download-icon"></span>
@@ -256,6 +258,7 @@
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
+        
         <!-- Modal -->
         <div id="desktopDownload" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="desktopDownloadLabel" aria-hidden="true">
           <div class="modal-header">
