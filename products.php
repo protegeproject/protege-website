@@ -399,8 +399,10 @@
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
+        
+      <a class="text-center link-b" href="http://protegewiki.stanford.edu/wiki/Protege_Desktop_Old_Versions" target="_blank">Older versions &raquo;</a>
 
-      <div class="tooltip-activate">
+      <!-- <div class="tooltip-activate">
         <a id="downloads-menu-title" class="text-center link-b">Other downloads &raquo;</a>
         <div class="tooltip bottom visually-hidden other-downloads">
           <div class="tooltip-inner">
@@ -430,10 +432,11 @@
               </a>
             </li>
             </ul>
-          </div><!-- /end .tooltip-inner -->
+          </div>
           <div class="tooltip-arrow"></div>
-      </div><!-- /end .col-4 -->
-    </div>
+      </div>
+    </div> -->
+        
     </div><!-- /end .row -->
   </div><!-- /end .container -->
 </section><!-- /end .features -->
