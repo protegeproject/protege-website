@@ -254,7 +254,7 @@
             </div><!-- /end .pull-left -->
             <div class="media-body">
               <h4>Download for Desktop</h4>
-              <span>Protégé Desktop 4.3</span>
+              <span>Prot&eacute;g&eacute; Desktop 5.0 beta</span>
             </div><!-- /end .media-body -->
           </div><!-- /end .media -->
         </a>
