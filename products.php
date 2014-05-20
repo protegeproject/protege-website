@@ -247,7 +247,7 @@
         </ul>
         
         <!-- Download button for Protege Desktop -->
-        <a href="http://protege.stanford.edu/download/protege/5.0/snapshots/protege-5.0.0-beta-06_2014_05_19.zip" class="btn btn btn-xl btn-icon btn-block desktop-download-btn">
+        <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn">
           <div class="media">
             <div class="pull-left">
               <span class="generic-download-icon"></span>
