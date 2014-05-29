@@ -180,6 +180,12 @@
                 <div class="tooltip-inner">
                   <ul>
                     <li>
+                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Install_Protege5">
+                        <span>&raquo;</span>
+                        Installation Guide
+                      </a>
+                    </li>
+                    <li>
                       <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs">
                         <span>&raquo;</span>
                         Overview
