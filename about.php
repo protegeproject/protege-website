@@ -47,13 +47,6 @@
         </a>
       </div><!-- /end .col-3 -->
       <div class="col-3">
-        <a href="http://www.stanford.edu/~natalya/" class="team-member text-center external-link">
-          <div class="natasha"></div>
-          <h4 class="heading-a">Natasha Noy, PhD</h4>
-          <p><small class="type-b">Senior Research Scientist</small></p>
-        </a>
-      </div><!-- /end .col-3 -->
-      <div class="col-3">
         <a href="http://www.researchgate.net/profile/Csongor_Nyulas/" class="team-member text-center external-link">
           <div class="csongor"></div>
           <h4 class="heading-a">Csongor Nyulas, MSc</h4>
@@ -72,13 +65,6 @@
           <div class="tania"></div>
           <h4 class="heading-a">Tania Tudorache, PhD</h4>
           <p><small class="type-b">Research Scientist</small></p>
-        </a>
-      </div><!-- /end .col-3 -->
-      <div class="col-3">
-        <a href="#" class="team-member text-center">
-          <div class="jennifer"></div>
-          <h4 class="heading-a">Jennifer Vendetti, BA, BSc</h4>
-          <p><small class="type-b">Research Staff</small></p>
         </a>
       </div><!-- /end .col-3 -->
     </div><!-- /end .row -->
