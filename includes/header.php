@@ -40,7 +40,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="no-margin para-a"><strong class="upcase bold-a">New Protégé Short Course:</strong> <a class="open-map" href="#">March 26-28 @ Stanford University - Stanford, CA</a></p>
+            <!-- <p class="no-margin para-a"><strong class="upcase bold-a">New Protégé Short Course:</strong> <a class="open-map" href="#">March 26-28 @ Stanford University - Stanford, CA</a></p> -->
+            <p class="no-margin para-a"><strong class="upcase bold-a">Protégé Team is hiring!</strong> <a href="http://protegewiki.stanford.edu/wiki/JobOpenings" target="_blank">Click for details.</a></p>
           </div><!-- /end .col-12 -->
           <a href="#" class="pictogram pull-right open-map-icon"></a>
         </div><!-- /end .row -->

@@ -3,8 +3,8 @@
   // Remove Map Canvas ID on Short Courses page to eliminate duplicate IDs
   $('.short-courses .event').removeAttr('id', 'map-canvas')
   
-  // Hide short course banner for now.  No new offerings at the current time.
-  $('.map-course-container').hide();
+  // Hide short course banner for now.  No new offerings at the current time. Uncomment following line to hide course banner
+  // $('.map-course-container').hide();
 
   // Hide .map-container on page load
   $('.map-container').hide();
@@ -30,7 +30,10 @@
 
     var marker = new google.maps.Marker({
       // Slightly alter these numbers (usually subtract a few decimals) to make sure the pin on the map is centered within the viewport
-      position: new google.maps.LatLng(37.4313,-122.175661),
+      // Uncomment next line for coordinates of the Li Ka Shing Center
+      // position: new google.maps.LatLng(37.4313,-122.175661),
+      // Coordinates of MSOB  
+      position: new google.maps.LatLng(37.432111,-122.179522),
       map: map,
       icon: image,
       visible: true
@@ -57,7 +60,7 @@
             
     // Options specific to InfoBox plugin
     var myOptions = {
-      content: boxText,
+      // content: boxText,
       disableAutoPan: false,
       maxWidth: 0,
       pixelOffset: new google.maps.Size(30, -110),
