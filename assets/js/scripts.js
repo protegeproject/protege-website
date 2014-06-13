@@ -115,7 +115,7 @@
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Windows');
     $('.desktop-download-btn .media .generic-download-icon').attr('class', 'windows-icon');
-    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-14.zip');
+    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-15.zip');
     $('.windows-instructions').removeClass('hide');
     if ($('div:not(.windows-instructions)')) {
       $('.instruction-panel div:not(.windows-instructions)').addClass('hide');
@@ -128,7 +128,7 @@
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Mac OSX');
     $('.desktop-download-btn .media .generic-download-icon').attr('class', 'apple-icon');
-    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-14.zip')
+    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-15.zip')
     $('.osx-instructions').removeClass('hide');
     if ($('div:not(.osx-instructions)')) {
       $('.instruction-panel div:not(.osx-instructions)').addClass('hide');
@@ -140,7 +140,7 @@
   if (navigator.userAgent.indexOf("Linux")!=-1) {
     $('.local-install').attr('href', 'http://protegewiki.stanford.edu/wiki/WebProtegeAdminGuide');
     $('.desktop-download-btn').find('h4').text('Download for Linux');
-    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-14.tar.gz')
+    $('.desktop-download-btn').attr('href', 'http://protege.stanford.edu/download/protege/5.0/binaries/protege-5.0.0-beta-15.tar.gz')
     $('.generic-instructions').removeClass('hide');
     if ($('div:not(.generic-instructions)')) {
       $('.instruction-panel div:not(.generic-instructions)').addClass('hide');
