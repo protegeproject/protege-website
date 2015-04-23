@@ -70,7 +70,7 @@
           <div class="row copyright">
 
             <div class="col-8">
-              <p>Copyright © 2014 Stanford Center for Biomedical Informatics Research</p>
+              <p>Copyright © 2015 Stanford Center for Biomedical Informatics Research</p>
               <p class="disclaimer">
                 <small>
                   Protégé is a national resource for biomedical ontologies and knowledge 
@@ -103,18 +103,5 @@
     <script src="assets/js/vendor/colorbox-min.js"></script>
     <script src="assets/js/scripts.js"></script>    
     <script src="assets/js/protege.mailinglists-1.0.0.js"></script>
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-2792183-1', 'stanford.edu');
-      ga('send', 'pageview');
-
-    </script>
-
   </body>
 </html>

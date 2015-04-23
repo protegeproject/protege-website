@@ -59,6 +59,12 @@
                 <div class="tooltip-inner">
                   <ul>
                   <li>
+	                  <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Install_Protege5">
+		                  <span>&raquo;</span>
+		                  Installation Guide
+		              </a>
+		          </li>
+                  <li>
                     <a class="external-link" href="http://protegewiki.stanford.edu/wiki/WebProtege">
                       <span>&raquo;</span>
                       Overview
@@ -180,12 +186,6 @@
                 <div class="tooltip-inner">
                   <ul>
                     <li>
-                      <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Install_Protege5">
-                        <span>&raquo;</span>
-                        Installation Guide
-                      </a>
-                    </li>
-                    <li>
                       <a class="external-link" href="http://protegewiki.stanford.edu/wiki/Protege4UserDocs">
                         <span>&raquo;</span>
                         Overview
@@ -253,7 +253,7 @@
         </ul>
         
         <!-- Download button for Protege Desktop -->
-        <a href="#" class="btn btn btn-xl btn-icon btn-block desktop-download-btn">
+        <a class="btn btn btn-xl btn-icon btn-block desktop-download-btn" id="protegeDownloadButton">
           <div class="media">
             <div class="pull-left">
               <span class="generic-download-icon"></span>
@@ -269,7 +269,7 @@
         <div id="desktopDownload" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="desktopDownloadLabel" aria-hidden="true">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel" class="heading-a upcase">Download Protégé 4.3 Desktop</h3>
+            <h3 id="myModalLabel" class="heading-a upcase">Download Protégé 5 Desktop</h3>
           </div>
           <div class="modal-body">
             <div class="row">
@@ -296,7 +296,7 @@
                 </form>
               </div><!-- /end .col-9 -->
               <div class="col-4">
-                <a href="#" class="btn btn-b btn-lg" id="showSignUpModal"><span>Download</span></a>
+                <a href="#" class="btn btn-b btn-lg"><span>Download</span></a>
               </div><!-- /end .col-2 -->
               <hr class="ruler-a clearleft">
 
@@ -356,57 +356,21 @@
           </div><!-- /end .modal-body -->
         </div><!-- /end .modal -->
 
-        <div id="signUpModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div id="signUpModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body">
-                <div class="row">
-                  <div class="col-6">
-                    <h3 class="heading-b">
-                      Your download should start in a couple 
-                      of seconds. If it doesn’t, <a class="alt-download" href="#">click here</a>.
-                    </h3>
-                    <p>
-                      In the meantime, please help us by registering in 
-                      the form on the right. Thank you for your support!
-                    </p>
-                    <p class="smaller">
-                      We use registration data to create statistics when 
-                      applying for Prot&eacute;g&eacute; funding. Prizes 
-                      are awarded to lucky users who register at milestones, 
-                      e.g., reaching 300,000 registrants. Your data is never 
-                      shared with third parties.
-                    </p>
-                  </div><!-- /end .col-6 -->
-                  <div class="col-6">
-                    <form id="signUpForm" method="" action="">
-                      <label>Name*</label> <span id="nameError" class="error-span">Please enter at least 3 characters.</span>
-                      <input id="name" type="text" name="name" placeholder="Enter your name">
-                      <label>Email*</label> <span id="emailError" class="error-span">Please enter a valid email address.</span>
-                      <input id="email" type="text" name="email" placeholder="Enter your email">
-                      <label>How did you hear about us?</label>
-                      <input type="text" name="referrer" placeholder="Colleague, Web search, conference, etc">
-                      <div class="half first">
-                        <label>Project URL</label>
-                        <input type="text" name="url" placeholder="http://">
-                      </div><!-- /end .half -->
-                      <div class="half">
-                        <label>Affiliation</label>
-                        <input type="text" name="affiliation" placeholder="What's your role?">
-                      </div><!-- /end .half -->
-                      <label>Project Description</label>
-                      <textarea id="project" name="project" placeholder="A few words about your project..."></textarea>
-                      <button id="signUp" type="submit" class="btn btn-b pull-right">Register</button>
-                    </form>
-                  </div><!-- /end .col-6 -->
-                </div><!-- /end .row -->
+                  <!-- iframe 'src' is set in scripts.js:276 -->
+                  <iframe width="630" height="580" frameborder="0" marginheight="0" marginwidth="0" id="registerFrame">Loading...</iframe>
               </div>
-              <a id="closeSignUpModal" href="#" data-dismiss="modal">No thanks, I'm already registered</a>
+	          <a id="closeSignUpModal" href="#" data-dismiss="modal">No, thanks. I'm already registered.</a>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
         
-      <a class="text-center link-b" href="http://protegewiki.stanford.edu/wiki/Protege_Desktop_Old_Versions" target="_blank">Older versions &raquo;</a>
+      <a class="text-center link-b" target="_blank" id="protegeDonwloadJre">Download platform independent version (requires a Java Runtime Environment)</a>
+        
+      <a class="text-center link-b" target="_blank" id="protegeOld">Older versions &raquo;</a>
 
       <!-- <div class="tooltip-activate">
         <a id="downloads-menu-title" class="text-center link-b">Other downloads &raquo;</a>

@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-10">
           <h1>
-            Protégé was developed by Stanford Center for 
+            Protégé was developed by the Stanford Center for 
             Biomedical Informatics Research at the Stanford 
             University School of Medicine.
           </h1>
@@ -32,6 +32,13 @@
 <section class="team">
   <div class="container">
     <div class="row">
+	  <div class="col-3">
+        <a href="http://www.stanford.edu/~rafaelsg/" class="team-member text-center external-link">
+          <div class="rafael"></div>
+          <h4 class="heading-a">Rafael Gon&ccedil;alves, PhD</h4>
+          <p><small class="type-b">Research Staff</small></p>
+        </a>
+      </div><!-- /end .col-3 -->
       <div class="col-3">
         <a href="http://www.stanford.edu/~horridge/" class="team-member text-center external-link">
           <div class="matthew"></div>
@@ -46,14 +53,14 @@
           <p><small class="type-b">Professor, Division Head</small></p>
         </a>
       </div><!-- /end .col-3 -->
-      <div class="col-3">
+      <div class="col-3 col-offset-1 team-offset">
         <a href="http://www.researchgate.net/profile/Csongor_Nyulas/" class="team-member text-center external-link">
           <div class="csongor"></div>
           <h4 class="heading-a">Csongor Nyulas, MSc</h4>
           <p><small class="type-b">Research Staff</small></p>
         </a>
       </div><!-- /end .col-3 -->
-      <div class="col-3 col-offset-1 team-offset">
+      <div class="col-3">
         <a href="http://www.stanford.edu/~swt/" class="team-member text-center external-link">
           <div class="samson"></div>
           <h4 class="heading-a">Samson Tu, MSc</h4>
@@ -64,7 +71,7 @@
         <a href="http://www.stanford.edu/~ttania/" class="team-member text-center external-link">
           <div class="tania"></div>
           <h4 class="heading-a">Tania Tudorache, PhD</h4>
-          <p><small class="type-b">Research Scientist</small></p>
+          <p><small class="type-b">Senior Research Scientist</small></p>
         </a>
       </div><!-- /end .col-3 -->
     </div><!-- /end .row -->
@@ -76,13 +83,13 @@
     <div class="row">
     <div class="col-12">
       <h2 class="heading-b upcase text-center offset-heading" id="about-bmir">
-        About Bmir
+        About BMIR
       </h2>
       <hr class="ruler-a small">
     </div><!-- /end col-12 -->
     <div class="col-offset-1 col-10">
       <p class="intro-c text-center">
-        At the Stanford Center for Biomedical Research (BMIR) we 
+        At the Stanford Center for Biomedical Informatics Research (BMIR) we 
         develop cutting-edge ways to acquire, represent, and process 
         information about human health. Our work enables the Institute 
         of Medicine’s vision for a Learning Health System by translating 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://protege.stanford.edu/</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/index.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/community.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/products.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/support.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/about.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://protege.stanford.edu/short-courses.php</loc>
+  <lastmod>2015-04-22T13:13:31-08:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>

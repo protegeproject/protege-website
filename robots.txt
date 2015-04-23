@@ -1,0 +1,5 @@
+User-agent: gsa-crawler
+Crawl-delay: 7
+
+User-agent: *
+Crawl-delay: 7

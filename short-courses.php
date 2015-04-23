@@ -69,6 +69,14 @@
           and/or subscribing to the <a href="https://mailman.stanford.edu/mailman/listinfo/protege-announce" target="_blank">protege-announce</a> 
           mailing list (low-traffic, announcement-only).
         </p>
+        <!-- Uncomment for next Protege short course -->
+         <!--
+         <p>
+			<span class="offset-raquo">&raquo;</span> <a href="shortcourse/201503/index.html" target="_blank" class="link-c">Next Short Course: <br />
+			March 25 - 27, 2015 @ Stanford</a>
+		</p>
+		-->
+        
         <p>
         <strong>Questions?</strong> Please <a href="mailto:protege-shortcourse@lists.stanford.edu">contact</a> the course organizers.
         </p>

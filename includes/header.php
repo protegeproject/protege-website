@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Protégé is a free, open-source ontology editor and framework for building intelligent systems">
+    <meta name="author" content="Stanford Center for Biomedical Informatics Research">
+    <meta name="keywords" content="protege,protégé,owl,ontology,ontologies,ontology editor,knowledge base,intelligent system,description logics,reasoning,stanford,swrl,sparql,frames">
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>prot&eacute;g&eacute;</title>
@@ -23,8 +24,18 @@
       $bodyClass = preg_replace("/\\.[^.\\s]{3,4}$/", "", $end);
     ?>
 
+    <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-2792183-1', 'auto');
+		ga('send', 'pageview');
+    </script>
 
   </head>
+  
   <body class="<?php echo $bodyClass; ?>">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -35,24 +46,25 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   
-  <div class="map-course-container">
-    <div class="newest-course text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- <p class="no-margin para-a"><strong class="upcase bold-a">New Protégé Short Course:</strong> <a class="open-map" href="#">March 26-28 @ Stanford University - Stanford, CA</a></p> -->
-            <p class="no-margin para-a"><strong class="upcase bold-a">Protégé Team is hiring!</strong> <a href="http://protegewiki.stanford.edu/wiki/JobOpenings" target="_blank">Click for details.</a></p>
-          </div><!-- /end .col-12 -->
-          <a href="#" class="pictogram pull-right open-map-icon"></a>
-        </div><!-- /end .row -->
-      </div><!-- /end .container -->
-    </div><!-- /end .newest-course -->
-
-    <div class="map-container">
-      <div id="map-canvas" class="first-map"></div>
-      <span class="pictogram close-map"></span>
-    </div><!-- /end .map-container -->
-  </div><!-- /end .map-course-container -->
+	  <!-- map/short course banner containers
+	  <div class="map-course-container">
+	    <div class="newest-course text-center">
+	      <div class="container">
+	        <div class="row">
+	          <div class="col-12">
+	            <p class="no-margin para-a">
+	            	<strong class="upcase bold-a">New Protégé Short Course:</strong> <a href="sc2015/index.html">March 25-27 @ Stanford University - Stanford, CA</a>
+	            </p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="map-container">
+	      <div id="map-canvas" class="first-map"></div>
+	      <span class="pictogram close-map"></span>
+	    </div>
+	  </div> 
+	  -->
 
   <header class="navbar-wrapper">
 

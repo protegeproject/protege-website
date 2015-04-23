@@ -281,15 +281,22 @@
 
     <div class="row">
       <div class="col-4 short-course-info">
-        <h3 class="heading-c">Short Courses</h3>
+        <h3 class="heading-c">Attend a Short Course</h3>
         <span class="offset-raquo">&raquo;</span><a href="short-courses.php" class="link-c">Protégé Short Course</a>
         <p>
           A 3-day intensive training in ontology development, hands-on use of the Prot&eacute;g&eacute; toolset, and the Web Ontology Language (OWL).
         </p>
+        <!-- Uncomment for next short course -->
+        <!--
+        <p>
+			<span class="offset-raquo">&raquo;</span> <a href="shortcourse/201503/index.html" target="_blank" class="link-c">Next Short Course: <br />
+			March 25 - 27, 2015 @ Stanford</a>
+		</p>
+		-->
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate">
-        <h3 class="heading-c">Protégé Afilliate</h3>
-        <span><em class="ital-a">(fee: $1,500/year)</em></span>
+        <h3 class="heading-c">Become a Protégé Affiliate</h3>
+        <span><em class="ital-a">(fee: $15,000/year)</em></span>
         <ul class="list-b">
           <li>40 hours consulting</li>
           <li>2 tickets to the Protégé Conference</li>
@@ -299,7 +306,7 @@
         <a href="mailto:protege-affiliates@lists.stanford.edu" class="btn btn-d btn-med upcase">Contact Support</a>
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate last">
-        <h3 class="heading-c">Consulting</h3>
+        <h3 class="heading-c">Ask for Consultation</h3>
         <span><em class="ital-a">(fee: $500/staff person/hour)</em></span>
         <ul class="list-b">
           <li>Ontology and knowledge base design and/or evaluation</li>

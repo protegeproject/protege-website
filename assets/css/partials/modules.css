@@ -498,7 +498,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 .team-member:hover .matthew, .team-member:hover .mark, .team-member:hover .natasha,
 .team-member:hover .csongor, .team-member:hover .samson, .team-member:hover .tania,
-.team-member:hover .jennifer {
+.team-member:hover .jennifer, .team-member:hover .rafael {
   background-position: bottom left;
 }
 
@@ -534,6 +534,11 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 .team-member .jennifer {
   background: url(../../img/team/jennifer.png) no-repeat top left;
+  background-size: cover;
+}
+
+.team-member .rafael {
+  background: url(../../img/team/rafael.png) no-repeat top left;
   background-size: cover;
 }
 
@@ -576,7 +581,8 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 /* Styles for newest course section on Short Course Page */
 .newest-course {
-  background: #fbf5db; 
+  /* background: #fbf5db; */
+  background: #ffff77;
   height: 70px;
   line-height: 72px;
   border-bottom: 1px solid #fbdfb7;
@@ -843,9 +849,16 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 }
 
 #signUpModal {
+  width: 630px;
+  height: 640px;
+/* (rsg:10/4/15)
   width: 780px;
+  height: 580px;
   padding: 30px;
-  margin-left: -390px;
+*/
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-left: -315px;
 }
 
 #signUpModal h3 {
@@ -887,8 +900,8 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 #signUpModal a[data-dismiss="modal"] {
   position: absolute;
-  bottom: 35px;
-  left: 30px;
+  bottom: 20px;
+  left: 56px;
 }
 
 .modal-body label, 
