@@ -1,63 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>9th International Prot&eacute;g&eacute; Conference: Application Development Tutorial</title>
-<style type="text/css">
-<!--
-li {padding-bottom: 5px;}
-.bodyText {font-family:arial,geneva,verdana,helvetica,sans-serif; margin-left:10px; margin-right:20px;}
-.sectionHeader {font-size:larger; color:#336699; font-weight:bold;}
--->
-</style>
-</head>
-
-<body class="bodyText" bgcolor="#F5F5DC"><br />
-
-<span class="sectionHeader" style="color:black;">
-Application Development Tutorial at the 9th Intl. Prot&eacute;g&eacute; Conference
-</span><br /><br />
-
-<span style="color:#AE5B08; font-weight:bold">Presenter:</span> Timothy Redmond<br />
-<span style="color:#AE5B08; font-weight:bold">Time:</span> Sunday, July 23rd, 2006, 9:00AM-12:30PM PST<br />
-
-<span style="color:#AE5B08; font-weight:bold">Location:</span> 
-<a href="http://www.stanford.edu/hpcgi/map/index.pl?q=James%20H.%20Clark%20Center" target="_blank">James H. Clark Center</a> 
-(room number T.B.A.), <a href="http://www.stanford.edu/" target="_blank">Stanford University</a><br /><br /><br />
-
-<span style="font-weight:bold;">Tutorial Description</span><br /><br />
-
-		This tutorial will address the issue of developing plug-ins and applications with Prot&eacute;g&eacute;. It will start with 
-		a description of the Prot&eacute;g&eacute; Plug-in Framework and describe how the plug-in framework can be used to 
-		add capabilities to the Prot&eacute;g&eacute; system. We will cover all of the 
-		<a href="../../doc/pdk/plugins/overview.html">existing plug-in types</a>. We will describe 
-		what is necessary to develop each type of plug-in and how each plug-in type extends the Prot&eacute;g&eacute; application. 
-		We will follow-up the discussion of Prot&eacute;g&eacute; plug-ins with a discussion of an alternative paradigm of 
-		development in Prot&eacute;g&eacute;: the development of standalone Prot&eacute;g&eacute; applications. We will see that in 
-		many cases, there is a natural evolution from the development of Prot&eacute;g&eacute; plug-ins to the development of 
-		standalone Prot&eacute;g&eacute; applications. We will describe the architectural design issues in application development 
-		and analyze some real deployed applications that have been built with Prot&eacute;g&eacute;. The target audience includes both 
-		Java programmers and non-programmers.<br /><br />
-
-<span style="font-weight:bold;">Tutorial Preparation</span><br /><br />
-
-If you would like to follow the hands-on portion of the tutorial, please complete the following steps 
-prior to arrival:
-
-<ul>
-<li><a href="../../../download/download.html" target="_blank">Download and install</a> Prot&eacute;g&eacute;.  For the purposes of this 
-tutorial, it does not matter if you have the release version (3.1.1), or the latest beta version (3.2 beta, build 324).  <em>The presenter will be using 3.2 beta.</em></li>
-<li>If you are new to Prot&eacute;g&eacute;, please familiarize yourself with basic operations such as opening projects and creating classes, slots, 
-and instances.  You can learn about how to perform these operations in the 
-&quot;<a href="../../../doc/tutorial/get_started/table_of_content.html" target="_blank">Getting Started with Prot&eacute;g&eacute;-Frames</a>&quot; guide.</li>
-<li> if you want to use the plugins associated with this tutorial, unzip this <a href="plugins.zip">file (31K)</a> in the protege installation directory.
-<li> if you want to view the Protocol Eligibility Screening project, unzip this <a href="projects.zip">file (107K)</a> in a place that you will remember later.
-<li> if you want to view the sources for the projects discussed in this tutorial unzip this <a href="src.zip">file (49M)</a>.  It is currently formatted as an eclipse 
-     workspace but it can be viewed with any tools for source code development.
-<li> None of these files are needed for understanding this tutorial.
-</ul><br /><br />
-
-<hr />
-<span style="font-size: 12px; font-weight: bold;">Last updated: Friday, July 21st, 2006, 6:10PM PST</span>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>9th International Prot&eacute;g&eacute; Conference: Application Development Tutorial</title>
+<style type="text/css">
+<!--
+li {padding-bottom: 5px;}
+.bodyText {font-family:arial,geneva,verdana,helvetica,sans-serif; margin-left:10px; margin-right:20px;}
+.sectionHeader {font-size:larger; color:#336699; font-weight:bold;}
+-->
+</style>
+</head>
+
+<body class="bodyText" bgcolor="#F5F5DC"><br />
+
+<span class="sectionHeader" style="color:black;">
+Application Development Tutorial at the 9th Intl. Prot&eacute;g&eacute; Conference
+</span><br /><br />
+
+<span style="color:#AE5B08; font-weight:bold">Presenter:</span> Timothy Redmond<br />
+<span style="color:#AE5B08; font-weight:bold">Time:</span> Sunday, July 23rd, 2006, 9:00AM-12:30PM PST<br />
+
+<span style="color:#AE5B08; font-weight:bold">Location:</span> 
+<a href="http://www.stanford.edu/hpcgi/map/index.pl?q=James%20H.%20Clark%20Center" target="_blank">James H. Clark Center</a> 
+(room number T.B.A.), <a href="http://www.stanford.edu/" target="_blank">Stanford University</a><br /><br /><br />
+
+<span style="font-weight:bold;">Tutorial Description</span><br /><br />
+
+		This tutorial will address the issue of developing plug-ins and applications with Prot&eacute;g&eacute;. It will start with 
+		a description of the Prot&eacute;g&eacute; Plug-in Framework and describe how the plug-in framework can be used to 
+		add capabilities to the Prot&eacute;g&eacute; system. We will cover all of the 
+		<a href="../../doc/pdk/plugins/overview.html">existing plug-in types</a>. We will describe 
+		what is necessary to develop each type of plug-in and how each plug-in type extends the Prot&eacute;g&eacute; application. 
+		We will follow-up the discussion of Prot&eacute;g&eacute; plug-ins with a discussion of an alternative paradigm of 
+		development in Prot&eacute;g&eacute;: the development of standalone Prot&eacute;g&eacute; applications. We will see that in 
+		many cases, there is a natural evolution from the development of Prot&eacute;g&eacute; plug-ins to the development of 
+		standalone Prot&eacute;g&eacute; applications. We will describe the architectural design issues in application development 
+		and analyze some real deployed applications that have been built with Prot&eacute;g&eacute;. The target audience includes both 
+		Java programmers and non-programmers.<br /><br />
+
+<span style="font-weight:bold;">Tutorial Preparation</span><br /><br />
+
+If you would like to follow the hands-on portion of the tutorial, please complete the following steps 
+prior to arrival:
+
+<ul>
+<li><a href="../../../download/download.html" target="_blank">Download and install</a> Prot&eacute;g&eacute;.  For the purposes of this 
+tutorial, it does not matter if you have the release version (3.1.1), or the latest beta version (3.2 beta, build 324).  <em>The presenter will be using 3.2 beta.</em></li>
+<li>If you are new to Prot&eacute;g&eacute;, please familiarize yourself with basic operations such as opening projects and creating classes, slots, 
+and instances.  You can learn about how to perform these operations in the 
+&quot;<a href="../../../doc/tutorial/get_started/table_of_content.html" target="_blank">Getting Started with Prot&eacute;g&eacute;-Frames</a>&quot; guide.</li>
+<li> if you want to use the plugins associated with this tutorial, unzip this <a href="plugins.zip">file (31K)</a> in the protege installation directory.
+<li> if you want to view the Protocol Eligibility Screening project, unzip this <a href="projects.zip">file (107K)</a> in a place that you will remember later.
+<li> if you want to view the sources for the projects discussed in this tutorial unzip this <a href="src.zip">file (49M)</a>.  It is currently formatted as an eclipse 
+     workspace but it can be viewed with any tools for source code development.
+<li> None of these files are needed for understanding this tutorial.
+</ul><br /><br />
+
+<hr />
+<span style="font-size: 12px; font-weight: bold;">Last updated: Friday, July 21st, 2006, 6:10PM PST</span>
+</body>
+</html>
