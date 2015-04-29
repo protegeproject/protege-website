@@ -584,5 +584,13 @@
   $("#downloads-menu-title").on("click", function(event) {
     event.preventDefault();
   })
+
+  // Get the contact modal dialog to show up
+  $('#contactBtn').on('click', function(e) {
+	  document.getElementById('contactFrame').src = 'contactForm.html?rand=' + Math.round(Math.random() * 10000000);
+	  $('#contactModal').modal('show');
+	  $('#contactModal').removeAttr('opacity');
+	  $('#contactpModal').removeAttr('top');
+  });
  
 })(jQuery);

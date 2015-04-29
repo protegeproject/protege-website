@@ -27,7 +27,7 @@
     	
       <div class="container">
       
-        <div class="row">
+        <div class="row" id="menuRow">
 
             <div class="col-2">
               <nav>
@@ -35,8 +35,19 @@
                 <ul>
                   <li class="<?php echo ($currentPage == 'home' ? 'active' : '');?>"><a href="/">Home</a></li>
                   <li class="<?php echo ($bodyClass == 'products' ? 'active' : '');?>"><a href="products.php">Products</a></li>
-                  <li class="<?php echo ($bodyClass == 'support' ? 'active' : '');?>"><a href="support.php">Support</a></li>
                   <li class="<?php echo ($bodyClass == 'community' ? 'active' : '');?>"><a href="community.php">Community</a></li>
+                  <li class="<?php echo ($bodyClass == 'contact' ? 'active' : '');?>"><a href="contact.php">Contact</a></li>
+                </ul>
+              </nav>
+            </div><!-- /end .col-2 -->
+
+            <div class="col-2">
+              <nav>
+                <h3 class="upcase">Support</h3>
+                <ul class="sub-footer-nav">
+                  <li class="<?php echo ($bodyClass == 'support' ? 'active' : '');?>"><a href="support.php">Mailing Lists</a></li>
+                  <li><a href="support.php#documentationSupport">Documentation</a></li>
+                  <li><a href="support.php#more-support">Other Options</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->

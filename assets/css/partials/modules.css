@@ -851,14 +851,17 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 #signUpModal {
   width: 630px;
   height: 640px;
-/* (rsg:10/4/15)
-  width: 780px;
-  height: 580px;
-  padding: 30px;
-*/
   padding-top: 15px;
   padding-bottom: 5px;
   margin-left: -315px;
+}
+
+#contactModal {
+  width: 630px;
+  height: 550px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-left: -315px;	
 }
 
 #signUpModal h3 {
@@ -887,21 +890,21 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   font-weight: 300;
 }
 
-#signUpModal .error-span {
+#signUpModal .error-span, #contactModal .error-span {
   color: red;
   display: none;
 }
 
-#signUpModal .modal-body {
+#signUpModal .modal-body, #contactModal .modal-body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
 }
 
-#signUpModal a[data-dismiss="modal"] {
+#signUpModal a[data-dismiss="modal"], #contactModal a[data-dismiss="modal"] {
   position: absolute;
   bottom: 20px;
-  left: 56px;
+  left: 58px;
 }
 
 .modal-body label, 

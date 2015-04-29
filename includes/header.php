@@ -79,6 +79,7 @@
           <li class="<?php echo ($bodyClass == 'products' ? 'active' : '');?>"><a href="products.php">Products</a></li>
           <li class="<?php echo ($bodyClass == 'support' ? 'active' : '');?>"><a href="support.php">Support</a></li>
           <li class="<?php echo ($bodyClass == 'community' ? 'active' : '');?>"><a href="community.php">Community</a></li>
+          <li class="<?php echo ($bodyClass == 'about' ? 'active' : '');?>"><a href="about.php">About</a></li>
         </ul>
 
       </div><!-- /end .container -->

@@ -78,7 +78,7 @@
   z-index: 100;
 }
 
-.jumbotron.home:after, .about .jumbotron:after, .products .jumbotron:after,
+.jumbotron.home:after, .about .jumbotron:after, .products .jumbotron:after, .contact .jumbotron:after,
 .support .jumbotron:after, .community .jumbotron:after, .short-courses .jumbotron:after {
   content: "";
   background: url(../../img/hero-home.jpg) no-repeat 0 0;
@@ -106,7 +106,7 @@
   background: url(../../img/hero-about.jpg) no-repeat 50% 0;
 }
 
-.products .jumbotron, .support .jumbotron, .community .jumbotron, .short-courses .jumbotron {
+.products .jumbotron, .support .jumbotron, .community .jumbotron, .short-courses .jumbotron, .contact .jumbotron {
   min-height: 495px;
 }
 
@@ -125,4 +125,8 @@
 .short-courses .jumbotron:after {
   background: url(../../img/hero-short-courses.jpg) no-repeat 50% 0;
   opacity: .3;
+}
+
+.contact .jumbotron:after {
+  background: url(../../img/hero-short-courses.jpg) no-repeat 50% 0;
 }
