@@ -1,0 +1,68 @@
+.ss-form-title {
+text-align: center;
+}
+
+.ss-form-desc {
+margin-top: 12px;
+text-align: left;
+}
+
+.ss-item {
+font-size: 1.110rem;
+}
+
+body {
+font-family: "Raleway";
+color: rgb(100,100,100);
+font-weight: 400;
+font-size: 1.250rem;
+font-style: normal;
+}
+
+.ss-form-title {
+font-family: "Raleway";
+color: rgb(65,81,97);
+font-weight: 400;
+font-size: 2.160rem;
+font-style: normal;
+}
+
+.ss-form-desc {
+font-family: "Raleway";
+color: rgb(100,100,100);
+font-weight: 400;
+font-size: 1.17rem;
+font-style: normal;
+}
+
+.ss-q-title {
+font-family: "Roboto";
+color: rgb(93,116,139);
+font-weight: 700;
+font-size: 1.110rem;
+font-style: normal;
+}
+
+.ss-q-help {
+font-family: "Roboto";
+color: rgb(132,132,132);
+font-weight: 400;
+font-size: 1.000rem;
+font-style: normal;
+}
+
+.ss-required-asterisk {
+font-family: "Roboto";
+color: rgb(196,59,29);
+font-weight: 400;
+font-size: 1.000rem;
+font-style: normal;
+}
+
+input[type='text'], input:not([type]), textarea {
+font-size: 1.000rem;
+}
+
+textarea, input[type="text"] {
+  width: 500px;
+}
