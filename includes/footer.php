@@ -36,7 +36,6 @@
                   <li class="<?php echo ($currentPage == 'home' ? 'active' : '');?>"><a href="/">Home</a></li>
                   <li class="<?php echo ($bodyClass == 'products' ? 'active' : '');?>"><a href="products.php">Products</a></li>
                   <li class="<?php echo ($bodyClass == 'community' ? 'active' : '');?>"><a href="community.php">Community</a></li>
-                  <li class="<?php echo ($bodyClass == 'contact' ? 'active' : '');?>"><a href="contact.php">Contact</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->
@@ -59,6 +58,7 @@
                   <li class="<?php echo ($bodyClass == 'about' ? 'active' : '');?>"><a href="about.php">Our Team</a></li>
                   <li><a href="about.php#about-bmir">BMIR</a></li>
                   <li><a href="about.php#citing">Citing</a></li>
+                  <li><a href="about.php#contact">Contact</a></li>
                 </ul>
               </nav>
             </div><!-- /end .col-2 -->

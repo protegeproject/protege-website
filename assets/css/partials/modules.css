@@ -116,6 +116,10 @@ blockquote.quote-a span {
   padding-top: 0;
 }
 
+.main-content.contact {
+  padding-top: 0;
+}
+
 /* Home features section */
 .features .col-4 {
   padding-right: 5px;
@@ -970,6 +974,17 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 .mailingList .btn-b {
   position: relative;
   top: 25px;
+}
+
+.subBtn {
+  letter-spacing: 0;
+  font-size: 17px;
+  font-weight: 500;
+  width: 100px;
+  text-align: center;
+  line-height: 0;
+  margin-top: 8px;
+  cursor: pointer;
 }
 
 .with-bg {
