@@ -21,8 +21,10 @@ Email: $email
 Affiliation: $affiliation
 Feedback: $feedback
 	";
-	mail($to, $subject, $message, implode("\r\n", $headers));
-
+	if(strlen($name) > 0 && strlen(trim($name)) > 0 && strlen($feedback) > 0 && strlen(trim($feedback)) > 0)
+		mail($to, $subject, $message, implode("\r\n", $headers));
+	}
+	
 	// Send an email to the submitter, acknowledging receipt of the feedback and welcoming them to the Protege community.
 	unset($to, $subject, $headers, $message);
 	$to = $email;
@@ -60,7 +62,9 @@ We look forward to interacting with you as part of the Protege community!
 Best Regards,
 The Protege Team
 	';
-	mail($to, $subject, $message, implode("\r\n", $headers));
+	if(strlen($email) > 0 && strlen(trim($email)) > 0) {
+		mail($to, $subject, $message, implode("\r\n", $headers));
+	}
 }
 
 ?>
