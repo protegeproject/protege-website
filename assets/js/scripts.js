@@ -278,12 +278,13 @@
  	
   // Get the registration modal to show up
   $('#protegeDownloadButton').on('click', function(e) {
+  	  $("body").css({ overflow: 'hidden' });
 	  document.getElementById('registerFrame').src = 'registration.html?rand=' + Math.round(Math.random() * 10000000);
 	  $('#signUpModal').modal('show');
 	  $('#signUpModal').removeAttr('opacity');
 	  $('#signUpModal').removeAttr('top');
   });
-  
+
   
   $('#protegeDonwloadJre').on('click', function(e) {
 	  $('body').append('<iframe name="desktop-other" id="sti"></iframe>', { css: { 'display': 'none' }});
@@ -302,6 +303,7 @@
   		commented out the triggering of signUpModal as this is now done via #protegeDownloadButton (see above) */
   // Case statement used to determine which file to download based on dropdown menu selection
   $('#closeSignUpModal').on('click', function(e) {
+    $("body").css({ overflow: 'inherit' });
     var altDdVal = $('dt.selected-download a').attr('data-value');
     var altD = $('#sti').attr('name');
     if (typeof altD !== 'undefined') altDdVal = altD;

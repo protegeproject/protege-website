@@ -363,7 +363,9 @@
                   <!-- iframe 'src' is set in scripts.js:276 -->
                   <iframe width="630" height="580" frameborder="0" marginheight="0" marginwidth="0" id="registerFrame">Loading...</iframe>
               </div>
-	          <a id="closeSignUpModal" href="#" data-dismiss="modal">No, thanks. I'm already registered.</a>
+              <div class="closemodal">
+		          <a id="closeSignUpModal" href="#" data-dismiss="modal">No, thanks. I'm already registered.</a>
+              </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->

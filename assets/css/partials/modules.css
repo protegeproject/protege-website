@@ -815,9 +815,10 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 }
 
 .modal-body {
-  max-height: 600px;
+  max-height: 590px;
   min-height: 400px;
   font-size: 14px;
+  overflow-y: hidden;
 }
 
 #protegeUserMailingList {
@@ -876,10 +877,13 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 #signUpModal {
   width: 630px;
-  height: 640px;
+  height: 610px;
   padding-top: 15px;
   padding-bottom: 5px;
   margin-left: -315px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 #contactModal {
@@ -927,9 +931,16 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   overflow-x: hidden;
 }
 
+.closemodal {
+  margin-top: -77px;
+}
+
+#closeSignUpModal {
+	left: 335px !important; 
+}
+
 #signUpModal a[data-dismiss="modal"], #contactModal a[data-dismiss="modal"] {
   position: absolute;
-  bottom: 20px;
   left: 58px;
 }
 
