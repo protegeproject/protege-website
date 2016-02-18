@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Attaching a Query to a Class</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img src="images/nerd32x32.gif" width="32" height="32">     &nbsp;Attaching
+a Query to a Class<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>A query can be <i>attached</i> to a class. In this case, the query lies within the scope of instances of the class to which it is attached. For
+example, suppose a query is attached to the Editor class.
+This means that the query-checking engine assumes an implicit range over
+instances of Editor for all undefined variables.&nbsp;</p>
+<p>Before you attach a query to a class, you should make the class <a href="queriable.htm">queriable</a>.
+This enables the SLOT-QUERIES slot for the class. A query that has been attached to a class is visible in the
+SLOT-QUERIES pane of the Class Form for that class.&nbsp;See <a href="queriable.htm">Making a Class Queriable</a>
+for more information.</p>
+<p> You can attach a query to more than
+one class.</p>
+<p><b>Note</b>: The same restriction to instances of the Editor class is also
+enforced by the syntax <i>(<font color="#0000FF">defrange</font> ?edit <font color="#0000FF"> :FRAME</font> Editor).
+</i>However, attaching a query to a class makes the attachment at the Protégé
+level, and also makes the query visible at the class.</p>
+<p>&nbsp;<b>Note: </b>By
+attaching a query to a class, you can make an implicit variable range&nbsp;
+definition, that is, you could omit a <i>defrange</i> statement for that
+variable. This can be used when you want the <i>defrange</i> of the query to
+apply to multiple classes that are not subclasses of a single class, as
+otherwise you would have to write the query in the scope of each class.&nbsp;
+However, this should be used with caution, because if a query is de-attached
+from all of its classes, it will lose its implicit range definitions, and will
+have unbound variables.&nbsp;</p>
+<p>You can attach a query to a class in one of three ways:</p>
+<ul>
+  <li>By attaching an existing query to a class using the Query Attachments pane <a href="#constraints"> in the PAL
+    Queries Tab</a>.</li>
+  <li>By attaching an existing query to a class <a href="#classes tab"> at the Classes
+    Tab</a>.</li>
+  <li>By creating a new query at a class. See <a href="create_query.htm#class">Creating a Blank
+    Query</a> for more information.</li>
+</ul>
+<h2><a name="constraints"></a>At the PAL Queries Tab</h2>
+<p>To attach a query to a class at the <a href="query_tab.htm"> PAL Queries
+Tab</a>:</p>
+<ol>
+  <li>Go to the <a href="query_tab.htm"> PAL Queries
+Tab</a> and make sure
+    the query you want to attach to a class is displayed. See <a href="disp_query_query.htm">Displaying
+    Queries at the
+    PAL Queries Tab</a>
+    for more information.</li>
+  <li>Select the query by clicking on it.&nbsp;</li>
+  <li>Click the Add <img border="0" src="images/AddNew.gif" width="19" height="19"> button at the
+    top right of
+    the <a href="attach_query_pane.htm">Query Attachments pane</a>.<br>
+    <img border="0" src="images/attach7.gif" width="664" height="110"><br>
+    <br>
+    A Choose class dialog box opens.<br>
+    <br>
+    <img border="0" src="images/attach6.gif" width="328" height="382"><br>
+  </li>
+  <li>Select the class to which you want to attach the query and click OK.<br>
+    The selected class is displayed in the Attachments pane. You can view the
+    Class Form for the class by selecting it and then clicking the View <img border="0" src="images/View.gif" width="15" height="15">
+    button in the Attachments pane. You can also see the query in the Class
+    Form for that class. See <a href="display_query_at_class.htm">Displaying Attached Queries
+    at a Class</a>
+    for more information.</li>
+</ol>
+<h2><a name="classes tab"></a>At the Classes Tab</h2>
+<p>To attach a query to a class at the Classes Tab:</p>
+<ol>
+  <li>Go to the Classes Tab.</li>
+  <li>Highlight the class to which you wish to attach the query.</li>
+  <li>Click the Add <img border="0" src="images/AddNew.gif" width="19" height="19">  
+    button at the upper right of the Class Queries pane in the Class
+    Form.&nbsp;<br>
+    A Select Instances dialog box opens.<br>
+    <br>
+    <img border="0" src="images/attach1.gif" width="528" height="382"><br>
+  </li>
+  <li>Select :PAL-CONSTRAINT on the left.</li>
+  <li>Select the query(s) you wish to attach to the chosen class on the
+    right.</li>
+  <li>Click OK.<br>
+    The query is attached to the class and appears in the list of queries in the
+    Queries pane in the Class Form.</li>
+</ol>
+<p>For information on how to attach a query to a class by creating it at
+the class, see <a href="create_query.htm#class">Creating a Blank Query</a>.</p>
+<hr>
+<p>PAL Queries User Interface/Attaching a Query to a Class</p>
+
+<p><b>Next</b>: <a href="detach_query.htm">Removing a Query from a Class</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

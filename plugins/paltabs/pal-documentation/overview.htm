@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Protégé Axiom Language</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> The <b> Protégé
+Axiom Language</b><br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The Protégé Axiom Language (PAL) extends the <a href="http://protege.stanford.edu"> Protégé-2000 knowledge
+modeling environment</a> with support for writing and storing logical constraints
+and queries about frames in a knowledge base. More than just a language, PAL is
+a plugin toolset that comprises engines for checking constraints and running
+queries on knowledge bases, as well as a set of useful user interface
+components. The primary use of PAL is to detect incomplete and/or inconsistent entry of
+information in a Protégé knowledge base.</p>
+<p>When entering instances in Protégé, an end-user is guided by facet-based
+constraints that impose restrictions on the values that can fill each slot.
+However, these facet-based constraints only ensure that the local value of each
+slot is valid; they do not monitor the relationships among values of different
+slots of an instance, nor of different instances. The Protégé Axiom Language provides a way
+to make arbitrary assertions about groups of concepts. The PAL engine can check to
+make sure that the assertions hold across the entire knowledge-base. For
+example, if, in the newspaper project, we know that editors always earn more
+than the employees they are responsible for, we can express that piece of
+knowledge as a constraint.
+Then, checking the constraint tells us if certain instances of employee or
+editor have been entered incorrectly in the knowledge base.&nbsp;Similarly,
+queries can be created to determine which instances satisfy a particular
+assertion.&nbsp;</p>
+<p>Although PAL is fundamentally a constraint- and query-creation language, the PAL
+plug-in provides much more:
+<ul>
+  <li>A <a href="language.htm">language</a> to express logical constraints and
+    queries about frames in a knowledge base;
+  <li>A <a href="lang_framework.htm">set of special-purpose frames</a> to model
+    constraints and queries as part of a knowledge base;
+  <li>A <a href="PAL_editor.htm">structured PAL Expression Editor</a> that provides
+    context-sensitive help to write PAL sentences;
+  <li>A <font color="#000000">constraint-checking engine</font>, which can be
+    invoked either with the <a href="constraints_tab.htm">PAL Constraints Tab</a>
+    <font color="#000000">or <a href="http://protege.stanford.edu/plugins/paltabs/pal-quickguide/testPAL.java">programmatically</a>;</font>
+  <li>A <font color="#000000">querying engine </font>which can be invoked either
+    with the <a href="query_tab.htm">PAL Queries Tab</a> <font color="#000000">or
+    <a href="http://protege.stanford.edu/plugins/paltabs/pal-quickguide/testPAL.java">programmatically</a></font>.</li>
+</ul>
+<p>In this documentation, we will use examples from the <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/pal_example_project.zip"> sample newspaper project</a>
+to illustrate the various ways in which PAL can be used.&nbsp;</p>
+<hr>
+<p>Introduction/The Protégé Axiom Language</p>
+
+<p><b>Next</b><font size="3">: </font><a href="constraint_intro.htm"> PAL
+Constraints</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

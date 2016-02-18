@@ -1,0 +1,259 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Supported Predicates and Functions in PAL</title>
+</head>
+
+<body><div id="mainheadline"><h1 align="center">Supported Predicates and Functions in PAL</h1></div><hr>
+
+<h2><a name="PAL Predicates">PAL Predicates</a></h2>
+
+<p>PAL supports mostly <a href="#Frame-system predicates">predicates that test the
+properties of frame arguments</a>; PAL also includes a limited number of <a
+href="#Arithmetic predicates">arithmetic</a> and <a href="#String predicates">string</a>
+predicates, plus <a href="#Miscellaneous predicates">miscellaneous</a> predicates. </p>
+
+<p>In addition, any slot of a knowledge base can be used as a unary predicate, the first
+argument being the class to which the slot is attached and the second argument being a
+slot value (<font color="#FF0000">see example</font>).</p>
+
+<p>Note on the strategy for evaluating predicates: 
+
+<ul>
+  <li>Evaluation is lazy</li>
+  <li>Evaluation is entire­the domain of predicates is the entire universe</li>
+  <li>Inappropriate arguments are simply false</li>
+  <li>There is no such thing as a list. Iteration is a procedural concept which maps to either
+    forall or exists</li>
+</ul>
+
+<h3><a name="Frame-system predicates">Frame-system predicates</a> </h3>
+
+<h4>Frame-level predicates</h4>
+
+<ul>
+  <li><a href="predicates/is-frame.html">is-frame</a> (1 argument: any type)</li>
+</ul>
+
+<h4>Class-level predicates</h4>
+
+<ul>
+  <li><a href="predicates/direct-subclass-of.html">direct-subclass-of</a> (2 arguments: the
+    subclass and the superclass)</li>
+  <li><a href="predicates/direct-superclass-of.html">direct-superclass-of</a> (2 arguments:
+    the superclass and the subclass)</li>
+  <li><a href="predicates/is-class.html">is-class</a> (1 argument: any type)</li>
+  <li><a href="predicates/is-concrete-class.html">is-concrete-class</a> (1 argument: any type)</li>
+  <li><a href="predicates/subclass-of.html">subclass-of</a> (2 arguments: the subclass and the
+    superclass)</li>
+  <li><a href="predicates/superclass-of.html">superclass-of</a> (2 arguments: the superclass
+    and the subclass)</li>
+</ul>
+
+<h4>Slot-level predicates</h4>
+
+<ul>
+  <li><a href="predicates/allowed-slot-value.html">allowed-slot-value</a> (3 arguments: slot,
+    class that slot is attached to, a value)</li>
+  <li><a href="predicates/allowed-slot-value-type.html">allowed-slot-value-type</a> (3
+    arguments: slot, class that slot is attached to, class which defines value type)</li>
+  <li><a href="predicates/direct-template-slot-of.html">direct-template-slot-of</a> (2
+    arguments: a slot and a class)</li>
+  <li><a href="predicates/own-slot-has-duplicate-values.html">own-slot-has-duplicate-values</a>
+    (2 arguments: a slot and a frame)</li>
+  <li><a href="predicates/own-slot-not-null.html">own-slot-not-null</a> (2 arguments: a slot
+    and a frame)</li>
+  <li><a href="predicates/own-slot-of.html">own-slot-of</a> (2 arguments: a slot and a frame)</li>
+  <li><a href="predicates/slot-at-class-is-boolean-valued.html">slot-at-class-is-boolean-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-class-valued.html">slot-at-class-is-class-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-float-valued.html">slot-at-class-is-float-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-frame-valued.html">slot-at-class-is-frame-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-instance-valued.html">slot-at-class-is-instance-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-integer-valued.html">slot-at-class-is-integer-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-primitive-valued.html">slot-at-class-is-primitive-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-single-valued.html">slot-at-class-is-single-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-string-valued.html">slot-at-class-is-string-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-at-class-is-symbol-valued.html">slot-at-class-is-symbol-valued</a>
+    (2 arguments: a slot and a class)</li>
+  <li><a href="predicates/slot-has-duplicate-values.html">slot-has-duplicate-values</a> (2
+    arguments: a slot and a frame)</li>
+  <li><a href="predicates/slot-is-boolean-valued.html">slot-is-boolean-valued</a> (1 argument:
+    the slot in question)</li>
+  <li><a href="predicates/slot-is-class-valued.html">slot-is-class-valued</a> (1 argument: the
+    slot in question)</li>
+  <li><a href="predicates/slot-is-float-valued.html">slot-is-float-valued</a> (1 argument: the
+    slot in question)</li>
+  <li><a href="predicates/slot-is-frame-valued.html">slot-is-frame-valued</a> (1 argument: the
+    slot in question)</li>
+  <li><a href="predicates/slot-is-instance-valued.html">slot-is-instance-valued</a> (1
+    argument: the slot in question)</li>
+  <li><a href="predicates/slot-is-integer-valued.html">slot-is-integer-valued</a> (1 argument:
+    the slot in question)</li>
+  <li><a href="predicates/slot-is-primitive-valued.html">slot-is-primitive-valued</a> (1
+    argument: the slot in question)</li>
+  <li><a href="predicates/slot-is-single-valued.html">slot-is-single-valued</a> (1 argument:
+    the slot in question)</li>
+  <li><a href="predicates/slot-is-string-valued.html">slot-is-string-valued</a>(1 argument:
+    the slot in question)</li>
+  <li><a href="predicates/slot-is-symbol-valued.html">slot-is-symbol-valued</a> (1 argument:
+    the slot in question)</li>
+  <li><a href="predicates/slot-not-null.html">slot-not-null</a> (2 arguments: a&nbsp;slot and
+    a frame)</li>
+  <li><a href="predicates/slot-of.html">slot-of</a> (2 arguments: a&nbsp;slot and a frame)</li>
+  <li><a href="predicates/template-slot-has-duplicate-values.html">template-slot-has-duplicate-values</a>
+    (2 arguments: a slot and a frame)</li>
+  <li><a href="predicates/template-slot-not-null.html">template-slot-not-null</a> (2
+    arguments: a slot and a class)</li>
+  <li><a href="predicates/template-slot-of.html">template-slot-of</a> (2 arguments: a slot and
+    a class)</li>
+</ul>
+
+<h4>Facet-level predicates</h4>
+
+<ul>
+  <li><a href="predicates/facet-not-null.html">facet-not-null</a> (3 arguments: a&nbsp;facet,
+    a frame, and a slot)</li>
+  <li><a href="predicates/own-facet-not-null.html">own-facet-not-null</a> (3 arguments: a
+    facet, a frame, and a slot)</li>
+  <li><a href="predicates/template-facet-not-null.html">template-facet-not-null</a> (3
+    arguments: a&nbsp;facet, a class, and a slot)</li>
+</ul>
+
+<h4>Instance-level predicates</h4>
+
+<ul>
+  <li><a href="predicates/direct-instance-of.html">direct-instance-of</a> (2 arguments: a
+    frame and a class)</li>
+  <li><a href="predicates/instance-of.html">instance-of</a> (2 arguments: a frame and a class)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="Arithmetic predicates">Arithmetic predicates</a> </h3>
+
+<ul>
+  <li><a href="predicates/even.html">even</a> (1 argument: an integer)</li>
+  <li><a href="predicates/negative.html">negative</a> (1 argument: a number)</li>
+  <li><a href="predicates/odd.html">odd</a> (1 argument: an integer)</li>
+  <li><a href="predicates/positive.html">positive</a> (1 argument: a number)</li>
+  <li><a href="predicates/prime.html">prime</a> (1 argument: an integer)</li>
+  <li><a href="predicates/less-than.html">&lt;</a> (2 arguments, both numbers)</li>
+  <li><a href="predicates/greater-than.html">&gt;</a> (2 arguments, both numbers)</li>
+  <li>zero</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="String predicates">String predicates</a> </h3>
+
+<ul>
+  <li><a href="predicates/prefix-of.html">prefix-of</a> (2 arguments: the smaller string and
+    the larger string)</li>
+  <li><a href="predicates/substring-of.html">substring-of</a> (2 arguments: the smaller string
+    and the larger string)</li>
+  <li><a href="predicates/suffix-of.html">suffix-of</a> (2 arguments: the smaller string and
+    the larger string)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="Miscellaneous predicates">Miscellaneous predicates</a> </h3>
+
+<ul>
+  <li><a href="predicates/element-of.html">element-of</a> (2 arguments, currently broken)</li>
+</ul>
+
+<hr>
+
+<h2><a name="PAL Functions">PAL Functions</a></h2>
+
+<p>PAL supports <a href="#Frame-system functions">functions that test argument frames</a>,
+as well as <a href="#Coercion&nbsp; functions">type-coercion</a> functions and a few <a
+href="#Arithmetic functions">arithmetic</a> functions.</p>
+
+<p>In addition, any slot of a knowledge base can be used as a function, the only argument
+being the class to which the slot is attached, and the return type being the value-type of
+the slot (<font color="#FF0000">see example</font>).</p>
+
+<p>Note on the strategy for evaluating predicates: 
+
+<ul>
+  <li>Evaluation is lazy</li>
+  <li>Validation is entirely on number of arguments</li>
+  <li>Types are cast, not coerced</li>
+  <li>Type checking is, in general, impossible</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="Frame-system functions">Frame-system functions</a> </h3>
+
+<ul>
+  <li><a href="functions/get-class.html">get-class</a>&nbsp; (1 argument: a frame. Return type
+    is class.)</li>
+  <li><a href="functions/number-of-own-slot-values.html">number-of-own-slot-values</a> (2
+    arguments: a slot and a frame. Return type is integer.)</li>
+  <li><a href="functions/number-of-slot-values.html">number-of-slot-values</a> (2 arguments: a
+    slot and a frame. Return type is integer.)</li>
+  <li><a href="functions/number-of-template-slot-values.html">number-of-template-slot-values</a>
+    (2 arguments: a slot and a frame. Return type is integer)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="Coercion&nbsp; functions">Coercion&nbsp; functions</a> </h3>
+
+<ul>
+  <li><a href="functions/coerce-to-class.html">coerce-to-class</a> (1 argument: anything will
+    do. Return type is class.)</li>
+  <li><a href="functions/coerce-to-facet.html">coerce-to-facet</a> (1 argument: anything will
+    do. Return type is facet.)</li>
+  <li><a href="functions/coerce-to-frame.html">coerce-to-frame</a> (1 argument: anything will
+    do. Return type is frame.)</li>
+  <li><a href="functions/coerce-to-instance.html">coerce-to-instance</a> (1 argument: anything
+    will do. Return type is instance.)</li>
+  <li><a href="functions/coerce-to-integer.html">coerce-to-integer</a> (1 argument: anything
+    will do. Return type is integer.)</li>
+  <li><a href="functions/coerce-to-number.html">coerce-to-number</a> (1 argument: anything
+    will do. Return type is number.)</li>
+  <li><a href="functions/coerce-to-slot.html">coerce-to-slot</a> (1 argument: anything will
+    do. Return type is slot.)</li>
+  <li><a href="functions/coerce-to-string.html">coerce-to-string</a> (1 argument: anything
+    will do. Return type is string.)</li>
+  <li><a href="functions/coerce-to-symbol.html">coerce-to-symbol</a> (1 argument: anything
+    will do. Return type is symbol.)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><a name="Arithmetic functions">Arithmetic functions</a> </h3>
+
+<ul>
+  <li><a href="functions/add.html">+</a> (2 arguments: both numbers. Return type is number.)</li>
+  <li><a href="functions/subtract.html">-</a> (2 arguments: both numbers. Return type is
+    number.)</li>
+  <li><a href="functions/multiply.html">*</a> (2 arguments: both numbers. Return type is
+    number.)</li>
+  <li><a href="functions/divide.html">/</a> (2 arguments: both numbers. Return type is
+    number.)</li>
+  <li><a href="functions/round.html">round</a> (1 arguments: a number. Return type is
+    integer.)</li>
+  <li><a href="functions/truncate.html">truncate</a> (1 arguments: a number. Return type is
+    integer.)</li>
+</ul>
+
+<hr>
+
+<p><strong><font color="#FF0000">Extending PAL with additional predicates and functions.</font></strong></p>
+</body>
+</html>

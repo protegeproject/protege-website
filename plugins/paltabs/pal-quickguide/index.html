@@ -1,0 +1,735 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>The Protégé Axiom Language (PAL)</title>
+</head>
+
+<body link="#FF8080" vlink="#808080"><div id="mainheadline"><h1 align="center">A Quick Guide to the Protégé Axiom Language and Toolset (&quot;PAL&quot;)</h1></div><hr>
+<h2><a name="Top">Outline</a></h2>
+
+<p>The Protégé Axiom Language (PAL) extends the Protégé-2000 knowledge modeling
+environment with support for writing and storing logical constraints and queries about
+frames in a knowledge base. More than just a language, PAL is a plugin toolset that
+comprises engines for checking constraints and running queries on knowledge bases, as well
+as a set of useful user interface components. </p>
+
+<p>More specifically, the PAL toolset features: 
+
+<ul>
+  <li>A <a href="#PAL Language">language</a> to express logical constraints and queries about
+    frames in a knowledge base;</li>
+  <li>A <a href="#PAL Frames">set of special-purpose frames</a> to model constraints and
+    queries as part of a knowledge base;</li>
+  <li>A <a href="#PAL Structured Editor">structured editor</a> that provides context-sensitive
+    help to write PAL sentences;</li>
+  <li>A <a href="#PAL Constraint-checking Engine"><font color="#000000">constraint-checking
+    engine</font></a>, which can be invoked either with the <a href="#PAL Constraints Tab">PAL
+    Constraints Tab</a> <font color="#000000">or <a
+    href="#Invoking PAL constraint-checking engine programmatically">programmatically</a>;</font></li>
+  <li>A <font color="#000000"><a href="#PAL Querying Engine">querying engine</a> </font>which
+    can be invoked either with the <a href="#PAL Queries Tab">PAL Queries Tab</a> <font
+    color="#000000">or <a href="#Invoking PAL querying engine programmatically">programmatically</a></font>.</li>
+</ul>
+
+<p>Each component of the PAL toolset is detailed in sections below, after some 
+  precisions about the <a href="#PAL Design Rationale">design rationale</a> of 
+  PAL. Illustrative examples are taken <font color="#000000">from <a href="pal_example_project.zip">a 
+  modified version of the <em>newspaper</em> project</a></font>.</p>
+
+<p><strong><font color="#231DFF" size="+1">A comprehensive, step-by-step documentation of the 
+  PAL plugin is available <a href="../pal-documentation/index.htm">here</a>.</font></strong></p>
+
+<hr>
+
+<h2><a name="PAL Design Rationale">Design Rationale</a></h2>
+
+<h4>Constraints</h4>
+
+<p>Protégé-2000 supports the definition of a knowledge base as a set of interrelated
+frames: classes and instances, slots that can be attached to classes, and facets that
+further define slot attachments. While these built-in relationships cover the overall
+definition of a knowledge base, they sometimes are insufficient to capture all constraints
+that hold among the frames of the knowledge base. Typically, Protégé-2000 does not offer
+a way of relating the values of different slots attached to a given class, nor does it
+help in relating the slot values of different instances of a class. For example, in the <a
+href="pal_example_project.zip"><em>newspaper</em> sample project</a>, one might want to
+state that the section in which an article is published is determined by the section on
+which the author of this article works (i.e., on the <em>Article</em> class, the slot <em>containing_section</em>
+is constrained by the slot <em>article_author</em>). As another example, one might want to
+state that editors should have a higher salary than the employees for whom they are
+responsible (i.e., a constraint that involves the <em>Editor</em> and <em>Employee</em>
+classes and the <em>salary</em> and <em>responsible_for</em> slots.). </p>
+
+<p>The primary purpose of the Protégé Axiom Language (PAL) is exactly to support the
+definition of such arbitrary logical constraints on the frames of a knowledge base. PAL
+constraints are modeled with <a href="#PAL Frames">special-purpose frames</a> and thus can
+be saved as part of the knowledge base.&nbsp; The <a
+href="#PAL Constraint-checking Engine">PAL constraint-checking engine</a> can be run
+against the knowledge base to detect frames that violate those constraints. </p>
+
+<p>Note that the underlying philosophy of PAL is model-checking rather than
+theorem-proving (see the <a href="OverallDesignConsiderations.zip">original design
+rationale document</a>). In other words, PAL makes strong &quot;closed world&quot;
+assumptions and is used for writing restrictions on existing knowledge, not for asserting
+new knowledge (in that respect, PAL should rather be called &quot;Protégé Constraint
+Language&quot;). The primary goals of PAL are therefore to detect incomplete entry of
+information and to check entered information for inconsistencies. </p>
+
+<h4>Queries</h4>
+
+<p>Moving one step further, a knowledge base can also contain a set of typical logical
+queries that are to be asked about its frames, beyond the <a
+href="http://protege.stanford.edu/doc/tutorial/getting_started/create_query.html"><font
+color="#000000">built-in querying facility</font></a> of Protégé-2000. For example, in
+the <a href="pal_example_project.zip"><em>newspaper</em> sample project</a>, one might
+want to find all the employees who are in a team; that is, employees whose responsible
+editor is responsible for more than one employee (i.e., find all the instances of the
+class <em>Employee</em> that are values for the slot <em>responsible_for</em> of an
+instance of the class <em>Editor </em>which has more than 1 value for its <em>responsible_for</em>
+slot). </p>
+
+<p>Queries not being very different from constraints, PAL also supports writing arbitrary
+queries about the contents of a knowledge base. PAL queries also are modeled with <a
+href="#PAL Frames">special-purpose frames</a> and thus also can be saved as part of the
+knowledge base. PAL queries can then be executed with the <a href="#PAL Querying Engine">PAL
+querying engine</a>.</p>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2><a name="PAL Language">PAL Language</a></h2>
+
+<p>A constraint (or a query) is a statement that holds on a certain number of variables,
+which range over a particular set of values. Therefore, a constraint or query in PAL
+consists of a set of variable range definitions and a logical statement that must hold on
+those variables. The language of PAL is a limited predicate logic extension of
+Protégé-2000 that supports the definition of such ranges and statements. The syntax of
+PAL is a variant of the Knowledge Interchange Format <font color="#000000">(<a
+href="http://www-ksl.stanford.edu/knowledge-sharing/kif/">KIF</a>)</font>: It supports KIF
+connectives but not all of KIF constants and predicates (e.g., the theory of arithmetic is
+much smaller). Statements like (defrelation) and (deffunction) are also omitted. </p>
+
+<p>For instance, in the <a href="pal_example_project.zip"><em>newspaper</em> example</a>,
+the constraint: </p>
+
+<p>&quot;The salary of an editor should be greater than the salary of any employee whom
+the editor is responsible for.&quot;</p>
+
+<p>can be written in PAL as follows:</p>
+
+<p><em>(<font color="#0000FF">defrange</font> ?editor <font color="#0000FF">:FRAME</font>
+Editor)<br>
+(<font color="#0000FF">defrange</font> ?employee <font color="#0000FF">:FRAME</font>
+Employee responsible_for)</em></p>
+
+<p><em>(<font color="#0000FF">forall</font> ?editor (<font color="#0000FF">forall</font>
+?employee<br>
+&nbsp;&nbsp;&nbsp; (<font color="#0000FF">=&gt;</font> (<font color="#0000FF">and</font> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (responsible_for ?editor ?employee)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">own-slot-not-null</font>
+salary ?editor) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">own-slot-not-null</font>
+salary ?employee)) <br>
+&nbsp;&nbsp;&nbsp; (<font color="#0000FF">&gt;</font> (salary ?editor) (salary
+?employee)))))</em></p>
+
+<p>&nbsp;</p>
+
+<h3>Variable range definitions</h3>
+
+<p>All variables that appear in a constraint or query statement must be defined within a
+range. Variables are either defined locally to the statement or globally to the knowledge
+base.</p>
+
+<p>A variable range definition is a sentence of the form <em>(<font color="#0000FF">defrange</font>
+[variable] [type] [type-specific information])</em>, where: 
+
+<ol>
+  <li><em>[variable]</em> is the name of the variable, beginning either with '?' to indicate a
+    local variable or with '%' to indicate a global variable;</li>
+  <li><em>[type]</em> is the type of the variable, one of <font color="#0000FF">:SET</font>, <font
+    color="#0000FF">:FRAME</font>, <font color="#0000FF">:SYMBOL</font>, <font color="#0000FF">:STRING</font>,
+    <font color="#0000FF">:INTEGER</font>, <font color="#0000FF">:NUMBER</font>;</li>
+  <li><em>[type-specific information]</em> depends on the type of the variable and is<ul>
+      <li type="disc">a set name for the type <font color="#0000FF">:SET</font>, optionally
+        followed by a slot name that restricts the range of the variable to values of that
+        slot--that is, <em>(<font color="#0000FF">defrange</font> [variable] <font color="#0000FF">:SET</font>
+        [setname] [slotname])</em> means &quot;all elements of the named set which are values for
+        the named slot&quot;;</li>
+      <li type="disc">a class name for the type <font color="#0000FF">:FRAME</font>, optionally
+        followed by a slot name that restricts the range of the variable to values of that
+        slot--that is, <em>(<font color="#0000FF">defrange</font> [variable] <font color="#0000FF">:FRAME</font>
+        [classname] [slotname])</em> means &quot;instances of the named class which are values of
+        the named slot&quot;;</li>
+      <li>a slot name for all other (primitive) types to restrict the range of the variable to
+        values of that slot--for example, <em>(<font color="#0000FF">defrange</font> [variable] <font
+        color="#0000FF">:INTEGER</font> [slotname])</em> means &quot;all integers which are values
+        of the named slot.&quot;</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In the above example, the definition of a local variable <em>?editor </em>that ranges
+over all instances of the class <em>Editor</em> is written as follows: </p>
+
+<p><em>(<font color="#0000FF">defrange</font> ?editor <font color="#0000FF">:FRAME</font>
+Editor)</em></p>
+
+<p>and, the definition of a local variable <em>?employee</em> that ranges over solely
+instances of the class <em>Employee</em> that are values for the slot <em>responsible_for</em>
+(that is, those employees for whom an editor is responsible) is written as follows:</p>
+
+<p><em>(<font color="#0000FF">defrange</font> ?employee <font color="#0000FF">:FRAME</font>
+Employee responsible_for)</em></p>
+
+<p>Another example is the following, that defines a global variable <em>%number_of_pages</em>
+that is an integer value for the slot <em>number_of_pages</em>:</p>
+
+<p><em>(<font color="#0000FF">defrange</font> %number_of_pages <font color="#0000FF">:INTEGER</font>
+number_of_pages)</em></p>
+
+<p>&nbsp;</p>
+
+<p>When a variable ranges over the elements of a set (i.e., a variable of type :SET), this
+set also must be defined and given a name. </p>
+
+<p>A set definition is a sentence of the form <em>(<font color="#0000FF">defset</font>
+[setname] [type] [list of values])</em>, where: 
+
+<ol>
+  <li><em>[setname]</em> is the name of the set;</li>
+  <li><em>[type]</em> is the type of the elements of the set, one of: <font color="#0000FF">:FRAME</font>,
+    <font color="#0000FF">:SYMBOL</font>, <font color="#0000FF">:STRING</font>, <font
+    color="#0000FF">:INTEGER</font>, <font color="#0000FF">:NUMBER</font>;</li>
+  <li><em>[list of values]</em> is the enumeration of the elements of the set, that must be of
+    the specified type (i.e., a list of frame names, of integers, etc.).</li>
+</ol>
+
+<p>For example, the definition of the set of weekdays symbols is written as follows: </p>
+
+<p><em>(<font color="#0000FF">defset</font> weekdays <font color="#0000FF">:SYMBOL</font>
+(Monday Tuesday Wednesday Thursday Friday Saturday Sunday))</em></p>
+
+<p>and, the definition of a variable <em>?day</em> that ranges of the elements of the <em>weekday
+</em>set is written as follows:</p>
+
+<p><em>(<font color="#0000FF">defrange</font> ?day <font color="#0000FF">:SET</font>
+weekdays)</em></p>
+
+<p>&nbsp;</p>
+
+<h3>Constraint statements</h3>
+
+<p>A PAL constraint statement consists of a sequence of sentences linked by logical
+connectives among the following: <em>&lt;=&gt;</em> (equivalent),<em> =&gt; </em>(&quot;if&quot;),
+<em>and</em>, <em>or</em>, <em>not</em>. To write those sentences, PAL supports a number
+of <a href="PalKeywords/pal-predicates-functions.html">predefined predicates and functions</a>,
+that can be used in constraint statements to test or compute properties of variables. In
+addition, any slot in a knowledge base can be used directly as a function or a unary
+predicate in PAL statements. Finally, all variables that appear in a constraint statement
+must be quantified, either with the universal quantifier (<em>forall</em>) or with the
+existential quantifier (<em>exists</em>).</p>
+
+<p><a href="PalKeywords/pal-predicates-functions.html#PAL Predicates">PAL predicates</a>
+can be listed as: 
+
+<ul>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Frame-system predicates">frame-system
+    predicates</a>, that test properties of frame arguments (e.g., whether a slot argument is
+    attached to a class argument); </li>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Arithmetic predicates">arithmetic
+    predicates</a>, that test arithmetic properties of number arguments (e.g., whether a
+    number argument is even);</li>
+  <li><a href="PalKeywords/pal-predicates-functions.html#String predicates">string-related
+    predicates</a>, that test properties of string arguments (e.g., whether a string argument
+    is contained in another string argument)</li>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Miscellaneous predicates">miscellaneous
+    predicates</a></li>
+</ul>
+
+<p><a href="PalKeywords/pal-predicates-functions.html#PAL Functions">PAL functions</a> can
+be listed as: 
+
+<ul>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Frame-system functions">frame-system
+    functions</a>, that return properties of frame arguments (e.g., the class of a frame
+    argument);</li>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Coercion&nbsp; functions">type-coercion
+    functions</a>, that transform any argument into a given type (e.g., transforming a string
+    into a slot);</li>
+  <li><a href="PalKeywords/pal-predicates-functions.html#Arithmetic functions">arithmetic
+    functions</a>, that compute arithmetic operations on number arguments (e.g., addition of 2
+    numbers).</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><font color="#000000">Below are a few example constraints from the <a
+href="pal_example_project.zip"><em>newspaper</em> project</a>.</font></p>
+
+<p>A simple constraint that state that all articles should be indexed with more than two
+keywords:</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>PAL Constraint</strong></td>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>Comments </strong></td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">defrange</font>
+    ?article <font color="#0000FF">:FRAME</font> Article)</em></td>
+    <td width="50%" style="text-align: left; vertical-align: top">This constraint concerns all
+    instances of the <em>Article</em> class.</td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">forall</font>
+    ?article <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">&gt;</font>
+    (<font color="#0000FF">number-of-slot-values</font> keywords ?article) 2))</em><p>&nbsp;</td>
+    <td width="50%" style="text-align: left; vertical-align: top"><p align="center"><font
+    color="#000000">&quot;</font><font color="#0000FF">For all</font> articles, the <font
+    color="#0000FF">number of values</font> for the slot <em>keywords</em> should be <font
+    color="#0000FF">greater</font> than 2.&quot;</p>
+    <p align="center">Note that this constraint is equivalent to setting the minimum
+    cardinality facet to 2 for the <em>keywords</em> slot attachment.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Similarly, the above example constraint that states that editors should be paid more
+than the employees for whom they are responsible:</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>PAL Constraint</strong></td>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>Comments </strong></td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">defrange</font>
+    ?editor <font color="#0000FF">:FRAME</font> Editor)<br>
+    (<font color="#0000FF">defrange</font> ?employee <font color="#0000FF">:FRAME</font>
+    Employee responsible_for)</em></td>
+    <td width="50%" style="text-align: left; vertical-align: top">This constraint concerns all
+    instances of the <em>Editor</em> class, and instances of the <em>Employee</em> class that
+    are values for the slot <em>responsible_for</em>.</td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">forall</font>
+    ?editor (<font color="#0000FF">forall</font> ?employee<br>
+    &nbsp;&nbsp;&nbsp; (<font color="#0000FF">=&gt;</font> (<font color="#0000FF">and</font> <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (responsible_for ?editor ?employee)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">own-slot-not-null</font>
+    salary ?editor) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">own-slot-not-null</font>
+    salary ?employee)) <br>
+    &nbsp;&nbsp;&nbsp; (<font color="#0000FF">&gt;</font> (salary ?editor) (salary
+    ?employee)))))</em><p>&nbsp;</p>
+    <p>&nbsp;</td>
+    <td width="50%" style="text-align: left; vertical-align: top"><p align="center"><font
+    color="#000000">&quot;</font><font color="#0000FF">For all</font> editors, and <font
+    color="#0000FF">for all</font> employees for whom an editor is responsible (see range
+    definition above), <font color="#0000FF">if</font> the editor in question is <font
+    color="#000000">responsible for</font> the employee in question <font color="#0000FF">and</font>
+    both the <font color="#000000">salaries</font> of this editor and this employee <font
+    color="#0000FF">are not empty</font>, this editor's <font color="#000000">salary</font>
+    should be <font color="#0000FF">greater</font> than this employee's <font color="#000000">salary</font>.&quot;</p>
+    <p align="center">The slot <em>responsible_for</em> is used as a predicate, to test
+    whether the employee in question is under the responsibility of the editor in question. </p>
+    <p align="center">The slot <em>salary</em> is used as a function, to return the value of
+    the employee's and editor's salary.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p><font color="#000000">A constraint that state that the section in which an article is
+published is determined by the section on which the author of this article works (i.e., on
+the <em>Article</em> class, the slot <em>containing_section</em> is constrained by the
+slot <em>article_author</em>):</font></p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="63%" style="text-align: center; vertical-align: top"><strong>PAL Constraint</strong></td>
+    <td width="37%" style="text-align: center; vertical-align: top"><strong>Comments </strong></td>
+  </tr>
+  <tr>
+    <td width="63%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">defrange</font>
+    ?article <font color="#0000FF">:FRAME</font> Article)<br>
+    (<font color="#0000FF">defrange</font> ?editor <font color="#0000FF">:FRAME</font> Editor)</em></td>
+    <td width="37%" style="text-align: left; vertical-align: top">The constraint concerns all
+    instances of the <em>Article</em> class, and any instance of the <em>Editor</em> class.</td>
+  </tr>
+  <tr>
+    <td width="63%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">forall</font>
+    ?article<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (=&gt; (<font color="#0000FF">instance-of</font>
+    (article_author ?article) Person) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">exists</font> ?editor <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">and</font> (<font color="#0000FF">or</font> (article_author
+    ?article ?editor)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (responsible_for ?editor (article_author ?article))) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (sections ?editor (containing_section ?article))))))</em><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+    <td width="37%" style="text-align: left; vertical-align: top">&quot;<font color="#0000FF">For
+    all</font> articles, <font color="#0000FF">if</font> the <font color="#000000">author</font>
+    of an article is a person, then there <font color="#0000FF">exists</font> an editor, who
+    is either this author <font color="#0000FF">or</font> the editor responsible for this <font
+    color="#000000">author</font>. The <font color="#000000">section that contains</font> this
+    article is a <font color="#000000">section</font> managed by this editor.&quot;<p>T<font
+    color="#400040">he slots </font><em>article_author</em> and<em> responsible_for </em>and <em>sections</em>
+    are used as predicates, to test respectively whether the author of the article in question
+    is the editor in question, whether the editor in question is responsible for the author of
+    the article in question, and whether the section that contains the article in question is
+    one of the sections managed by the editor in question. </p>
+    <p>The <font color="#400040">slots </font><em>article_author</em>, and <em>containing_section</em>
+    are used as functions, to return the value of the author and section of the article in
+    question.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>A constraint that states that the global variable <em>%number_of_pages</em> is
+positive, wherever it happens to be used in the knowledge base:</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>PAL Constraint</strong></td>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>Comments </strong></td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">defrange</font>
+    %number_of_pages <font color="#0000FF">:INTEGER</font> number_of_pages)</em></td>
+    <td width="50%" style="text-align: left; vertical-align: top">This global variable ranges
+    over all integer that are values for the slot <em>number_of_pages</em>.</td>
+  </tr>
+  <tr>
+    <td width="50%" style="text-align: left; vertical-align: top"><em>(<font color="#0000FF">forall</font>
+    %number_of_pages<br>
+    &nbsp;&nbsp;&nbsp; (<font color="#0000FF">&gt;</font> %number_of_pages 0))</em><p>&nbsp;</td>
+    <td width="50%" style="text-align: left; vertical-align: top"><p align="center"><font
+    color="#000000">&quot;</font><font color="#0000FF">All</font> values of the <em>number_of_pages</em>
+    slot should be <font color="#0000FF">greater</font> than 0.&quot;</p>
+    <p>Note that this constraint is equivalent to setting the minimum-value facet of the <em>number_of_pages</em>
+    top-level slot to 0.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3>Query statements</h3>
+
+<p>Similarly to a constraint statement, a PAL query statement consists of a sequence of
+sentences linked by logical connectives (<em>&lt;=&gt;</em>,<em> =&gt;</em>, <em>and</em>,
+<em>or</em>, <em>not</em>). Sentences are written with the same set of <a
+href="PalKeywords/pal-predicates-functions.html">PAL predicates and functions</a> and with
+slots used directly as functions or unary predicates. Variables used in query statements
+must be defined within a valid range, similarly to constraint variables. <strong>The only
+way in which query statements differ from constraint statements is that variables are
+&quot;quantified&quot; with the query quantifiers <em>findall </em>and&nbsp; <em>find n </em>instead
+of the universal quantifier <em>forall</em>.</strong> Variables can also be quantified
+with the existential quantifier (<em>exists</em>) inside statements. </p>
+
+<p><font color="#000000">Below are a few example queries from the <a
+href="pal_example_project.zip"><em>newspaper</em> project</a>.</font></p>
+
+<p>A query that finds 3 articles that are not authored by persons:</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>PAL Query</strong></td>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>Comments</strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><em>(<font color="#0000FF">defrange</font> ?article <font color="#0000FF">:FRAME</font>
+    Article)</em></td>
+    <td width="50%">The query concerns all instances of the <em>Article</em> class.</td>
+  </tr>
+  <tr>
+    <td width="50%"><em>(<font color="#0000FF">find </font><font color="#000000">3</font>
+    ?article<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">not</font>
+    (<font color="#0000FF">instance-of</font> (article_author ?article) Person)))</em><p>&nbsp;</p>
+    <p>&nbsp;</td>
+    <td width="50%"><font color="#400040">&quot;</font><font color="#0000FF">Find </font><font
+    color="#000000">3</font><font color="#400040"> instances of the class <em>Article</em>
+    which </font><font color="#000000">author</font><font color="#400040"> is </font><font
+    color="#0000FF">not</font><font color="#400040"> an </font><font color="#0000FF">instance
+    of</font><font color="#400040"> the class <em>Person</em>.&quot;</font><p><font
+    color="#400040">The slot <em>article_author</em> is used as a function, to return the
+    value of the author of the article in question.</font></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>A query that finds all employees who are in a team (ie, whose responsible editor is
+responsible for more than 1 employee):</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="60%" style="text-align: center; vertical-align: top"><strong>PAL Query</strong></td>
+    <td width="40%" style="text-align: center; vertical-align: top"><strong>Comments</strong></td>
+  </tr>
+  <tr>
+    <td width="60%"><em>(<font color="#0000FF">defrange</font> ?employee :FRAME Employee
+    responsible_for)<br>
+    (<font color="#0000FF">defrange</font> ?editor :FRAME Editor)</em></td>
+    <td width="40%">The query concerns all instances of the <em>Employee</em> class that are
+    values for the slot <em>responsible_for</em> and any instance of the <em>Editor</em>
+    class.</td>
+  </tr>
+  <tr>
+    <td width="60%"><em>(<font color="#0000FF">findall</font> ?employee<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">exists</font>
+    ?editor<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">and</font> (responsible_for ?editor ?employee)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">&gt;</font> (<font color="#0000FF">number-of-slot-values</font>
+    responsible_for ?editor) 1))))</em><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+    <td width="40%"><font color="#400040">&quot;</font><font color="#0000FF">Find all</font>
+    the employees such that there <font color="#0000FF">exists</font> an editor which is <font
+    color="#000000">responsible for</font> the employee in question <font color="#0000FF">and</font>
+    which <font color="#0000FF">number </font>of employees under responsibility is <font
+    color="#0000FF">greater</font> than 1.<font color="#400040">&quot;</font><p><font
+    color="#400040">The slot </font><em>responsible_for</em> is used as a predicate to test
+    whether the editor in question is responsible for the employee in question.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>A query that finds all employees who are paid more than their responsible editor:</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>PAL Query</strong></td>
+    <td width="50%" style="text-align: center; vertical-align: top"><strong>Query in English </strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><em>(<font color="#0000FF">defrange</font> ?employee :FRAME Employee
+    responsible_for)<br>
+    (<font color="#0000FF">defrange</font> ?editor :FRAME Editor)</em></td>
+    <td width="50%">The query concerns all instances of the <em>Employee</em> class that are
+    values for the slot <em>responsible_for</em> and any instance of the <em>Editor</em>
+    class.</td>
+  </tr>
+  <tr>
+    <td width="50%"><em>(<font color="#0000FF">findall</font> ?employee<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000FF">exists</font>
+    ?editor<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">and</font> (responsible_for ?editor ?employee)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">own-slot-not-null</font> salary ?editor)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">own-slot-not-null</font> salary ?employee)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (<font color="#0000FF">&lt;</font> (salary ?editor) (salary ?employee)))))</em><p>&nbsp;</td>
+    <td width="50%"><font color="#400040">&quot;</font><font color="#0000FF">Find all</font>
+    the employees such that there <font color="#0000FF">exists</font> an editor which is <font
+    color="#000000">responsible for</font> the employee in question <font color="#0000FF">and</font><font
+    color="#000000"> that editor's salary is </font><font color="#0000FF">lower</font><font
+    color="#000000"> than the salary of the employee in question, both salaries </font><font
+    color="#0000FF">not being empty</font><font color="#000000">.</font><font color="#400040">&quot;</font><p><font
+    color="#400040">The slot <em>responsible_for</em> is used as a predicate to test </font>whether
+    the editor in question is responsible for the employee in question. The slot <em>salary</em>
+    is used as a function, to return the value of the employee's and editor's salary.</td>
+  </tr>
+</table>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2><a name="PAL Frames">PAL Conceptual Framework</a></h2>
+
+<p>PAL provides a set of special-purpose frames to hold constraints and queries that are
+added to a Protégé knowledge base, respectively the <em>:PAL-CONSTRAINT</em> and the <em>PAL-QUERY</em>
+classes. Specifically, a PAL constraint is an instance of the <em>:PAL-CONSTRAINT</em>
+class and a PAL query is an instance of the <em>PAL-QUERY</em> class. Both classes have
+the following slots attached to them: 
+
+<ul>
+  <li><em>:PAL-name</em>, which holds a label for the constraint or query;</li>
+  <li><em>:PAL-documentation</em>, which holds a natural language description of the
+    constraint or query;</li>
+  <li><em>:PAL-range</em>, which holds the definition of local and global variables that
+    appear in the statement;</li>
+  <li><em>:PAL-statement</em>, which holds the sentence of the constraint or query.</li>
+</ul>
+
+<h4>Creation of a constraint or query</h4>
+
+<p>To create a PAL constraint (or a PAL query), one simply needs to create a new instance
+of the <em>:PAL-CONSTRAINT</em> class (or of the <em>PAL-QUERY</em> class), using the <a
+href="http://protege.stanford.edu/doc/users_guide/index.html">Instance tab</a> of
+Protégé. Then, one needs to fill-in the slots listed above with valid PAL sentences. The
+<em>PalConstraintWidget</em> and the <em>PalRangeWidget</em> are two slot widgets that
+provide a <a href="#PAL Structured Editor">structured editor</a> to enter valid PAL range
+definitions and statements. These two widgets are set by default on the knowledge-entry
+forms for the instances of <em>:PAL-CONSTRAINT</em> and <em>PAL-QUERY</em>.</p>
+
+<h4>Attachment of a constraint to a class and implicit range definition</h4>
+
+<p>Another way of creating a PAL constraint for a class is to use the <em>Constraints</em>
+widget that appears on the form for every class. As a result of clicking the &quot;C&quot;
+button, Protégé creates a new instance of the <em>:PAL-CONSTRAINT</em> class and
+attaches it to the selected class. </p>
+
+<p>In that case, all variables that are not defined within a range in the <em>:PAL-range</em>
+slot implicitely range over all instances of that class.</p>
+
+<p>&nbsp;</p>
+
+<p>This screen shot below shows the <em>Editor</em> class, which has the example
+constraint about editors' salary attached to it (top right box). This screen shot also
+shows the <em>:SYSTEM-CLASS</em> subtree with the <em>:PAL-CONSTRAINT</em> and <em>PAL-QUERY</em>
+classes.</p>
+
+<table border="1" width="85%">
+  <tr>
+    <td width="50%" align="center"><img src="pal_example_editor_class.gif" width="681"
+    height="339" alt="pal_example_editor_class.gif (27287 bytes)"></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>The screen shot below shows the example constraint about the salary of an editor
+formalized as an instance of the <em>&nbsp; :PAL-CONSTRAINT</em> class:</p>
+
+<table border="1" width="85%">
+  <tr>
+    <td width="50%" align="center"><img src="pal_example_salary_constraint.gif" width="681"
+    height="298" alt="pal_example_salary_constraint.gif (12125 bytes)"></td>
+  </tr>
+</table>
+
+<p>The screen shot below shows the example query about employees in a team formalized as
+an instance of the <em>PAL-QUERY</em> class:</p>
+
+<table border="1" width="85%">
+  <tr>
+    <td width="50%" align="center"><img src="pal_example_team_query.gif"
+    alt="pal_example_team_query.gif" width="681" height="326"></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h4>Important note</h4>
+
+<p>The :PAL-CONSTRAINT class comes as part of the <a
+href="http://protege.stanford.edu/plugins/paltabs/pal.zip">PAL plugin</a>, and appears in
+the subtree of system classes for Protégé (under the :SYSTEM-CLASS root class). </p>
+
+<p>PAL-QUERY does not come as part of the PAL plugin: This class is available in the <em>pal_query.pprj</em>
+project, that needs to be included in the working project. The <em>pal_query.pprj</em>
+project does come as part of the Protege release, though, in the <em>projects</em>
+subdirectory of the <em>Protege-2000</em> installation directory (it is also available
+with the <a href="pal_example_project.zip"><em>newspaper</em> sample project</a>). Once
+this project included in the working project, the <em>PAL-QUERY</em> class also appears in
+the <em>:SYSTEM-CLASS</em> subtree.</p>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2><a name="PAL Structured Editor">PAL Structured Editor</a></h2>
+
+<p>Documentation of the PAL Structure Editor can be found <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/">in 
+  the comprehensive documentation of the PAL plugin</a>. You can also have a look 
+  at a <a href="PALEditor.ppt">presentation</a> by its author, Anton An.</p>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2><a name="PAL Constraint-checking Engine">PAL Constraint-checking Engine</a></h2>
+
+<h3><a name="PAL Constraints Tab">PAL Constraints Tab</a></h3>
+
+<p>Documentation of the PAL Constraints Tab can be found <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/">in 
+  the comprehensive documentation of the PAL plugin</a>.</p>
+
+<h3><a name="Invoking PAL constraint-checking engine programmatically">Invoking PAL
+constraint-checking engine programmatically</a></h3>
+
+<p>A <a href="testPAL.java">sample JAVA code file</a> illustrates how the PAL constraint-checking engine can be invoked programmatically to evaluate PAL constraints.</p>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2><a name="PAL Querying Engine">PAL Querying Engine</a></h2>
+
+<h3><a name="PAL Queries Tab">PAL Queries Tab</a></h3>
+
+<p>Documentation of the PAL Queries Tab can be found <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/">in 
+  the comprehensive documentation of the PAL plugin</a>.</p>
+
+<h3><a name="Invoking PAL querying engine programmatically">Invoking PAL querying engine
+programmatically</a></h3>
+
+<p>A <a href="testPAL.java">sample JAVA code file</a> illustrates how the PAL querying engine can be invoked programmatically to evaluate PAL queries.</p>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<h2>Additional Resources</h2>
+
+<h4>Documents</h4>
+
+<ul>
+  <li><a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/">Comprehensive, step-by-tep documentation of the PAL plugin</a>.</li>
+  <li>The <a href="OverallDesignConsiderations.zip">original design rationale document</a>, by
+    Bill Grosso.</li>
+  <li>A <a href="defrangeAndDefset.html">discussion on defining ranges and sets in PAL</a>, by
+    Bill Grosso.</li>
+  <li>A <a href="PALTutorial.pdf">PAL tutorial</a> and a <a href="hazard.zip">sample project</a>,
+    by Samson Tu.</li>
+  <li>A presentation of the <a href="PALEditor.ppt">PAL structured editor</a>, by Anton An. </li>
+</ul>
+
+<h4>Example projects that use PAL</h4>
+
+<ul>
+  <li>The <a href="http://protege.stanford.edu/plugins/psmtab/upml_editor.html">Unified Problem-solving Method development
+    Language UPML</a>.</li>
+  <li>The <a href="http://smi-web.stanford.edu/projects/helix/pubs/process-model/">Malaria
+    project</a>.</li>
+</ul>
+
+<p><a href="#Top">^ return to top.</a></p>
+
+<hr>
+
+<p><em>Questions? Suggestions? Contributions? Send email to <a
+href="mailto:crubezy@smi.stanford.edu">Monica Crubézy</a>.</em></p>
+
+<p><em>Pages created and maintained by <a href="mailto:crubezy@smi.stanford.edu">Monica 
+  Crubézy</a>. Last updated: 
+  <!--webbot bot="Timestamp" startspan S-Type="EDITED"
+S-Format="%B %d, %Y" -->
+  March 8, 2005 
+  <!--webbot bot="Timestamp" i-checksum="17573" endspan -->
+  .</em></p>
+</body>
+</html>

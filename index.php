@@ -38,7 +38,7 @@
     <div class="row">
 
       <div class="col-8">
-        <h3 class="heading-a upcase">Trusted by over <big class="type-a">244,817</big> users</h3>
+        <h3 class="heading-a upcase">Trusted by over <big class="type-a">297,513</big> users</h3>
       </div><!-- /end .col-8 -->
 
       <div class="col-4">
@@ -223,7 +223,7 @@
           <img src="assets/img/features-community-icon.png">
           <h3 class="text-center upcase">Active <br> Community</h3>
           <p>
-            Protege is actively supported by a strong community of users 
+            Protégé is actively supported by a strong community of users 
             and developers that field questions, write documentation, and 
             contribute plug-ins.
           </p>
@@ -235,7 +235,7 @@
           <img src="assets/img/features-export-icon.png">
           <h3 class="text-center upcase">W3C Standards Support</h3>
           <p>
-            Protege fully supports the latest OWL 2 Web Ontology Language 
+            Protégé fully supports the latest OWL 2 Web Ontology Language 
             and RDF specifications from the World Wide Web Consortium.
           </p>
         </div><!-- /end .feature -->
@@ -246,7 +246,7 @@
           <img src="assets/img/features-enviro-icon.png">
           <h3 class="text-center upcase">Extensible Open Source Environment</h3>
           <p>
-            Protege is based on Java, is extensible, and provides a plug-and-play 
+            Protégé is based on Java, is extensible, and provides a plug-and-play 
             environment that makes it a flexible base for rapid prototyping and 
             application development.
           </p>

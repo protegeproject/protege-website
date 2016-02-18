@@ -1,0 +1,245 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Predicate Descriptions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img src="images/nerd32x32.gif" width="48" height="48">    &nbsp;Predicate
+Reference<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The following predicates can be used to begin a statement.</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="51%" valign="top"><code>forall(Symbol, Predicate)</code></td>
+    <td width="49%" valign="top">
+
+<p>The predicate is true if all instances have property. Use this predicate to
+start a <b>constraint</b> statement</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>forany(Symbol, Predicate)</code></td>
+    <td width="49%" valign="top">Finds all instances which have property. Use
+      this predicate to start a <b>query</b> statement.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>forn(Symbol, Predicate)</code></td>
+    <td width="49%" valign="top">??. Use this predicate to start a <b>query</b>
+      statement.</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="51%" valign="top"><code>/=(Any, Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if the two parameters are not equal</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>&lt;(Number, Number)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is less than the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>&lt;=&gt;(Predicate, Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true if left and right are equivalent, i.e. if they are both true or both false.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>=(Any, Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if the two parameters are equal.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>=&gt;(Predicate, Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true if assumption is false, or if both assumption and conclusion are true.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>&gt;(Number, Number)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is greater than the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>allowed-slot-value(Slot, Class, Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if value is allowed for the slot in the class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>allowed-slot-value-type(Slot, Class,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if type is allowed for the slot in the class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>and(Predicate, Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true when both predicates in the argument list are true.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>direct-instance-of(Frame, Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is a direct instance of the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>direct-subclass-of(Class, Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is the direct subclass of the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>direct-superclass-of(Class, Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is the direct
+      superclass of the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>direct-template-slot-of(Slot, Frame)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first argument is the direct template slot of the second argument.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>element-of(Any, Instance)</code></td>
+    <td width="49%" valign="top">The predicate is true if the instance is an element of the first parameter.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>even(Integer)</code></td>
+    <td width="49%" valign="top">The predicate is true if the integer is an even integer.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>exists(Symbol, Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true if there exists at least one instance which has property.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>facet-not-null(Facet, Frame, Slot)</code></td>
+    <td width="49%" valign="top">The predicate is true if the facet describing the slot is not null.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>instance-of(Frame, Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the frame is an instance of the class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>is-class(Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if the parameter is a class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>is-concrete-class(Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if the parameter is a concrete class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>is-frame(Any)</code></td>
+    <td width="49%" valign="top">The predicate is true if the parameter is a frame.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>negative(Number)</code></td>
+    <td width="49%" valign="top">The predicate is true if the number is a negative number</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>not(Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true if the argument predicate is false, and vice versa.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>odd(Integer)</code></td>
+    <td width="49%" valign="top">The predicate is true if the integer is an odd integer.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>or(Predicate, Predicate)</code></td>
+    <td width="49%" valign="top">The predicate is true if either predicate in the argument list is true.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>own-facet-not-null(Facet, Frame, Slot)</code></td>
+    <td width="49%" valign="top">The predicate is true if the facet describing the slot is not null.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>own-slot-not-null(Slot, Frame)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the frame is not null.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>own-slot-of(Slot, Frame)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot is an own slot of the frame.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>positive(Number)</code></td>
+    <td width="49%" valign="top">The predicate is true if the number is a positive number.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>prefix-of(String, String)</code></td>
+    <td width="49%" valign="top">The predicate is true if the first parameter is a prefix of the second parameter.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>prime(Integer)</code></td>
+    <td width="49%" valign="top">The predicate is true if the integer is a prime integer.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-boolean-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type boolean.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-class-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type class.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-float-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type float.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-frame-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type frame.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-instance-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type instance.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-integer-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type integer.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-primitive-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is one of the primitive types, including boolean, string, integer, float, and symbol.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-single-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class allows only single value.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-string-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type string.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top"><code>slot-at-class-is-symbol-valued(Slot,
+      Class)</code></td>
+    <td width="49%" valign="top">The predicate is true if the slot belonging to the class is of value type symbol.</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top">&nbsp;</td>
+    <td width="49%" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top">&nbsp;</td>
+    <td width="49%" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top">&nbsp;</td>
+    <td width="49%" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top">&nbsp;</td>
+    <td width="49%" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="51%" valign="top">&nbsp;</td>
+    <td width="49%" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<hr>
+<p><font size="3">Next:</font></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

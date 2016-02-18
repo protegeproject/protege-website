@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Creating a Blank Query</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;Creating
+a Blank Query<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>You can create a blank query using the <a href="PAL_editor.htm"> PAL Expression
+Editor</a>.&nbsp;To do this, you can open the
+editor in one of three ways:</p>
+<ul>
+  <li>Directly create a <a href="#constraint">query at the PAL Queries Tab</a>&nbsp;</li>
+  <li>Create the query as an <a href="#instances">instance of
+    :PAL-CONSTRAINT</a> at the Instances Tab</li>
+  <li><a href="#class">Attach a query to a class</a> at the Classes Tab</li>
+</ul>
+<p>The first two methods give identical results; they just reflect different
+ways of viewing queries in Protégé. The third method actually <a href="attach_class_query.htm">attaches</a>
+the query to the class. Attaching a query to a class creates an
+implicit range definition over all instances of the class, for all variables
+that appear in the query statement and that are not defined by an explicit
+range definition.</p>
+<h2><a name="constraint"></a>At the Queries Tab</h2>
+<p>To open the editor at the Queries tab:&nbsp;</p>
+<ol>
+  <li>Go to the <a href="query_tab.htm">PAL Queries Tab</a></li>
+  <li>Click the Create <img border="0" src="images/Create.gif" width="15" height="15"> button at the
+    upper right of the Choose Queries pane.<br>
+    A new query is created and the editor opens in a separate window.<br>
+    <br>
+    <img border="0" src="images/create3.gif" width="295" height="190"><br>
+  </li>
+</ol>
+<h2><a name="instances"></a>At the Instances Tab</h2>
+<ol>
+  <li>Go to the Instances Tab.</li>
+  <li>Display the classes under :SYSTEM-CLASS, display the classes under
+    :CONSTRAINT, and click on :PAL-CONSTRAINT to highlight it.&nbsp;<br>
+    <br>
+    <img border="0" src="images/create3.gif" width="295" height="190"><br>
+  </li>
+  <li>Go to the Direct Instances pane and click the Create <img border="0" src="images/Create.gif" width="15" height="15"> 
+    button.<br>
+    A new query is created and the <a href="PAL_editor.htm"> PAL Expression
+    Editor</a> 
+    appears in the Forms pane of the Instances tab.</li>
+</ol>
+<h2><a name="class"></a>At the Classes Tab</h2>
+<p>To create a query at the Classes Tab, and <a href="attach_class_query.htm">attach</a>
+it to a class, you must first make sure the class is queriable. See <a href="queriable.htm">Making a Class Queriable</a>
+for more information.</p>
+<p>Once your class is queriable, you can create and attach a query:</p>
+<ol>
+  <li>Go to the Classes Tab.</li>
+  <li>Highlight the class to which you wish to attach the query to be
+    created.<br>
+    The Class Form for the selected class is displayed at the right of the
+    Classes Tab.</li>
+  <li>Click the Create <img border="0" src="images/Create.gif" width="15" height="15"> 
+    button at the upper right of the Class Queries pane in the Class
+    Form.&nbsp;<br>
+    A new query is created and the <a href="PAL_editor.htm"> PAL Expression
+    Editor</a> 
+    opens in a separate window.</li>
+</ol>
+<h2>Working With a New Query</h2>
+<p>Once the query has been created, you can:</p>
+<ul>
+  <li>Name it by typing directly in the <b>Name</b> field</li>
+  <li>Enter a description by typing directly in the <b>Description</b>
+    field.&nbsp;</li>
+  <li>Define variable ranges by typing directly in the Range area, or using the <a href="range.htm">Range Editor</a>.&nbsp;</li>
+  <li>Create a statement by typing directly in the Statement area, or using the <a href="statement_ed.htm">Statement Editor</a>.</li>
+</ul>
+<hr>
+<p>PAL Queries User Interface/Creating a Blank Query</p>
+
+<p><b>Next</b>: <a href="view_query.htm">Viewing a Query</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

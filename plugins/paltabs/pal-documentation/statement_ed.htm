@@ -1,0 +1,209 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Statement Editor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;The Statement Editor<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The <a href="language.htm">PAL Language</a> offers a way to express <a href="lang_const.htm">constraint
+statements</a> in a logical way. A PAL statement is composed of a set of
+embedded predicate and functional expressions that involve variables ranging
+over a set of values (<a href="lang_range_def.htm">range definitions</a>), and
+that ultimately return true or false on each particular instanciation of
+variables. The Statement editor of the <a href="PAL_editor.htm">The PAL Expression Editor</a>
+allows you to create statements in an interactive way. Based on user selections,
+the Statement editor creates skeletal statements involving predicates,
+variables, and functions. The user then fills the arguments in step-by-step. </p>
+
+<p align="center"><img border="0" src="images/statem2.gif" width="284" height="167"> </p>
+
+<p><b>Note:</b> The first time you use the PAL Expression Editor in your project, you may need to make sure that
+the PAL Expression Editor is set up on your constraints. See <a href="display_ed.htm">Configuring the PAL Expression Editor</a>
+for more information.</p>
+
+<p>The Statement editor offers the following functionality: </p>
+
+<ul>
+  <li>Double-clicking on a string (e.g., <i>Predicate</i>
+    or <i>Symbol</i>) opens a window that allows you to choose the appropriate
+    replacement.</li>
+  <li>A context-sensitive right-click statement menu (Command-click on the
+    Macintosh) allows you to choose a term type and have the editor fill in a
+    skeleton syntax with a placeholder argument for that term.</li>
+  <li>Statement buttons allow you to verify syntax, change indentation, add and
+    remove parentheses, and edit your statement.</li>
+</ul>
+<p align="center"><img border="0" src="images/statem3.gif" width="97" height="136"></p>
+
+<h2>Starting a New Statement</h2>
+
+<p>When the Statement window first opens for a new constraint or query, the
+window contains the string <i>(Predicate)</i>.</p>
+
+<p>You should always begin a constraint statement as follows:</p>
+
+<ul>
+  <li>For a new constraint, double-click on <i>(Predicate)</i> and select <i>forall</i>
+    from the Predicate window.</li>
+</ul>
+
+<p><b>Note</b>: A new query should start with <i>findall</i>
+ or <i>find n</i>. Due to a known bug, the Statement editor does not currently
+support the selection of <i>findall</i> and <i>find n</i> predicates. You can edit existing
+query statements, or enter <i>findall</i>
+ or <i>find n</i>  manually.</p>
+
+<h2>Double-Click Windows</h2>
+
+<p align="left">The placeholder arguments supplied by the Statement editor are
+italicized. Everything in italics needs to be replaced before the statement is
+complete. Double-clicking on a replaceable string displays a selection window.
+You can click on any of the following to replace it:</p>
+
+<ul>
+  <li>
+    <p align="left"><i>Any, Class, Facet, Frame, Function, Instance, Integer,
+    Number, Predicate, Slot, </i>and<i> Symbol.</i></li>
+</ul>
+<p align="left"><b>Note: </b>Even after one of these terms has been replaced with a
+specific instance, it is possible to edit it later by double-clicking. For
+example, when <i>Predicate</i> has been replaced with <font color="#0000FF">forall</font>,
+double-clicking on <font color="#0000FF">forall </font>will open the Predicate
+selection window.</p>
+
+<p align="left"><b>Note:</b> In the Statement editor, the term <i>Symbol</i>
+does not denote a symbol in the sense of a Protégé value type.
+Instead, it means a symbol in the logical language, i.e., an atomic value.</p>
+
+<p align="left">The dialogs you get by clicking on a replaceable string are of three types:</p>
+
+<ul>
+  <li>
+    <p align="left">Select Type Dialog</li>
+  <li>
+    <p align="left">Type-specific Dialogs </li>
+  <li>
+    <p align="left">Integer, Number, or Symbol Dialogs</li>
+</ul>
+<h3 align="left">The Select Type Dialog</h3>
+
+<p>Double-clicking on <i>Any</i> displays a window that allows you to choose the
+type of term you want. </p>
+
+<p align="center"><img border="0" src="images/statem1.gif" width="228" height="207"></p>
+
+<p align="left">Selecting :ANY does not do anything; it merely keeps the window
+open. Selecting any other type displays the selection window for that type.</p>
+
+<h3 align="left">Type-specific Dialogs</h3>
+
+<p align="left">All other term types, including Class, Facet, Frame, Function,
+Instance, Predicate, and Slot, have at least three areas. These areas appear,
+for example, in the dialog for Predicate shown here:</p>
+
+<p align="center"><img border="0" src="images/statem4.gif" width="403" height="277"></p>
+
+<ol>
+  <li>The <b>Pattern</b> entry bar, which allows you to type the beginning of a
+    selection you are looking for. Only selections that match the text in <b>Pattern</b>
+    are then displayed in the <b>Select</b> pane.<br>
+    <img border="0" src="images/statem6.gif" width="400" height="107"></li>
+  <li>The <b>Select</b> pane, which shows the list of available selections. You can scroll through this area and then highlight the
+    selection you want.<br>
+    <img border="0" src="images/statem7.gif" width="398" height="111"><br>
+    <b>Notes:</b>
+    <ul>
+      <li>For the <i>Predicate</i> and <i>Function</i> dialogs, the choices will
+    include those slots of <a href="lang_range_def.htm">ranged variables</a>
+    that can be used as a predicate or function in the current context. However,
+    if the variable range has been defined implicitly, by <a href="attach_class.htm">attachment
+    to a class</a>, the slots will not be made available in the dialog.</li>
+      <li>If you choose a slot or a class whose name contains a space, you will
+        need to enclose the name in single quotes. For instance, <i>my class</i>
+        must be written <i>'my class'</i>. The editor will not do this for you.</li>
+      <li>Due to the limitations of the current implementation, the list of selections
+    may include inappropriate choices. Inappropriate choices may appear for the
+    following choices:
+    <ul>
+      <li>For the <i>Instance</i> selection.</li>
+      <li>For the <i>Predicate </i> selection.</li>
+    </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The <b>Description</b>  pane, which gives a brief description of the selected
+    term. Not all terms have a description.<br>
+    <img border="0" src="images/statem8.gif" width="403" height="83"></li>
+</ol>
+<h3> Integer, Number, and Symbol Dialogs</h3>
+<p>The <b>Integer</b>,<b> Number</b>, and <b>Symbol</b> windows have an
+additional entry bar at the top of the window.&nbsp;&nbsp;</p>
+<p align="center"><img border="0" src="images/statem10.gif" width="245" height="252"></p>
+<ul>
+  <li>The <b>Integer/Number/Symbol</b> text field, which allows you to enter a string directly.
+    Typing a string in this entry bar and clicking OK replaces the previous text
+    with the string you typed.</li>
+</ul>
+<p align="center"><img border="0" src="images/statem9.gif" width="230" height="32"></p>
+<p align="center"><img border="0" src="images/statem5.gif" width="368" height="32"></p>
+<h2>Editing Buttons</h2>
+<p>The Editing Buttons offer the following functionality:</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/check.gif" width="16" height="15"></td>
+    <td width="89%"><b>Check Syntax</b>: Verifies the syntax of the current
+      statement. Validation errors are shown in the pane at the bottom of the
+      Statement window. These errors are similar to those shown when <a href="warn_const.htm">verifying
+      constraints</a> at the Constraints tab.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/format.gif" width="16" height="15"></td>
+    <td width="89%"><b>Format</b>: Formats the statement indentation. </td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/addParen.gif" width="16" height="15"></td>
+    <td width="89%"><b>Add Parentheses</b>: Adds parentheses around the
+      highlighted text. </td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/removeParen.gif" width="16" height="15"></td>
+    <td width="89%"><b>R</b><b>emove Parentheses</b>: Removes parentheses around
+      the highlighted text. For this button to work, the highlight must begin
+      and end on the beginning and end of a correct pair of parentheses. </td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Cut.gif" width="16" height="15"></td>
+    <td width="89%"><b>Cut</b>: Removes the highlighted text and copies it to
+      the clipboard.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Copy.gif" width="16" height="15"></td>
+    <td width="89%"><b>Copy</b>: Copies the highlighted text to the clipboard.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Paste.gif" width="16" height="15"></td>
+    <td width="89%"><b>Paste</b>: Inserts the contents of the clipboard at the
+      cursor.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Delete.gif" width="16" height="15"></td>
+    <td width="89%"><b>Delete</b>: Deletes the highlighted text.</td>
+  </tr>
+</table>
+<hr>
+<p>The PAL Expression Editor/The Statement Editor</p>
+
+<p><b>Next</b>: <a href="sample_constraint.htm">Creating a Sample Constraint</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

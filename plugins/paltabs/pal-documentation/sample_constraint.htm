@@ -1,0 +1,231 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Creating a Sample Constraint</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;Creating
+a Sample Constraint<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The <a href="PAL_editor.htm">PAL Expression Editor</a> allows you to
+create constraints in a semi-structured way.&nbsp; This example shows how to
+create a constraint using the expression editor.&nbsp;</p>
+<p>Like any programmatic editor, you need to have an idea of the syntax and
+structure of the constraint you wish to create.&nbsp; The editor will then help
+you to maintain correct syntax.</p>
+<p>We will create a copy of the constraint that states that articles should be
+indexed with more than two keywords. The syntax is:</p>
+<table width="581">
+  <tr>
+    <td style="TEXT-ALIGN: left; VERTICAL-ALIGN: top" width="573"><em>(<font color="#0000FF">defrange</font> ?article
+      <font color="#0000FF"> :FRAME</font> Article)</em></td>
+  </tr>
+  <tr>
+    <td style="TEXT-ALIGN: left; VERTICAL-ALIGN: top" width="573"><em>(</em><em>(<font color="#0000FF">forall</font> ?article&nbsp;<br>
+      (<font color="#0000FF">&gt;</font> (number-of-slot-values keywords ?article) 2))</em></td>
+  </tr>
+</table>
+<h3>Getting Started</h3>
+<p>Start by opening the <a href="PAL_editor.htm">PAL Expression Editor</a>. To do this:</p>
+<ol>
+  <li>Go to the <a href="constraints_tab.htm">PAL Constraints tab</a>.</li>
+  <li>Click the Create <img border="0" src="images/Create.gif" width="15" height="15"> 
+    button at the top right of the Choose Constraints pane.<br>
+    The <a href="PAL_editor.htm"> PAL Expression Editor</a> appears.</li>
+</ol>
+<p>OR</p>
+<ol>
+  <li>Go to the Instances tab.</li>
+  <li>Display the classes under :SYSTEM-CLASS, display the classes under
+    :CONSTRAINT, and click on :PAL-CONSTRAINT to highlight it.&nbsp;<br>
+    <br>
+    <img border="0" src="images/create1.gif" width="236" height="162"><br>
+  </li>
+  <li>Go to the Direct Instances pane and click the Create <img border="0" src="images/Create.gif" width="15" height="15"> 
+    button.<br>
+    A new constraint is created and the <a href="PAL_editor.htm"> PAL Expression
+    Editor</a>  appears in the
+    Forms pane of the Instances tab.</li>
+</ol>
+<p>You can also create a constraint at the <a href="constraints_tab.htm">PAL Constraints Tab</a>
+or at the Classes Tab. See <a href="create_constraint.htm">Creating a Blank Constraint</a>
+for more information.</p>
+<h3>Giving the Constraint a Name and Description</h3>
+<ol>
+  <li>Name the constraint by typing <i> articles-more-than-2-keywords-copy</i> in the Name entry bar.<br>
+    <br>
+    <img border="0" src="images/sample8.gif" width="254" height="60"><br>
+  </li>
+  <li>Type in the following description in the Description Entry Box<br>
+    <i>All articles should be indexed with more than two keywords (equivalent to  minimum cardinality facet on slot attachment).<br>
+    <br>
+    <img border="0" src="images/sample9.gif" width="245" height="200"><br>
+    </i></li>
+</ol>
+<h3>Defining Variable Ranges</h3>
+<p>It's a good idea to always start a constraint by defining the range of each
+variable you intend to use. This also declares the variable names for use by the
+Statement part of the editor.&nbsp;</p>
+<p>To define ranges, use the Range editor area in the PAL Expression
+Editor.</p>
+<p align="center"><img border="0" src="images/sample19.gif" width="259" height="156"></p>
+<p align="left">The variable we wish to declare is ?article, and we want to
+allow it to take on the values of
+    instances in the Article class. The desired syntax is:<br>
+<em>(<font color="#0000ff">defrange</font>
+ ?article <font color="#0000ff">:FRAME</font>  Article)</em>.&nbsp;</p>
+<ol>
+  <li>Right click in the <a href="range.htm"> Range editor</a> in the PAL Expression
+    Editor. (Macintosh users, hold down the Comand key while clicking
+    the mouse.)</li>
+  <li>To set a range, first select <b>defrange</b>
+    from the pop-up menu.&nbsp;A second menu gives the options for <i>defrange</i>.</li>
+  <li>To specify that you will be ranging over instances of a class, select <b>
+    FRAME</b> from the second pop-up menu. A third menu gives you the choices
+    for a frame.</li>
+  <li>Select <b>Without Slot</b>&nbsp;to have the variable range over <i>all</i>
+    instances of the selected class.&nbsp;<br>
+    <br>
+    <img border="0" src="images/defr_men.gif" width="288" height="165"><br>
+  </li>
+  <li>You now have the following syntax:<br>
+    <i>(<font color="#0000FF">defrange</font> varName <font color="#0000FF"> :FRAME</font>
+    frameName)<br>
+    </i>The expression editor has created a skeleton variable declaration and range
+    definition.&nbsp;</li>
+  <li>To name your variable, double-click on <i> varName. </i>An entry box
+    appears. Note that the entry box tells you that the variable you are
+    declaring is a symbol. Symbols in the editor include all defined variables
+    and their slots.<i><br>
+    <br>
+    <img border="0" src="images/symbol.gif" width="183" height="87"><br>
+    </i></li>
+  <li>You will name the variable <i>?article</i>. Type <i>?article </i>in the entry bar and click OK. Note that preceding a
+    variable with a ? states that it is a local variable.</li>
+  <li>To select a range class for your variable, double-click <i>frameName</i>. The
+    editor displays a list of all possible class names. Using this method of
+    choosing a class ensures that you enter a legal class. <b>Note:</b> If you choose a class whose name contains a space, you must
+    manually enclose the name in single quotes after selecting it. For example, <i>my
+    class</i> must be written as <i>'my class'</i>.<br>
+    <br>
+    <img border="0" src="images/create2.gif" width="328" height="382"><br>
+  </li>
+  <li>Select Article and click OK.</li>
+</ol>
+<p><b>Note:</b>  If this constraint were <a href="attach_class.htm">attached</a>
+to the Article class, the range definition for <i> ?article</i> could be omitted.
+In this case (as for any unranged variable), the variable automatically ranges over the instances of Article.</p>
+<h3>Creating the Statement</h3>
+<p>To create a statement, use the <a href="statement_ed.htm"> Statement editor</a>
+area.</p>
+<p align="center"><img border="0" src="images/sample10.gif" width="275" height="113"></p>
+<p>The statement we wish to create is:</p>
+<p><em>((<font color="#0000FF">forall</font> ?article&nbsp;<br>
+      (<font color="#0000FF">&gt;</font> (number-of-slot-values keywords ?article) 2))</em></p>
+<ol>
+  <li>To select the overall predicate, <em><font color="#0000FF">forall</font>  </em>,
+    double-click the word <i>(Predicate)</i> in the editor.<br>
+    The Predicate window opens, showing a list of all possible predicates.</li>
+  <li>To narrow down the number of options, you can type the first few letters, <em><font color="#0000FF">for</font></em>,
+    of the predicate you want.&nbsp;</li>
+  <li>Select <em><font color="#0000FF">forall</font><i>&nbsp;</i></em> in the
+    Predicate window and click OK.<br>
+    <br>
+    <img border="0" src="images/sample6.gif" width="403" height="277"><br>
+    <br>
+    The editor automatically fills in the skeleton syntax for the predicate you have
+    chosen.<br>
+    <br>
+    <img border="0" src="images/sample12.gif" width="187" height="83"><br>
+  </li>
+  <li>To select the variable on which the <em><font color="#0000FF">forall</font></em>
+    predicate should apply, double-click the word <i>Symbol</i>.<br>
+    The Symbol dialog box shows all defined variables and those related slots
+    and functions that can return a symbol. In this
+    case, we have only defined <i>?article</i>.</li>
+  <li>Select <i>?article</i> and click OK.<br>
+    <br>
+    <img border="0" src="images/sample13.gif" width="245" height="252"><br>
+    <br>
+    The editor fills in the symbol you have selected.<br>
+    <br>
+    <img border="0" src="images/sample14.gif" width="273" height="83"><br>
+  </li>
+  <li>Now we need to fill out the new (inner) predicate. Double-click <i>(Predicate)</i> in the editor and select &gt;<i>(Number,Number)</i>
+    from the Predicate window.<br>
+    <br>
+    <img border="0" src="images/sample15.gif" width="403" height="277"><br>
+    <br>
+    The skeleton syntax for that new predicate is filled in by the editor.<br>
+    <br>
+    <img border="0" src="images/sample16.gif" width="281" height="72"><br>
+  </li>
+  <li>Now we need to fill in the number arguments. To do this, double-click on the first <i>Number</i>.<br>
+    The Number dialog box displays the possible replacement arguments (i.e.,
+    functions, or slots used as functions, that return numbers).<br>
+    <br>
+    <img border="0" src="images/sample17.gif" width="367" height="252"><br>
+  </li>
+  <li>Choose <i>number-of-slot-values(Slot,Frame)</i> and click OK.<br>
+    <br>
+    <img border="0" src="images/sample18.gif" width="281" height="96"><br>
+    <br>
+    The editor fills in the value you have chosen.
+  </li>
+  <li>In our case, we have only one declared variable, so the possible slots
+    that can replace <i>Slot</i> will all be related to that variable. In general, however, we may have more
+    than one variable, so it is better to pick the frame first, in order to
+    narrow the scope of possible slot replacements. To do this,
+    double-click on <i>Frame</i>.<br>
+    The Frame dialog shows the possible frame replacements for that function.<br>
+    <br>
+    <img border="0" src="images/sample1.gif" width="403" height="277">
+    <br>
+  </li>
+  <li>Choose <i>?article</i> and click OK. Once again, the syntax is generated.<br>
+    <br>
+    <img border="0" src="images/sample2.gif" width="272" height="98">
+    <br>
+  </li>
+  <li>Now we can choose a slot related to <i>?article</i>. Double-click on <i>Slot</i>.<br>
+    The Slot window opens. Because the <i>?article</i> variable is defined to
+    range over the Article class, the slots that are attached to the Article
+    class are listed.&nbsp;<br>
+    <br>
+    <img border="0" src="images/sample3.gif" width="403" height="277">
+    <br>
+  </li>
+  <li>Choose <i>keywords</i> and click OK.<br>
+    <br>
+    <img border="0" src="images/sample4.gif" width="276" height="99">
+    <br>
+  </li>
+  <li>To put in a number, double-click <i>Number</i> and use the number text
+    field. Alternatively, simply highlight <i>Number</i> and type
+    2.<br>
+    <br>
+    <img border="0" src="images/sample7.gif" width="367" height="252"><br>
+    <br>
+    <br>
+    <img border="0" src="images/sample5.gif" width="277" height="99">
+    <br>
+  </li>
+</ol>
+<p>To check the syntax, click on the check <img border="0" src="images/check.gif" width="16" height="15">
+button. To check violations of the constraints, use the <b>Evaluate indicated
+constraints</b> in the <a href="choose_const.htm">Choose Constraints Pane</a> at
+the <a href="constraints_tab.htm">PAL Constraints Tab</a>.</p>
+<hr>
+<p>The PAL Expression Editor/Creating a Sample Constraint</p>
+
+<p><b>Next</b>: <a href="known_bugs.htm">Known Problems</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

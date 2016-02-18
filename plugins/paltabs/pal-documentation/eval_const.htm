@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Evaluating Constraints</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;<b>Evaluating Constraints</b><br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>You can evaluate constraints using the <a href="constraints_tab.htm"> PAL
+Constraints Tab</a>. The PAL engine will check that the instances in the
+knowledge base conform to your constraints and the <a href="constraints_tab.htm"> PAL
+Constraints Tab</a> will display any instances that violate
+them.</p>
+<p>To evaluate constraints:</p>
+<ol>
+  <li>Go to the <a href="constraints_tab.htm"> PAL Constraints Tab</a> and make sure
+    the constraint(s) you want to evaluate are displayed. See <a href="disp_const_const.htm">Displaying Constraints at the Constraints Tab</a>
+    for more information.</li>
+  <li>Tag the constraints you want to evaluate by clicking in the <b>Evaluate?</b>
+    column. Tag constraints are shown with a check <img border="0" src="images/check.gif" width="16" height="15">.</li>
+  <li>Click the <b>Evaluate indicated constraints</b> button.<br>
+    The PAL engine evaluates the instances of each tagged constraint. Constraints
+    that are not violated are marked with a green checkmark; constraints which
+    are violated by some instance are marked with a red warning.</li>
+  <li>To see details about a particular constraint, click on the constraint to
+    select it.&nbsp;<br>
+    The area at the right of the PAL Constraints Tab displays the instances which
+    violate the constraints grouping them by the name of the variable that they
+    fill in one violated occurrence of the constraint. In some cases, for clarity, you might want to declare a variable
+    which is otherwise unused so that the specific instances that fill that
+    variable on violation will appear when the constraint is
+    evaluated.</li>
+</ol>
+<p>For example, in this report for the editor-employees-salary-constraint in the
+newspaper example, the following violating instances are displayed:</p>
+<p>&nbsp;</p>
+<p align="center"><img border="0" src="images/eval_c2.gif" width="453" height="81"></p>
+<p align="center">&nbsp;</p>
+<p>We see that in one instance, Joe Schmo earns more than his editor Mr.
+Science. Similarly, Larry Tennis-nut makes more than Sports Nut.</p>
+<p>You can view the Instance Form for any of the displayed instances by clicking
+on the instance to highlight it and then clicking the View <img border="0" src="images/View.gif" width="15" height="15">
+button at the upper right of the pane.</p>
+<hr>
+<p>PAL Constraints User Interface/Evaluating Constraints</p>
+
+<p><b>Next</b>: <a href="const_trace.htm">Tracing Constraint Functions and Predicates</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

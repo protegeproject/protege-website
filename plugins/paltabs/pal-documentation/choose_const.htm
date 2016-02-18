@@ -1,0 +1,144 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Choose Constraints Pane</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> The
+Choose Constraints Pane<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The Choose Constraints pane at the&nbsp;<a href="constraints_tab.htm"> PAL Constraints Tab</a>
+allows you to <a href="disp_const_const.htm">display</a>, <a href="warn_const.htm">verify</a>,
+<a href="eval_const.htm">evaluate</a>, <a href="view_constraint.htm">view</a>,
+and <a href="create_constraint.htm">create</a> constraints.</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><img border="0" src="images/choose_const.gif" width="663" height="308"></p>
+
+<p align="center">&nbsp;</p>
+
+<h2><a name="buttons"></a>Constraints Buttons</h2>
+
+<p>The Constraints Buttons in the upper right of the Choose Constraints Pane at
+the <a href="constraints_tab.htm">PAL Constraints Tab</a> allow you to tag and
+untag constraints for verification, display constraints at the
+Constraints Tab, and create, view, and delete constraints.</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/CheckAll.gif" width="15" height="15"></td>
+    <td width="89%"><b>Tag All</b>: Tags all displayed constraints for <a href="warn_const.htm">
+      verification</a> or <a href="eval_const.htm">evaluation</a>. Tagged
+      constraints are shown with a check <img border="0" src="images/check.gif" width="16" height="15">
+      in the <b>Evaluate?</b> column to the left of the constraint.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/UncheckAll.gif" width="15" height="15"></td>
+    <td width="89%"><b>Untag All</b>: Untags all displayed constraints for <a href="warn_const.htm">
+      verification</a> or <a href="eval_const.htm">evaluation</a>. Untagged
+      constraints are shown with a blank box in the <b>Evaluate?</b> column to
+      the left of the constraint.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/SuperPlus.gif" width="16" height="16"></td>
+    <td width="89%"><b>Display All:</b> Displays all constraints currently in the
+      knowledge base at the <a href="constraints_tab.htm">PAL Constraints Tab</a></td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/View.gif" width="15" height="15"></td>
+    <td width="89%"><b>View Constraint</b>: Opens the <a href="PAL_editor.htm"> PAL Expression Editor</a>
+      in a separate window, and allows you to <a href="view_constraint.htm">view</a>
+      the selected constraint.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Create.gif" width="15" height="15"></td>
+    <td width="89%"><b>Create Constraint</b>: <a href="create_constraint.htm">Creates</a>
+      a new constraint and opens the <a href="PAL_editor.htm"> PAL Expression Editor</a>
+      in a separate window.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/AddNew.gif" width="19" height="19"></td>
+    <td width="89%"><b>Add Constraint to List</b>: Opens the Select Instances
+      dialog and allows you choose the constraint(s) you wish to have displayed at
+      the Constraints Tab.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/RemoveNew.gif" width="19" height="19"></td>
+    <td width="89%"><b>Remove Constraint From List</b>: Removes the selected
+      constraint(s) from the list of constraints visible at the Constraints Tab.
+      The constraint(s) remain in the knowledge base and are still <a href="disp_const_inst.htm">displayed
+      at the Instances Tab</a>. They can also be added back to the list at the
+      Constraints Tab later. It
+      is best to click the constraint you wish to remove from the list
+      immediately before you remove it.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Delete.gif" width="16" height="15"></td>
+    <td width="89%"><b>Delete Constraint</b>: Removes selected constraint(s)
+      from knowledge base completely. Removed constraints cannot be viewed
+      elsewhere or recovered. It
+      may be safest to <a href="delete_constraint.htm#instance"> delete constraints from the Instances
+      Tab</a>, where you can
+      see which constraints are selected.</td>
+  </tr>
+</table>
+<h2><a name="columns"></a>Constraint Columns</h2>
+
+<p>The constraint columns give information about the displayed constraints.</p>
+
+<h3>Evaluate?</h3>
+
+<p>Indicates which constraints are tagged for verification or evaluation. Tagged
+constraints are indicated with a check <img border="0" src="images/check.gif" width="16" height="15">.
+You can tag or untag a constraint by clicking anywhere in the <b> Evaluate</b> area to
+the left of the constraint. You can also tag and untag all constraints using the
+<b>
+Tag All</b> <img border="0" src="images/CheckAll.gif" width="15" height="15">  and
+<b>
+Untag All</b> buttons.</p>
+
+<h3><a name="status"></a>Status</h3>
+
+<p>Indicates the result of verification or evaluation:</p>
+<ul>
+  <li>After the button <b>Warn about indicated constraints</b> has been clicked,
+    a green check sign in the Status column indicates that the constraint is
+    syntactically correct. A red warning sign indicates that there are syntactic
+    warnings or errors.&nbsp;Selecting a constraint that has a red warning sign
+    will drive the Warning and Error pane to display the warning information.</li>
+  <li>After the button <b>Evaluate indicated constraints</b> has been clicked, a
+    green check sign in the Status column indicates that all instances meet the
+    constraint. A red warning sign indicates that there are instances which
+    violate the constraint.&nbsp;Selecting a constraint that has a red warning
+    sign will drive the Query Response pane to display the warning information.</li>
+</ul>
+<h3>Constraint</h3>
+<p>Gives the name of the constraint. You can select a constraint by clicking in
+this column; however, note that selected constraints are not highlighted.</p>
+<h2>Warn/Evaluate Buttons</h2>
+<p>The buttons at the bottom of the Choose Constraints pane allow you to
+validate constraint syntax and evaluate whether there are any instances in the
+knowledge base that
+violate the tagged constraints.</p>
+<ul>
+  <li><b>Warn about indicated constraints</b> validates the syntax of all tagged
+    constraints. The result is indicated in the <a href="#status">Status</a>
+    column.&nbsp;&nbsp;</li>
+  <li><b>Evaluate indicated constraints</b> evaluates whether any instances in
+    the knowledge base violate the tagged constraints.&nbsp; The result is indicated in
+    the <a href="#status">Status</a> column.&nbsp;</li>
+</ul>
+<hr>
+<p>PAL Constraints User Interface/The Choose Constraints Pane</p>
+
+<p><b>Next</b>: <a href="attach_pane.htm">The Constraints Attachment Pane</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

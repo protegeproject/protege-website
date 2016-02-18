@@ -1,0 +1,255 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Supported Predicates and Functions in PAL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> Supported
+Predicates and Functions in PAL<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><h2><a name="PAL Predicates">PAL Predicates</a></h2>
+<p>PAL supports mostly <a href="#Frame-system predicates">predicates that test
+the properties of frame arguments</a>; PAL also includes a limited number of <a href="#Arithmetic predicates">arithmetic</a>
+and <a href="#String predicates">string</a> predicates, plus <a href="#Miscellaneous predicates">miscellaneous</a>
+predicates.</p>
+<p>In addition, any slot of a knowledge base can be used as a unary predicate,
+the first argument being the class to which the slot is attached and the second
+argument being a slot value. When multi-valued slots are used as predicates,
+then the predicate will be tested with each value of the slot.</p>
+<p>Note on the strategy for evaluating predicates:
+<ul>
+  <li>Evaluation is lazy
+  <li>Evaluation is entire ­- the domain of predicates is the entire universe
+  <li>Inappropriate arguments are simply false
+  <li>There is no such thing as a list. Iteration is a procedural concept which
+    maps to either forall or exists</li>
+</ul>
+<p><b>Note: </b>When using a class or slot name that contains a space, you must
+enclose the name in single quotes. For example, <i>my class</i> must be written
+as <i>'my class'</i>.</p>
+<h3><a name="Frame-system predicates">Frame-system predicates</a></h3>
+<h4>Frame-level predicates</h4>
+<ul>
+  <li>is-frame
+    (1 argument: any type)</li>
+</ul>
+<h4>Class-level predicates</h4>
+<ul>
+  <li>direct-subclass-of
+    (2 arguments: the subclass and the superclass)
+  <li>direct-superclass-of
+    (2 arguments: the superclass and the subclass)
+  <li>is-class
+    (1 argument: any type)
+  <li>is-concrete-class
+    (1 argument: any type)
+  <li>subclass-of
+    (2 arguments: the subclass and the superclass)
+  <li>superclass-of
+    (2 arguments: the superclass and the subclass)</li>
+</ul>
+<h4>Slot-level predicates</h4>
+<ul>
+  <li>allowed-slot-value
+    (3 arguments: slot, class that slot is attached to, a value)
+  <li>allowed-slot-value-type
+    (3 arguments: slot, class that slot is attached to, class which defines
+    value type)
+  <li>direct-template-slot-of
+    (2 arguments: a slot and a class)
+  <li>own-slot-has-duplicate-values
+    (2 arguments: a slot and a frame)
+  <li>own-slot-not-null
+    (2 arguments: a slot and a frame)
+  <li>own-slot-of
+    (2 arguments: a slot and a frame)
+  <li>slot-at-class-is-boolean-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-class-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-float-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-frame-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-instance-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-integer-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-primitive-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-single-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-string-valued
+    (2 arguments: a slot and a class)
+  <li>slot-at-class-is-symbol-valued
+    (2 arguments: a slot and a class)
+  <li>slot-has-duplicate-values
+    (2 arguments: a slot and a frame)
+  <li>slot-is-boolean-valued
+    (1 argument: the slot in question)
+  <li>slot-is-class-valued
+    (1 argument: the slot in question)
+  <li>slot-is-float-valued
+    (1 argument: the slot in question)
+  <li>slot-is-frame-valued
+    (1 argument: the slot in question)
+  <li>slot-is-instance-valued
+    (1 argument: the slot in question)
+  <li>slot-is-integer-valued
+    (1 argument: the slot in question)
+  <li>slot-is-primitive-valued
+    (1 argument: the slot in question)
+  <li>slot-is-single-valued
+    (1 argument: the slot in question)
+  <li>slot-is-string-valued (1
+    argument: the slot in question)
+  <li>slot-is-symbol-valued
+    (1 argument: the slot in question)
+  <li>slot-not-null
+    (2 arguments: a&nbsp;slot and a frame)
+  <li>slot-of
+    (2 arguments: a&nbsp;slot and a frame)
+  <li>template-slot-has-duplicate-values
+    (2 arguments: a slot and a frame)
+  <li>template-slot-not-null
+    (2 arguments: a slot and a class)
+  <li>template-slot-of
+    (2 arguments: a slot and a class)</li>
+</ul>
+<h4>Facet-level predicates</h4>
+<ul>
+  <li>facet-not-null
+    (3 arguments: a&nbsp;facet, a frame, and a slot)
+  <li>own-facet-not-null
+    (3 arguments: a facet, a frame, and a slot)
+  <li>template-facet-not-null
+    (3 arguments: a&nbsp;facet, a class, and a slot)</li>
+</ul>
+<h4>Instance-level predicates</h4>
+<ul>
+  <li>direct-instance-of
+    (2 arguments: a frame and a class)
+  <li>instance-of
+    (2 arguments: a frame and a class)</li>
+</ul>
+<p>&nbsp;</p>
+<h3><a name="Arithmetic predicates">Arithmetic predicates</a></h3>
+<ul>
+  <li>even
+    (1 argument: an integer)
+  <li>negative
+    (1 argument: a number)
+  <li>odd
+    (1 argument: an integer)
+  <li>positive
+    (1 argument: a number)
+  <li>prime
+    (1 argument: an integer)
+  <li>&lt;
+    (2 arguments, both numbers)
+  <li>&gt;
+    (2 arguments, both numbers)
+  <li>zero</li>
+</ul>
+<p>&nbsp;</p>
+<h3><a name="String predicates">String predicates</a></h3>
+<ul>
+  <li>prefix-of
+    (2 arguments: the smaller string and the larger string)
+  <li>substring-of
+    (2 arguments: the smaller string and the larger string)
+  <li>suffix-of
+    (2 arguments: the smaller string and the larger string)</li>
+</ul>
+<p>&nbsp;</p>
+<h3><a name="Miscellaneous predicates">Miscellaneous predicates</a></h3>
+<ul>
+  <li>element-of
+    (2 arguments, currently broken)</li>
+</ul>
+<hr>
+<h2><a name="PAL Functions">PAL Functions</a></h2>
+<p>PAL supports <a href="#Frame-system functions">functions that test argument
+frames</a>, as well as <a href="#Coercion&nbsp; functions">type-coercion</a>
+functions and a few <a href="#Arithmetic functions">arithmetic</a> functions.</p>
+<p>In addition, any slot of a knowledge base can be used as a function, the only
+argument being the class to which the slot is attached, and the return type
+being the value-type of the slot.&nbsp; However, multi-valued slots are not very
+useful as functions, because in this case the element-of predicate is broken.</p>
+<p>Note on the strategy for evaluating functions:
+<ul>
+  <li>Evaluation is lazy
+  <li>Validation is entirely on number of arguments
+  <li>Types are cast, not coerced
+  <li>Type checking is, in general, impossible</li>
+</ul>
+<p><b>Note: </b>When using a class or slot name that contains a space, you must
+enclose the name in single quotes. For example, <i>my class</i> must be written
+as <i>'my class'</i>.</p>
+<h3><a name="Frame-system functions">Frame-system functions</a></h3>
+<ul>
+  <li>get-class&nbsp;
+    (1 argument: a frame. Return type is class.)
+  <li>number-of-own-slot-values
+    (2 arguments: a slot and a frame. Return type is integer.)
+  <li>number-of-slot-values
+    (2 arguments: a slot and a frame. Return type is integer.)
+  <li>number-of-template-slot-values
+    (2 arguments: a slot and a frame. Return type is integer)</li>
+</ul>
+<p>&nbsp;</p>
+<h3><a name="Coercion&nbsp; functions">Coercion&nbsp; functions</a></h3>
+<ul>
+  <li>coerce-to-class
+    (1 argument: anything will do. Return type is class.)
+  <li>coerce-to-facet
+    (1 argument: anything will do. Return type is facet.)
+  <li>coerce-to-frame
+    (1 argument: anything will do. Return type is frame.)
+  <li>coerce-to-instance
+    (1 argument: anything will do. Return type is instance.)
+  <li>coerce-to-integer
+    (1 argument: anything will do. Return type is integer.)
+  <li>coerce-to-number
+    (1 argument: anything will do. Return type is number.)
+  <li>coerce-to-slot
+    (1 argument: anything will do. Return type is slot.)
+  <li>coerce-to-string
+    (1 argument: anything will do. Return type is string.)
+  <li>coerce-to-symbol
+    (1 argument: anything will do. Return type is symbol.)</li>
+</ul>
+<p>&nbsp;</p>
+<h3><a name="Arithmetic functions">Arithmetic functions</a></h3>
+<ul>
+  <li>+
+    (2 arguments: both numbers. Return type is number.)
+  <li>-
+    (2 arguments: both numbers. Return type is number.)
+  <li>*
+    (2 arguments: both numbers. Return type is number.)
+  <li>/
+    (2 arguments: both numbers. Return type is number.)
+  <li>round
+    (1 arguments: a number. Return type is integer.)
+  <li>truncate
+    (1 arguments: a number. Return type is integer.)</li>
+</ul>
+
+<p>&nbsp;</p>
+<hr>
+<p>The PAL Language and Frames/Supported Predicates and Functions in PAL
+</p>
+
+<p><b>Next</b>: The User Interface/<a href="constraints_tab.htm">The PAL Constraints Tab</a>
+</p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

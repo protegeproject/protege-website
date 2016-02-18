@@ -1,0 +1,108 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>PAL Conceptual Framework</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> PAL
+Conceptual Framework<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>PAL provides a set of special-purpose frames to hold constraints and queries
+that are added to a Protégé knowledge base, respectively the <em>:PAL-CONSTRAINT</em>
+and the <em>PAL-QUERY</em> classes. Specifically, a PAL constraint is an
+instance of the <em>:PAL-CONSTRAINT</em> class and a PAL query is an instance of
+the <em>PAL-QUERY</em> class. Both classes have the following slots attached to
+them:
+<ul>
+  <li><em>:PAL-name</em>, which holds a label for the constraint or query;
+  <li><em>:PAL-documentation</em>, which holds a natural language description of
+    the constraint or query;
+  <li><em>:PAL-range</em>, which holds the definition of local and <a href="lang_range_def.htm#global"> global</a>
+    variables that appear in the statement;
+  <li><em>:PAL-statement</em>, which holds the sentence of the constraint or
+    query.</li>
+</ul>
+<h2>Creation of a constraint or query</h2>
+<p>To create a PAL constraint (or a PAL query), one simply needs to create a new
+instance of the <em>:PAL-CONSTRAINT</em> class (or of the <em>PAL-QUERY</em>
+class), using the <a href="http://protege.stanford.edu/doc/users_guide/index.html">Instance
+tab</a> or the <a href="constraints_tab.htm"> PAL Constraints Tab</a> (or the <a href="query_tab.htm">PAL Queries Tab</a>)
+of Protégé. Then, one needs to fill-in the slots listed above with
+valid PAL sentences. The <em>PalConstraintWidget</em> and the <em>PalRangeWidget</em>
+are two slot widgets that provide a <a href="PAL_editor.htm">structured
+editor</a> to enter valid PAL range definitions and statements. Normally, these two
+widgets are set by default on the knowledge-entry forms for the instances of <em>:PAL-CONSTRAINT</em>
+and <em>PAL-QUERY</em>. If they are not set, see <a href="display_ed.htm">Configuring the PAL Expression Editor</a>
+for more information.</p>
+<h3>Important note</h3>
+<p>The :PAL-CONSTRAINT class comes as part of the <a href="http://protege.stanford.edu/plugins/paltabs/pal.zip">PAL
+plugin</a>, and appears in the subtree of system classes for Protégé (under
+the :SYSTEM-CLASS root class). Constraint classes are system classes and are
+written with a colon (:) in front of the name.</p>
+<p>PAL-QUERY does not come as part of the PAL plugin: This class is available in
+the <em>pal_query.pprj</em> project, that needs to be included in the working
+project. The <em>pal_query.pprj</em> project does come as part of the Protege
+release, though, in the <em>projects</em> subdirectory of the <em>Protege-2000</em>
+installation directory (it is also available with the <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/pal_example_project.zip"><em>newspaper</em>
+sample project</a>). Once this project included in the working project, the <em>PAL-QUERY</em>
+class also appears in the <em>:SYSTEM-CLASS</em>  subtree. Query classes are
+written without a colon.</p>
+<h2>Attachment of a constraint to a class and implicit range definition</h2>
+<p>Another way of creating a PAL constraint for a class is to use the <em>Constraints</em>
+widget that appears on the form for every class. As a result of clicking the
+&quot;C&quot; button, Protégé creates a new instance of the <em>:PAL-CONSTRAINT</em>
+class and <a href="attach_class.htm"> attaches</a> it to the selected class.&nbsp;</p>
+<p>In that case, all variables that are not defined within a range in the <em>:PAL-range</em>
+slot implicitly range over all instances of that class. In addition, all
+unquantified variables are given an implicit quantification over that implicit
+range. In this case, you could omit a <i>defrange</i> statement for that
+variable. This can be used when you want the <i>defrange</i> of the constraint
+to apply to multiple classes that are not subclasses of a single class, as
+otherwise you would have to write the constraint in the scope of each
+class.&nbsp; However, this should be used with caution, because if a constraint
+is de-attached from all of its classes, it will lose its implicit range
+definitions, and will have unbound variables.&nbsp;</p>
+<p>This screen shot below shows the <em>Editor</em> class, which has the example
+constraint about editors' salary attached to it (top right box). This screen
+shot also shows the <em>:SYSTEM-CLASS</em> subtree with the <em>:PAL-CONSTRAINT</em>
+and <em>PAL-QUERY&nbsp;</em>classes.</p>
+<table width="85%" border="1">
+  <tbody>
+    <tr>
+      <td align="middle" width="50%"><img border="0" src="images/lang_f1.gif" width="988" height="591"></td>
+    </tr>
+  </tbody>
+</table>
+<p>The screen shot below shows the example constraint about the salary of an
+editor formalized as an instance of the&nbsp;<em>&nbsp; :PAL-CONSTRAINT</em>
+class:</p>
+<table width="85%" border="1">
+  <tbody>
+    <tr>
+      <td align="middle" width="50%"><img border="0" src="images/lang_f2.gif" width="973" height="389"></td>
+    </tr>
+  </tbody>
+</table>
+<p>Queries work similarly. The screen shot below shows the example query about employees in a team
+formalized as an instance of the <em>PAL-QUERY</em> class:</p>
+<table width="85%" border="1">
+  <tbody>
+    <tr>
+      <td align="middle" width="50%"><img border="0" src="images/lang_f3.gif" width="909" height="440"></td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<p>The PAL Language and Frames/PAL Conceptual Framework</p>
+
+<p><b>Next</b>: <a href="lang_pred_fun.htm">Supported Predicates and Functions in PAL</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

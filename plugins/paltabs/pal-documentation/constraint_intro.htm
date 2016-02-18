@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Understanding PAL Constraints</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> <b>PAL Constraints</b><br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>Protégé-2000 supports the definition of a knowledge base as a set of
+interrelated frames: classes and instances, slots that can be attached to
+classes, and facets that further define slot attachments. While these built-in
+relationships cover the overall definition of a knowledge base, they sometimes
+are insufficient to capture all constraints that hold among the frames of the
+knowledge base. Typically, Protégé-2000 does not offer a way of relating the
+values of different slots attached to a given class, nor does it help in
+relating the slot values of different instances of a class. For example, in the <em>newspaper</em>
+sample project, one might want to state that the section in which an article is
+published is determined by the section on which the author of this article works
+(i.e., on the <em>Article</em> class, the slot <em>containing_section</em> is
+constrained by the slot <em>article_author</em>). As another example, one might
+want to state that editors should have a higher salary than the employees for
+whom they are responsible (i.e., a constraint that involves the <em>Editor</em>
+and <em>Employee</em> classes and the <em>salary</em> and <em>responsible_for</em>
+slots.).</p>
+<p>The primary purpose of the Protégé Axiom Language (PAL) is to support the
+definition of such arbitrary logical constraints on the frames of a knowledge
+base. PAL constraints are modeled with <a href="lang_framework.htm"> special-purpose frames</a>
+and thus can be saved as part of the knowledge base.&nbsp; The <a href="constraints_tab.htm">PAL
+constraint-checking engine</a> can be run against the knowledge base to detect
+frames that violate those constraints.</p>
+<p>Note that the underlying philosophy of PAL is model-checking rather than
+theorem-proving. In other words, PAL makes strong &quot;closed world&quot;
+assumptions and is used for writing restrictions on existing knowledge, not for
+asserting new knowledge. (In that respect, PAL could be called &quot;Protégé
+Constraint Language.&quot;) The primary goals of PAL are thus to detect incomplete
+entry of information and to check entered information for inconsistencies beyond
+the local scope of facets. Other plug-ins in the Protégé Plug-In library
+provide services for performing more complex inference on knowledge and
+assertion of new knowledge. Follow the Inference and Reasoning Link in the <a href="http://protege.cim3.net/cgi-bin/wiki.pl?ProtegePluginsLibraryByTopic">Protégé
+Plug-In library</a> for information on these plug-ins.&nbsp;</p>
+<hr>
+<p>Introduction/PAL Constraints</p>
+
+<p><b>Next</b>: <a href="query_intro.htm"> PAL Queries</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

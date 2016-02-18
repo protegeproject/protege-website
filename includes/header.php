@@ -46,14 +46,17 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   
-	  <!-- map/short course banner containers
+	  <!-- map/short course banner containers -->
 	  <div class="map-course-container">
 	    <div class="newest-course text-center">
 	      <div class="container">
 	        <div class="row">
 	          <div class="col-12">
-	            <p class="no-margin para-a">
-	            	<strong class="upcase bold-a">New Protégé Short Course:</strong> <a href="sc2015/index.html">March 25-27 @ Stanford University - Stanford, CA</a>
+		          <p class="no-margin para-a">	            	
+	            	<!-- short course -->
+	            	<strong class="upcase bold-a" style="font-size: 16px;">Join us for the next Protégé Short Course: </strong> 
+	            	<a href="http://protege.stanford.edu/shortcourse/201603/index.html" class="top-sc-link" style="font-size: 16px;" target="_blank">
+	            	<u><strong>MARCH 21 - 23 @ STANFORD, CA</strong></u></a>
 	            </p>
 	          </div>
 	        </div>
@@ -64,7 +67,6 @@
 	      <span class="pictogram close-map"></span>
 	    </div>
 	  </div> 
-	  -->
 
   <header class="navbar-wrapper">
 

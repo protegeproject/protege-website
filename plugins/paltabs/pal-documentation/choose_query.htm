@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Choose Queries Pane</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img src="images/nerd32x32.gif" width="32" height="32">      The
+Choose Queries Pane<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The Choose Queries pane at the&nbsp;<a href="query_tab.htm"> PAL Queries Tab</a>
+allows you to <a href="disp_query_query.htm">display</a>, <a href="warn_query.htm">verify</a>,
+<a href="eval_query.htm">evaluate</a>, <a href="view_query.htm">view</a>,
+and <a href="create_query.htm">create</a> queries.</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><img border="0" src="images/choosequery.gif" width="540" height="222"></p>
+
+<p align="center">&nbsp;</p>
+
+<h2><a name="buttons"></a>Queries Buttons</h2>
+
+<p>The Queries Buttons in the upper right of the Choose Queries Pane at
+the <a href="query_tab.htm">PAL Queries Tab</a> allow you to tag and
+untag queries for verification, display queries at the Queries Tab, and create, view, and delete
+queries.</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/CheckAll.gif" width="15" height="15"></td>
+    <td width="89%"><b>Tag All</b>: Tags all displayed queries for <a href="warn_query.htm">
+      verification</a> or <a href="eval_query.htm">evaluation</a>. Tagged queries
+      are shown with a check <img border="0" src="images/check.gif" width="16" height="15">
+      in the <b>Evaluate?</b> column to the left of the query.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/UncheckAll.gif" width="15" height="15"></td>
+    <td width="89%"><b>Untag All</b>: Untags all displayed queries for <a href="warn_query.htm">
+      verification</a> or <a href="eval_query.htm">evaluation</a>. Untagged queries
+      are shown with a blank box in the <b>Evaluate?</b> column to
+      the left of the query.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/SuperPlus.gif" width="16" height="16"></td>
+    <td width="89%"><b>Display All:</b> Displays all queries currently in the
+      knowledge base at the <a href="query_tab.htm">PAL Queries Tab</a></td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/View.gif" width="15" height="15"></td>
+    <td width="89%"><b>View Query</b>: Opens the <a href="PAL_editor.htm"> PAL Expression Editor</a>
+      in a separate window, and allows you to <a href="view_query.htm">view</a>
+      the selected query.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Create.gif" width="15" height="15"></td>
+    <td width="89%"><b>Create Query</b>: <a href="create_query.htm">Creates</a>
+      a new query and opens the <a href="PAL_editor.htm"> PAL Expression Editor</a>
+      in a separate window. Note that, due to a known bug, the PAL Expression
+      Editor has limited support for creating your queries.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/AddNew.gif" width="19" height="19"></td>
+    <td width="89%"><b>Add Query to List</b>: Opens the Select Instances
+      dialog and allows you choose the querie(s) you wish to have displayed at
+      the Queries Tab.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/RemoveNew.gif" width="19" height="19"></td>
+    <td width="89%"><b>Remove Query From List</b>: Removes the selected querie(s)
+      from the list of queries visible at the Queries Tab.
+      The querie(s) remain in the knowledge base and are still <a href="disp_query_inst.htm">displayed
+      at the Instances Tab</a>. They can also be added back to the list at the Queries
+      Tab later.&nbsp; It
+      is best to click the query you wish to remove from the list
+      immediately before you remove it.</td>
+  </tr>
+  <tr>
+    <td width="11%" valign="top"><img border="0" src="images/Delete.gif" width="16" height="15"></td>
+    <td width="89%"><b>Delete Query</b>: Removes selected querie(s) from knowledge base completely. Removed
+      queries cannot be viewed
+      elsewhere or recovered. It
+      may be safest to <a href="delete_query.htm#instance"> delete queries from the Instances
+      Tab</a>, where you can
+      see which queries are highlighted.</td>
+  </tr>
+</table>
+<h2><a name="columns"></a>Query Columns</h2>
+
+<p>The query columns give information about the displayed queries.</p>
+
+<h3>Evaluate?</h3>
+
+<p>Indicates which queries are tagged for verification or evaluation. Tagged queries
+are indicated with a check <img border="0" src="images/check.gif" width="16" height="15">.
+You can tag or untag a query by clicking anywhere in the Evaluate area to
+the left of the query. You can also tag and untag all queries using the
+Tag All <img border="0" src="images/CheckAll.gif" width="15" height="15"> and
+Untag All buttons.</p>
+
+<h3><a name="status"></a>Status</h3>
+
+<p>Indicates the result of verification or evaluation:</p>
+<ul>
+  <li>After the button <b>Warn about indicated queries</b> has been clicked, a
+    green check in the Status column indicates that the query is syntactically
+    correct. A red warning sign indicates that there are syntactic
+    warnings or errors.&nbsp;Selecting a query that has a red warning sign
+    will drive the Warning and Error pane to display the warning information.</li>
+  <li>After the button <b>Evaluate indicated queries</b> has been clicked,
+    plusses <img border="0" src="images/SuperPlus.gif" width="16" height="16"> in the Status column
+    indicate there are instance that meet the query. A red warning sign indicates that there are
+    no instances which satisfy the query.&nbsp;Selecting a query that has plusses <img border="0" src="images/SuperPlus.gif" width="16" height="16">
+    will drive the Query Response pane to display the instances found. Note that
+    if the query has a limit on number of instances (for example, three-articles-not-written-by-person),
+    only the first three instances encountered by the Query engine will be
+    displayed.</li>
+</ul>
+<h3>Query</h3>
+<p>Gives the name of the query. You can select a query by clicking in
+this column; however,
+selected queries are not highlighted.</p>
+<h2>Warn/Evaluate Buttons</h2>
+<p>The buttons at the bottom of the Choose Queries pane allow you to
+validate query syntax and evaluate whether there are any instances in the
+knowledge base that
+violate the tagged queries.</p>
+<ul>
+  <li><b>Warn about indicated queries</b> validates the syntax of all tagged queries. The result is indicated in the
+    <a href="#status">Status</a>
+    column.&nbsp;&nbsp;</li>
+  <li><b>Evaluate indicated queries</b> evaluates whether any instances in
+    the knowledge base satisfy the tagged queries.&nbsp; The result is indicated in
+    the <a href="#status">Status</a> column.&nbsp;</li>
+</ul>
+<hr>
+<p>PAL Queries User Interface/The Choose Queries Pane</p>
+
+<p><b>Next</b>: <a href="attach_query_pane.htm">The Query Attachment Pane</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

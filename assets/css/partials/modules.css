@@ -120,6 +120,10 @@ blockquote.quote-a span {
   padding-top: 0;
 }
 
+.contact .col-6 {
+  padding-top: 20px;
+}
+
 /* Home features section */
 .features .col-4 {
   padding-right: 5px;
@@ -502,7 +506,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 .team-member:hover .matthew, .team-member:hover .mark, .team-member:hover .natasha,
 .team-member:hover .csongor, .team-member:hover .samson, .team-member:hover .tania,
-.team-member:hover .jennifer, .team-member:hover .rafael {
+.team-member:hover .jennifer, .team-member:hover .rafael, .team-member:hover .josef {
   background-position: bottom left;
 }
 
@@ -546,6 +550,11 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   background-size: cover;
 }
 
+.team-member .josef {
+  background: url(../../img/team/josef.png) no-repeat top left;
+  background-size: cover;
+}
+
 .team-offset {
   margin-left: 12%;
 }
@@ -586,7 +595,7 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 /* Styles for newest course section on Short Course Page */
 .newest-course {
   /* background: #fbf5db; */
-  background: #ffff77;
+  background: #FFFFAF;
   height: 70px;
   line-height: 72px;
   border-bottom: 1px solid #fbdfb7;
@@ -775,6 +784,19 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
   width: 675px;
   margin-left: -337px;
   border-radius: 2px;
+}
+
+.big-modal {
+	display: none;
+	width: 750px;
+	margin-left: -337px;
+	border-radius: 2px;
+}
+
+.big-modal-body {
+  max-height: 700px;
+  min-height: 400px;
+  font-size: 14px;
 }
 
 .modal form span {
@@ -1373,4 +1395,9 @@ html[data-useragent*='MSIE 10.0'] .team-member:hover, html[data-useragent*='MSIE
 
 [class^="col-"] > *:last-child {
   margin-bottom: 0;
+}
+
+.top-sc-link {
+	font-size: 21px; 
+	color: #20639D;
 }

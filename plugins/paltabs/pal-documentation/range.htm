@@ -1,0 +1,112 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The PAL Range Editor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;The PAL
+Range Editor<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>The Range editor of the <a href="PAL_editor.htm">PAL Expression Editor</a>
+allows you to declare and set the range for each variable in your constraint.
+The <a href="language.htm">PAL Language</a> offers several ways of <a href="lang_range_def.htm">defining
+the range of a variable</a>; these are supported by the Range editor. Declared
+variables are made available in the pop-up menus
+for the <a href="statement_ed.htm"> Statement editor</a>.</p>
+
+<p align="center"><img border="0" src="images/range.3.gif" width="259" height="185"></p>
+<p>Note: The first time you use the PAL Expression Editor in your project, you may need to make sure that
+the PAL Expression Editor is set up on your constraints. See <a href="display_ed.htm">Configuring the PAL Expression Editor</a>
+for more information.</p>
+<p>The Range editor offers the following functionality:</p>
+<ul>
+  <li>A right-click <a href="#range_menu">range menu</a> (Command-click on the
+    Macintosh) allows you to choose a range type and have the editor generate a
+    skeleton declaration.</li>
+  <li><a href="#double-click">Double-clicking</a> on the placeholder strings or
+    arguments supplied by the editor (e.g.,
+    <i>
+    varName</i> and <i>frameName</i>) opens a window that allows you to define or choose
+    the name of those arguments.</li>
+</ul>
+<h3><a name="range_menu"></a>Range Menu</h3>
+<p>The Range menu lets you select the type of range you want for your
+variable.&nbsp;</p>
+<p align="center">
+    <img border="0" src="images/defr_men.gif" width="288" height="165"></p>
+<p>Choosing a range type generates the syntax for a range definition, using
+placeholder names for the arguments of the range defintion. The placeholder names can be replaced by double-clicking and
+entering a real name, as described <a href="#double-click">below</a>.&nbsp;</p>
+<p>For set definition (<b>defset</b>), the functionality is currently unimplemented.
+The editor will generate the syntax, but it cannot actually be used.</p>
+<p>For range definitions (<b>defrange</b>), the range editor generates the following syntax:</p>
+<ul>
+  <li><b>SET</b> is currently unimplemented. Syntax will be generated that cannot
+    actually be used.</li>
+  <li>For <b> FRAME|Without Slot</b>:<br>
+    <i>(defrange varName :FRAME frameName)<br>
+    </i>This declares a variable (the replacement for <i>varName</i>) with
+    values all instances in a class (the replacement for <i>frameName</i>).</li>
+  <li>For <b>FRAME|With Slot</b>, the syntax is&nbsp;<br>
+    <i>(defrange varName :FRAME frameName slotName)<br>
+    </i>This declares a variable (the replacement for <i>varName</i>) with
+    values those instances in a class (the replacement for <i>frameName</i>)
+    which appear as values for a slot (the replacement for <i>slotName</i>).</li>
+  <li>For the <b>INTEGER</b>, <b>STRING</b>, <b>SYMBOL</b>, and <b> NUMBER</b> types, the syntax given
+    defines a variable of the chosen type which is restricted to values of a
+    specified slot.&nbsp; However, the current implementation actually adds an
+    extraneous dummy variable, which should be deleted. For example, choosing <b>
+    SYMBOL</b> gives the syntax:<br>
+    <i>(<font color="#0000FF">defrange</font> varName <font color="#0000FF"> :SYMBOL</font> symbolName slotName)&nbsp;<br>
+    </i>In this syntax, <i>symbolName </i>is extraneous.</li>
+</ul>
+<p> For example, choosing <b>defrange|FRAME|Without Slot</b>
+ generates the text:&nbsp;</p>
+<p><i>(<font color="#0000FF">defrange</font> varName <font color="#0000FF"> :FRAME</font> frameName)</i></p>
+<p>where <i> varName</i> and <i> frameName</i> are argument placeholders supplied by the Range editor.</p>
+<p>For a list of range types, see&nbsp;<a href="lang_range_def.htm">Variable Range Definitions</a>.</p>
+<h3><a name="double-click"></a>Double-clicking on a Variable</h3>
+<p>Double-clicking on a string that has been inserted by the Range editor brings
+up the entry method appropriate to the string.</p>
+<ul>
+  <li>Double-clicking on a generated variable <i>varName</i> displays the Symbol
+    entry box. Type the variable name in the entry bar or select from the list
+    of available symbols. Remember to prepend ? to the variable name for a local
+    variable and % for <a href="lang_range_def.htm#global"> global</a> variables. Then click OK.</li>
+</ul>
+<p align="center"><img border="0" src="images/range.6.gif" width="183" height="87"></p>
+<ul>
+  <li>Double-clicking on the extraneous variables <i>integerName, stringName,
+    symbolName, </i>and<i> numberName</i> also displays the Symbol entry box.</li>
+  <li>Double-clicking on&nbsp; <i>frameName</i> opens the Select Class dialog
+    box. Select the class where you want the variable to take its values and
+    click OK. If you choose a class whose name contains a space, you must
+    enclose the name in single quotes after selecting it. For example, <i>my
+    class</i> must be written as <i>'my class'</i>.</li>
+</ul>
+<p align="center"><img border="0" src="images/range.5.gif" width="328" height="382"></p>
+<ul>
+  <li>Double-clicking on <i>slotName </i>opens the Select Slot dialog box. Only
+    those slots of value type Class that have the selected class as an allowed class are displayed.
+    (If there are no such slots, a warning dialog is displayed instead.) Select the slot to which you want to restrict the variable and click OK.
+    If you choose a slot whose name contains a space, you must enclose the name
+    in single quotes. For example, <i>my slot </i>must be written as <i>'my
+    slot'</i>.</li>
+</ul>
+<p align="center"><img border="0" src="images/range.4.gif" width="328" height="166"></p>
+<hr>
+<p>The PAL Expression Editor/The Range Editor</p>
+
+<p><b>Next</b>: <a href="statement_ed.htm">The Statement Editor</a> </p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

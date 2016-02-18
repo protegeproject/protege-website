@@ -20,7 +20,7 @@
   <div class="container" style="width:675px;">
     <div class="row">
       <div class="col-3 registered-users">
-        <big class="type-b">244,817</big>
+        <big class="type-b">291,017</big>
         <small class="type-a upcase">Registered Users</small>
       </div><!-- /end .col-3 -->
       <div class="col-3 user-list-members">
@@ -46,9 +46,9 @@
         </p>
         <p>
           Prot&eacute;g&eacute; is an open source project and we welcome your 
-          involement.  Share your solutions with others on our mailing lists, 
+          involvement.  Share your solutions with others on our mailing lists, 
           sign up for an account on the Prot&eacute;g&eacute; wiki to help us 
-          maintain official documenation, or send us a pull request on 
+          maintain official documentation, or send us a pull request on 
           GitHub.  We like to know what you think about Prot&eacute;g&eacute; 
           and encourage you to stay in touch.
         </p>
@@ -58,7 +58,7 @@
         <div class="social-panel twitter">
             <div class="pictogram-social twitter-icon-fade"></div>
           <p class="intro-a">
-            Not a developer or don’t have a Facebook acount? Follow us on Twitter to get all the latest project updates.
+            Not a developer or don’t have a Facebook account? Follow us on Twitter to get all the latest project updates.
           </p>
           <a href="https://twitter.com/protegeproject" class="twitter-follow-button" data-show-count="false">Follow @protegeproject</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

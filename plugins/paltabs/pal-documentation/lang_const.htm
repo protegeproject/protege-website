@@ -1,0 +1,257 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>PAL Constraint Statements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">  PAL
+Constraint Statements<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>A PAL statement is composed of a set of embedded predicate and functional
+expressions that involve variables ranging over a set of values (<a href="lang_range_def.htm">range
+definitions</a>), and that ultimately return true or false on each particular
+instantiation of variables.</p>
+
+<p>A PAL constraint statement consists of a sequence of sentences linked by
+logical connectives among the following: <em>&lt;=&gt;</em> (equivalent),<em>
+=&gt; </em>(&quot;if&quot;), <em>and</em>, <em>or</em>, <em>not</em>. To write
+those sentences, PAL supports a number of <a href="lang_pred_fun.htm">predefined
+predicates and functions</a>, that can be used in constraint statements to test
+or compute properties of variables. In addition, any slot in a knowledge base
+can be used directly as a function or a unary predicate in PAL statements.
+Finally, all variables that appear in a constraint statement must be quantified,
+either with the universal quantifier (<em>forall</em>) or with the existential
+quantifier (<em>exists</em>).</p>
+<p><b>Note:</b> When a constraint is <a href="attach_class.htm">attached</a> to
+a class, there is a default universal quantifier (<em>forall</em>) if no other
+quantifier is present. However, in this case, the <a href="query_response_pane.htm">The Query Response Pane for Constraints</a>
+will not show violating instances, and in general this is not good practice.</p>
+<p><a href="lang_pred_fun.htm#PAL Predicates">PAL
+predicates</a> can be listed as:
+<ul>
+  <li><a href="lang_pred_fun.htm#Frame-system predicates">frame-system
+    predicates</a>, that test properties of frame arguments (e.g., whether a
+    slot argument is attached to a class argument);
+  <li><a href="lang_pred_fun.htm#Arithmetic predicates">arithmetic
+    predicates</a>, that test arithmetic properties of number arguments (e.g.,
+    whether a number argument is even);
+  <li><a href="lang_pred_fun.htm#String predicates">string-related
+    predicates</a>, that test properties of string arguments (e.g., whether a
+    string argument is contained in another string argument)
+  <li><a href="lang_pred_fun.htm#Miscellaneous predicates">miscellaneous
+    predicates</a></li>
+</ul>
+<p><a href="lang_pred_fun.htm#PAL Functions">PAL
+functions</a> can be listed as:
+<ul>
+  <li><a href="lang_pred_fun.htm#Frame-system functions">frame-system
+    functions</a>, that return properties of frame arguments (e.g., the class of
+    a frame argument);
+  <li><a href="lang_pred_fun.htm#Coercion&nbsp; functions">type-coercion
+    functions</a>, that transform any argument into a given type (e.g.,
+    transforming a string into a slot);
+  <li><a href="lang_pred_fun.htm#Arithmetic functions">arithmetic
+    functions</a>, that compute arithmetic operations on number arguments (e.g.,
+    addition of 2 numbers).</li>
+</ul>
+<p>&nbsp;</p>
+<p><font color="#000000">Below are a few example constraints from the <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/pal_example_project.zip"><em>newspaper</em>
+project</a>.</font></p>
+<p>A simple constraint that states that all articles should be indexed with more
+than two keywords:</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>PAL
+        Constraint</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">defrange</font>
+        ?article <font color="#0000ff">:FRAME</font> Article)</em></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">This
+        constraint concerns all instances of the <em>Article</em> class.</td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">forall</font>
+        ?article<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">&gt;</font>
+        (<font color="#0000ff">number-of-slot-values</font> keywords ?article)
+        2))</em>
+        <p>&nbsp;</p>
+      </td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">
+        <p align="left"><font color="#000000">&quot;</font><font color="#0000ff">For
+        all</font> articles, the <font color="#0000ff">number of values</font>
+        for the slot <em>keywords</em> should be <font color="#0000ff">greater</font>
+        than 2.&quot;</p>
+        <p align="left">Note that this constraint is equivalent to setting the
+        minimum cardinality facet to 2 for the <em>keywords</em> slot
+        attachment.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>Similarly, the above example constraint that states that editors should be
+paid more than the employees for whom they are responsible:</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>PAL
+        Constraint</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">defrange</font>
+        ?editor <font color="#0000ff">:FRAME</font> Editor)<br>
+        (<font color="#0000ff">defrange</font> ?employee <font color="#0000ff">:FRAME</font>
+        Employee responsible_for)</em></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">This
+        constraint concerns all instances of the <em>Editor</em> class, and
+        instances of the <em>Employee</em> class that are values for the slot <em>responsible_for</em>.</td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">forall</font>
+        ?editor (<font color="#0000ff">forall</font> ?employee<br>
+        &nbsp;&nbsp;&nbsp; (<font color="#0000ff">=&gt;</font> (<font color="#0000ff">and</font><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (responsible_for ?editor
+        ?employee)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">own-slot-not-null</font>
+        salary ?editor)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">own-slot-not-null</font>
+        salary ?employee))<br>
+        &nbsp;&nbsp;&nbsp; (<font color="#0000ff">&gt;</font> (salary ?editor)
+        (salary ?employee)))))</em>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">
+        <p align="left"><font color="#000000">&quot;</font><font color="#0000ff">For
+        all</font> editors, and <font color="#0000ff">for all</font> employees
+        for whom an editor is responsible (see range definition above), <font color="#0000ff">if</font>
+        the editor in question is <font color="#000000">responsible for</font>
+        the employee in question <font color="#0000ff">and</font> both the <font color="#000000">salaries</font>
+        of this editor and this employee <font color="#0000ff">are not empty</font>,
+        this editor's <font color="#000000">salary</font> should be <font color="#0000ff">greater</font>
+        than this employee's <font color="#000000">salary</font>.&quot;</p>
+        <p align="left">The slot <em>responsible_for</em> is used as a
+        predicate, to test whether the employee in question is under the
+        responsibility of the editor in question.</p>
+        <p align="left">The slot <em>salary</em> is used as a function, to
+        return the value of the employee's and editor's salary.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p><font color="#000000">A constraint that states that the section in which an
+article is published is determined by the section on which the author of this
+article works (i.e., on the <em>Article</em> class, the slot <em>containing_section</em>
+is constrained by the slot <em>article_author</em>):</font></p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="63%"><strong>PAL
+        Constraint</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="37%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="63%"><em>(<font color="#0000ff">defrange</font>
+        ?article <font color="#0000ff">:FRAME</font> Article)<br>
+        (<font color="#0000ff">defrange</font> ?editor <font color="#0000ff">:FRAME</font>
+        Editor)</em></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="37%">The
+        constraint concerns all instances of the <em>Article</em> class, and any
+        instance of the <em>Editor</em> class.</td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="63%"><em>(<font color="#0000ff">forall</font>
+        ?article<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (=&gt; (<font color="#0000ff">instance-of</font>
+        (article_author ?article) Person)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">exists</font> ?editor<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">and</font> (<font color="#0000ff">or</font> (article_author
+        ?article ?editor)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (responsible_for ?editor (article_author ?article)))<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (sections ?editor (containing_section ?article))))))</em>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="37%">&quot;<font color="#0000ff">For
+        all</font> articles, <font color="#0000ff">if</font> the <font color="#000000">author</font>
+        of an article is a person, then there <font color="#0000ff">exists</font>
+        an editor, who is either this author <font color="#0000ff">or</font> the
+        editor responsible for this <font color="#000000">author</font>. The <font color="#000000">section
+        that contains</font> this article is a <font color="#000000">section</font>
+        managed by this editor.&quot;
+        <p>T<font color="#400040">he slots </font><em>article_author</em> and<em>
+        responsible_for </em>and <em>sections</em> are used as predicates, to
+        test respectively whether the author of the article in question is the
+        editor in question, whether the editor in question is responsible for
+        the author of the article in question, and whether the section that
+        contains the article in question is one of the sections managed by the
+        editor in question.</p>
+        <p>The <font color="#400040">slots </font><em>article_author</em>, and <em>containing_section</em>
+        are used as functions, to return the value of the author and section of
+        the article in question.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>A constraint that states that the <a href="lang_range_def.htm#global"> global</a> variable <em>%number_of_pages</em>
+is positive, wherever it happens to be used in the knowledge base:</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>PAL
+        Constraint</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">defrange</font>
+        %number_of_pages <font color="#0000ff">:INTEGER</font> number_of_pages)</em></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">This global
+        variable ranges over all integers that are values for the slot <em>number_of_pages</em>.</td>
+    </tr>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%"><em>(<font color="#0000ff">forall</font>
+        %number_of_pages<br>
+        &nbsp;&nbsp;&nbsp; (<font color="#0000ff">&gt;</font> %number_of_pages
+        0))</em>
+        <p>&nbsp;</p>
+      </td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" width="50%">
+        <p align="center"><font color="#000000">&quot;</font><font color="#0000ff">All</font>
+        values of the <em>number_of_pages</em> slot should be <font color="#0000ff">greater</font>
+        than 0.&quot;</p>
+        <p>Note that this constraint is equivalent to setting the minimum-value
+        facet of the <em>number_of_pages</em> top-level slot to 0.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
+<p>The PAL Language and Frames/PAL Constraint Statements</p>
+
+<p><b>Next</b>: <a href="lang_query.htm">PAL Query Statements</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

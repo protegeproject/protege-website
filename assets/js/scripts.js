@@ -1,10 +1,10 @@
 (function($) {
 
   // Remove Map Canvas ID on Short Courses page to eliminate duplicate IDs
-  $('.short-courses .event').removeAttr('id', 'map-canvas')
+//  $('.short-courses .event').removeAttr('id', 'map-canvas')
   
   // Hide short course banner for now.  No new offerings at the current time. Uncomment following line to hide course banner
-  $('.map-course-container').hide();
+  //$('.map-course-container').hide();
 
   // Hide .map-container on page load
   $('.map-container').hide();
@@ -84,7 +84,7 @@
   would sit at the top of the page for about a second until they were hidden. This way they never appear in the first place */
 
   // Run initMaps() function on page load
-  // initMaps();
+   initMaps();
 
   // Interaction for opening map panel
   $('.open-map, .open-map-icon').on('click', function(e) {
@@ -276,7 +276,6 @@
     })
   });
  	
-
   // Get the registration modal to show up
   $('#protegeDownloadButton').on('click', function(e) {
 	  document.getElementById('registerFrame').src = 'registration.html?rand=' + Math.round(Math.random() * 10000000);
@@ -309,18 +308,18 @@
     switch (altDdVal) {
       case 'desktop-osx':
         $('#desktopDownload').modal('hide');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-os-x.zip"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-os-x.zip"></iframe>');
         iFrameDl.prependTo($('body'));
-        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-os-x.zip')
+        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-os-x.zip')
         break;
       case 'desktop-win-64-vm': // fallthrough
       case 'desktop-win-64': // fallthrough
       case 'desktop-win-vm': // fallthrough
       case 'desktop-win': // fallthrough
         $('#desktopDownload').modal('hide');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-win.zip"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-win.zip"></iframe>');
         iFrameDl.prependTo($('body'));
-        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-win.zip')
+        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-win.zip')
         break;
       case 'desktop-linux-64-vm': // fallthrough
       case 'desktop-linux-64': // fallthrough
@@ -328,9 +327,9 @@
       case 'desktop-linux': // fallthrough
       case 'desktop-unix': // fallthrough
         $('#desktopDownload').modal('hide');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-linux.tar.gz"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-linux.tar.gz"></iframe>');
         iFrameDl.prependTo($('body'));
-        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-linux.tar.gz')
+        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-linux.tar.gz')
         break;
       case 'old-versions': 
       	window.open('http://protegewiki.stanford.edu/wiki/Protege_Desktop_Old_Versions', 'Protege-Wiki'); 
@@ -343,9 +342,9 @@
       case 'desktop-other': // fallthrough
       default: 
         $('#desktopDownload').modal('hide');
-        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-platform-independent.zip"></iframe>');
+        var iFrameDl = $('<iframe width="1" height="1" frameborder="0" style="display: none;" src="https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-platform-independent.zip"></iframe>');
         iFrameDl.prependTo($('body'));
-        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege/releases/download/protege-parent-5.0.0-beta-17/protege-5.0.0-beta-17-platform-independent.zip')
+        $('.alt-download').attr('href', 'https://github.com/protegeproject/protege-distribution/releases/download/protege-5.0.0-beta-23/Protege-5.0.0-beta-23-platform-independent.zip')
         break;
     }
     e.preventDefault();

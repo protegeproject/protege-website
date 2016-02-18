@@ -1,0 +1,27 @@
+A:link {
+	COLOR: blue
+}
+A:visited {
+	COLOR: purple
+}
+A:active {
+	COLOR: red
+}
+BODY {
+	FONT-SIZE: 12px; MARGIN-LEFT: 1%; MARGIN-RIGHT: 2%; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+H1 {
+	COLOR: black; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+H2 {
+	COLOR: black; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+H3 {
+	COLOR: black; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+H4 {
+	COLOR: black; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+.category {
+	FONT-WEIGHT: bold; COLOR: #026630
+}

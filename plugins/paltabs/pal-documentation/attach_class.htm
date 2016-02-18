@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Attaching a Constraint to a Class</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img src="images/nerd32x32.gif" width="32" height="32">    &nbsp;Attaching
+a Constraint to a Class<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>A constraint can be <i>attached</i> to a class. In this case, the constraint
+lies within the scope of instances of the class to which it is attached. For
+example, the editor-employee-salary-constraint from the newspaper sample project
+is attached to the Editor class.
+This means that the constraint-checking engine assumes an implicit range over
+instances of Editor for all undefined variables.
+A constraint that has been attached to a class is visible in the Constraints
+pane of the Class Form for that class. You can attach a constraint to more than
+one class.</p>
+<p><b>Note</b>: The same restriction to instances of the Editor class is also
+enforced by the syntax <i>(<font color="#0000FF">defrange</font> ?edit <font color="#0000FF"> :FRAME</font> Editor).&nbsp;
+</i>However, attaching a constraint to a class makes the attachment at the Protégé
+level, and also makes the constraint visible at the class.&nbsp;</p>
+<p><b>Note: </b>By
+attaching a constraint to a class, you can make an implicit variable range&nbsp;
+definition, that is, you could omit a <i>defrange</i> statement for that
+variable. This can be used when you want the <i>defrange</i> of the constraint
+to apply to multiple classes that are not subclasses of a single class, as
+otherwise you would have to write the constraint in the scope of each
+class.&nbsp; However, this should be used with caution, because if a constraint
+is de-attached from all of its classes, it will lose its implicit range
+definitions, and will have unbound variables.&nbsp;</p>
+<p>You can attach a constraint to a class in one of three ways:</p>
+<ul>
+  <li>By attaching an existing constraint to a class using the Constraint
+    Attachments pane <a href="#constraints"> in the PAL Constraints Tab</a>.</li>
+  <li>By attaching an existing constraint to a class <a href="#classes tab"> at the Classes
+    Tab</a>.</li>
+  <li>By creating a new constraint at a class. See <a href="create_constraint.htm#class">Creating a Blank Constraint</a>
+    for more information.</li>
+</ul>
+<h2><a name="constraints"></a>At the PAL Constraints Tab</h2>
+<p>To attach a constraint to a class at the <a href="constraints_tab.htm"> PAL Constraints Tab</a>:</p>
+<ol>
+  <li>Go to the <a href="constraints_tab.htm"> PAL Constraints Tab</a> and make sure
+    the constraint you want to attach to a class is displayed. See <a href="disp_const_const.htm">Displaying Constraints at the
+    PAL Constraints Tab</a>
+    for more information.</li>
+  <li>Select the constraint by clicking on it.&nbsp;</li>
+  <li>Click the Add <img border="0" src="images/AddNew.gif" width="19" height="19"> button at the
+    top right of
+    the <a href="attach_pane.htm">Constraint Attachments pane</a>.<br>
+    <br>
+    <img border="0" src="images/attach7.gif" width="664" height="110"><br>
+    <br>
+    A Choose class dialog box opens.<br>
+    <br>
+    <img border="0" src="images/attach6.gif" width="328" height="382"><br>
+  </li>
+  <li>Select the class to which you want to attach the constraint and click OK.<br>
+    The selected class is displayed in the Attachments pane. You can view the
+    Class Form for the class by selecting it and then clicking the View <img border="0" src="images/View.gif" width="15" height="15">
+    button in the Attachments pane. You can also see the constraint in the Class
+    Form for that class. See <a href="display_at_class.htm">Displaying Attached Constraints at a Class</a>
+    for more information.</li>
+</ol>
+<h2><a name="classes tab"></a>At the Classes Tab</h2>
+<p>To attach a constraint to a class at the Classes Tab:</p>
+<ol>
+  <li>Go to the Classes Tab.</li>
+  <li>Highlight the class to which you wish to attach the constraint.</li>
+  <li>Click the Add <img border="0" src="images/AddNew.gif" width="19" height="19">  
+    button at the upper right of the Class Constraints pane in the Class
+    Form.&nbsp;<br>
+    A Select Instances dialog box opens.<br>
+    <br>
+    <img border="0" src="images/attach1.gif" width="528" height="382"><br>
+  </li>
+  <li>Select :PAL-CONSTRAINT on the left.</li>
+  <li>Select the constraint(s) you wish to attach to the chosen class on the
+    right.</li>
+  <li>Click OK.<br>
+    The constraint is attached to the class and appears in the list of
+    constraints in the Constraints pane in the Class Form.</li>
+</ol>
+<p>For information on how to attach a constraint to a class by creating it at
+the class, see <a href="create_constraint.htm#class">Creating a Blank Constraint</a>.</p>
+<hr>
+<p>PAL Constraints User Interface/Attaching a Constraint to a Class</p>
+
+<p><b>Next</b>: <a href="detach_const.htm">Removing an Attached Constraint from a Class</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

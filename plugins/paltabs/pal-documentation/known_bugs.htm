@@ -1,0 +1,98 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Known Problems</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">&nbsp;Known
+Problems&nbsp;<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><h2>PAL Language</h2>
+<ol>
+  <li>Defining and using sets:
+    <ul>
+      <li><i>defset</i> is currently broken, that is, you cannot create
+    variable declarations for sets.</li>
+      <li>The <i>:SET</i> option for <i>defrange</i> is also broken.</li>
+    </ul>
+  </li>
+  <li>Boolean values: You cannot test Boolean slot values directly in PAL
+    statements. You need to coerce them to symbols first and then test them
+    against &quot;true&quot; or &quot;false. For example:
+    <p><i>(<font color="#0000FF">forall</font> ?var<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= &quot;true&quot; (coerce-to-symbol (boolean-slot
+    ?var))))<br>
+    </i></li>
+  <li>
+    <p>Slots of type class with template slot values:<br>
+    If you use a slot as a predicate or function, <i>and</i> the slot is of type
+    class,&nbsp;<i> and</i> the slot has a template slot value (i.e., the value
+    of the slot is set as an unmodifiable value), then the function call to the
+    slot always returns <i>null</i>. In this case, a constraint or query will
+    not evaluate correctly, even if the template slot value is correct.</li>
+</ol>
+
+<h2>Pal Expression Editor</h2>
+<h3>Range Editor</h3>
+<ol>
+  <li>defset and :SET options in right-click menus don't work.</li>
+  <li>Selecting INTEGER, STRING, SYMBOL, or NUMBER from the right-click <a href="range.htm#range_menu">Range
+    Menu</a> inserts an extra variable name in the editor. For example,
+    selecting INTEGER inserts the syntax:&nbsp;<i><br>
+    <font color="#0000FF">defrange</font> varName <font color="#0000FF"> :INTEGER</font> integerName
+    slotName)<br>
+    </i>where <i>integerName</i> is not required for a <i>defrange</i>
+    statement.&nbsp;</li>
+  <li>If a class name is changed in the ontology, the range definition doesn't
+    update correctly.</li>
+</ol>
+<h3>Statement Editor</h3>
+<ol>
+  <li>The Predicate dialog does not include the <i>findall</i>
+    and <i>find n</i> predicates for creating query statements.</li>
+  <li>The right-click menu is not context-sensitive. This means you can insert
+    statement syntax anywhere, even if it is not appropriate.</li>
+  <li>The double-click functionality is independent of the right-click menu
+    functionality. Ideally, these two should be connected.</li>
+  <li>Double-clicking will sometimes bring up inappropriate options, instead of
+    limiting choices to the appropriate options. Some of the specific options
+    that may give problems are:
+    <ul>
+      <li>Instance</li>
+      <li>Symbol, which will allow you to pick a slot that does not actually
+        return a symbol.</li>
+    </ul>
+  </li>
+  <li>Deleting text directly, using the backspace or delete keys, or by
+    overtyping, may confuse the editor. Instead, it is recommended that you
+    highlight the text you wish to delete and click the Delete <img border="0" src="images/Delete.gif" width="16" height="15">
+    button at the upper right of the Statement Editor.</li>
+</ol>
+<h2>PAL Constraints&nbsp;</h2>
+<h3>Programmatic Bugs</h3>
+<ol>
+  <li>The predicates = and /= cannot be traced during constraint evaluation. This is due to the fact that,
+    internally, they are implemented differently from the other predicates.</li>
+</ol>
+<h3>PAL Constraints Tab</h3>
+<ol>
+  <li>Highlighting does not work in the <a href="choose_const.htm"> Choose Constraints</a>
+    and the <a href="choose_query.htm">Choose Queries</a> panes. This means
+    that, even if an item is selected, no visible highlight will
+    appear.&nbsp;&nbsp;</li>
+  <li>The Function to Trace menu includes the functions = and /= even though
+    they cannot be traced (see above).</li>
+</ol>
+<hr>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

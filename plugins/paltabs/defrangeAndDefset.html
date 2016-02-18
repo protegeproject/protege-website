@@ -1,0 +1,124 @@
+<html>
+<head>
+<title> A discussion on defrange and defset in PAL</title>
+</head>
+<body><div id="mainheadline"><h1>A discussion on defrange and defset in PAL</h1></div>Bill Grosso
+<pre>
+So what's the syntax for defrange ? There are actually 5 distinct
+types defrange statements. They all have the form:
+
+         (defrange [variable] [type] [type-specific information])
+
+[variable] is simply a local or global variable name. [type] is one of
+:SET,:FRAME, :INTEGER, :STRING, :SYMBOL, :NUMBER and {refinement}
+depends
+on the type
+
+There are two possible defranges using :SET as a value for [type]
+
+         (defrange variable :SET [setname])
+         (defrange variable :SET [setname] [slotname])
+
+That is, you must specify the set the variable is ranging over. And,
+optionally, you can specify a slot. The meaning of the second form
+is "all elements of this set which are values for the specified
+slot"
+
+:FRAME is exactly parallel to :SET (not surprising, since "class"
+is really just a strange way of spelling "set").
+
+         (defrange variable :FRAME [classname])
+         (defrange variable :FRAME [classname])[slotname])
+
+The first is simply "instances of the named class" and the second
+is "instances of the named class which are values of the
+specified slot.
+
+The final 4 types require a slot (because the implied binding spaces
+would otherwise be infinite). So, for example.
+
+         (defrange variable :INTEGER [slotname])
+
+This means "all integers which are values of that slot." Which is
+marginally cool in a reifed-slots sort of way. For example:
+
+         (defrange %height :INTEGER height)
+         (forall %height (> %height 0))
+
+constrains the integer values of the slot height wherever it happens
+to be attached. All future users of this slot, in either the current kb,
+or in any kb that includes it, are constrained !
+--------------
+
+--------------
+A discussion of defrange leads immediately to a discussion of
+defset. The immediate question is, of course, "What's a set ?"
+
+The answer is that a set is simply an enumerated list of things. You
+use one of the following forms for defset
+
+         (defset [setname] :FRAME [list of frame names])
+         (defset [setname] :INTEGER [list of integers])
+         (defset [setname] :STRING [list of strings])
+         (defset [setname] :SYMBOL [list of symbols])
+         (defset [setname] :NUMBER [list of numbers])
+
+And then you can have variables range over the set.
+
+
+element-of is a two-place predicate involving a term and a set.
+It is of the form
+
+         (element-of [term] [set])
+
+And the only real use case is when the term is either a variable or a
+function involving a variable. So, for example, you might write the
+following constraint
+
+         (defset Swedish-Male-First-Names :STRING Lars Erik Bjorn)
+         (defrange ?person :FRAME Person)
+
+         (forall ?person (=>
+                      (and (= (country  ?person) Sweden) (sex ?person
+"male"))
+                      (element-of (first-name ?person)
+Swedish-First-Names)
+         )
+
+(roughly "All swedish men have a first name of either Lars, Erik or
+Bjorn")
+--------------
+
+--------------
+The way to think about defset is that it gives you the ability
+to make arbitrary "and no more" statements about your ontology.
+So, for example, borrowing an example from Austin's most
+incomprehensible ontology:
+
+         (defset BaseClasses IntangibleThing PartiallyIntangibleThing
+                 PartiallyTangibleThing TangibleThing)
+         (defrange ?baseClass :SET BaseClasses)
+         (defrange ?baseClass2 :SET BaseClasses)
+         (defrange ?frame :FRAME :THING)
+
+         (forall ?frame
+                 (or
+                         (exists ?baseClass (instance-of ?frame
+?baseClass))
+                         (= ?frame :THING)
+                 )
+         )
+         (forall ?frame (exists ?baseClass (exists ?baseClass2
+                 (=>     (and    (instance-of ?frame ?baseClass)
+                                 (instance-of ?frame ?baseClass2)
+                         )
+                         (= ?baseClass ?baseClass2)
+                 )
+         )
+
+What this states, in an intensional way, is that the BaseClasses
+are almost a complete partition of the knowledge base-- everything
+(except for :THING) is an instance of exactly one of them.
+</pre>
+</body>
+</html>

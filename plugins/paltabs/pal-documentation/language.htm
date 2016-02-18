@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>PAL Language</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img src="images/nerd32x32.gif" width="32" height="32">    The PAL
+Language<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>A constraint (or a query) is a statement that holds on a certain number of
+variables, which each range over a particular set of values. Therefore, a constraint
+or query in PAL consists of a set of variable range definitions and a logical
+statement that must hold on those variables. The language of PAL is a limited
+predicate logic extension of Protégé-2000 that supports the definition of such
+ranges and statements. The syntax of PAL is a variant of the Knowledge
+Interchange Format <font color="#000000">(<a href="http://www-ksl.stanford.edu/knowledge-sharing/kif/">KIF</a>)</font>:
+It supports KIF connectives but not all of KIF constants and predicates (e.g.,
+the theory of arithmetic is much smaller). Statements like (defrelation) and (deffunction)
+are also omitted.</p>
+<p>For instance, in the <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/pal_example_project.zip"><em>newspaper</em>
+example</a>, the constraint:</p>
+<p>&quot;The salary of an editor should be greater than the salary of any
+employee whom the editor is responsible for.&quot;</p>
+<p>can be written in PAL as follows:</p>
+<p><em>(<font color="#0000ff">defrange</font> ?editor <font color="#0000ff">:FRAME</font>
+Editor)<br>
+(<font color="#0000ff">defrange</font> ?employee <font color="#0000ff">:FRAME</font>
+Employee responsible_for)</em></p>
+<p><em>(<font color="#0000ff">forall</font> ?editor (<font color="#0000ff">forall</font>
+?employee<br>
+&nbsp;&nbsp;&nbsp; (<font color="#0000ff">=&gt;</font> (<font color="#0000ff">and</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (responsible_for ?editor ?employee)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">own-slot-not-null</font>
+salary ?editor)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">own-slot-not-null</font>
+salary ?employee))<br>
+&nbsp;&nbsp;&nbsp; (<font color="#0000ff">&gt;</font> (salary ?editor) (salary
+?employee)))))</em></p>
+<hr>
+<p>The PAL Language and Frames/The PAL Language</p>
+
+<p><b>Next</b>: <a href="lang_range_def.htm">Variable Range Definitions</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

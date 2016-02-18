@@ -1,0 +1,165 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>PAL Query Statements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32"> PAL
+Query Statements<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>Similarly to a <a href="lang_const.htm"> constraint statement</a>, a PAL query statement consists of a
+sequence of sentences linked by logical connectives (<em>&lt;=&gt;</em>,<em>
+=&gt;</em>, <em>and</em>, <em>or</em>, <em>not</em>). Sentences are written with
+the same set of <a href="lang_pred_fun.htm">PAL
+predicates and functions</a> and with slots used directly as functions or unary
+predicates. Variables used in query statements must be defined within a valid
+range, similarly to constraint variables. <strong>The only way in which query
+statements differ from constraint statements is that variables are
+&quot;quantified&quot; with the query quantifiers <em>findall </em>and&nbsp; <em>find
+n </em>instead of the universal quantifier <em>forall</em>.</strong> Variables
+can also be quantified with the existential quantifier (<em>exists</em>) inside
+statements.</p>
+<p><font color="#000000">Below are a few example queries from the <a href="http://protege.stanford.edu/plugins/paltabs/pal-documentation/pal_example_project.zip"><em>newspaper</em>
+project</a>.</font></p>
+<p>A query that finds 3 articles that are not authored by persons:</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>PAL
+        Query</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td width="50%"><em>(<font color="#0000ff">defrange</font> ?article <font color="#0000ff">:FRAME</font>
+        Article)</em></td>
+      <td width="50%">The query concerns all instances of the <em>Article</em>
+        class.</td>
+    </tr>
+    <tr>
+      <td width="50%"><em>(<font color="#0000ff">find </font><font color="#000000">3</font>
+        ?article<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">not</font>
+        (<font color="#0000ff">instance-of</font> (article_author ?article)
+        Person)))</em>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </td>
+      <td width="50%"><font color="#400040">&quot;</font><font color="#0000ff">Find
+        </font><font color="#000000">3</font><font color="#400040"> instances of
+        the class <em>Article</em> which </font><font color="#000000">author</font><font color="#400040">
+        is </font><font color="#0000ff">not</font><font color="#400040"> an </font><font color="#0000ff">instance
+        of</font><font color="#400040"> the class <em>Person</em>.&quot;</font>
+        <p><font color="#400040">The slot <em>article_author</em> is used as a
+        function, to return the value of the author of the article in question.</font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>A query that finds all employees who are in a team (ie, whose responsible
+editor is responsible for more than 1 employee):</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="60%"><strong>PAL
+        Query</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="40%"><strong>Comments</strong></td>
+    </tr>
+    <tr>
+      <td width="60%"><em>(<font color="#0000ff">defrange</font> ?employee
+        :FRAME Employee responsible_for)<br>
+        (<font color="#0000ff">defrange</font> ?editor :FRAME Editor)</em></td>
+      <td width="40%">The query concerns all instances of the <em>Employee</em>
+        class that are values for the slot <em>responsible_for</em> and any
+        instance of the <em>Editor</em> class.</td>
+    </tr>
+    <tr>
+      <td width="60%"><em>(<font color="#0000ff">findall</font> ?employee<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">exists</font>
+        ?editor<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">and</font> (responsible_for ?editor ?employee)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">&gt;</font> (<font color="#0000ff">number-of-slot-values</font>
+        responsible_for ?editor) 1))))</em>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </td>
+      <td width="40%"><font color="#400040">&quot;</font><font color="#0000ff">Find
+        all</font> the employees such that there <font color="#0000ff">exists</font>
+        an editor which is <font color="#000000">responsible for</font> the
+        employee in question <font color="#0000ff">and</font> which <font color="#0000ff">number
+        </font>of employees under responsibility is <font color="#0000ff">greater</font>
+        than 1.<font color="#400040">&quot;</font>
+        <p><font color="#400040">The slot </font><em>responsible_for</em> is
+        used as a predicate to test whether the editor in question is
+        responsible for the employee in question.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>A query that finds all employees who are paid more than their responsible
+editor:</p>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>PAL
+        Query</strong></td>
+      <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: center" width="50%"><strong>Query
+        in English</strong></td>
+    </tr>
+    <tr>
+      <td width="50%"><em>(<font color="#0000ff">defrange</font> ?employee
+        :FRAME Employee responsible_for)<br>
+        (<font color="#0000ff">defrange</font> ?editor :FRAME Editor)</em></td>
+      <td width="50%">The query concerns all instances of the <em>Employee</em>
+        class that are values for the slot <em>responsible_for</em> and any
+        instance of the <em>Editor</em> class.</td>
+    </tr>
+    <tr>
+      <td width="50%"><em>(<font color="#0000ff">findall</font> ?employee<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (<font color="#0000ff">exists</font>
+        ?editor<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">and</font> (responsible_for ?editor ?employee)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">own-slot-not-null</font> salary ?editor)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">own-slot-not-null</font> salary ?employee)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (<font color="#0000ff">&lt;</font> (salary ?editor) (salary
+        ?employee)))))</em>
+        <p>&nbsp;</p>
+      </td>
+      <td width="50%"><font color="#400040">&quot;</font><font color="#0000ff">Find
+        all</font> the employees such that there <font color="#0000ff">exists</font>
+        an editor which is <font color="#000000">responsible for</font> the
+        employee in question <font color="#0000ff">and</font><font color="#000000">
+        that editor's salary is </font><font color="#0000ff">lower</font><font color="#000000">
+        than the salary of the employee in question, both salaries </font><font color="#0000ff">not
+        being empty</font><font color="#000000">.</font><font color="#400040">&quot;</font>
+        <p><font color="#400040">The slot <em>responsible_for</em> is used as a
+        predicate to test </font>whether the editor in question is responsible
+        for the employee in question. The slot <em>salary</em> is used as a
+        function, to return the value of the employee's and editor's salary.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<hr>
+<p>The PAL Language and Frames/PAL Query Statements</p>
+
+<p><b>Next:</b><font size="3"> </font><a href="lang_framework.htm">PAL Conceptual Framework</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>

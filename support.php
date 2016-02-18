@@ -287,19 +287,19 @@
           A 3-day intensive training in ontology development, hands-on use of the Prot&eacute;g&eacute; toolset, and the Web Ontology Language (OWL).
         </p>
         <!-- Uncomment for next short course -->
-        <!--
+
         <p>
-			<span class="offset-raquo">&raquo;</span> <a href="shortcourse/201503/index.html" target="_blank" class="link-c">Next Short Course: <br />
-			March 25 - 27, 2015 @ Stanford</a>
+			<span class="offset-raquo">&raquo;</span> <a href="shortcourse/201603/index.html" target="_blank" class="link-c">Next Short Course: <br />
+			March 21 - 23, 2016 @ Stanford</a>
 		</p>
-		-->
+
       </div><!-- /end .col-4 -->
       <div class="col-4 affiliate">
         <h3 class="heading-c">Become a Prot&eacute;g&eacute; Affiliate</h3>
         <span><em class="ital-a">(fee: $15,000/year)</em></span>
         <ul class="list-b">
           <li>40 hours consulting</li>
-          <li>2 tickets to the Prot&eacute;g&eacute; Conference</li>
+          <li>One free registration to the <a href="short-courses.php">Prot&eacute;g&eacute; Short Course</a></li>
           <li>Prot&eacute;g&eacute; coffee mug and t-shirt</li>
           <li>Recognition in the Prot&eacute;g&eacute; Desktop application's About Box</li>
         </ul>

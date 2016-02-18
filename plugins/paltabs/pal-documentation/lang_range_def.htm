@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Variable Range Definitions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="http://protege.stanford.edu/styles/plugins.css">
+</head>
+
+<body><div id="mainheadline"><h1><img border="0" src="images/nerd32x32.gif" width="32" height="32">  Variable
+Range Definitions<br>
+<img src="images/header_line.gif" width="590" height="6"></h1></div><p>All variables that appear in a constraint or query statement must be defined
+within a range. Variables must
+have an explicit range definition, with one exception. Constraints that are <a href="attach_class.htm">attached to
+classes</a> can omit range definitions of those of their variables that range
+over the instance of those classes. In this
+case there is an implicit variable range definition of unbound variables over
+the instance of those classes.This can be used when you want the <i>defrange</i>
+of the constraint to apply to multiple classes that are not subclasses of a
+single class, as otherwise you would have to write the constraint in the scope
+of each class.&nbsp; However, this should be used with caution, because if a
+constraint is de-attached from all of its classes, it will lose its implicit
+range definitions, and will have unbound variables. &nbsp;</p>
+
+<p> To define ranges interactively, use the
+right-click Range menu in the <a href="range.htm">Range editor</a> in the
+<a href="PAL_editor.htm"> PAL Expression Editor</a>.</p>
+
+<p><a name="global"></a>Variables are either defined locally or globally.&nbsp;
+A <i>local</i> variable is defined locally to the statement. A <i>global</i>
+variable is is shared, along with its range definition, by all constraints and
+queries in the knowledge base.</p>
+<p>A variable range definition is a sentence of the form:
+<p align="center"><em>(<font color="#0000ff">defrange</font>  [variable] [type]
+[type-specific information])</em></p>
+<p align="left">where:</p>
+<ol>
+  <li><em>[variable]</em> is the name of the variable, beginning either with '?'
+    to indicate a local variable or with '%' to indicate a global variable;
+  <li><em>[type]</em> is the type of the variable, one of <font color="#0000ff">:SET</font>,
+    <font color="#0000ff">:FRAME</font>, <font color="#0000ff">:SYMBOL</font>, <font color="#0000ff">:STRING</font>,
+    <font color="#0000ff">:INTEGER</font>, <font color="#0000ff">:NUMBER</font>;
+  <li><em>[type-specific information]</em> depends on the type of the variable
+    and is
+    <ul>
+      <li type="disc">a set name for the type <font color="#0000ff">:SET</font>,
+        optionally followed by a slot name that restricts the range of the
+        variable to values of that slot--that is, <em>(<font color="#0000ff">defrange</font>
+        [variable] <font color="#0000ff">:SET</font> [setname] [slotname])</em>
+        means &quot;all elements of the named set which are values for the named
+        slot&quot; (Note, however, that the <em><font color="#0000ff">:SET</font> </em>
+        option for <em><font color="#0000ff">defrange</font>  </em> is currently
+        broken, that is, you cannot create
+    variable declarations of type <font color="#0000ff">:SET</font>);
+      <li type="disc">a class name for the type <font color="#0000ff">:FRAME</font>,
+        optionally followed by a slot name that restricts the range of the
+        variable to values of that slot--that is, <em>(<font color="#0000ff">defrange</font>
+        [variable] <font color="#0000ff">:FRAME</font> [classname] [slotname])</em>
+        means &quot;instances of the named class which are values of the named
+        slot&quot;;
+      <li type="disc">a slot name for all other (primitive) types to restrict
+        the range of the variable to values of that slot--for example, <em>(<font color="#0000ff">defrange</font>
+        [variable] <font color="#0000ff">:INTEGER</font> [slotname])</em> means
+        &quot;all integers which are values of the named slot.&quot;</li>
+    </ul>
+  </li>
+</ol>
+<p><b>Note: </b>When using a class or slot name that contains a space, you must
+enclose the name in single quotes. For example, <i>my class</i> must be written
+as <i>'my class'</i>.</p>
+<p>In the newspaper example, the definition of a local variable <em>?editor </em>that
+ranges over all instances of the class <em>Editor</em> is written as follows:</p>
+<p><em>(<font color="#0000ff">defrange</font> ?editor <font color="#0000ff">:FRAME</font>
+Editor)</em></p>
+<p>and, the definition of a local variable <em>?employee</em> that ranges over
+solely instances of the class <em>Employee</em> that are values for the slot <em>responsible_for</em>
+(that is, those employees for whom an editor is responsible) is written as
+follows:</p>
+<p><em>(<font color="#0000ff">defrange</font> ?employee <font color="#0000ff">:FRAME</font>
+Employee responsible_for)</em></p>
+<p>Another example is the following, that defines a global variable <em>%number_of_pages</em>
+as an integer that is a value for the slot <em>number_of_pages</em>:</p>
+<p><em>(<font color="#0000ff">defrange</font> %number_of_pages <font color="#0000ff">:INTEGER</font>
+number_of_pages)</em></p>
+<h3>Sets</h3>
+<p><b>Note:</b> <em><font color="#0000ff">defset</font>
+ </em> is currently broken, that is, you cannot create
+    variable declarations for sets.&nbsp;</p>
+<p>When a variable ranges over the elements of a set (i.e., a variable of type
+:SET), this set also must be defined and given a name.</p>
+<p>A set definition is a sentence of the form <em>(<font color="#0000ff">defset</font>
+[setname] [type] [list of values])</em>, where:
+<ol>
+  <li><em>[setname]</em> is the name of the set;
+  <li><em>[type]</em> is the type of the elements of the set, one of: <font color="#0000ff">:FRAME</font>,
+    <font color="#0000ff">:SYMBOL</font>, <font color="#0000ff">:STRING</font>, <font color="#0000ff">:INTEGER</font>,
+    <font color="#0000ff">:NUMBER</font>;
+  <li><em>[list of values]</em> is the enumeration of the elements of the set,
+    that must be of the specified type (i.e., a list of frame names, of
+    integers, etc.).</li>
+</ol>
+<p>For example, the definition of the set of weekdays symbols is written as
+follows:</p>
+<p><em>(<font color="#0000ff">defset</font> weekdays <font color="#0000ff">:SYMBOL</font>
+(Monday Tuesday Wednesday Thursday Friday Saturday Sunday))</em></p>
+<p>and, the definition of a variable <em>?day</em> that ranges of the elements
+of the <em>weekday </em>set is written as follows:</p>
+<p><em>(<font color="#0000ff">defrange</font> ?day <font color="#0000ff">:SET</font>
+weekdays)</em></p>
+<hr>
+<p>The PAL Language and Frames/Variable Range Definitions</p>
+
+<p><b>Next</b>: <a href="lang_const.htm">PAL Constraint Statements</a></p>
+
+<p><a href="index.htm">PAL Table of Contents</a></p>
+
+</body>
+
+</html>
